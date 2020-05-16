@@ -1,23 +1,23 @@
 const { db } = require('../util/admin');
 
-exports.getAllTodos = (request, response) => {
+exports.getAllEvents = (request, response) => {
 	db
-        .collection('todos')
+        .collection('events')
         .where('username', '==', request.user.username)
 		.orderBy('createdAt', 'desc')
 		.get()
 		.then((data) => {
-			let todos = [];
+			let events = [];
 			data.forEach((doc) => {
-				todos.push({
-                    todoId: doc.id,
+				events.push({
+                    eventId: doc.id,
                     title: doc.data().title,
                     username: doc.data().username,
 					body: doc.data().body,
 					createdAt: doc.data().createdAt,
 				});
 			});
-			return response.json(todos);
+			return response.json(events);
 		})
 		.catch((err) => {
 			console.error(err);
@@ -25,23 +25,23 @@ exports.getAllTodos = (request, response) => {
 		});
 };
 
-exports.getOneTodo = (request, response) => {
+exports.getOneEvent = (request, response) => {
 	db
-        .doc(`/todos/${request.params.todoId}`)
+        .doc(`/events/${request.params.eventId}`)
 		.get()
 		.then((doc) => {
 			if (!doc.exists) {
 				return response.status(404).json(
                     { 
-                        error: 'Todo not found' 
+                        error: 'Event not found' 
                     });
             }
             if(doc.data().username !== request.user.username){
-                return response.status(403).json({error:"UnAuthorized"})
+                return response.status(403).json({error:"Unauthorized"})
             }
-			TodoData = doc.data();
-			TodoData.todoId = doc.id;
-			return response.json(TodoData);
+			EventData = doc.data();
+			EventData.eventId = doc.id;
+			return response.json(EventData);
 		})
 		.catch((err) => {
 			console.error(err);
@@ -49,7 +49,7 @@ exports.getOneTodo = (request, response) => {
 		});
 };
 
-exports.postOneTodo = (request, response) => {
+exports.postOneEvent = (request, response) => {
 	if (request.body.body.trim() === '') {
 		return response.status(400).json({ body: 'Must not be empty' });
     }
@@ -58,7 +58,7 @@ exports.postOneTodo = (request, response) => {
         return response.status(400).json({ title: 'Must not be empty' });
     }
     
-    const newTodoItem = {
+    const newEventItem = {
         title: request.body.title,
         username: request.user.username,
         body: request.body.body,
@@ -66,12 +66,12 @@ exports.postOneTodo = (request, response) => {
     }
 
     db
-        .collection('todos')
-        .add(newTodoItem)
+        .collection('events')
+        .add(newEventItem)
         .then((doc)=>{
-            const responseTodoItem = newTodoItem;
-            responseTodoItem.id = doc.id;
-            return response.json(responseTodoItem);
+            const responseEventItem = newEventItem;
+            responseEventItem.id = doc.id;
+            return response.json(responseEventItem);
         })
         .catch((error) => {
             console.error(error);
@@ -79,14 +79,14 @@ exports.postOneTodo = (request, response) => {
 		});
 };
 
-exports.deleteTodo = (request, response) => {
-    const document = db.doc(`/todos/${request.params.todoId}`);
+exports.deleteEvent = (request, response) => {
+    const document = db.doc(`/events/${request.params.eventId}`);
     document
         .get()
         .then((doc) => {
             if (!doc.exists) {
                 return response.status(404).json({ 
-                    error: 'Todo not found' 
+                    error: 'Event not found' 
             })}
             if(doc.data().username !== request.user.username){
                 return response.status(403).json({error:"UnAuthorized"})
@@ -104,11 +104,11 @@ exports.deleteTodo = (request, response) => {
         });
 };
 
-exports.editTodo = ( request, response ) => { 
-    if(request.body.todoId || request.body.createdAt){
+exports.editEvent = ( request, response ) => { 
+    if(request.body.eventId || request.body.createdAt){
         response.status(403).json({message: 'Not allowed to edit'});
     }
-    let document = db.collection('todos').doc(`${request.params.todoId}`);
+    let document = db.collection('events').doc(`${request.params.eventId}`);
     document.update(request.body)
     .then((doc)=> {
         response.json({message: 'Updated successfully'});

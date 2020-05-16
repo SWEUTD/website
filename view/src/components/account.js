@@ -70,7 +70,7 @@ class account extends Component {
 			phoneNumber: '',
 			username: '',
 			country: '',
-			profilePicture: '',
+			//profilePicture: '',
 			uiLoading: true,
 			buttonLoading: false,
 			imageError: ''
@@ -116,6 +116,7 @@ class account extends Component {
 		});
 	};
 
+	/*
 	profilePictureHandler = (event) => {
 		event.preventDefault();
 		this.setState({
@@ -147,6 +148,7 @@ class account extends Component {
 				});
 			});
 	};
+	*/
 
 	updateFormValues = (event) => {
 		event.preventDefault();
@@ -195,14 +197,14 @@ class account extends Component {
 									<Typography className={classes.locationText} gutterBottom variant="h4">
 										{this.state.firstName} {this.state.lastName}
 									</Typography>
-									<Button
+									{/*<Button
 										variant="outlined"
 										color="primary"
 										type="submit"
 										size="small"
 										startIcon={<CloudUploadIcon />}
 										className={classes.uploadButton}
-										onClick={this.profilePictureHandler}
+										{//onClick={this.profilePictureHandler}}
 									>
 										Upload Photo
 									</Button>
@@ -215,7 +217,7 @@ class account extends Component {
 										</div>
 									) : (
 										false
-									)}
+									)}*/}
 								</div>
 							</div>
 							<div className={classes.progress} />

@@ -93,15 +93,15 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 	return <Slide direction="up" ref={ref} {...props} />;
 });
 
-class todo extends Component {
+class event extends Component {
 	constructor(props) {
 		super(props);
 
 		this.state = {
-			todos: '',
+			events: '',
 			title: '',
 			body: '',
-			todoId: '',
+			eventId: '',
 			errors: [],
 			open: false,
 			uiLoading: true,
@@ -109,7 +109,7 @@ class todo extends Component {
 			viewOpen: false
 		};
 
-		this.deleteTodoHandler = this.deleteTodoHandler.bind(this);
+		this.deleteEventHandler = this.deleteEventHandler.bind(this);
 		this.handleEditClickOpen = this.handleEditClickOpen.bind(this);
 		this.handleViewOpen = this.handleViewOpen.bind(this);
 	}
@@ -125,10 +125,10 @@ class todo extends Component {
 		const authToken = localStorage.getItem('AuthToken');
 		axios.defaults.headers.common = { Authorization: `${authToken}` };
 		axios
-			.get('/todos')
+			.get('/events')
 			.then((response) => {
 				this.setState({
-					todos: response.data,
+					events: response.data,
 					uiLoading: false
 				});
 			})
@@ -137,13 +137,13 @@ class todo extends Component {
 			});
 	};
 
-	deleteTodoHandler(data) {
+	deleteEventHandler(data) {
 		authMiddleWare(this.props.history);
 		const authToken = localStorage.getItem('AuthToken');
 		axios.defaults.headers.common = { Authorization: `${authToken}` };
-		let todoId = data.todo.todoId;
+		let eventId = data.event.eventId;
 		axios
-			.delete(`todo/${todoId}`)
+			.delete(`event/${eventId}`)
 			.then(() => {
 				window.location.reload();
 			})
@@ -154,9 +154,9 @@ class todo extends Component {
 
 	handleEditClickOpen(data) {
 		this.setState({
-			title: data.todo.title,
-			body: data.todo.body,
-			todoId: data.todo.todoId,
+			title: data.event.title,
+			body: data.event.body,
+			eventId: data.event.eventId,
 			buttonType: 'Edit',
 			open: true
 		});
@@ -164,8 +164,8 @@ class todo extends Component {
 
 	handleViewOpen(data) {
 		this.setState({
-			title: data.todo.title,
-			body: data.todo.body,
+			title: data.event.title,
+			body: data.event.body,
 			viewOpen: true
 		});
 	}
@@ -197,7 +197,7 @@ class todo extends Component {
 
 		const handleClickOpen = () => {
 			this.setState({
-				todoId: '',
+				eventId: '',
 				title: '',
 				body: '',
 				buttonType: '',
@@ -208,22 +208,22 @@ class todo extends Component {
 		const handleSubmit = (event) => {
 			authMiddleWare(this.props.history);
 			event.preventDefault();
-			const userTodo = {
+			const userEvent = {
 				title: this.state.title,
 				body: this.state.body
 			};
 			let options = {};
 			if (this.state.buttonType === 'Edit') {
 				options = {
-					url: `/todo/${this.state.todoId}`,
+					url: `/event/${this.state.eventId}`,
 					method: 'put',
-					data: userTodo
+					data: userEvent
 				};
 			} else {
 				options = {
-					url: '/todo',
+					url: '/event',
 					method: 'post',
-					data: userTodo
+					data: userEvent
 				};
 			}
 			const authToken = localStorage.getItem('AuthToken');
@@ -262,7 +262,7 @@ class todo extends Component {
 					<IconButton
 						className={classes.floatingButton}
 						color="primary"
-						aria-label="Add Todo"
+						aria-label="Add Event"
 						onClick={handleClickOpen}
 					>
 						<AddCircleIcon style={{ fontSize: 60 }} />
@@ -274,7 +274,7 @@ class todo extends Component {
 									<CloseIcon />
 								</IconButton>
 								<Typography variant="h6" className={classes.title}>
-									{this.state.buttonType === 'Edit' ? 'Edit Todo' : 'Create a new Todo'}
+									{this.state.buttonType === 'Edit' ? 'Edit Event' : 'Create a new Event'}
 								</Typography>
 								<Button
 									autoFocus
@@ -294,10 +294,10 @@ class todo extends Component {
 										variant="outlined"
 										required
 										fullWidth
-										id="todoTitle"
-										label="Todo Title"
+										id="eventTitle"
+										label="Event Title"
 										name="title"
-										autoComplete="todoTitle"
+										autoComplete="eventTitle"
 										helperText={errors.title}
 										value={this.state.title}
 										error={errors.title ? true : false}
@@ -309,10 +309,10 @@ class todo extends Component {
 										variant="outlined"
 										required
 										fullWidth
-										id="todoDetails"
-										label="Todo Details"
+										id="eventDetails"
+										label="Event Details"
 										name="body"
-										autoComplete="todoDetails"
+										autoComplete="eventDetails"
 										multiline
 										rows={25}
 										rowsMax={25}
@@ -327,29 +327,29 @@ class todo extends Component {
 					</Dialog>
 
 					<Grid container spacing={2}>
-						{this.state.todos.map((todo) => (
+						{this.state.events.map((event) => (
 							<Grid item xs={12} sm={6}>
 								<Card className={classes.root} variant="outlined">
 									<CardContent>
 										<Typography variant="h5" component="h2">
-											{todo.title}
+											{event.title}
 										</Typography>
 										<Typography className={classes.pos} color="textSecondary">
-											{dayjs(todo.createdAt).fromNow()}
+											{dayjs(event.createdAt).fromNow()}
 										</Typography>
 										<Typography variant="body2" component="p">
-											{`${todo.body.substring(0, 65)}`}
+											{`${event.body.substring(0, 65)}`}
 										</Typography>
 									</CardContent>
 									<CardActions>
-										<Button size="small" color="primary" onClick={() => this.handleViewOpen({ todo })}>
+										<Button size="small" color="primary" onClick={() => this.handleViewOpen({ event })}>
 											{' '}
 											View{' '}
 										</Button>
-										<Button size="small" color="primary" onClick={() => this.handleEditClickOpen({ todo })}>
+										<Button size="small" color="primary" onClick={() => this.handleEditClickOpen({ event })}>
 											Edit
 										</Button>
-										<Button size="small" color="primary" onClick={() => this.deleteTodoHandler({ todo })}>
+										<Button size="small" color="primary" onClick={() => this.deleteEventHandler({ event })}>
 											Delete
 										</Button>
 									</CardActions>
@@ -371,7 +371,7 @@ class todo extends Component {
 						<DialogContent dividers>
 							<TextField
 								fullWidth
-								id="todoDetails"
+								id="eventDetails"
 								name="body"
 								multiline
 								readonly
@@ -390,4 +390,4 @@ class todo extends Component {
 	}
 }
 
-export default withStyles(styles)(todo);
+export default withStyles(styles)(event);

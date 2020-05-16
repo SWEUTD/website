@@ -102,6 +102,7 @@ exports.signUpUser = (request, response) => {
 		});
 }
 
+/*
 deleteImage = (imageName) => {
     const bucket = admin.storage().bucket();
     const path = `${imageName}`
@@ -113,8 +114,9 @@ deleteImage = (imageName) => {
         return
     })
 }
-
+*/
 // Upload profile picture
+/*
 exports.uploadProfilePhoto = (request, response) => {
     const BusBoy = require('busboy');
 	const path = require('path');
@@ -164,7 +166,7 @@ exports.uploadProfilePhoto = (request, response) => {
 	});
 	busboy.end(request.rawBody);
 };
-
+*/
 exports.getUserDetail = (request, response) => {
     let userData = {};
 	db

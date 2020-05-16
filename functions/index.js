@@ -3,32 +3,32 @@ const app = require('express')();
 const auth = require('./util/auth');
  
 const {
-    getAllTodos,
-    getOneTodo,
-    postOneTodo,
-    deleteTodo,
-    editTodo
-} = require('./APIs/todos')
+    getAllEvents,
+    getOneEvent,
+    postOneEvent,
+    deleteEvent,
+    editEvent
+} = require('./APIs/events')
 
 const { 
     loginUser,
     signUpUser,
-    uploadProfilePhoto,
+    //uploadProfilePhoto,
     getUserDetail,
     updateUserDetails
 } = require('./APIs/users')
 
-// Todos
-app.get('/todos', auth, getAllTodos);
-app.get('/todo/:todoId', auth, getOneTodo);
-app.post('/todo',auth, postOneTodo);
-app.delete('/todo/:todoId',auth, deleteTodo);
-app.put('/todo/:todoId',auth, editTodo);
+// Events
+app.get('/events', auth, getAllEvents);
+app.get('/event/:eventId', auth, getOneEvent);
+app.post('/event',auth, postOneEvent);
+app.delete('/event/:eventId',auth, deleteEvent);
+app.put('/event/:eventId',auth, editEvent);
 
 // Users
 app.post('/login', loginUser);
 app.post('/signup', signUpUser);
-app.post('/user/image', auth ,uploadProfilePhoto);
+//app.post('/user/image', auth ,uploadProfilePhoto);
 app.post('/user', auth ,updateUserDetails);
 app.get('/user', auth, getUserDetail);
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 import Account from '../components/account';
-import Todo from '../components/todo';
+import Event from '../components/event';
 
 import Drawer from '@material-ui/core/Drawer';
 import AppBar from '@material-ui/core/AppBar';
@@ -17,7 +17,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import withStyles from '@material-ui/core/styles/withStyles';
 import AccountBoxIcon from '@material-ui/icons/AccountBox';
 import NotesIcon from '@material-ui/icons/Notes';
-import Avatar from '@material-ui/core/avatar';
+//import Avatar from '@material-ui/core/avatar';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
@@ -70,7 +70,7 @@ class home extends Component {
 		this.setState({ render: true });
 	};
 
-	loadTodoPage = (event) => {
+	loadEventPage = (event) => {
 		this.setState({ render: false });
 	};
 
@@ -85,7 +85,7 @@ class home extends Component {
 		this.state = {
 			firstName: '',
 			lastName: '',
-			profilePicture: '',
+			//profilePicture: '',
 			uiLoading: true,
 			imageLoading: false
 		};
@@ -107,7 +107,7 @@ class home extends Component {
 					country: response.data.userCredentials.country,
 					username: response.data.userCredentials.username,
 					uiLoading: false,
-					profilePicture: response.data.userCredentials.imageUrl
+					//profilePicture: response.data.userCredentials.imageUrl
 				});
 			})
 			.catch((error) => {
@@ -134,7 +134,7 @@ class home extends Component {
 					<AppBar position="fixed" className={classes.appBar}>
 						<Toolbar>
 							<Typography variant="h6" noWrap>
-								TodoApp
+								EventApp
 							</Typography>
 						</Toolbar>
 					</AppBar>
@@ -148,7 +148,7 @@ class home extends Component {
 						<div className={classes.toolbar} />
 						<Divider />
 						<center>
-							<Avatar src={this.state.profilePicture} className={classes.avatar} />
+							{/*<Avatar src={this.state.profilePicture} className={classes.avatar} />*/}
 							<p>
 								{' '}
 								{this.state.firstName} {this.state.lastName}
@@ -156,12 +156,12 @@ class home extends Component {
 						</center>
 						<Divider />
 						<List>
-							<ListItem button key="Todo" onClick={this.loadTodoPage}>
+							<ListItem button key="Event" onClick={this.loadEventPage}>
 								<ListItemIcon>
 									{' '}
 									<NotesIcon />{' '}
 								</ListItemIcon>
-								<ListItemText primary="Todo" />
+								<ListItemText primary="Event" />
 							</ListItem>
 
 							<ListItem button key="Account" onClick={this.loadAccountPage}>
@@ -182,7 +182,7 @@ class home extends Component {
 						</List>
 					</Drawer>
 
-					<div>{this.state.render ? <Account /> : <Todo />}</div>
+					<div>{this.state.render ? <Account /> : <Event />}</div>
 				</div>
 			);
 		}
