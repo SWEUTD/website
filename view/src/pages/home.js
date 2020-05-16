@@ -104,6 +104,7 @@ class home extends Component {
 					phoneNumber: response.data.userCredentials.phoneNumber,
 					classification: response.data.userCredentials.classification,
 					major: response.data.userCredentials.major,
+					otherMajor: response.data.userCredentials.otherMajor,
 					netid: response.data.userCredentials.netid,
 					uiLoading: false,
 				});

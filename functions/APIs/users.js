@@ -45,6 +45,7 @@ exports.signUpUser = (request, response) => {
         phoneNumber: request.body.phoneNumber,
         classification: request.body.classification,
         major: request.body.major,
+        otherMajor: request.body.otherMajor,
 		password: request.body.password,
 		confirmPassword: request.body.confirmPassword,
         netid: request.body.netid
@@ -83,6 +84,7 @@ exports.signUpUser = (request, response) => {
                 phoneNumber: newUser.phoneNumber,
                 classification: newUser.classification,
                 major: newUser.major,
+                otherMajor: newUser.otherMajor,
                 email: newUser.email,
                 createdAt: new Date().toISOString(),
                 userId

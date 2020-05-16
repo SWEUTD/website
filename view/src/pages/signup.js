@@ -3,6 +3,8 @@ import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
+import Select from '@material-ui/core/Select';
+import MenuItem from '@material-ui/core/MenuItem';
 import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
@@ -12,6 +14,7 @@ import withStyles from '@material-ui/core/styles/withStyles';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
 import axios from 'axios';
+import { FormControl, InputLabel, Menu } from '@material-ui/core';
 
 const styles = (theme) => ({
 	paper: {
@@ -72,12 +75,15 @@ class signup extends Component {
 	handleSubmit = (event) => {
 		event.preventDefault();
 		this.setState({ loading: true });
+		if(this.state.major != "Other")
+			this.state.otherMajor = "";
 		const newUserData = {
 			firstName: this.state.firstName,
 			lastName: this.state.lastName,
 			phoneNumber: this.state.phoneNumber,
 			classification: this.state.classification,
 			major: this.state.major,
+			otherMajor: this.state.otherMajor,
 			netid: this.state.netid,
 			email: this.state.email,
 			password: this.state.password,
@@ -99,6 +105,8 @@ class signup extends Component {
 				});
 			});
 	};
+
+	
 
 	render() {
 		const { classes } = this.props;
@@ -143,7 +151,7 @@ class signup extends Component {
 									onChange={this.handleChange}
 								/>
 							</Grid>
-							<Grid item xs={12} sm={6}>
+							<Grid item xs={12}>
 								<TextField
 									variant="outlined"
 									required
@@ -158,32 +166,28 @@ class signup extends Component {
 								/>
 							</Grid>
 							<Grid item xs={12} sm={6}>
-								<TextField
+								<FormControl 
+									fullWidth 
 									variant="outlined"
 									required
-									fullWidth
-									id="classification"
-									label="Classification"
-									name="classification"
-									autoComplete="classification"
-									helperText={errors.classification}
-									error={errors.classification ? true : false}
-									onChange={this.handleChange}
-								/>
-							</Grid>
-							<Grid item xs={12} sm={6}>
-								<TextField
-									variant="outlined"
-									required
-									fullWidth
-									id="major"
-									label="Major"
-									name="major"
-									autoComplete="major"
-									helperText={errors.major}
-									error={errors.major ? true : false}
-									onChange={this.handleChange}
-								/>
+								>
+								<InputLabel>Classification</InputLabel>
+									<Select
+										id="classification"
+										label="Classification"
+										name="classification"
+										autoComplete="classification"
+										helperText={errors.classification}
+										error={errors.classification ? true : false}
+										onChange={this.handleChange}
+										>
+											<MenuItem selected value="Freshman">Freshman</MenuItem>
+											<MenuItem value="Sophomore">Sophomore</MenuItem>
+											<MenuItem value="Junior">Junior</MenuItem>
+											<MenuItem value="Senior">Senior</MenuItem>
+											<MenuItem value="Graduate Student">Graduate Student</MenuItem>
+									</Select>
+								</FormControl>
 							</Grid>
 							<Grid item xs={12} sm={6}>
 								<TextField
@@ -199,7 +203,49 @@ class signup extends Component {
 									onChange={this.handleChange}
 								/>
 							</Grid>
+							
+							<Grid item xs={12} sm = {6}>
+								<FormControl 
+									fullWidth 
+									variant="outlined"
+									required
+								>
+								<InputLabel>Major</InputLabel>
+									<Select
+										id="major"
+										label="Major"
+										name="major"
+										autoComplete="major"
+										helperText={errors.major}
+										error={errors.major ? true : false}
+										onChange={this.handleChange}
+										>
+											<MenuItem selected value="Biomedical Engineering">Biomedical Engineering</MenuItem>
+											<MenuItem value="Computer Engineering">Computer Engineering</MenuItem>
+											<MenuItem value="Computer Science">Computer Science</MenuItem>
+											<MenuItem value="Electrical Engineering">Electrical Engineering</MenuItem>
+											<MenuItem value="Mechanical Engineering">Mechanical Engineering</MenuItem>
+											<MenuItem value="Software Engineering">Software Engineering</MenuItem>
+											<MenuItem value="Other">Other</MenuItem>
+											
+									</Select>
+								</FormControl>
+							</Grid>
 
+							<Grid item xs={12} sm = {6}>
+								<TextField
+									variant="outlined"
+									fullWidth
+									id="otherMajor"
+									label="Other Major"
+									name="otherMajor"
+									autoComplete="otherMajor"
+									helperText={errors.otherMajor}
+									error={errors.otherMajor ? true : false}
+									onChange={this.handleChange}
+								/>
+							</Grid>
+							
 							<Grid item xs={12}>
 								<TextField
 									variant="outlined"

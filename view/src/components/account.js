@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 
 import withStyles from '@material-ui/core/styles/withStyles';
 import Typography from '@material-ui/core/Typography';
+import FormControl from '@material-ui/core/FormControl';
+import InputLabel from '@material-ui/core/InputLabel';
+import Select from '@material-ui/core/Select';
+import MenuItem from '@material-ui/core/MenuItem';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { Card, CardActions, CardContent, Divider, Button, Grid, TextField } from '@material-ui/core';
 
@@ -70,6 +74,7 @@ class account extends Component {
 			netid: '',
 			classification: '',
 			major: '',
+			otherMajor: '',
 			uiLoading: true,
 			buttonLoading: false,
 			imageError: ''
@@ -91,6 +96,7 @@ class account extends Component {
 					phoneNumber: response.data.userCredentials.phoneNumber,
 					classification: response.data.userCredentials.classification,
 					major: response.data.userCredentials.major,
+					otherMajor: response.data.userCredentials.otherMajor,
 					netid: response.data.userCredentials.netid,
 					uiLoading: false
 				});
@@ -122,11 +128,17 @@ class account extends Component {
 		authMiddleWare(this.props.history);
 		const authToken = localStorage.getItem('AuthToken');
 		axios.defaults.headers.common = { Authorization: `${authToken}` };
+		if(this.state.major != "Other")
+			this.state.otherMajor = "";
 		const formRequest = {
 			firstName: this.state.firstName,
 			lastName: this.state.lastName,
-			classification: this.state.classification
+			classification: this.state.classification,
+			major: this.state.major,
+			otherMajor: this.state.otherMajor,
+			phoneNumber: this.state.phoneNumber
 		};
+		
 		axios
 			.post('/user', formRequest)
 			.then(() => {
@@ -218,7 +230,6 @@ class account extends Component {
 											name="phone"
 											type="number"
 											variant="outlined"
-											disabled={true}
 											value={this.state.phoneNumber}
 											onChange={this.handleChange}
 										/>
@@ -228,32 +239,65 @@ class account extends Component {
 											fullWidth
 											label="NetID"
 											margin="dense"
-											name="userHandle"
+											name="NetID"
 											disabled={true}
 											variant="outlined"
 											value={this.state.netid}
 											onChange={this.handleChange}
 										/>
 									</Grid>
-									<Grid item md={6} xs={12}>
-										<TextField
-											fullWidth
-											label="Classification"
-											margin="dense"
-											name="classification"
+									<Grid item xs={12} sm={6}>
+										<FormControl 
+											fullWidth 
 											variant="outlined"
-											value={this.state.classification}
-											onChange={this.handleChange}
-										/>
+											margin="dense"
+										>
+										<InputLabel>Classification</InputLabel>
+											<Select
+												label="Classification"
+												name="classification"
+												value={this.state.classification}
+												onChange={this.handleChange}
+												>
+													<MenuItem selected value="Freshman">Freshman</MenuItem>
+													<MenuItem value="Sophomore">Sophomore</MenuItem>
+													<MenuItem value="Junior">Junior</MenuItem>
+													<MenuItem value="Senior">Senior</MenuItem>
+													<MenuItem value="Graduate Student">Graduate Student</MenuItem>
+											</Select>
+										</FormControl>
+									</Grid>
+									<Grid item xs={12} sm={6}>
+										<FormControl 
+											fullWidth 
+											variant="outlined"
+											margin="dense"
+										>
+										<InputLabel>Major</InputLabel>
+											<Select
+												label="Major"
+												name="major"
+												value={this.state.major}
+												onChange={this.handleChange}
+												>
+													<MenuItem selected value="Biomedical Engineering">Biomedical Engineering</MenuItem>
+													<MenuItem value="Computer Engineering">Computer Engineering</MenuItem>
+													<MenuItem value="Computer Science">Computer Science</MenuItem>
+													<MenuItem value="Electrical Engineering">Electrical Engineering</MenuItem>
+													<MenuItem value="Mechanical Engineering">Mechanical Engineering</MenuItem>
+													<MenuItem value="Software Engineering">Software Engineering</MenuItem>
+													<MenuItem value="Other">Other</MenuItem>
+											</Select>
+										</FormControl>
 									</Grid>
 									<Grid item md={6} xs={12}>
 										<TextField
 											fullWidth
-											label="Major"
+											label="Other Major"
 											margin="dense"
-											name="major"
+											name="otherMajor"
 											variant="outlined"
-											value={this.state.major}
+											value={this.state.otherMajor}
 											onChange={this.handleChange}
 										/>
 									</Grid>
@@ -274,7 +318,9 @@ class account extends Component {
 							this.state.buttonLoading ||
 							!this.state.firstName ||
 							!this.state.lastName ||
-							!this.state.classification
+							!this.state.classification ||
+							!this.state.major ||
+							!this.state.phoneNumber
 						}
 					>
 						Save details
