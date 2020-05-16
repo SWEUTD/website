@@ -1,0 +1,10 @@
+- npm install in the 'functions' folder
+- add config file to functions/util
+- run firebase serve from root folder
+- get request to localhost:5000/swe-utd/us-central1/api/todos
+- go to link to build index
+- firebase deploy from root folder
+
+
+- npm install from the view folder
+

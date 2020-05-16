@@ -3,7 +3,7 @@ const { db } = require('../util/admin');
 exports.getAllEvents = (request, response) => {
 	db
         .collection('events')
-        .where('username', '==', request.user.username)
+        .where('netid', '==', request.user.netid)
 		.orderBy('createdAt', 'desc')
 		.get()
 		.then((data) => {
@@ -12,7 +12,7 @@ exports.getAllEvents = (request, response) => {
 				events.push({
                     eventId: doc.id,
                     title: doc.data().title,
-                    username: doc.data().username,
+                    netid: doc.data().netid,
 					body: doc.data().body,
 					createdAt: doc.data().createdAt,
 				});
@@ -36,7 +36,7 @@ exports.getOneEvent = (request, response) => {
                         error: 'Event not found' 
                     });
             }
-            if(doc.data().username !== request.user.username){
+            if(doc.data().netid !== request.user.netid){
                 return response.status(403).json({error:"Unauthorized"})
             }
 			EventData = doc.data();
@@ -60,7 +60,7 @@ exports.postOneEvent = (request, response) => {
     
     const newEventItem = {
         title: request.body.title,
-        username: request.user.username,
+        netid: request.user.netid,
         body: request.body.body,
         createdAt: new Date().toISOString()
     }
@@ -88,8 +88,8 @@ exports.deleteEvent = (request, response) => {
                 return response.status(404).json({ 
                     error: 'Event not found' 
             })}
-            if(doc.data().username !== request.user.username){
-                return response.status(403).json({error:"UnAuthorized"})
+            if(doc.data().netid !== request.user.netid){
+                return response.status(403).json({error:"Unauthorized"})
             }
             return document.delete();
         })

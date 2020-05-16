@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import withStyles from '@material-ui/core/styles/withStyles';
 import Typography from '@material-ui/core/Typography';
 import CircularProgress from '@material-ui/core/CircularProgress';
-import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 import { Card, CardActions, CardContent, Divider, Button, Grid, TextField } from '@material-ui/core';
 
 import clsx from 'clsx';
@@ -68,9 +67,9 @@ class account extends Component {
 			lastName: '',
 			email: '',
 			phoneNumber: '',
-			username: '',
-			country: '',
-			//profilePicture: '',
+			netid: '',
+			classification: '',
+			major: '',
 			uiLoading: true,
 			buttonLoading: false,
 			imageError: ''
@@ -90,8 +89,9 @@ class account extends Component {
 					lastName: response.data.userCredentials.lastName,
 					email: response.data.userCredentials.email,
 					phoneNumber: response.data.userCredentials.phoneNumber,
-					country: response.data.userCredentials.country,
-					username: response.data.userCredentials.username,
+					classification: response.data.userCredentials.classification,
+					major: response.data.userCredentials.major,
+					netid: response.data.userCredentials.netid,
 					uiLoading: false
 				});
 			})
@@ -116,40 +116,6 @@ class account extends Component {
 		});
 	};
 
-	/*
-	profilePictureHandler = (event) => {
-		event.preventDefault();
-		this.setState({
-			uiLoading: true
-		});
-		authMiddleWare(this.props.history);
-		const authToken = localStorage.getItem('AuthToken');
-		let form_data = new FormData();
-		form_data.append('image', this.state.image);
-		form_data.append('content', this.state.content);
-		axios.defaults.headers.common = { Authorization: `${authToken}` };
-		axios
-			.post('/user/image', form_data, {
-				headers: {
-					'content-type': 'multipart/form-data'
-				}
-			})
-			.then(() => {
-				window.location.reload();
-			})
-			.catch((error) => {
-				if (error.response.status === 403) {
-					this.props.history.push('/login');
-				}
-				console.log(error);
-				this.setState({
-					uiLoading: false,
-					imageError: 'Error in posting the data'
-				});
-			});
-	};
-	*/
-
 	updateFormValues = (event) => {
 		event.preventDefault();
 		this.setState({ buttonLoading: true });
@@ -159,7 +125,7 @@ class account extends Component {
 		const formRequest = {
 			firstName: this.state.firstName,
 			lastName: this.state.lastName,
-			country: this.state.country
+			classification: this.state.classification
 		};
 		axios
 			.post('/user', formRequest)
@@ -197,27 +163,6 @@ class account extends Component {
 									<Typography className={classes.locationText} gutterBottom variant="h4">
 										{this.state.firstName} {this.state.lastName}
 									</Typography>
-									{/*<Button
-										variant="outlined"
-										color="primary"
-										type="submit"
-										size="small"
-										startIcon={<CloudUploadIcon />}
-										className={classes.uploadButton}
-										{//onClick={this.profilePictureHandler}}
-									>
-										Upload Photo
-									</Button>
-									<input type="file" onChange={this.handleImageChange} />
-
-									{this.state.imageError ? (
-										<div className={classes.customError}>
-											{' '}
-											Wrong Image Format || Supported Format are PNG and JPG
-										</div>
-									) : (
-										false
-									)}*/}
 								</div>
 							</div>
 							<div className={classes.progress} />
@@ -281,26 +226,38 @@ class account extends Component {
 									<Grid item md={6} xs={12}>
 										<TextField
 											fullWidth
-											label="User Name"
+											label="NetID"
 											margin="dense"
 											name="userHandle"
 											disabled={true}
 											variant="outlined"
-											value={this.state.username}
+											value={this.state.netid}
 											onChange={this.handleChange}
 										/>
 									</Grid>
 									<Grid item md={6} xs={12}>
 										<TextField
 											fullWidth
-											label="Country"
+											label="Classification"
 											margin="dense"
-											name="country"
+											name="classification"
 											variant="outlined"
-											value={this.state.country}
+											value={this.state.classification}
 											onChange={this.handleChange}
 										/>
 									</Grid>
+									<Grid item md={6} xs={12}>
+										<TextField
+											fullWidth
+											label="Major"
+											margin="dense"
+											name="major"
+											variant="outlined"
+											value={this.state.major}
+											onChange={this.handleChange}
+										/>
+									</Grid>
+									
 								</Grid>
 							</CardContent>
 							<Divider />
@@ -317,7 +274,7 @@ class account extends Component {
 							this.state.buttonLoading ||
 							!this.state.firstName ||
 							!this.state.lastName ||
-							!this.state.country
+							!this.state.classification
 						}
 					>
 						Save details

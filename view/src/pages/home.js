@@ -17,7 +17,6 @@ import ListItemText from '@material-ui/core/ListItemText';
 import withStyles from '@material-ui/core/styles/withStyles';
 import AccountBoxIcon from '@material-ui/icons/AccountBox';
 import NotesIcon from '@material-ui/icons/Notes';
-//import Avatar from '@material-ui/core/avatar';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
@@ -85,7 +84,6 @@ class home extends Component {
 		this.state = {
 			firstName: '',
 			lastName: '',
-			//profilePicture: '',
 			uiLoading: true,
 			imageLoading: false
 		};
@@ -104,10 +102,10 @@ class home extends Component {
 					lastName: response.data.userCredentials.lastName,
 					email: response.data.userCredentials.email,
 					phoneNumber: response.data.userCredentials.phoneNumber,
-					country: response.data.userCredentials.country,
-					username: response.data.userCredentials.username,
+					classification: response.data.userCredentials.classification,
+					major: response.data.userCredentials.major,
+					netid: response.data.userCredentials.netid,
 					uiLoading: false,
-					//profilePicture: response.data.userCredentials.imageUrl
 				});
 			})
 			.catch((error) => {
@@ -148,7 +146,6 @@ class home extends Component {
 						<div className={classes.toolbar} />
 						<Divider />
 						<center>
-							{/*<Avatar src={this.state.profilePicture} className={classes.avatar} />*/}
 							<p>
 								{' '}
 								{this.state.firstName} {this.state.lastName}

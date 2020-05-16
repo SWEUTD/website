@@ -21,6 +21,12 @@ const isEmail = (email) => {
 	else return false;
 };
 
+const isNetId = (netid) => {
+	const netidRegEx = /^[a-zA-Z]{3}[0-9]{6}$/;
+	if (netid.match(netidRegEx)) return true;
+	else return false;
+};
+
 exports.validateSignUpData = (data) => {
 	let errors = {};
 
@@ -30,14 +36,21 @@ exports.validateSignUpData = (data) => {
 		errors.email = 'Must be valid email address';
 	}
 
+	if (isEmpty(data.netid)) {
+		errors.netid = 'Must not be empty';
+	} else if (!isNetId(data.netid)) {
+		errors.netid = 'Must be valid NetID';
+	}
+
 	if (isEmpty(data.firstName)) errors.firstName = 'Must not be empty';
 	if (isEmpty(data.lastName)) errors.lastName = 'Must not be empty';
 	if (isEmpty(data.phoneNumber)) errors.phoneNumber = 'Must not be empty';
-	if (isEmpty(data.country)) errors.country = 'Must not be empty';
+	if (isEmpty(data.classification)) errors.classification = 'Must not be empty';
+	if (isEmpty(data.major)) errors.major = 'Must not be empty';
 
 	if (isEmpty(data.password)) errors.password = 'Must not be empty';
-	if (data.password !== data.confirmPassword) errors.confirmPassword = 'Passowrds must be the same';
-	if (isEmpty(data.username)) errors.username = 'Must not be empty';
+	if (isEmpty(data.confirmPassword)) errors.confirmPassword = 'Must not be empty';
+	if (data.password !== data.confirmPassword) errors.confirmPassword = 'Passwords must be the same';
 
 	return {
 		errors,

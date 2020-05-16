@@ -13,7 +13,6 @@ const {
 const { 
     loginUser,
     signUpUser,
-    //uploadProfilePhoto,
     getUserDetail,
     updateUserDetails
 } = require('./APIs/users')
@@ -28,8 +27,7 @@ app.put('/event/:eventId',auth, editEvent);
 // Users
 app.post('/login', loginUser);
 app.post('/signup', signUpUser);
-//app.post('/user/image', auth ,uploadProfilePhoto);
-app.post('/user', auth ,updateUserDetails);
+app.post('/user', auth, updateUserDetails);
 app.get('/user', auth, getUserDetail);
 
 exports.api = functions.https.onRequest(app);

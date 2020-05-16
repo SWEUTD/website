@@ -44,8 +44,9 @@ class signup extends Component {
 			firstName: '',
 			lastName: '',
 			phoneNumber: '',
-			country: '',
-			username: '',
+			classification: '',
+			major: '',
+			netid: '',
 			email: '',
 			password: '',
 			confirmPassword: '',
@@ -75,8 +76,9 @@ class signup extends Component {
 			firstName: this.state.firstName,
 			lastName: this.state.lastName,
 			phoneNumber: this.state.phoneNumber,
-			country: this.state.country,
-			username: this.state.username,
+			classification: this.state.classification,
+			major: this.state.major,
+			netid: this.state.netid,
 			email: this.state.email,
 			password: this.state.password,
 			confirmPassword: this.state.confirmPassword
@@ -141,22 +143,6 @@ class signup extends Component {
 									onChange={this.handleChange}
 								/>
 							</Grid>
-
-							<Grid item xs={12} sm={6}>
-								<TextField
-									variant="outlined"
-									required
-									fullWidth
-									id="username"
-									label="User Name"
-									name="username"
-									autoComplete="username"
-									helperText={errors.username}
-									error={errors.username ? true : false}
-									onChange={this.handleChange}
-								/>
-							</Grid>
-
 							<Grid item xs={12} sm={6}>
 								<TextField
 									variant="outlined"
@@ -166,9 +152,50 @@ class signup extends Component {
 									label="Phone Number"
 									name="phoneNumber"
 									autoComplete="phoneNumber"
-									pattern="[7-9]{1}[0-9]{9}"
 									helperText={errors.phoneNumber}
 									error={errors.phoneNumber ? true : false}
+									onChange={this.handleChange}
+								/>
+							</Grid>
+							<Grid item xs={12} sm={6}>
+								<TextField
+									variant="outlined"
+									required
+									fullWidth
+									id="classification"
+									label="Classification"
+									name="classification"
+									autoComplete="classification"
+									helperText={errors.classification}
+									error={errors.classification ? true : false}
+									onChange={this.handleChange}
+								/>
+							</Grid>
+							<Grid item xs={12} sm={6}>
+								<TextField
+									variant="outlined"
+									required
+									fullWidth
+									id="major"
+									label="Major"
+									name="major"
+									autoComplete="major"
+									helperText={errors.major}
+									error={errors.major ? true : false}
+									onChange={this.handleChange}
+								/>
+							</Grid>
+							<Grid item xs={12} sm={6}>
+								<TextField
+									variant="outlined"
+									required
+									fullWidth
+									id="netid"
+									label="NetID"
+									name="netid"
+									autoComplete="netid"
+									helperText={errors.netid}
+									error={errors.netid ? true : false}
 									onChange={this.handleChange}
 								/>
 							</Grid>
@@ -193,28 +220,11 @@ class signup extends Component {
 									variant="outlined"
 									required
 									fullWidth
-									id="country"
-									label="Country"
-									name="country"
-									autoComplete="country"
-									helperText={errors.country}
-									error={errors.country ? true : false}
-									onChange={this.handleChange}
-								/>
-							</Grid>
-
-							<Grid item xs={12}>
-								<TextField
-									variant="outlined"
-									required
-									fullWidth
 									name="password"
 									label="Password"
 									type="password"
 									id="password"
 									autoComplete="current-password"
-									helperText={errors.password}
-									error={errors.password ? true : false}
 									onChange={this.handleChange}
 								/>
 							</Grid>
@@ -241,11 +251,13 @@ class signup extends Component {
 							onClick={this.handleSubmit}
                             disabled={loading || 
                                 !this.state.email || 
-                                !this.state.password ||
+								!this.state.password ||
+								!this.state.confirmPassword || //?
                                 !this.state.firstName || 
                                 !this.state.lastName ||
-                                !this.state.country || 
-                                !this.state.username || 
+								!this.state.classification || 
+								!this.state.major || 
+                                !this.state.netid || 
                                 !this.state.phoneNumber}
 						>
 							Sign Up
