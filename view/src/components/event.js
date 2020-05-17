@@ -208,7 +208,7 @@ class event extends Component {
 		const handleSubmit = (event) => {
 			authMiddleWare(this.props.history);
 			event.preventDefault();
-			const userEvent = {
+			const memberEvent = {
 				title: this.state.title,
 				body: this.state.body
 			};
@@ -217,13 +217,13 @@ class event extends Component {
 				options = {
 					url: `/event/${this.state.eventId}`,
 					method: 'put',
-					data: userEvent
+					data: memberEvent
 				};
 			} else {
 				options = {
 					url: '/event',
 					method: 'post',
-					data: userEvent
+					data: memberEvent
 				};
 			}
 			const authToken = localStorage.getItem('AuthToken');

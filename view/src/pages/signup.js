@@ -77,7 +77,7 @@ class signup extends Component {
 		this.setState({ loading: true });
 		if(this.state.major != "Other")
 			this.state.otherMajor = "";
-		const newUserData = {
+		const newMemberData = {
 			firstName: this.state.firstName,
 			lastName: this.state.lastName,
 			phoneNumber: this.state.phoneNumber,
@@ -90,7 +90,7 @@ class signup extends Component {
 			confirmPassword: this.state.confirmPassword
 		};
 		axios
-			.post('/signup', newUserData)
+			.post('/signup', newMemberData)
 			.then((response) => {
 				localStorage.setItem('AuthToken', `${response.data.token}`);
 				this.setState({ 

@@ -86,18 +86,18 @@ class account extends Component {
 		const authToken = localStorage.getItem('AuthToken');
 		axios.defaults.headers.common = { Authorization: `${authToken}` };
 		axios
-			.get('/user')
+			.get('/member')
 			.then((response) => {
 				console.log(response.data);
 				this.setState({
-					firstName: response.data.userCredentials.firstName,
-					lastName: response.data.userCredentials.lastName,
-					email: response.data.userCredentials.email,
-					phoneNumber: response.data.userCredentials.phoneNumber,
-					classification: response.data.userCredentials.classification,
-					major: response.data.userCredentials.major,
-					otherMajor: response.data.userCredentials.otherMajor,
-					netid: response.data.userCredentials.netid,
+					firstName: response.data.memberInfo.firstName,
+					lastName: response.data.memberInfo.lastName,
+					email: response.data.memberInfo.email,
+					phoneNumber: response.data.memberInfo.phoneNumber,
+					classification: response.data.memberInfo.classification,
+					major: response.data.memberInfo.major,
+					otherMajor: response.data.memberInfo.otherMajor,
+					netid: response.data.memberInfo.netid,
 					uiLoading: false
 				});
 			})
@@ -140,7 +140,7 @@ class account extends Component {
 		};
 		
 		axios
-			.post('/user', formRequest)
+			.post('/member', formRequest)
 			.then(() => {
 				this.setState({ buttonLoading: false });
 			})

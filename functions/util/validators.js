@@ -57,3 +57,30 @@ exports.validateSignUpData = (data) => {
 		valid: Object.keys(errors).length === 0 ? true : false
 	};
 };
+
+exports.validateAddEventData = (data) => {
+	let errors = {};
+
+	if (isEmpty(data.email)) {
+		errors.email = 'Must not be empty';
+	} else if (!isEmail(data.email)) {
+		errors.email = 'Must be valid email address';
+	}
+
+	if (isEmpty(data.netid)) {
+		errors.netid = 'Must not be empty';
+	} else if (!isNetId(data.netid)) {
+		errors.netid = 'Must be valid NetID';
+	}
+
+	if (isEmpty(data.firstName)) errors.firstName = 'Must not be empty';
+	if (isEmpty(data.lastName)) errors.lastName = 'Must not be empty';
+	if (isEmpty(data.phoneNumber)) errors.phoneNumber = 'Must not be empty';
+	if (isEmpty(data.classification)) errors.classification = 'Must not be empty';
+	if (isEmpty(data.major)) errors.major = 'Must not be empty';
+
+	return {
+		errors,
+		valid: Object.keys(errors).length === 0 ? true : false
+	};
+};

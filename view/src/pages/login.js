@@ -71,12 +71,12 @@ class login extends Component {
 	handleSubmit = (event) => {
 		event.preventDefault();
 		this.setState({ loading: true });
-		const userData = {
+		const memberData = {
 			email: this.state.email,
 			password: this.state.password
 		};
 		axios
-			.post('/login', userData)
+			.post('/login', memberData)
 			.then((response) => {
 				localStorage.setItem('AuthToken', `Bearer ${response.data.token}`);
 				this.setState({ 

@@ -12,11 +12,11 @@ module.exports = (request, response, next) => {
 		.auth()
 		.verifyIdToken(idToken)
 		.then((decodedToken) => {
-			request.user = decodedToken;
-			return db.collection('users').where('userId', '==', request.user.uid).limit(1).get();
+			request.member = decodedToken;
+			return db.collection('members').where('memberId', '==', request.member.uid).limit(1).get();
 		})
 		.then((data) => {
-			request.user.netid = data.docs[0].data().netid;
+			request.member.netid = data.docs[0].data().netid;
 			return next();
 		})
 		.catch((err) => {

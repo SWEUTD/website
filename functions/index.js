@@ -11,11 +11,12 @@ const {
 } = require('./APIs/events')
 
 const { 
-    loginUser,
-    signUpUser,
-    getUserDetail,
-    updateUserDetails
-} = require('./APIs/users')
+    loginMember,
+    signUpMember,
+    getMemberDetail,
+    updateMemberDetails,
+    addEventMember,
+} = require('./APIs/members')
 
 // Events
 app.get('/events', auth, getAllEvents);
@@ -24,10 +25,11 @@ app.post('/event',auth, postOneEvent);
 app.delete('/event/:eventId',auth, deleteEvent);
 app.put('/event/:eventId',auth, editEvent);
 
-// Users
-app.post('/login', loginUser);
-app.post('/signup', signUpUser);
-app.post('/user', auth, updateUserDetails);
-app.get('/user', auth, getUserDetail);
+// Members
+app.post('/login', loginMember);
+app.post('/signup', signUpMember);
+app.post('/member', auth, updateMemberDetails);
+app.post('/newEvent', addEventMember);
+app.get('/member', auth, getMemberDetail);
 
 exports.api = functions.https.onRequest(app);
