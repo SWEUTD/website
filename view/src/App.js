@@ -4,14 +4,20 @@ import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
 import login from './pages/login';
 import signup from './pages/signup';
-import home from './pages/home';
+import portal from './pages/portal';
+import newhome from './pages/newhome'
+import about from './pages/about'
+import officers from './pages/officers'
+import events from './pages/events'
+import contact from './pages/contact'
+import join from './pages/join'
 
 const theme = createMuiTheme({
 	palette: {
 		primary: {
-			light: '#33c9dc',
-			main: '#FF5722',
-			dark: '#d50000',
+			light: '#DBC554', // swe gold
+			main: '#5A5377',  // swe purple
+			dark: '#A9A8A9',  // swe gray
 			contrastText: '#fff'
 		}
 	}
@@ -25,7 +31,13 @@ function App() {
           <Switch>
               <Route exact path="/login" component={login}/>
               <Route exact path="/signup" component={signup}/>
-              <Route exact path="/" component={home}/>
+              <Route exact path="/" component={newhome}/>
+              <Route exact path="/portal" component={portal}/>
+              <Route exact path="/about" component={about}/>
+              <Route exact path="/officers" component={officers}/>
+              <Route exact path="/events" component={events}/>
+              <Route exact path="/join" component={join}/>
+              <Route exact path="/contact" component={contact}/>
           </Switch>
         </div>
       </Router>

@@ -60,7 +60,7 @@ const styles = (theme) => ({
 	toolbar: theme.mixins.toolbar
 });
 
-class home extends Component {
+class portal extends Component {
 	state = {
 		render: false
 	};
@@ -187,4 +187,4 @@ class home extends Component {
 	}
 }
 
-export default withStyles(styles)(home);
+export default withStyles(styles)(portal);

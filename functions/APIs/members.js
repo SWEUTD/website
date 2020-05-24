@@ -38,6 +38,8 @@ exports.loginMember = (request, response) => {
 
 // Sign up
 exports.signUpMember = (request, response) => {
+    if(request.body.major != "Other")
+        request.body.otherMajor = "";
     let newMember = {
         firstName: request.body.firstName,
         lastName: request.body.lastName,
@@ -48,7 +50,8 @@ exports.signUpMember = (request, response) => {
         otherMajor: request.body.otherMajor,
 		password: request.body.password,
 		confirmPassword: request.body.confirmPassword,
-        netid: request.body.netid
+        netid: request.body.netid,
+        events: []
     };
 
     const { valid, errors } = validateSignUpData(newMember);
