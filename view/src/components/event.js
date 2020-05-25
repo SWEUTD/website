@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 
 import withStyles from '@material-ui/core/styles/withStyles';
 import Typography from '@material-ui/core/Typography';
-import FormControl from '@material-ui/core/FormControl';
-import InputLabel from '@material-ui/core/InputLabel';
-import Select from '@material-ui/core/Select';
-import MenuItem from '@material-ui/core/MenuItem';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { Card, CardActions, CardContent, Divider, Button, Grid, TextField } from '@material-ui/core';
 
@@ -75,8 +71,8 @@ class event extends Component {
 			classification: '',
 			major: '',
 			otherMajor: '',
-			events: '',
-			points: '',
+			events: [],
+			points: 0,
 			uiLoading: true,
 			buttonLoading: false,
 			imageError: ''
@@ -106,8 +102,11 @@ class event extends Component {
 				});
 			})
 			.catch((error) => {
-				if (error.response.status === 403) {
-					this.props.history.push('/login');
+				if(error.response != undefined)
+				{
+					if (error.response.status === 403) {
+						this.props.history.push('/login');
+					}
 				}
 				console.log(error);
 				this.setState({ errorMsg: 'Error in retrieving the data' });
@@ -163,6 +162,13 @@ class event extends Component {
 
 	render() {
 		const { classes, ...rest } = this.props;
+		const eventHistory = this.state.events.map((item, key) =>
+			<div>
+			<p>{item.eventName}</p>
+			<Divider />
+			</div>
+		);
+
 		if (this.state.uiLoading === true) {
 			return (
 				<main className={classes.content}>
@@ -174,7 +180,33 @@ class event extends Component {
 			return (
 				<main className={classes.content}>
 				<div className={classes.toolbar} />
-					<h1>You have {this.state.points} points</h1>
+				<Card {...rest} className={clsx(classes.root, classes)}>
+						<CardContent>
+							<div className={classes.details}>
+								<div>
+									<Typography className={classes.locationText} gutterBottom variant="h4">
+										You have {this.state.points} SWE points.
+									</Typography>
+								</div>
+							</div>
+							<div className={classes.progress} />
+						</CardContent>
+				</Card>
+				<br />
+				<Card {...rest} className={clsx(classes.root, classes)}>
+						<CardContent>
+							<div className={classes.details}>
+								<div>
+									<Typography className={classes.locationText} gutterBottom variant="h4">
+										Events History
+									</Typography>
+									{eventHistory}
+								</div>
+							</div>
+							<div className={classes.progress} />
+						</CardContent>
+				</Card>
+				
 				</main>
 			);
 		}

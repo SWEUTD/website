@@ -178,7 +178,7 @@ exports.addEventMember = (request, response) => {
             if (doc.exists) {
                 let eventsList = doc.data().events
                 eventsList.push(eventToAdd)
-                let newPointTotal = doc.data().points + eventToAdd.eventPoints
+                let newPointTotal = parseInt(doc.data().points) + parseInt(eventToAdd.eventPoints)
                 const updatedMember = {
                     events: eventsList,
                     points: newPointTotal

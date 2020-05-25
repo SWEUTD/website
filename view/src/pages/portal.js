@@ -5,12 +5,10 @@ import Account from '../components/account';
 import Event from '../components/event';
 
 import Drawer from '@material-ui/core/Drawer';
-import AppBar from '@material-ui/core/AppBar';
-import Container from '@material-ui/core/Container'
-import CssBaseline from '@material-ui/core/CssBaseline';
+import Box from '@material-ui/core/Box';
 import Toolbar from '@material-ui/core/Toolbar';
+import ScopedCssBaseline from '@material-ui/core/ScopedCssBaseline'
 import List from '@material-ui/core/List';
-import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
@@ -43,13 +41,6 @@ const styles = (theme) => ({
 	content: {
 		flexGrow: 1,
 		padding: theme.spacing(3)
-	},
-	avatar: {
-		height: 110,
-		width: 100,
-		flexShrink: 0,
-		flexGrow: 0,
-		marginTop: 20
 	},
 	uiProgess: {
 		position: 'fixed',
@@ -112,8 +103,11 @@ class portal extends Component {
 				});
 			})
 			.catch((error) => {
-				if(error.response.status === 403) {
-					this.props.history.push('/login')
+				if(error.response != undefined)
+				{
+					if(error.response.status === 403) {
+						this.props.history.push('/login')
+					}
 				}
 				console.log(error);
 				this.setState({ errorMsg: 'Error in retrieving the data' });
@@ -143,9 +137,9 @@ class portal extends Component {
 					>
 						<div className={classes.toolbar} />
 						<Divider />
-						<center>
+						
+       					<center>
 							<p>
-								{' '}
 								{this.state.firstName} {this.state.lastName}
 							</p>
 						</center>
@@ -156,7 +150,7 @@ class portal extends Component {
 									{' '}
 									<NotesIcon />{' '}
 								</ListItemIcon>
-								<ListItemText primary="Event" />
+								<ListItemText primary="Points" />
 							</ListItem>
 
 							<ListItem button key="Account" onClick={this.loadAccountPage}>

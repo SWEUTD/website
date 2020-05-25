@@ -19,23 +19,24 @@ const styles = (theme) => ({
 class navbar extends Component {
     render() {
         const { classes } = this.props;
+        const navbar = {backgroundColor: '#F16E10 !important'};
         return(
             <Container className={classes.container}>
             <AppBar position="fixed" className={classes.appBar}>
-					<Navbar className={classes.navbar} bg="dark" variant="dark" expand="lg">
-						<Navbar.Brand href="#home">
-						<img
-							alt=""
-							src={logo}
-							width="30"
-							height="30"
-							className="d-inline-block align-top"
-						/>{' '}
-						UTD SWE
-						</Navbar.Brand>
+					<Navbar bg="primary" variant="dark" expand="lg">
+                        <Navbar.Brand href="#home">
+                        <img
+                            alt=""
+                            src={logo}
+                            width="30"
+                            height="30"
+                            className="d-inline-block align-top"
+                        />{' '}
+                        UTD SWE
+                        </Navbar.Brand>
 						<Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
-                            <Nav className="mr-auto">
+                            <Nav className="mr-auto" style={navbar}>
                             <Nav.Link href="/">Home</Nav.Link>
                             <Nav.Link href="/about">About</Nav.Link>
                             <Nav.Link href="/officers">Officers</Nav.Link>

@@ -24,12 +24,6 @@ const styles = (theme) => ({
 	details: {
 		display: 'flex'
 	},
-	avatar: {
-		height: 110,
-		width: 100,
-		flexShrink: 0,
-		flexGrow: 0
-	},
 	locationText: {
 		paddingLeft: '15px'
 	},
@@ -179,7 +173,6 @@ class account extends Component {
 							</div>
 							<div className={classes.progress} />
 						</CardContent>
-						<Divider />
 					</Card>
 
 					<br />
@@ -304,7 +297,6 @@ class account extends Component {
 									
 								</Grid>
 							</CardContent>
-							<Divider />
 							<CardActions />
 						</form>
 					</Card>
