@@ -13,6 +13,8 @@ import Container from '@material-ui/core/Container';
 import withStyles from '@material-ui/core/styles/withStyles';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
+import NavBar from '../components/navbar'
+
 import axios from 'axios';
 import { FormControl, InputLabel, Menu } from '@material-ui/core';
 
@@ -96,7 +98,7 @@ class signup extends Component {
 				this.setState({ 
 					loading: false,
 				});	
-				this.props.history.push('/');
+				this.props.history.push('/portal');
 			})
 			.catch((error) => {
 				this.setState({
@@ -113,7 +115,7 @@ class signup extends Component {
 		const { errors, loading } = this.state;
 		return (
 			<Container component="main" maxWidth="xs">
-				<CssBaseline />
+				<NavBar />
 				<div className={classes.paper}>
 					<Avatar className={classes.avatar}>
 						<LockOutlinedIcon />

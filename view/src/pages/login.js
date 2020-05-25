@@ -12,6 +12,8 @@ import withStyles from '@material-ui/core/styles/withStyles';
 import Container from '@material-ui/core/Container';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
+import NavBar from '../components/navbar'
+
 import axios from 'axios';
 
 const styles = (theme) => ({
@@ -55,10 +57,13 @@ class login extends Component {
 	}
 
 	componentWillReceiveProps(nextProps) {
-		if (nextProps.UI.errors) {
+		if (nextProps.UI != undefined)
+		{
+			if(nextProps.UI.errors) {
 			this.setState({
 				errors: nextProps.UI.errors
-			});
+				});
+			}
 		}
 	}
 
@@ -82,7 +87,7 @@ class login extends Component {
 				this.setState({ 
 					loading: false,
 				});		
-				this.props.history.push('/');
+				this.props.history.push('/portal');
 			})
 			.catch((error) => {				
 				this.setState({
@@ -97,7 +102,7 @@ class login extends Component {
 		const { errors, loading } = this.state;
 		return (
 			<Container component="main" maxWidth="xs">
-				<CssBaseline />
+				<NavBar />
 				<div className={classes.paper}>
 					<Avatar className={classes.avatar}>
 						<LockOutlinedIcon />

@@ -2,26 +2,16 @@ import React, { Component } from 'react';
 
 import withStyles from '@material-ui/core/styles/withStyles';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import Dialog from '@material-ui/core/Dialog';
-import AddCircleIcon from '@material-ui/icons/AddCircle';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
-import CloseIcon from '@material-ui/icons/Close';
-import Slide from '@material-ui/core/Slide';
-import TextField from '@material-ui/core/TextField';
-import Grid from '@material-ui/core/Grid';
-import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
+import FormControl from '@material-ui/core/FormControl';
+import InputLabel from '@material-ui/core/InputLabel';
+import Select from '@material-ui/core/Select';
+import MenuItem from '@material-ui/core/MenuItem';
 import CircularProgress from '@material-ui/core/CircularProgress';
-import CardContent from '@material-ui/core/CardContent';
-import MuiDialogTitle from '@material-ui/core/DialogTitle';
-import MuiDialogContent from '@material-ui/core/DialogContent';
+import { Card, CardActions, CardContent, Divider, Button, Grid, TextField } from '@material-ui/core';
+
+import clsx from 'clsx';
 
 import axios from 'axios';
-import dayjs from 'dayjs';
-import relativeTime from 'dayjs/plugin/relativeTime';
 import { authMiddleWare } from '../util/auth';
 
 const styles = (theme) => ({
@@ -29,42 +19,23 @@ const styles = (theme) => ({
 		flexGrow: 1,
 		padding: theme.spacing(3)
 	},
-	appBar: {
-		position: 'relative'
-	},
-	title: {
-		marginLeft: theme.spacing(2),
-		flex: 1
-	},
-	submitButton: {
-		display: 'block',
-		color: 'white',
-		textAlign: 'center',
-		position: 'absolute',
-		top: 14,
-		right: 10
-	},
-	floatingButton: {
-		position: 'fixed',
-		bottom: 0,
-		right: 0
-	},
-	form: {
-		width: '98%',
-		marginLeft: 13,
-		marginTop: theme.spacing(3)
-	},
 	toolbar: theme.mixins.toolbar,
-	root: {
-		minWidth: 470
+	root: {},
+	details: {
+		display: 'flex'
 	},
-	bullet: {
-		display: 'inline-block',
-		margin: '0 2px',
-		transform: 'scale(0.8)'
+	avatar: {
+		height: 110,
+		width: 100,
+		flexShrink: 0,
+		flexGrow: 0
 	},
-	pos: {
-		marginBottom: 12
+	locationText: {
+		paddingLeft: '15px'
+	},
+	buttonProperty: {
+		position: 'absolute',
+		top: '50%'
 	},
 	uiProgess: {
 		position: 'fixed',
@@ -74,23 +45,21 @@ const styles = (theme) => ({
 		left: '50%',
 		top: '35%'
 	},
-	dialogeStyle: {
-		maxWidth: '50%'
+	progess: {
+		position: 'absolute'
 	},
-	viewRoot: {
-		margin: 0,
-		padding: theme.spacing(2)
+	uploadButton: {
+		marginLeft: '8px',
+		margin: theme.spacing(1)
 	},
-	closeButton: {
-		position: 'absolute',
-		right: theme.spacing(1),
-		top: theme.spacing(1),
-		color: theme.palette.grey[500]
+	customError: {
+		color: 'red',
+		fontSize: '0.8rem',
+		marginTop: 10
+	},
+	submitButton: {
+		marginTop: '10px'
 	}
-});
-
-const Transition = React.forwardRef(function Transition(props, ref) {
-	return <Slide direction="up" ref={ref} {...props} />;
 });
 
 class event extends Component {
@@ -98,21 +67,52 @@ class event extends Component {
 		super(props);
 
 		this.state = {
+			firstName: '',
+			lastName: '',
+			email: '',
+			phoneNumber: '',
+			netid: '',
+			classification: '',
+			major: '',
+			otherMajor: '',
 			events: '',
-			title: '',
-			body: '',
-			eventId: '',
-			errors: [],
-			open: false,
+			points: '',
 			uiLoading: true,
-			buttonType: '',
-			viewOpen: false
+			buttonLoading: false,
+			imageError: ''
 		};
-
-		this.deleteEventHandler = this.deleteEventHandler.bind(this);
-		this.handleEditClickOpen = this.handleEditClickOpen.bind(this);
-		this.handleViewOpen = this.handleViewOpen.bind(this);
 	}
+
+	componentWillMount = () => {
+		authMiddleWare(this.props.history);
+		const authToken = localStorage.getItem('AuthToken');
+		axios.defaults.headers.common = { Authorization: `${authToken}` };
+		axios
+			.get('/member')
+			.then((response) => {
+				console.log(response.data);
+				this.setState({
+					firstName: response.data.memberInfo.firstName,
+					lastName: response.data.memberInfo.lastName,
+					email: response.data.memberInfo.email,
+					phoneNumber: response.data.memberInfo.phoneNumber,
+					classification: response.data.memberInfo.classification,
+					major: response.data.memberInfo.major,
+					otherMajor: response.data.memberInfo.otherMajor,
+					netid: response.data.memberInfo.netid,
+					events: response.data.memberInfo.events,
+					points: response.data.memberInfo.points,
+					uiLoading: false
+				});
+			})
+			.catch((error) => {
+				if (error.response.status === 403) {
+					this.props.history.push('/login');
+				}
+				console.log(error);
+				this.setState({ errorMsg: 'Error in retrieving the data' });
+			});
+	};
 
 	handleChange = (event) => {
 		this.setState({
@@ -120,133 +120,49 @@ class event extends Component {
 		});
 	};
 
-	componentWillMount = () => {
+	handleImageChange = (event) => {
+		this.setState({
+			image: event.target.files[0]
+		});
+	};
+
+	updateFormValues = (event) => {
+		event.preventDefault();
+		this.setState({ buttonLoading: true });
 		authMiddleWare(this.props.history);
 		const authToken = localStorage.getItem('AuthToken');
 		axios.defaults.headers.common = { Authorization: `${authToken}` };
+		if(this.state.major != "Other")
+			this.state.otherMajor = "";
+		const formRequest = {
+			firstName: this.state.firstName,
+			lastName: this.state.lastName,
+			classification: this.state.classification,
+			major: this.state.major,
+			otherMajor: this.state.otherMajor,
+			phoneNumber: this.state.phoneNumber,
+			events: this.state.events,
+			points: this.state.points
+		};
+		
 		axios
-			.get('/events')
-			.then((response) => {
-				this.setState({
-					events: response.data,
-					uiLoading: false
-				});
+			.post('/member', formRequest)
+			.then(() => {
+				this.setState({ buttonLoading: false });
 			})
-			.catch((err) => {
-				console.log(err);
+			.catch((error) => {
+				if (error.response.status === 403) {
+					this.props.history.push('/login');
+				}
+				console.log(error);
+				this.setState({
+					buttonLoading: false
+				});
 			});
 	};
 
-	deleteEventHandler(data) {
-		authMiddleWare(this.props.history);
-		const authToken = localStorage.getItem('AuthToken');
-		axios.defaults.headers.common = { Authorization: `${authToken}` };
-		let eventId = data.event.eventId;
-		axios
-			.delete(`event/${eventId}`)
-			.then(() => {
-				window.location.reload();
-			})
-			.catch((err) => {
-				console.log(err);
-			});
-	}
-
-	handleEditClickOpen(data) {
-		this.setState({
-			title: data.event.title,
-			body: data.event.body,
-			eventId: data.event.eventId,
-			buttonType: 'Edit',
-			open: true
-		});
-	}
-
-	handleViewOpen(data) {
-		this.setState({
-			title: data.event.title,
-			body: data.event.body,
-			viewOpen: true
-		});
-	}
-
 	render() {
-		const DialogTitle = withStyles(styles)((props) => {
-			const { children, classes, onClose, ...other } = props;
-			return (
-				<MuiDialogTitle disableTypography className={classes.root} {...other}>
-					<Typography variant="h6">{children}</Typography>
-					{onClose ? (
-						<IconButton aria-label="close" className={classes.closeButton} onClick={onClose}>
-							<CloseIcon />
-						</IconButton>
-					) : null}
-				</MuiDialogTitle>
-			);
-		});
-
-		const DialogContent = withStyles((theme) => ({
-			viewRoot: {
-				padding: theme.spacing(2)
-			}
-		}))(MuiDialogContent);
-
-		dayjs.extend(relativeTime);
-		const { classes } = this.props;
-		const { open, errors, viewOpen } = this.state;
-
-		const handleClickOpen = () => {
-			this.setState({
-				eventId: '',
-				title: '',
-				body: '',
-				buttonType: '',
-				open: true
-			});
-		};
-
-		const handleSubmit = (event) => {
-			authMiddleWare(this.props.history);
-			event.preventDefault();
-			const memberEvent = {
-				title: this.state.title,
-				body: this.state.body
-			};
-			let options = {};
-			if (this.state.buttonType === 'Edit') {
-				options = {
-					url: `/event/${this.state.eventId}`,
-					method: 'put',
-					data: memberEvent
-				};
-			} else {
-				options = {
-					url: '/event',
-					method: 'post',
-					data: memberEvent
-				};
-			}
-			const authToken = localStorage.getItem('AuthToken');
-			axios.defaults.headers.common = { Authorization: `${authToken}` };
-			axios(options)
-				.then(() => {
-					this.setState({ open: false });
-					window.location.reload();
-				})
-				.catch((error) => {
-					this.setState({ open: true, errors: error.response.data });
-					console.log(error);
-				});
-		};
-
-		const handleViewClose = () => {
-			this.setState({ viewOpen: false });
-		};
-
-		const handleClose = (event) => {
-			this.setState({ open: false });
-		};
-
+		const { classes, ...rest } = this.props;
 		if (this.state.uiLoading === true) {
 			return (
 				<main className={classes.content}>
@@ -257,133 +173,8 @@ class event extends Component {
 		} else {
 			return (
 				<main className={classes.content}>
-					<div className={classes.toolbar} />
-
-					<IconButton
-						className={classes.floatingButton}
-						color="primary"
-						aria-label="Add Event"
-						onClick={handleClickOpen}
-					>
-						<AddCircleIcon style={{ fontSize: 60 }} />
-					</IconButton>
-					<Dialog fullScreen open={open} onClose={handleClose} TransitionComponent={Transition}>
-						<AppBar className={classes.appBar}>
-							<Toolbar>
-								<IconButton edge="start" color="inherit" onClick={handleClose} aria-label="close">
-									<CloseIcon />
-								</IconButton>
-								<Typography variant="h6" className={classes.title}>
-									{this.state.buttonType === 'Edit' ? 'Edit Event' : 'Create a new Event'}
-								</Typography>
-								<Button
-									autoFocus
-									color="inherit"
-									onClick={handleSubmit}
-									className={classes.submitButton}
-								>
-									{this.state.buttonType === 'Edit' ? 'Save' : 'Submit'}
-								</Button>
-							</Toolbar>
-						</AppBar>
-
-						<form className={classes.form} noValidate>
-							<Grid container spacing={2}>
-								<Grid item xs={12}>
-									<TextField
-										variant="outlined"
-										required
-										fullWidth
-										id="eventTitle"
-										label="Event Title"
-										name="title"
-										autoComplete="eventTitle"
-										helperText={errors.title}
-										value={this.state.title}
-										error={errors.title ? true : false}
-										onChange={this.handleChange}
-									/>
-								</Grid>
-								<Grid item xs={12}>
-									<TextField
-										variant="outlined"
-										required
-										fullWidth
-										id="eventDetails"
-										label="Event Details"
-										name="body"
-										autoComplete="eventDetails"
-										multiline
-										rows={25}
-										rowsMax={25}
-										helperText={errors.body}
-										error={errors.body ? true : false}
-										onChange={this.handleChange}
-										value={this.state.body}
-									/>
-								</Grid>
-							</Grid>
-						</form>
-					</Dialog>
-
-					<Grid container spacing={2}>
-						{this.state.events.map((event) => (
-							<Grid item xs={12} sm={6}>
-								<Card className={classes.root} variant="outlined">
-									<CardContent>
-										<Typography variant="h5" component="h2">
-											{event.title}
-										</Typography>
-										<Typography className={classes.pos} color="textSecondary">
-											{dayjs(event.createdAt).fromNow()}
-										</Typography>
-										<Typography variant="body2" component="p">
-											{`${event.body.substring(0, 65)}`}
-										</Typography>
-									</CardContent>
-									<CardActions>
-										<Button size="small" color="primary" onClick={() => this.handleViewOpen({ event })}>
-											{' '}
-											View{' '}
-										</Button>
-										<Button size="small" color="primary" onClick={() => this.handleEditClickOpen({ event })}>
-											Edit
-										</Button>
-										<Button size="small" color="primary" onClick={() => this.deleteEventHandler({ event })}>
-											Delete
-										</Button>
-									</CardActions>
-								</Card>
-							</Grid>
-						))}
-					</Grid>
-
-					<Dialog
-						onClose={handleViewClose}
-						aria-labelledby="customized-dialog-title"
-						open={viewOpen}
-						fullWidth
-						classes={{ paperFullWidth: classes.dialogeStyle }}
-					>
-						<DialogTitle id="customized-dialog-title" onClose={handleViewClose}>
-							{this.state.title}
-						</DialogTitle>
-						<DialogContent dividers>
-							<TextField
-								fullWidth
-								id="eventDetails"
-								name="body"
-								multiline
-								readonly
-								rows={1}
-								rowsMax={25}
-								value={this.state.body}
-								InputProps={{
-									disableUnderline: true
-								}}
-							/>
-						</DialogContent>
-					</Dialog>
+				<div className={classes.toolbar} />
+					<h1>You have {this.state.points} points</h1>
 				</main>
 			);
 		}

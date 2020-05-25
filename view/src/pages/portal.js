@@ -6,6 +6,7 @@ import Event from '../components/event';
 
 import Drawer from '@material-ui/core/Drawer';
 import AppBar from '@material-ui/core/AppBar';
+import Container from '@material-ui/core/Container'
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Toolbar from '@material-ui/core/Toolbar';
 import List from '@material-ui/core/List';
@@ -19,6 +20,7 @@ import AccountBoxIcon from '@material-ui/icons/AccountBox';
 import NotesIcon from '@material-ui/icons/Notes';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import NavBar from '../components/navbar'
 
 import { authMiddleWare } from '../util/auth'
 
@@ -129,14 +131,9 @@ class portal extends Component {
 		} else {
 			return (
 				<div className={classes.root}>
-					<CssBaseline />
-					<AppBar position="fixed" className={classes.appBar}>
-						<Toolbar>
-							<Typography variant="h6" noWrap>
-								EventApp
-							</Typography>
-						</Toolbar>
-					</AppBar>
+					<Toolbar position = 'fixed' className={classes.appBar}>
+						<NavBar/>
+					</Toolbar>
 					<Drawer
 						className={classes.drawer}
 						variant="permanent"
@@ -154,7 +151,7 @@ class portal extends Component {
 						</center>
 						<Divider />
 						<List>
-							<ListItem button key="Event" onClick={this.loadEventPage}>
+							<ListItem button key="Points" onClick={this.loadEventPage}>
 								<ListItemIcon>
 									{' '}
 									<NotesIcon />{' '}
@@ -179,9 +176,9 @@ class portal extends Component {
 							</ListItem>
 						</List>
 					</Drawer>
-
 					<div>{this.state.render ? <Account /> : <Event />}</div>
 				</div>
+				
 			);
 		}
 	}

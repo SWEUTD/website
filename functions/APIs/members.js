@@ -30,7 +30,7 @@ exports.loginMember = (request, response) => {
             console.error(error);
             return response.status(403).json(
                 { 
-                    general: 'wrong credentials, please try again' 
+                    general: 'Wrong credentials, please try again' 
                 }
             );
         })
@@ -51,7 +51,8 @@ exports.signUpMember = (request, response) => {
 		password: request.body.password,
 		confirmPassword: request.body.confirmPassword,
         netid: request.body.netid,
-        events: []
+        events: [],
+        points: 0
     };
 
     const { valid, errors } = validateSignUpData(newMember);
@@ -94,9 +95,10 @@ exports.signUpMember = (request, response) => {
                 phoneNumber: newMember.phoneNumber,
                 classification: newMember.classification,
                 major: newMember.major,
-                events: newMember.events,
                 otherMajor: newMember.otherMajor,
                 email: newMember.email,
+                events: newMember.events,
+                points: newMember.points,
                 createdAt: new Date().toISOString(),
                 memberId
             };
@@ -148,12 +150,12 @@ exports.updateMemberDetails = (request, response) => {
     });
 }
 
-// Add event to member
+// Add event and points to member
 exports.addEventMember = (request, response) => {
     const eventToAdd = {
-        points: request.body.points,
-        name: request.body.name,
-        date: request.body.date
+        eventPoints: request.body.eventPoints,
+        eventName: request.body.eventName,
+        eventDate: request.body.eventDate
     }
     const memberRequest = {
         firstName: request.body.firstName,
@@ -176,8 +178,10 @@ exports.addEventMember = (request, response) => {
             if (doc.exists) {
                 let eventsList = doc.data().events
                 eventsList.push(eventToAdd)
+                let newPointTotal = doc.data().points + eventToAdd.eventPoints
                 const updatedMember = {
-                    events: eventsList
+                    events: eventsList,
+                    points: newPointTotal
                 }
                 db.doc(`/members/${memberRequest.netid}`).update(updatedMember)
                 return response.status(201).json({ general: 'Member updated' });
@@ -194,6 +198,7 @@ exports.addEventMember = (request, response) => {
                     email: memberRequest.email,
                     isMember: false,
                     events: [eventToAdd],
+                    points: eventToAdd.eventPoints,
                     createdAt: new Date().toISOString(),
                     memberId
                 };

@@ -41,7 +41,7 @@ class navbar extends Component {
                             <Nav.Link href="/officers">Officers</Nav.Link>
                             <Nav.Link href="/events">Events</Nav.Link>
                             <Nav.Link href="/join">Join</Nav.Link>
-                            <Nav.Link href="/login">Login</Nav.Link>
+                            <Nav.Link href="/portal">Portal</Nav.Link>
                             <Nav.Link href="/contact">Contact</Nav.Link>
                             </Nav>
                         </Navbar.Collapse>
