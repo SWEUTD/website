@@ -19,7 +19,10 @@ const theme = createMuiTheme({
 			main: '#5A5377',  // swe purple
 			dark: '#A9A8A9',  // swe gray
 			contrastText: '#fff'
-		}
+    },
+    background: {
+      default: "#A9A8A9"
+    }
 	}
 });
 

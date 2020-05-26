@@ -162,7 +162,7 @@ class account extends Component {
 			return (
 				<main className={classes.content}>
 					<div className={classes.toolbar} />
-					<Card {...rest} className={clsx(classes.root, classes)}>
+					<Card className={classes.root} variant="outlined">
 						<CardContent>
 							<div className={classes.details}>
 								<div>
@@ -176,7 +176,7 @@ class account extends Component {
 					</Card>
 
 					<br />
-					<Card {...rest} className={clsx(classes.root, classes)}>
+					<Card className={classes.root} variant="outlined">
 						<form autoComplete="off" noValidate>
 							<Divider />
 							<CardContent>

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import withStyles from '@material-ui/core/styles/withStyles';
 import Container from '@material-ui/core/Container'
+import CssBaseline from '@material-ui/core/CssBaseline'
 
 import NavBar from '../components/navbar'
 
@@ -15,6 +16,7 @@ class about extends Component {
 		return (
 			<div className={classes.root}>
 				<NavBar />
+				<CssBaseline />
 				<Container className={classes.container}>
 					<h1>About</h1>
 				</Container>

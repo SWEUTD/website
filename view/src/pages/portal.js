@@ -7,7 +7,7 @@ import Event from '../components/event';
 import Drawer from '@material-ui/core/Drawer';
 import Box from '@material-ui/core/Box';
 import Toolbar from '@material-ui/core/Toolbar';
-import ScopedCssBaseline from '@material-ui/core/ScopedCssBaseline'
+import CssBaseline from '@material-ui/core/CssBaseline'
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
@@ -22,7 +22,7 @@ import NavBar from '../components/navbar'
 
 import { authMiddleWare } from '../util/auth'
 
-const drawerWidth = 240;
+const drawerWidth = "240px";
 
 const styles = (theme) => ({
 	root: {
@@ -128,6 +128,7 @@ class portal extends Component {
 					<Toolbar position = 'fixed' className={classes.appBar}>
 						<NavBar/>
 					</Toolbar>
+					<CssBaseline />
 					<Drawer
 						className={classes.drawer}
 						variant="permanent"

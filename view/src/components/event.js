@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import withStyles from '@material-ui/core/styles/withStyles';
 import Typography from '@material-ui/core/Typography';
 import CircularProgress from '@material-ui/core/CircularProgress';
-import { Card, CardActions, CardContent, Divider, Button, Grid, TextField } from '@material-ui/core';
+import { Card, CardActions, CardContent, Divider, Button, Box, Grid, TextField } from '@material-ui/core';
 
 import clsx from 'clsx';
 
@@ -16,15 +16,8 @@ const styles = (theme) => ({
 		padding: theme.spacing(3)
 	},
 	toolbar: theme.mixins.toolbar,
-	root: {},
 	details: {
 		display: 'flex'
-	},
-	avatar: {
-		height: 110,
-		width: 100,
-		flexShrink: 0,
-		flexGrow: 0
 	},
 	locationText: {
 		paddingLeft: '15px'
@@ -162,12 +155,69 @@ class event extends Component {
 
 	render() {
 		const { classes, ...rest } = this.props;
-		const eventHistory = this.state.events.map((item, key) =>
-			<div>
-			<p>{item.eventName}</p>
-			<Divider />
+
+		const header = 
+			<div fullWidth>
+				<Typography className={classes.locationText} gutterBottom variant="h4" fullWidth>
+					Your Attendance History
+				</Typography>
+			</div>
+		
+		const history = this.state.events.map((item, key) =>
+			<div fullWidth>
+			<br />
+				<Divider />
+			<br />
+				<p class="alignleft">{item.eventName}</p>
+				<p class="aligncenter">{item.eventDate}</p>
+				<p class="alignright">{item.eventPoints} pt</p>
+			<br />
 			</div>
 		);
+
+		
+		
+		let rewardStatus;
+		let nextLevel;
+		if(this.state.points < 3) {
+			nextLevel = 3 - this.state.points
+			rewardStatus = 
+				<div>
+					<Typography className={classes.locationText} gutterBottom variant="h4" align="center">You are {nextLevel} points away from being a SWE Star!</Typography>
+					<Divider />
+					<br />
+					<p>Reach the bronze tier and unlock:</p>
+					<ul>
+						<li>SWE Gift Bag</li>
+					</ul>
+				</div>
+		}
+		else if (this.state.points < 5) {
+			nextLevel = 5 - this.state.points
+			rewardStatus =
+				<div fullWidth>
+					<Typography className={classes.locationText} gutterBottom variant="h4" align="center">You are a SWE Star!</Typography>
+					<Divider />
+					<br />
+					<p>You are {nextLevel} points away from the silver tier</p>
+					<p>Reach the silver tier and unlock:</p>
+					<ul>
+						<li>Exclusive invite to our end-of-summer celebration!</li>
+					</ul>
+				</div>
+		}
+		else if (this.state.points < 7) {
+			nextLevel = 7 - this.state.points
+			rewardStatus =
+				<div>
+					<Typography className={classes.locationText} gutterBottom variant="h4" align="center">You are a SWE Star!</Typography>
+					<br />
+					<p>Reach the gold tier and unlock:</p>
+					<ul>
+						<li>Social Media Shoutout</li>
+					</ul>
+				</div>
+		}
 
 		if (this.state.uiLoading === true) {
 			return (
@@ -180,33 +230,40 @@ class event extends Component {
 			return (
 				<main className={classes.content}>
 				<div className={classes.toolbar} />
-				<Card {...rest} className={clsx(classes.root, classes)}>
-						<CardContent>
-							<div className={classes.details}>
-								<div>
-									<Typography className={classes.locationText} gutterBottom variant="h4">
-										You have {this.state.points} SWE points.
-									</Typography>
-								</div>
-							</div>
-							<div className={classes.progress} />
-						</CardContent>
-				</Card>
-				<br />
-				<Card {...rest} className={clsx(classes.root, classes)}>
-						<CardContent>
-							<div className={classes.details}>
-								<div>
-									<Typography className={classes.locationText} gutterBottom variant="h4">
-										Events History
-									</Typography>
-									{eventHistory}
-								</div>
-							</div>
-							<div className={classes.progress} />
-						</CardContent>
-				</Card>
-				
+
+				<Grid container
+					spacing={5}
+					height="100%"
+					width="100%"
+					alignItems="stretch"
+					justify="space-evenly"
+				>
+					<Grid item md={6} xs={12}>
+						<Card variant="outlined" fullWidth>
+							<CardContent align="center" fullWidth>
+								<Typography className={classes.locationText} gutterBottom variant="h4">
+									{this.state.points} SWE points
+								</Typography>
+							</CardContent>
+						</Card>
+						<br />
+						<Card variant="outlined" fullWidth>
+							<CardContent align="left" fullWidth>
+								{rewardStatus}
+							</CardContent>
+						</Card>
+					</Grid>
+
+					<Grid item md={6} xs={12}>
+						<Card variant="outlined" style={{height:"100%"}} fullWidth>
+							<CardContent align="center" fullWidth>				
+									{header}
+									{history}
+							</CardContent>
+						</Card>
+					</Grid>
+				</Grid>
+
 				</main>
 			);
 		}
