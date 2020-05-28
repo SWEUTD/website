@@ -128,7 +128,6 @@ class portal extends Component {
 					<Toolbar position = 'fixed' className={classes.appBar}>
 						<NavBar/>
 					</Toolbar>
-					<CssBaseline />
 					<Drawer
 						className={classes.drawer}
 						variant="permanent"

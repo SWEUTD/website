@@ -6,8 +6,10 @@ import AppBar from '@material-ui/core/AppBar';
 import Container from '@material-ui/core/Container'
 
 // bootstrap imports
-import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar'
+import Nav from 'react-bootstrap/Nav'
+import NavDropdown from 'react-bootstrap/NavDropdown'
+import NavItem from 'react-bootstrap/NavItem'
 
 // my imports
 import logo from '../assets/logo.png'
@@ -24,7 +26,7 @@ class navbar extends Component {
         return(
             <div>
                 <AppBar position="fixed" className={classes.appBar}>
-                        <Navbar bg="primary" variant="dark" expand="lg">
+                        <Navbar bg="dark" variant="dark" expand="lg">
                             <Navbar.Brand href="#home">
                             <img
                                 alt=""
@@ -38,13 +40,21 @@ class navbar extends Component {
                             <Navbar.Toggle aria-controls="basic-navbar-nav" />
                             <Navbar.Collapse id="basic-navbar-nav">
                                 <Nav className="mr-auto" style={navbar}>
-                                <Nav.Link href="/">Home</Nav.Link>
-                                <Nav.Link href="/about">About</Nav.Link>
-                                <Nav.Link href="/officers">Officers</Nav.Link>
-                                <Nav.Link href="/events">Events</Nav.Link>
-                                <Nav.Link href="/join">Join</Nav.Link>
-                                <Nav.Link href="/portal">Portal</Nav.Link>
-                                <Nav.Link href="/contact">Contact</Nav.Link>
+                                    <Nav.Link href="/">Home</Nav.Link>
+                                    <Nav.Link href="/about">About</Nav.Link>
+                                    <Nav.Link href="/officers">Officers</Nav.Link>
+                                    <NavDropdown title="What We Do" id="basic-nav-dropdown">
+                                        <NavDropdown.Item href="/events">Events</NavDropdown.Item>
+                                        <NavDropdown.Item href="https://hansikasundaresan.github.io/LadiesinTech/">Ladies in Tech Mentorship Program</NavDropdown.Item>
+                                        <NavDropdown.Item href="http://wehackutd.com">WEHack</NavDropdown.Item>
+                                    </NavDropdown>
+                                    <Nav.Link href="/join">Join</Nav.Link>
+                                    <Nav.Link href="/portal">Member Portal</Nav.Link>
+                                    <Nav.Link href="/contact">Contact</Nav.Link>
+                                </Nav>
+                                <Nav pullRight>
+                                    <NavItem eventKey={1} href="#">Hello</NavItem>
+                                    <NavItem eventKey={2} href="#">World</NavItem>
                                 </Nav>
                             </Navbar.Collapse>
                     </Navbar>

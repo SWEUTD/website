@@ -103,7 +103,6 @@ class login extends Component {
 		return (
 			<Container component="main" maxWidth="xs">
 				<NavBar />
-				<CssBaseline />
 				<div className={classes.paper}>
 					<Avatar className={classes.avatar}>
 						<LockOutlinedIcon />

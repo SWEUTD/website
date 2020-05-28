@@ -22,6 +22,9 @@ const styles = (theme) => ({
 	locationText: {
 		paddingLeft: '15px'
 	},
+	card: {
+		backgroundColor: '#A9A8A9'
+	},
 	buttonProperty: {
 		position: 'absolute',
 		top: '50%'
@@ -239,7 +242,7 @@ class event extends Component {
 					justify="space-evenly"
 				>
 					<Grid item md={6} xs={12}>
-						<Card variant="outlined" fullWidth>
+						<Card className={classes.card} variant="outlined" fullWidth>
 							<CardContent align="center" fullWidth>
 								<Typography className={classes.locationText} gutterBottom variant="h4">
 									{this.state.points} SWE points
@@ -247,7 +250,7 @@ class event extends Component {
 							</CardContent>
 						</Card>
 						<br />
-						<Card variant="outlined" fullWidth>
+						<Card className={classes.card} variant="outlined" fullWidth>
 							<CardContent align="left" fullWidth>
 								{rewardStatus}
 							</CardContent>
@@ -255,7 +258,7 @@ class event extends Component {
 					</Grid>
 
 					<Grid item md={6} xs={12}>
-						<Card variant="outlined" style={{height:"100%"}} fullWidth>
+						<Card className={classes.card} variant="outlined" style={{height:"100%"}} fullWidth>
 							<CardContent align="center" fullWidth>				
 									{header}
 									{history}

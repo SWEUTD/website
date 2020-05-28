@@ -16,7 +16,6 @@ class events extends Component {
 		return (
 			<div className={classes.root}>
 				<NavBar />
-				<CssBaseline />
 				<Container className={classes.container}>
 					<h1>events</h1>
 				</Container>

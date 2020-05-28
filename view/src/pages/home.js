@@ -1,28 +1,25 @@
 import React, { Component } from 'react';
-
 import withStyles from '@material-ui/core/styles/withStyles';
 import Container from '@material-ui/core/Container'
-import ScopedCssBaseline from '@material-ui/core/ScopedCssBaseline'
 import CssBaseline from '@material-ui/core/CssBaseline'
+
+import Slideshow from '../components/slideshow.js'
 import NavBar from '../components/navbar'
 
 const styles = (theme) => ({
 	
 });
 
-class newhome extends Component {
+class home extends Component {
 	render() {
 		const { classes } = this.props;
 		return (
 			<div className={classes.root}>
 				<NavBar />
-				<CssBaseline />
-				<Container className={classes.container}>
-					<h1>Home</h1>
-				</Container>
+				<Slideshow/>
 			</div>
 		);
 	}
 }
 
-export default withStyles(styles)(newhome);
+export default withStyles(styles)(home);

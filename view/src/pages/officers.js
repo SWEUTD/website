@@ -23,7 +23,9 @@ import SindhuBoppudi from '../assets/OfficerPhotos/SindhuBoppudi.jpg'
 
 
 const styles = (theme) => ({
-	
+	card: {
+		//backgroundColor: '#A9A8A9'
+	},
 });
 
 class officers extends Component {
@@ -32,10 +34,9 @@ class officers extends Component {
 		return (
 			<div className={classes.root}>
 				<NavBar />
-				<CssBaseline />
 				<Container className={classes.container}>
 					<br />
-					<Card className={classes.root} variant="outlined" align="center">
+					<Card className={classes.card}className={classes.root} variant="outlined" align="center">
 						<CardContent>
 							<div className={classes.details}>
 								<div>
@@ -56,7 +57,7 @@ class officers extends Component {
 					justify="space-evenly"
 				>
 						<Grid item xs="6" sm="3">
-							<Card variant="outlined">
+							<Card className={classes.card}variant="outlined">
 								<CardContent align="center">
 									<img src={MedhaAiyah} width="80%" />
 									<br />
@@ -69,7 +70,7 @@ class officers extends Component {
 							</Card>
 						</Grid>
 						<Grid item xs="6" sm="3">
-							<Card variant="outlined">
+							<Card className={classes.card}variant="outlined">
 								<CardContent align="center">
 									<img src={AnkitaBantey} width="80%" />
 									<br />
@@ -82,7 +83,7 @@ class officers extends Component {
 							</Card>
 						</Grid>
 						<Grid item xs="6" sm="3">
-							<Card variant="outlined">
+							<Card className={classes.card}variant="outlined">
 								<CardContent align="center">
 									<img src={MaahaSakia} width="80%" />
 									<br />
@@ -95,7 +96,7 @@ class officers extends Component {
 							</Card>
 						</Grid>
 						<Grid item xs="6" sm="3">
-							<Card variant="outlined">
+							<Card className={classes.card}variant="outlined">
 								<CardContent align="center">
 									<img src={ArushiAgrawal} width="80%" />
 									<br />
@@ -108,7 +109,7 @@ class officers extends Component {
 							</Card>
 						</Grid>
 						<Grid item xs="6" sm="3">
-							<Card variant="outlined">
+							<Card className={classes.card}variant="outlined">
 								<CardContent align="center">
 									<img src={ShivaniGandhi} width="80%" />
 									<br />
@@ -121,7 +122,7 @@ class officers extends Component {
 							</Card>
 						</Grid>
 						<Grid item xs="6" sm="3">
-							<Card variant="outlined">
+							<Card className={classes.card}variant="outlined">
 								<CardContent align="center">
 									<img src={AngelleNazareno} width="80%" />
 									<br />
@@ -134,7 +135,7 @@ class officers extends Component {
 							</Card>
 						</Grid>
 						<Grid item xs="6" sm="3">
-							<Card variant="outlined">
+							<Card className={classes.card}variant="outlined">
 								<CardContent align="center">
 									<img src={JanroseSamson} width="80%" />
 									<br />
@@ -147,7 +148,7 @@ class officers extends Component {
 							</Card>
 						</Grid>
 						<Grid item xs="6" sm="3">
-							<Card variant="outlined">
+							<Card className={classes.card}variant="outlined">
 								<CardContent align="center">
 									<img src={SindhuBoppudi} width="80%" />
 									<br />
@@ -160,7 +161,7 @@ class officers extends Component {
 							</Card>
 						</Grid>
 						<Grid item xs="6" sm="3">
-							<Card variant="outlined">
+							<Card className={classes.card}variant="outlined">
 								<CardContent align="center">
 									<img src={DeeshaKumbham} width="80%" />
 									<br />
@@ -173,7 +174,7 @@ class officers extends Component {
 							</Card>
 						</Grid>
 						<Grid item xs="6" sm="3">
-							<Card variant="outlined">
+							<Card className={classes.card}variant="outlined">
 								<CardContent align="center">
 									<img src={MichaelaPerez} width="80%" />
 									<br />
@@ -186,7 +187,7 @@ class officers extends Component {
 							</Card>
 						</Grid>
 						<Grid item xs="6" sm="3">
-							<Card variant="outlined">
+							<Card className={classes.card}variant="outlined">
 								<CardContent align="center">
 									<img src={CaitlinTibbetts} width="80%" />
 									<br />
@@ -199,7 +200,7 @@ class officers extends Component {
 							</Card>
 						</Grid>
 						<Grid item xs="6" sm="3">
-							<Card variant="outlined">
+							<Card className={classes.card}variant="outlined">
 								<CardContent align="center">
 									<img src={CadyBaltz} width="80%" />
 									<br />
@@ -212,7 +213,7 @@ class officers extends Component {
 							</Card>
 						</Grid>
 						<Grid item xs="6" sm="3">
-							<Card variant="outlined">
+							<Card className={classes.card}variant="outlined">
 								<CardContent align="center">
 									<img src={AfridaTasnim} width="80%" />
 									<br />

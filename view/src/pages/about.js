@@ -16,7 +16,6 @@ class about extends Component {
 		return (
 			<div className={classes.root}>
 				<NavBar />
-				<CssBaseline />
 				<Container className={classes.container}>
 					<h1>About</h1>
 				</Container>
