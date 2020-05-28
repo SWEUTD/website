@@ -4,6 +4,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import './custom.scss';
 import './custom.css';
+import './components/fontawesome';
 
 ReactDOM.render(
   <React.StrictMode>

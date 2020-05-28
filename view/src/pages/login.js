@@ -11,6 +11,7 @@ import Typography from '@material-ui/core/Typography';
 import withStyles from '@material-ui/core/styles/withStyles';
 import Container from '@material-ui/core/Container';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import classNames from 'classnames';
 
 import NavBar from '../components/navbar'
 
@@ -47,6 +48,8 @@ const styles = (theme) => ({
 class login extends Component {
 	constructor(props) {
 		super(props);
+
+		this.state = { headerReady: false };
 
 		this.state = {
 			email: '',
@@ -97,12 +100,22 @@ class login extends Component {
 			});
 	};
 
-	render() {
+	// needed for header animation
+      componentDidMount() {
+        setTimeout(() => {
+          this.setState({ headerReady: true });
+        }, 0);
+    }
+    render() {
+        const { headerReady } = this.state;
 		const { classes } = this.props;
 		const { errors, loading } = this.state;
 		return (
 			<Container component="main" maxWidth="xs">
 				<NavBar />
+				<div className={classNames('header', { 'ready': headerReady })}>
+		            <p className="heading">Access the Portal to View Your SWE Points</p>
+                </div>
 				<div className={classes.paper}>
 					<Avatar className={classes.avatar}>
 						<LockOutlinedIcon />

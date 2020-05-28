@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import classNames from 'classnames';
 
 import withStyles from '@material-ui/core/styles/withStyles';
 import Container from '@material-ui/core/Container'
@@ -29,26 +30,26 @@ const styles = (theme) => ({
 });
 
 class officers extends Component {
-	render() {
+		// needed for header animation
+		constructor(props) {
+			super(props);
+			this.state = { headerReady: false };
+		  }
+		  componentDidMount() {
+			setTimeout(() => {
+			  this.setState({ headerReady: true });
+			}, 0);
+		}
+		render() {
+		const { headerReady } = this.state;
 		const { classes } = this.props;
 		return (
 			<div className={classes.root}>
 				<NavBar />
+				<div className={classNames('header', { 'ready': headerReady })}>
+		            <p className="heading">Meet Our Officers</p>
+                </div>
 				<Container className={classes.container}>
-					<br />
-					<Card className={classes.card}className={classes.root} variant="outlined" align="center">
-						<CardContent>
-							<div className={classes.details}>
-								<div>
-									<Typography className={classes.locationText} gutterBottom variant="h4">
-										Meet Our Team
-									</Typography>
-								</div>
-							</div>
-							<div className={classes.progress} />
-						</CardContent>
-					</Card>
-					<br />
 					<Grid container
 					spacing={5}
 					height="100%"

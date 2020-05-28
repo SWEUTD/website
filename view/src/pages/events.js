@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import classNames from 'classnames';
 
 import withStyles from '@material-ui/core/styles/withStyles';
 import Container from '@material-ui/core/Container'
@@ -11,11 +12,25 @@ const styles = (theme) => ({
 });
 
 class events extends Component {
-	render() {
+	// needed for header animation
+    constructor(props) {
+        super(props);
+        this.state = { headerReady: false };
+      }
+      componentDidMount() {
+        setTimeout(() => {
+          this.setState({ headerReady: true });
+        }, 0);
+    }
+    render() {
+        const { headerReady } = this.state;
 		const { classes } = this.props;
 		return (
 			<div className={classes.root}>
 				<NavBar />
+				<div className={classNames('header', { 'ready': headerReady })}>
+		            <p className="heading">Events</p>
+                </div>
 				<Container className={classes.container}>
 					<h1>events</h1>
 				</Container>

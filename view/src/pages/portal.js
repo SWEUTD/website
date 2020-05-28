@@ -137,7 +137,7 @@ class portal extends Component {
 					>
 						<div className={classes.toolbar} />
 						<Divider />
-						
+						<br />
        					<center>
 							<p>
 								{this.state.firstName} {this.state.lastName}
