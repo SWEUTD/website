@@ -51,10 +51,6 @@ class navbar extends Component {
                                     <Nav.Link href="/portal">Member Portal</Nav.Link>
                                     <Nav.Link href="/contact">Contact</Nav.Link>
                                 </Nav>
-                                <Nav pullRight>
-                                    <NavItem eventKey={1} href="#"></NavItem>
-                                    <NavItem eventKey={2} href="#">World</NavItem>
-                                </Nav>
                             </Navbar.Collapse>
                     </Navbar>
                 </AppBar>

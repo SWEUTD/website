@@ -162,10 +162,11 @@ class account extends Component {
 			return (
 				<main className={classes.content}>
 					<div className={classes.toolbar} />
-					<Card className={classes.root} variant="outlined">
+					<Card className={classes.root} className="movingItem" variant="outlined">
 						<CardContent>
 							<div className={classes.details}>
 								<div>
+									<br/>
 									<Typography className={classes.locationText} gutterBottom variant="h4">
 										{this.state.firstName} {this.state.lastName}
 									</Typography>
@@ -176,7 +177,7 @@ class account extends Component {
 					</Card>
 
 					<br />
-					<Card className={classes.root} variant="outlined">
+					<Card className={classes.root} className="movingItem" variant="outlined">
 						<form autoComplete="off" noValidate>
 							<Divider />
 							<CardContent>
@@ -300,11 +301,13 @@ class account extends Component {
 							<CardActions />
 						</form>
 					</Card>
+					<br/>
 					<Button
 						color="primary"
 						variant="contained"
 						type="submit"
 						className={classes.submitButton}
+						className="movingItem"
 						onClick={this.updateFormValues}
 						disabled={
 							this.state.buttonLoading ||

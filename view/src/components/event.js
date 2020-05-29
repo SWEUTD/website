@@ -23,7 +23,7 @@ const styles = (theme) => ({
 		paddingLeft: '15px'
 	},
 	card: {
-		backgroundColor: '#A9A8A9'
+		//backgroundColor: '#A9A8A9'
 	},
 	buttonProperty: {
 		position: 'absolute',
@@ -164,61 +164,89 @@ class event extends Component {
 				<Typography className={classes.locationText} gutterBottom variant="h4" fullWidth>
 					Your Attendance History
 				</Typography>
+				<Divider/>
 			</div>
 		
 		const history = this.state.events.map((item, key) =>
 			<div fullWidth>
-			<br />
-				<Divider />
-			<br />
-				<p class="alignleft">{item.eventName}</p>
-				<p class="aligncenter">{item.eventDate}</p>
-				<p class="alignright">{item.eventPoints} pt</p>
+				<br/>
+				<table width="100%">
+					<tr>
+						<td align="left">{item.eventName}</td>
+						<td >{item.eventDate}</td>
+						<td align="right">{item.eventPoints} pt</td>
+					</tr>
+				</table>
 			<br />
 			</div>
 		);
 
-		
-		
 		let rewardStatus;
 		let nextLevel;
 		if(this.state.points < 3) {
 			nextLevel = 3 - this.state.points
 			rewardStatus = 
 				<div>
-					<Typography className={classes.locationText} gutterBottom variant="h4" align="center">You are {nextLevel} points away from being a SWE Star!</Typography>
+					<h4 align="center">You are {nextLevel} points away from becoming a SWE Star!</h4>
 					<Divider />
 					<br />
-					<p>Reach the bronze tier and unlock:</p>
-					<ul>
-						<li>SWE Gift Bag</li>
-					</ul>
+					<h5>Reach the bronze tier and unlock:</h5>
+					<p>★ SWE gift bag</p>
 				</div>
 		}
 		else if (this.state.points < 5) {
 			nextLevel = 5 - this.state.points
 			rewardStatus =
-				<div fullWidth>
-					<Typography className={classes.locationText} gutterBottom variant="h4" align="center">You are a SWE Star!</Typography>
-					<Divider />
+				<div>
+					<Typography className={classes.locationText} gutterBottom variant="h4" align="center">You are a Bronze SWE Star!</Typography>
+					<Divider/>
 					<br />
-					<p>You are {nextLevel} points away from the silver tier</p>
-					<p>Reach the silver tier and unlock:</p>
-					<ul>
-						<li>Exclusive invite to our end-of-summer celebration!</li>
-					</ul>
+					<h4 align="center">You are {nextLevel} points away from the silver tier</h4>
+					<br />
+					<Divider />
+					<br/>
+					<h5>Reach the silver tier and unlock:</h5>
+					<p>★ Exclusive invite to our end-of-summer celebration</p>
+					<Divider/>
+					<br />
+					<h5>You have unlocked:</h5>
+					<p>★ SWE gift bag</p>
 				</div>
 		}
 		else if (this.state.points < 7) {
 			nextLevel = 7 - this.state.points
 			rewardStatus =
 				<div>
-					<Typography className={classes.locationText} gutterBottom variant="h4" align="center">You are a SWE Star!</Typography>
+					<Typography className={classes.locationText} gutterBottom variant="h4" align="center">You are a Silver SWE Star!</Typography>
+					<Divider/>
 					<br />
-					<p>Reach the gold tier and unlock:</p>
-					<ul>
-						<li>Social Media Shoutout</li>
-					</ul>
+					<h4 align="center">You are {nextLevel} points away from the gold tier</h4>
+					<br />
+					<Divider />
+					<br/>
+					<h5>Reach the gold tier and unlock:</h5>
+					<p>★ Social Media Shoutout</p>
+					<Divider/>
+					<br />
+					<h5>You have unlocked:</h5>
+					<p>★ Exclusive invite to our end-of-summer celebration</p>
+					<p>★ SWE gift bag</p>
+				</div>
+		}
+		else {
+			rewardStatus =
+				<div>
+					<Typography className={classes.locationText} gutterBottom variant="h4" align="center">You are a Gold SWE Star!</Typography>
+					<Divider/>
+					<br />
+					<h4 align="center">You have reached the SWE gold tier! Congratulations!</h4>
+					<br/>
+					<Divider/>
+					<br />
+					<h5>You have unlocked:</h5>
+					<p>★ Social Media Shoutout</p>
+					<p>★ Exclusive invite to our end-of-summer celebration</p>
+					<p>★ SWE gift bag</p>
 				</div>
 		}
 
@@ -242,15 +270,16 @@ class event extends Component {
 					justify="space-evenly"
 				>
 					<Grid item md={6} xs={12}>
-						<Card className={classes.card} variant="outlined" fullWidth>
+						<Card className="movingItem" variant="outlined" fullWidth>
 							<CardContent align="center" fullWidth>
+								<br/>
 								<Typography className={classes.locationText} gutterBottom variant="h4">
 									{this.state.points} SWE points
 								</Typography>
 							</CardContent>
 						</Card>
 						<br />
-						<Card className={classes.card} variant="outlined" fullWidth>
+						<Card className="movingItem" variant="outlined" fullWidth>
 							<CardContent align="left" fullWidth>
 								{rewardStatus}
 							</CardContent>
@@ -258,7 +287,7 @@ class event extends Component {
 					</Grid>
 
 					<Grid item md={6} xs={12}>
-						<Card className={classes.card} variant="outlined" style={{height:"100%"}} fullWidth>
+						<Card className="movingItem" variant="outlined" maxHeight="100%" fullWidth>
 							<CardContent align="center" fullWidth>				
 									{header}
 									{history}

@@ -333,8 +333,8 @@
     -webkit-transform: translateX(-50px);
             transform: translateX(-50px);
     opacity: 0;
-    -webkit-transition: all 0.5s 1s;
-    transition: all 0.5s 1s;
+    -webkit-transition: all 0.75s 0.0s;
+     transition: all 0.75s 0.0s;
     cursor: pointer;
   }
   .slider__control:before {
