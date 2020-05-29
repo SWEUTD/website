@@ -69,6 +69,7 @@ exports.signUpMember = (request, response) => {
             } else {
                 if (doc.exists){
                     newMember.events = doc.data().events;
+                    newMember.points = doc.data().points;
                     const document = db.doc(`/members/${newMember.netid}`);
                     document.delete();
                 }
