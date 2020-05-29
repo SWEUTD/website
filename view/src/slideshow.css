@@ -183,47 +183,6 @@
     -webkit-transition-delay: 0.9333333333s;
             transition-delay: 0.9333333333s;
   }
-  .slider__slide-readmore {
-    position: relative;
-    font-size: 14px;
-    text-transform: lowercase;
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
-    cursor: pointer;
-    opacity: 0;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-  }
-  .slider__slide.s--active .slider__slide-readmore {
-    -webkit-transition-delay: 0.65s;
-            transition-delay: 0.65s;
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  .slider__slide-readmore:before {
-    content: '';
-    position: absolute;
-    left: -2px;
-    top: -3px;
-    width: calc(100% + 4px);
-    height: calc(100% + 6px);
-    background: rgba(255, 255, 255, 0.4);
-    -webkit-transform: scaleX(0.3);
-            transform: scaleX(0.3);
-    -webkit-transform-origin: 0 50%;
-            transform-origin: 0 50%;
-    -webkit-transition: -webkit-transform 0.3s;
-    transition: -webkit-transform 0.3s;
-    transition: transform 0.3s;
-    transition: transform 0.3s, -webkit-transform 0.3s;
-  }
-  .slider__slide-readmore:hover:before {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-  }
   .slider__slide-parts {
     position: absolute;
     left: 0;

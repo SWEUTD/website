@@ -24,6 +24,8 @@
   line-height: 50px;
 }
 
+
+
 .header {
   overflow: hidden;
   position: relative;
@@ -40,8 +42,8 @@
   font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 2.5px;
-  -webkit-transition: all 0.25s 0.5s;
-  transition: all 0.25s 0.5s;
+  -webkit-transition: all 0.75s 0.0s;
+  transition: all 0.75s 0.0s;
   -webkit-transform: translateY(-30px);
           transform: translateY(-30px);
   opacity: 0;
@@ -57,3 +59,27 @@
           transform: translateY(0);
   opacity: 1;
 }
+
+.movingItem {
+  overflow: hidden;
+  position: relative;
+  animation: 0.75s ease-out 0.0s 1 slideup;
+}
+
+@keyframes slideup {
+  0% {
+    transform: translateY(20px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0px);
+    transition: 0.75s;
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
