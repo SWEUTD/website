@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
 import login from './pages/login';
-import signup from './pages/signup';
 import home from './pages/home';
 import portal from './pages/portal';
 import about from './pages/about'
