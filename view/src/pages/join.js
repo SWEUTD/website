@@ -9,7 +9,12 @@ import ListItem from '@material-ui/core/ListItem'
 import CardContent from '@material-ui/core/CardContent'
 import Grid from '@material-ui/core/Grid'
 import Divider from '@material-ui/core/Divider'
-import NavBar from '../components/navbar'
+import TopNavBar from '../components/navbar'
+
+import Navbar from 'react-bootstrap/Navbar'
+import Nav from 'react-bootstrap/Nav'
+import NavDropdown from 'react-bootstrap/NavDropdown'
+import NavItem from 'react-bootstrap/NavItem'
 
 const styles = (theme) => ({
 	root:  {
@@ -42,7 +47,7 @@ class join extends Component {
 		const { classes } = this.props;
 		return (
 			<div className={classes.root}>
-				<NavBar />
+				<TopNavBar />
 				<div className={classNames('header', { 'ready': headerReady })}>
 		            <p className="heading">Become a Member</p>
                 </div>
@@ -104,8 +109,7 @@ class join extends Component {
 										</List>
 									</CardContent>
 								</Card>
-
-						</Grid>
+							</Grid>
 						</Grid>
 				</Container>
 			</div>

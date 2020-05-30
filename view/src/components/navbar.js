@@ -8,11 +8,14 @@ import AppBar from '@material-ui/core/AppBar';
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import NavDropdown from 'react-bootstrap/NavDropdown'
-import NavItem from 'react-bootstrap/NavItem'
 
 // my imports
 import logo from '../assets/logo.png'
 
+import { faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const styles = (theme) => ({
@@ -50,7 +53,19 @@ class navbar extends Component {
                                     <Nav.Link href="/portal">Member Portal</Nav.Link>
                                     <Nav.Link href="/contact">Contact</Nav.Link>
                                 </Nav>
-                            </Navbar.Collapse>
+                                <Navbar.Brand href="https://www.facebook.com/sweutd" pullRight>
+                                    <FontAwesomeIcon icon={faFacebook} size="lg" style={{ color: '#DBC554' }}/>{' '}
+                                </Navbar.Brand>
+                                <Navbar.Brand href="https://www.instagram.com/sweutd/" pullRight>
+                                    <FontAwesomeIcon icon={faInstagram} size="lg" style={{ color: '#DBC554' }}/>{' '}
+                                </Navbar.Brand>
+                                <Navbar.Brand href="https://www.linkedin.com/in/sweutd/" pullRight>
+                                    <FontAwesomeIcon icon={faLinkedin} size="lg" style={{ color: '#DBC554' }}/>{' '}
+                                </Navbar.Brand>
+                                <Navbar.Brand href="mailto:sweutd@gmail.com" pullRight>
+                                    <FontAwesomeIcon icon={faEnvelope} size="lg" style={{ color: '#DBC554' }}/>{' '}
+                                </Navbar.Brand>
+                            </Navbar.Collapse> 
                     </Navbar>
                 </AppBar>
                 <div className={classes.toolbar} />
