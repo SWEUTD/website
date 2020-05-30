@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import withStyles from '@material-ui/core/styles/withStyles';
 import Typography from '@material-ui/core/Typography';
 import CircularProgress from '@material-ui/core/CircularProgress';
-import { Card, CardActions, CardContent, Divider, Button, Box, Grid, TextField } from '@material-ui/core';
+import { Card, CardActions, CardContent, Container, Divider, Button, Box, Grid, TextField } from '@material-ui/core';
 
 import clsx from 'clsx';
 
@@ -22,8 +22,15 @@ const styles = (theme) => ({
 	locationText: {
 		paddingLeft: '15px'
 	},
+	gridItem: {
+		display: 'flex',
+		width: '100%'
+	},
 	card: {
-		//backgroundColor: '#A9A8A9'
+		display: 'flex',
+		justifyContent: 'space-between',
+		flexDirection: 'column',
+		width: '100%'
 	},
 	buttonProperty: {
 		position: 'absolute',
@@ -173,7 +180,7 @@ class event extends Component {
 				<table width="100%">
 					<tr>
 						<td align="left">{item.eventName}</td>
-						<td >{item.eventDate}</td>
+						<td align="left">{item.eventDate}</td>
 						<td align="right">{item.eventPoints} pt</td>
 					</tr>
 				</table>
@@ -259,36 +266,36 @@ class event extends Component {
 			);
 		} else {
 			return (
-				<main className={classes.content}>
+				<Container className={classes.content}>
 				<div className={classes.toolbar} />
 
 				<Grid container
-					spacing={5}
+					spacing={2}
 					height="100%"
 					width="100%"
 					alignItems="stretch"
 					justify="space-evenly"
 				>
-					<Grid item md={6} xs={12}>
-						<Card className="movingItem" variant="outlined" fullWidth>
-							<CardContent align="center" fullWidth>
-								<br/>
-								<Typography className={classes.locationText} gutterBottom variant="h4">
-									{this.state.points} SWE points
-								</Typography>
-							</CardContent>
-						</Card>
-						<br />
-						<Card className="movingItem" variant="outlined" fullWidth>
-							<CardContent align="left" fullWidth>
-								{rewardStatus}
-							</CardContent>
-						</Card>
+					<Grid className={classes.gridItem} style={{flexDirection: 'column'}} item md={6} xs={12}>
+							<Card className="movingItem" variant="outlined" fullWidth>
+								<CardContent align="center" fullWidth>
+									<br/>
+									<Typography className={classes.locationText} gutterBottom variant="h4">
+										{this.state.points} SWE points
+									</Typography>
+								</CardContent>
+							</Card>
+							<br/>
+							<Card alignItems="stretch"  className="movingItem" variant="outlined" fullWidth>
+								<CardContent height="100%" align="left" fullWidth>
+									{rewardStatus}
+								</CardContent>
+							</Card>
 					</Grid>
 
-					<Grid item md={6} xs={12}>
-						<Card className="movingItem" variant="outlined" maxHeight="100%" fullWidth>
-							<CardContent align="center" fullWidth>				
+					<Grid className={classes.gridItem} item md={6} xs={12}>
+						<Card height="100%" className="movingItem" variant="outlined">
+							<CardContent height="100%" align="center" fullWidth>				
 									{header}
 									{history}
 							</CardContent>
@@ -296,7 +303,7 @@ class event extends Component {
 					</Grid>
 				</Grid>
 
-				</main>
+				</Container>
 			);
 		}
 	}

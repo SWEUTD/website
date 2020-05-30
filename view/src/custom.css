@@ -38,7 +38,19 @@
   text-align: center;
   background-color: rgba(90, 83, 119, 0.75);
 }
+.about {
+  width: 100%;
+  opacity: 0;
+  padding:25px;
+  text-align: center;
+  background-color: #DBC554;
+}
 .header.ready .heading {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+.header.ready .about {
   -webkit-transform: translateY(0);
           transform: translateY(0);
   opacity: 1;

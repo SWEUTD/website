@@ -14,7 +14,7 @@ import Fall2020 from '../assets/SlideshowImages/WE.jpg'
 import NavBar from '../components/navbar'
 
 const styles = (theme) => ({
-	grid: {
+	gridItem: {
 		display: 'flex'
 	},
 	card: {
@@ -53,14 +53,14 @@ class events extends Component {
 						alignItems="stretch"
 						justify="space-evenly"
 					>
-						<Grid className={classes.grid} item md={6} xs={12}>
+						<Grid className={classes.gridItem} item md={6} xs={12}>
 							<Card className={classes.card} className="movingItem" variant="outlined" fullWidth>
 								<CardContent align="center" width = "50%">
-									<img src={Summer2020} width = "100%"/>
+									<img src={Summer2020} verticalAlign="center" width = "100%"/>
 								</CardContent>
 							</Card>
 						</Grid>
-						<Grid className={classes.grid} item md={6} xs={12}>
+						<Grid className={classes.gridItem} item md={6} xs={12}>
 							<Card className={classes.card} className="movingItem" variant="outlined">
 								<CardContent align="center">
 									<br/>
