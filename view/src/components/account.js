@@ -150,7 +150,7 @@ class account extends Component {
 	};
 
 	render() {
-		const { classes, ...rest } = this.props;
+		const { classes } = this.props;
 		if (this.state.uiLoading === true) {
 			return (
 				<main className={classes.content}>

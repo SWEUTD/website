@@ -157,7 +157,7 @@ class event extends Component {
 	};
 
 	render() {
-		const { classes, ...rest } = this.props;
+		const { classes } = this.props;
 
 		const header = 
 			<div fullWidth>

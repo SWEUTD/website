@@ -22,7 +22,7 @@ import NavBar from '../components/navbar'
 
 import { authMiddleWare } from '../util/auth'
 
-const drawerWidth = "240px";
+const drawerWidth = "20%";
 
 const styles = (theme) => ({
 	root: {
@@ -138,14 +138,15 @@ class portal extends Component {
 						<div className={classes.toolbar} />
 						<Divider />
 						<br />
-       					<center>
+       					<center width="drawerWidth">
 							<p>
 								{this.state.firstName} {this.state.lastName}
 							</p>
 						</center>
 						<Divider />
-						<List>
-							<ListItem button key="Points" onClick={this.loadEventPage}>
+						
+						<List width="drawerWidth">
+							<ListItem button key="Points" onClick={this.loadEventPage} width="drawerWidth">
 								<ListItemIcon>
 									{' '}
 									<NotesIcon />{' '}

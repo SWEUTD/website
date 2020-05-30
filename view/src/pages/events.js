@@ -3,12 +3,26 @@ import classNames from 'classnames';
 
 import withStyles from '@material-ui/core/styles/withStyles';
 import Container from '@material-ui/core/Container'
-import CssBaseline from '@material-ui/core/CssBaseline'
+import Card from '@material-ui/core/Card'
+import CardContent from '@material-ui/core/CardContent'
+import Grid from '@material-ui/core/Grid'
+import Divider from '@material-ui/core/Divider'
+
+import Summer2020 from '../assets/Summer2020.png'
+import Fall2020 from '../assets/SlideshowImages/WE.jpg'
 
 import NavBar from '../components/navbar'
 
 const styles = (theme) => ({
-	
+	grid: {
+		display: 'flex'
+	},
+	card: {
+		display: 'flex',
+		justifyContent: 'space-between',
+		flexDirection: 'column',
+		width: '100%'
+	}
 });
 
 class events extends Component {
@@ -32,7 +46,38 @@ class events extends Component {
 		            <p className="heading">Events</p>
                 </div>
 				<Container className={classes.container}>
-					<h1>events</h1>
+					<Grid container
+						spacing={5}
+						height="100%"
+						width="100%"
+						alignItems="stretch"
+						justify="space-evenly"
+					>
+						<Grid className={classes.grid} item md={6} xs={12}>
+							<Card className={classes.card} className="movingItem" variant="outlined" fullWidth>
+								<CardContent align="center" width = "50%">
+									<img src={Summer2020} width = "100%"/>
+								</CardContent>
+							</Card>
+						</Grid>
+						<Grid className={classes.grid} item md={6} xs={12}>
+							<Card className={classes.card} className="movingItem" variant="outlined">
+								<CardContent align="center">
+									<br/>
+									<h1>Stay connected with SWE this summer!</h1>
+									<br/>
+									<Divider/>
+									<br/>
+									<h4>Click <a href="https://www.badgelist.com/SWE-UTD-Summer-2020#">here</a> to participate in #SWEUTDSummer2020 challenges</h4>
+									<br/>
+									<h4>Be sure to visit our new <a href="/portal">member portal</a> to keep up with your SWE points</h4>
+									<br/>
+									<img src={Fall2020} width="100%"/>
+								</CardContent>
+							</Card>
+							
+						</Grid>
+					</Grid>
 				</Container>
 			</div>
 		);
