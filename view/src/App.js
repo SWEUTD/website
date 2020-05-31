@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
 import login from './pages/login';
@@ -13,6 +14,9 @@ import swematch from './pages/swematch'
 import weconference from './pages/weconference'
 import contact from './pages/contact'
 import join from './pages/join'
+
+//temp
+import kickoff from './pages/kickoff'
 
 const theme = createMuiTheme({
 	palette: {
@@ -29,25 +33,25 @@ const theme = createMuiTheme({
 });
 
 function App() {
+
   return (
     <MuiThemeProvider theme={theme}>
-      <Router>
-        <div>
+      <BrowserRouter>
           <Switch>
-              <Route exact path="/login" component={login}/>
-              <Route exact path="/" component={home}/>
-              <Route exact path="/portal" component={portal}/>
-              <Route exact path="/about" component={about}/>
-              <Route exact path="/officers" component={officers}/>
-              <Route exact path="/swestars" component={swestars}/>
-              <Route exact path="/events" component={events}/>
-              <Route exact path="/swematch" component={swematch}/>
-              <Route exact path="/weconference" component={weconference}/>
-              <Route exact path="/join" component={join}/>
-              <Route exact path="/contact" component={contact}/>
+              <Route exact path="/SWEUTD-Website/login" component={login}/>
+              <Route exact path="/SWEUTD-Website/" component={home}/>
+              <Route exact path="/SWEUTD-Website/portal" component={portal}/>
+              <Route exact path="/SWEUTD-Website/about" component={about}/>
+              <Route exact path="/SWEUTD-Website/officers" component={officers}/>
+              <Route exact path="/SWEUTD-Website/swestars" component={swestars}/>
+              <Route exact path="/SWEUTD-Website/events" component={events}/>
+              <Route exact path="/SWEUTD-Website/swematch" component={swematch}/>
+              <Route exact path="/SWEUTD-Website/weconference" component={weconference}/>
+              <Route exact path="/SWEUTD-Website/join" component={join}/>
+              <Route exact path="/SWEUTD-Website/contact" component={contact}/>
+              <Route exact path="/SWEUTD-Website/kickoff" component={kickoff}/>
           </Switch>
-        </div>
-      </Router>
+      </BrowserRouter>
     </MuiThemeProvider>
   );
 }

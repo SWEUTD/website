@@ -34,7 +34,7 @@ const styles = (theme) => ({
 	login: {
 		margin: theme.spacing(3, 0, 2)
 	},
-	signup: {
+	signin: {
 		margin: theme.spacing(3, 0, 2)
 	},
 	customError: {
@@ -47,18 +47,11 @@ const styles = (theme) => ({
 	}
 });
 
-class login extends Component {
+class kickoff extends Component {
 	constructor(props) {
 		super(props);
 
 		this.state = { headerReady: false };
-
-		this.state = {
-			email: '',
-			password: '',
-			errors: [],
-			loginLoading: false
-		};
 
 		this.state = {
 			firstName: '',
@@ -68,10 +61,8 @@ class login extends Component {
 			major: '',
 			netid: '',
 			email: '',
-			password: '',
-			confirmPassword: '',
 			errors: [],
-			signupLoading: false
+			signinLoading: false
 		};
 	}
 
@@ -92,33 +83,9 @@ class login extends Component {
 		});
 	};
 
-	handleLogin = (event) => {
+	handleSignin = (event) => {
 		event.preventDefault();
-		this.setState({ loginLoading: true });
-		const memberData = {
-			email: this.state.email,
-			password: this.state.password
-		};
-		axios
-			.post('https://us-central1-swe-utd.cloudfunctions.net/api/login', memberData)
-			.then((response) => {
-				localStorage.setItem('AuthToken', `Bearer ${response.data.token}`);
-				this.setState({ 
-					loginLoading: false,
-				});		
-				this.props.history.push('/SWEUTD-Website/portal');
-			})
-			.catch((error) => {				
-				this.setState({
-					errors: error.response.data,
-					loginLoading: false
-				});
-			});
-	};
-
-	handleSignup = (event) => {
-		event.preventDefault();
-		this.setState({ signupLoading: true });
+		this.setState({ signinLoading: true });
 		if(this.state.major != "Other")
 			this.state.otherMajor = "";
 		const newMemberData = {
@@ -129,23 +96,20 @@ class login extends Component {
 			major: this.state.major,
 			otherMajor: this.state.otherMajor,
 			netid: this.state.netid,
-			email: this.state.email,
-			password: this.state.password,
-			confirmPassword: this.state.confirmPassword
+            email: this.state.email,
+            eventPoints: 1,
+            eventName: "Kickoff",
+            eventDate: "05/31/2020"
 		};
 		axios
-			.post('https://us-central1-swe-utd.cloudfunctions.net/api/signup', newMemberData)
-			.then((response) => {
-				localStorage.setItem('AuthToken', `Bearer ${response.data.token}`);
-				this.setState({ 
-					signupLoading: false,
-				});	
-				this.props.history.push('/SWEUTD-Website/portal');
+			.post('https://us-central1-swe-utd.cloudfunctions.net/api/newEvent', newMemberData)
+			.then(() => {
+				this.props.history.push('/SWEUTD-Website/');
 			})
 			.catch((error) => {
 				this.setState({
 					errors: error.response.data,
-					signupLoading: false
+					signinLoading: false
 				});
 			});
 	};
@@ -159,12 +123,12 @@ class login extends Component {
     render() {
         const { headerReady } = this.state;
 		const { classes } = this.props;
-		const { errors, loginLoading, signupLoading } = this.state;
+		const { errors, signinLoading } = this.state;
 		return (
 			<div>
 				<NavBar />
 				<div className={classNames('header', { 'ready': headerReady })}>
-					<p className="heading">Access the Portal to View Your SWE Points</p>
+					<p className="heading">Sign In to the SWE Kickoff</p>
 				</div>
 				<Container width="75%">
 					<Grid container
@@ -176,67 +140,6 @@ class login extends Component {
 					>
 						<Grid item sm={6} xs={12}>
 							<div className={classes.paper}>
-								<Typography component="h1" variant="h5">
-									Login
-								</Typography>
-								<br/>					
-								<form className={classes.form} noValidate>
-								<Grid container spacing={2}>						
-									<TextField
-										variant="outlined"
-										margin="normal"
-										required
-										fullWidth
-										id="email"
-										label="Email Address"
-										name="email"
-										autoComplete="email"
-										autoFocus
-										helperText={errors.email}
-										error={errors.email ? true : false}
-										onChange={this.handleChange}
-									/>
-									<TextField
-										variant="outlined"
-										margin="normal"
-										required
-										fullWidth
-										name="password"
-										label="Password"
-										type="password"
-										id="password"
-										autoComplete="current-password"
-										helperText={errors.password}
-										error={errors.password ? true : false}
-										onChange={this.handleChange}
-									/>
-									<Button
-										type="login"
-										fullWidth
-										variant="contained"
-										color="primary"
-										className={classes.login}
-										onClick={this.handleLogin}
-										disabled={loginLoading || !this.state.email || !this.state.password}
-									>
-										Sign In
-										{loginLoading && <CircularProgress size={30} className={classes.progess} />}
-									</Button>
-									{errors.general && (
-										<Typography variant="body2" className={classes.customError}>
-											{errors.general}
-										</Typography>
-									)}
-									</Grid>
-								</form>	
-							</div>
-						</Grid>
-						<Grid item sm={6} xs={12}>
-							<div className={classes.paper}>
-								<Typography component="h1" variant="h5">
-									Sign up
-								</Typography>
-								<br/>
 								<form className={classes.form} noValidate>
 									<Grid container spacing={2}>
 										<Grid item xs={12} sm={6}>
@@ -264,20 +167,6 @@ class login extends Component {
 												autoComplete="lastName"
 												helperText={errors.lastName}
 												error={errors.lastName ? true : false}
-												onChange={this.handleChange}
-											/>
-										</Grid>
-										<Grid item xs={12}>
-											<TextField
-												variant="outlined"
-												required
-												fullWidth
-												id="phoneNumber"
-												label="Phone Number"
-												name="phoneNumber"
-												autoComplete="phoneNumber"
-												helperText={errors.phoneNumber}
-												error={errors.phoneNumber ? true : false}
 												onChange={this.handleChange}
 											/>
 										</Grid>
@@ -359,7 +248,20 @@ class login extends Component {
 												onChange={this.handleChange}
 											/>
 										</Grid>
-										
+										<Grid item xs={12}>
+											<TextField
+												variant="outlined"
+												required
+												fullWidth
+												id="phoneNumber"
+												label="Phone Number"
+												name="phoneNumber"
+												autoComplete="phoneNumber"
+												helperText={errors.phoneNumber}
+												error={errors.phoneNumber ? true : false}
+												onChange={this.handleChange}
+											/>
+										</Grid>
 										<Grid item xs={12}>
 											<TextField
 												variant="outlined"
@@ -374,45 +276,16 @@ class login extends Component {
 												onChange={this.handleChange}
 											/>
 										</Grid>
-
-										<Grid item xs={12}>
-											<TextField
-												variant="outlined"
-												required
-												fullWidth
-												name="password"
-												label="Password"
-												type="password"
-												id="password"
-												autoComplete="current-password"
-												onChange={this.handleChange}
-											/>
-										</Grid>
-										<Grid item xs={12}>
-											<TextField
-												variant="outlined"
-												required
-												fullWidth
-												name="confirmPassword"
-												label="Confirm Password"
-												type="password"
-												id="confirmPassword"
-												autoComplete="current-password"
-												onChange={this.handleChange}
-											/>
-										</Grid>
 									</Grid>
 									<Button
-										type="signup"
+										type="signin"
 										fullWidth
 										variant="contained"
 										color="primary"
-										className={classes.signup}
-										onClick={this.handleSignup}
-										disabled={signupLoading || 
+										className={classes.signin}
+										onClick={this.handleSignin}
+										disabled={signinLoading || 
 											!this.state.email || 
-											!this.state.password ||
-											!this.state.confirmPassword || //?
 											!this.state.firstName || 
 											!this.state.lastName ||
 											!this.state.classification || 
@@ -420,8 +293,8 @@ class login extends Component {
 											!this.state.netid || 
 											!this.state.phoneNumber}
 									>
-										Sign Up
-										{signupLoading && <CircularProgress size={30} className={classes.progess} />}
+										Sign In
+										{signinLoading && <CircularProgress size={30} className={classes.progess} />}
 									</Button>
 								</form>
 							</div>
@@ -433,4 +306,4 @@ class login extends Component {
 	}
 }
 
-export default withStyles(styles)(login);
+export default withStyles(styles)(kickoff);

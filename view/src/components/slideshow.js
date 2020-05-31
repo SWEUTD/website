@@ -12,17 +12,17 @@ const slides = [
 	{
 	  title: 'Who WE Are',
 		img: WePhoto,
-		link: "/about"
+		link: "/SWEUTD-Website/about"
 	},
 	{
 	  title: 'Meet Our Officers',
 		img: OfficersPhoto,
-		link: "/officers"
+		link: "/SWEUTD-Website/officers"
 	},
 	{
 	  title: 'Get Involved',
 		img: EventPhoto,
-		link: "/join"
+		link: "/SWEUTD-Website/join"
 	},
 ];
 

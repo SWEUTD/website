@@ -29,7 +29,7 @@ class navbar extends Component {
             <div>
                 <AppBar position="fixed" className={classes.appBar}>
                         <Navbar bg="dark" variant="dark" expand="lg">
-                            <Navbar.Brand href="/">
+                            <Navbar.Brand href="/SWEUTD-Website/">
                             <img
                                 alt=""
                                 src={logo}
@@ -42,19 +42,19 @@ class navbar extends Component {
                             <Navbar.Toggle aria-controls="basic-navbar-nav" />
                             <Navbar.Collapse id="basic-navbar-nav">
                                 <Nav className="mr-auto">
-                                    <Nav.Link href="/about">About</Nav.Link>
+                                    <Nav.Link href="/SWEUTD-Website/about">About</Nav.Link>
                                     <NavDropdown title="What We Do" id="basic-nav-dropdown">
-                                        <NavDropdown.Item href="/events">Events</NavDropdown.Item>
-                                        <NavDropdown.Item href="/weconference">WE Conference</NavDropdown.Item>
-                                        <NavDropdown.Item href="/swematch">SWEmatch</NavDropdown.Item>
+                                        <NavDropdown.Item href="/SWEUTD-Website/events">Events</NavDropdown.Item>
+                                        <NavDropdown.Item href="/SWEUTD-Website/weconference">WE Conference</NavDropdown.Item>
+                                        <NavDropdown.Item href="/SWEUTD-Website/swematch">SWEmatch</NavDropdown.Item>
                                         <NavDropdown.Item href="https://hansikasundaresan.github.io/LadiesinTech/">Ladies in Tech</NavDropdown.Item>
                                         <NavDropdown.Item href="http://wehackutd.com">WEHack</NavDropdown.Item>
                                     </NavDropdown>
-                                    <Nav.Link href="/officers">Officers</Nav.Link>
-                                    <Nav.Link href="/swestars">SWE Stars</Nav.Link>
-                                    <Nav.Link href="/join">Join</Nav.Link>
-                                    <Nav.Link href="/portal">Member Portal</Nav.Link>
-                                    <Nav.Link href="/contact">Contact</Nav.Link>
+                                    <Nav.Link href="/SWEUTD-Website/officers">Officers</Nav.Link>
+                                    <Nav.Link href="/SWEUTD-Website/swestars">SWE Stars</Nav.Link>
+                                    <Nav.Link href="/SWEUTD-Website/join">Join</Nav.Link>
+                                    <Nav.Link href="/SWEUTD-Website/portal">Member Portal</Nav.Link>
+                                    <Nav.Link href="/SWEUTD-Website/contact">Contact</Nav.Link>
                                 </Nav>
                                 <Navbar.Brand href="https://www.facebook.com/sweutd" pullRight>
                                     <FontAwesomeIcon icon={faFacebook} size="lg" style={{ color: '#DBC554' }}/>{' '}

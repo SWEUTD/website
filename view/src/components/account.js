@@ -8,8 +8,6 @@ import MenuItem from '@material-ui/core/MenuItem';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { Card, CardActions, CardContent, Divider, Button, Grid, TextField } from '@material-ui/core';
 
-import clsx from 'clsx';
-
 import axios from 'axios';
 import { authMiddleWare } from '../util/auth';
 
@@ -79,7 +77,7 @@ class account extends Component {
 		const authToken = localStorage.getItem('AuthToken');
 		axios.defaults.headers.common = { Authorization: `${authToken}` };
 		axios
-			.get('/member')
+			.get('https://us-central1-swe-utd.cloudfunctions.net/api/member')
 			.then((response) => {
 				console.log(response.data);
 				this.setState({
@@ -96,7 +94,7 @@ class account extends Component {
 			})
 			.catch((error) => {
 				if (error.response.status === 403) {
-					this.props.history.push('/login');
+					this.props.history.push('/SWEUTD-Website/login');
 				}
 				console.log(error);
 				this.setState({ errorMsg: 'Error in retrieving the data' });
@@ -121,7 +119,7 @@ class account extends Component {
 		authMiddleWare(this.props.history);
 		const authToken = localStorage.getItem('AuthToken');
 		axios.defaults.headers.common = { Authorization: `${authToken}` };
-		if(this.state.major != "Other")
+		if(this.state.major !== "Other")
 			this.state.otherMajor = "";
 		const formRequest = {
 			firstName: this.state.firstName,
@@ -133,13 +131,13 @@ class account extends Component {
 		};
 		
 		axios
-			.post('/member', formRequest)
+			.post('https://us-central1-swe-utd.cloudfunctions.net/api/member', formRequest)
 			.then(() => {
 				this.setState({ buttonLoading: false });
 			})
 			.catch((error) => {
 				if (error.response.status === 403) {
-					this.props.history.push('/login');
+					this.props.history.push('/SWEUTD-Website/login');
 				}
 				console.log(error);
 				this.setState({

@@ -73,7 +73,7 @@ class events extends Component {
 											<br/>
 											<h4>Click <a href="https://www.badgelist.com/SWE-UTD-Summer-2020#">here</a> to participate in #SWEUTDSummer2020 challenges</h4>
 											<br/>
-											<h4>Be sure to visit our new <a href="/portal">member portal</a> to keep up with your SWE points</h4>
+											<h4>Be sure to visit our new <a href="/SWEUTD-Website/portal">member portal</a> to keep up with your SWE points</h4>
 											<br/>
 											<img src={Fall2020} width="100%"/>
 										</CardContent>

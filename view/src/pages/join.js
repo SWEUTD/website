@@ -22,7 +22,9 @@ const styles = (theme) => ({
 		display: 'flex',
 		justifyContent: 'space-between',
 		flexDirection: 'column',
-		width:'100%'
+		width: '100%',
+		padding: '15px',
+		backgroundColor: 'rgba(255,255,255,0.5)'
 	}
 });
 
@@ -59,13 +61,13 @@ class join extends Component {
 							style={{padding:'40px',backgroundColor:"#DBC554"}}
 						>
 							<Grid item xs={12} className={classes.gridItem}>
-									<Card style={{width:'100%'}} className="movingItem" variant="outlined">
+									<Card style={{width:'100%'}} className={classes.card} className="movingItem" variant="outlined">
 										<CardContent align="center" fullWidth>
 											<h1>Chapter Membership</h1>	
 									<br/>
 									<Divider/>
 									<br/>
-											<h5>Click <a href="/portal">here</a> to visit the member portal and create an account with UTD SWE</h5>
+											<h5>Click <a href="/SWEUTD-Website/portal">here</a> to visit the member portal and create an account with UTD SWE</h5>
 										</CardContent>
 									</Card>
 							</Grid>

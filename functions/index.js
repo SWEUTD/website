@@ -1,6 +1,9 @@
 const functions = require('firebase-functions');
+const cors = require('cors')
 const app = require('express')();
 const auth = require('./util/auth');
+
+app.use(cors())
  
 const {
     getAllEvents,
