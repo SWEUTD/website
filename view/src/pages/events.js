@@ -43,42 +43,45 @@ class events extends Component {
 			<div className={classes.root}>
 				<NavBar />
 				<div className={classNames('header', { 'ready': headerReady })}>
-		            <p className="heading">Events</p>
+		            <p className="heading">Become a Member</p>
                 </div>
-				<Container className={classes.container}>
-					<Grid container
-						spacing={5}
-						height="100%"
-						width="100%"
-						alignItems="stretch"
-						justify="space-evenly"
-					>
-						<Grid className={classes.gridItem} item md={6} xs={12}>
-							<Card className={classes.card} className="movingItem" variant="outlined" fullWidth>
-								<CardContent align="center" width = "50%">
-									<img src={Summer2020} verticalAlign="center" width = "100%"/>
-								</CardContent>
-							</Card>
-						</Grid>
-						<Grid className={classes.gridItem} item md={6} xs={12}>
-							<Card className={classes.card} className="movingItem" variant="outlined">
-								<CardContent align="center">
-									<br/>
-									<h1>Stay connected with SWE this summer!</h1>
-									<br/>
-									<Divider/>
-									<br/>
-									<h4>Click <a href="https://www.badgelist.com/SWE-UTD-Summer-2020#">here</a> to participate in #SWEUTDSummer2020 challenges</h4>
-									<br/>
-									<h4>Be sure to visit our new <a href="/portal">member portal</a> to keep up with your SWE points</h4>
-									<br/>
-									<img src={Fall2020} width="100%"/>
-								</CardContent>
-							</Card>
+				<div className="fullscreen">
+						<Grid container
+							spacing={2}
+							height="100%"
+							width="100%"
+							alignItems="stretch"
+							justify="space-evenly"
+							className={classes.gridItem}
+							style={{padding:'40px',backgroundColor:"#DBC554"}}
+						>
+							<Grid item md={6} xs={12} className={classes.gridItem}>
+									<Card style={{width:'100%'}} className="movingItem" variant="outlined">
+										<CardContent align="center" fullWidth>
+											<img src={Summer2020} verticalAlign="center" width = "100%"/>	
+										</CardContent>
+									</Card>
+							</Grid>
+
+							<Grid item item md={6} xs={12} align="center" className={classes.gridItem}>
+									<Card style={{width:'100%'}} className="movingItem" variant="outlined">
+										<CardContent align="center" fullWidth>
+											<br/>
+											<h1>Stay connected with SWE this summer!</h1>
+											<br/>
+											<Divider/>
+											<br/>
+											<h4>Click <a href="https://www.badgelist.com/SWE-UTD-Summer-2020#">here</a> to participate in #SWEUTDSummer2020 challenges</h4>
+											<br/>
+											<h4>Be sure to visit our new <a href="/portal">member portal</a> to keep up with your SWE points</h4>
+											<br/>
+											<img src={Fall2020} width="100%"/>
+										</CardContent>
+									</Card>
+							</Grid>
 							
 						</Grid>
-					</Grid>
-				</Container>
+				</div>
 			</div>
 		);
 	}

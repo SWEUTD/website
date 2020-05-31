@@ -7,7 +7,10 @@ import home from './pages/home';
 import portal from './pages/portal';
 import about from './pages/about'
 import officers from './pages/officers'
+import swestars from './pages/swestars'
 import events from './pages/events'
+import swematch from './pages/swematch'
+import weconference from './pages/weconference'
 import contact from './pages/contact'
 import join from './pages/join'
 
@@ -36,7 +39,10 @@ function App() {
               <Route exact path="/portal" component={portal}/>
               <Route exact path="/about" component={about}/>
               <Route exact path="/officers" component={officers}/>
+              <Route exact path="/swestars" component={swestars}/>
               <Route exact path="/events" component={events}/>
+              <Route exact path="/swematch" component={swematch}/>
+              <Route exact path="/weconference" component={weconference}/>
               <Route exact path="/join" component={join}/>
               <Route exact path="/contact" component={contact}/>
           </Switch>

@@ -9,12 +9,7 @@ import ListItem from '@material-ui/core/ListItem'
 import CardContent from '@material-ui/core/CardContent'
 import Grid from '@material-ui/core/Grid'
 import Divider from '@material-ui/core/Divider'
-import TopNavBar from '../components/navbar'
-
-import Navbar from 'react-bootstrap/Navbar'
-import Nav from 'react-bootstrap/Nav'
-import NavDropdown from 'react-bootstrap/NavDropdown'
-import NavItem from 'react-bootstrap/NavItem'
+import NavBar from '../components/navbar'
 
 const styles = (theme) => ({
 	root:  {
@@ -27,7 +22,7 @@ const styles = (theme) => ({
 		display: 'flex',
 		justifyContent: 'space-between',
 		flexDirection: 'column',
-		width: '100%'
+		width:'100%'
 	}
 });
 
@@ -46,62 +41,101 @@ class join extends Component {
         const { headerReady } = this.state;
 		const { classes } = this.props;
 		return (
-			<div className={classes.root}>
-				<TopNavBar />
+			<div>
+				<NavBar />
 				<div className={classNames('header', { 'ready': headerReady })}>
 		            <p className="heading">Become a Member</p>
                 </div>
-				<Container>
-					<Grid container
-						spacing={2}
-						height="100%"
-						width="100%"
-						alignItems="stretch"
-						justify="space-evenly"
-					>
-						<Grid item xs={12}>
-								<Card className="movingItem" variant="outlined" fullWidth>
-									<CardContent align="center" fullWidth>
-										<h1>UTD Membership</h1>	
+				<div className="fullscreen">
+				<Grid container>
+					<Grid xs={12} md={6} className={classes.gridItem}>
+						<Grid container
+							spacing={2}
+							height="100%"
+							width="100%"
+							alignItems="stretch"
+							justify="space-evenly"
+							className={classes.gridItem}
+							style={{padding:'40px',backgroundColor:"#DBC554"}}
+						>
+							<Grid item xs={12} className={classes.gridItem}>
+									<Card style={{width:'100%'}} className="movingItem" variant="outlined">
+										<CardContent align="center" fullWidth>
+											<h1>Chapter Membership</h1>	
 									<br/>
 									<Divider/>
 									<br/>
-									<h5>Visit the <a href="swe.org/join">member portal</a> to create an account with UTD SWE and join our mailing listenerCount.</h5>
+											<h5>Click <a href="/portal">here</a> to visit the member portal and create an account with UTD SWE</h5>
+										</CardContent>
+									</Card>
+							</Grid>
+							<Grid item sm={6} xs={12} className={classes.gridItem}>
+								<Card style={{verticalAlign: 'top',height:'100%', width:'100%'}} className="movingItem" variant="outlined">
+									<CardContent>
+										<h5 align="left">Membership Benefits:</h5>
+											<List dense="true" align="center">
+												<ListItem>Company Tours</ListItem>
+												<ListItem>Outreach</ListItem>
+												<ListItem>Socials/Gatherings</ListItem>
+												<ListItem>SWE Conference</ListItem>
+												<ListItem>Networking</ListItem>
+												<ListItem>Workshops</ListItem>
+												<ListItem>Tech Talks</ListItem>
+												<ListItem>Meeting some awesome women in STEM!</ListItem>
+											</List>
 									</CardContent>
 								</Card>
-						</Grid>
-						<Grid item xs={12}>
-								<Card className="movingItem" variant="outlined" fullWidth>
-									<CardContent align="center" fullWidth>
-										<h1>National Membership</h1>	
-
-								<br/>
-								<Divider/>
-								<br/>
-										<h5>Click <a href="swe.org/join">here</a> to become a member of the National SWE Organization</h5>
+							</Grid>
+							<Grid item sm={6} xs={12} className={classes.gridItem}>
+								<Card style={{verticalAlign: 'top',height:'100%', width:'100%'}} className="movingItem" variant="outlined">
+									<CardContent>
+										<h5 align="left">Membership Costs:</h5>
+										<List dense="true" align="center">
+											<ListItem>None!</ListItem>
+										</List>
 									</CardContent>
 								</Card>
+							</Grid>
 						</Grid>
-
-							<Grid className={classes.gridItem} item md={6} xs={12}>
-								<Card className={classes.card} className="movingItem" variant="outlined" fullWidth>
-									<CardContent align="center" fullWidth>
+					</Grid>
+					<Grid xs={12} md={6}>
+						<Grid container
+							spacing={2}
+							height="100%"
+							width="100%"
+							alignItems="stretch"
+							justify="space-evenly"
+							className={classes.gridItem}
+							style={{padding:'40px',backgroundColor:"#A9A8A9"}}
+						>
+							<Grid item xs={12} align="center" className={classes.gridItem}>
+									<Card style={{width:'100%'}} className="movingItem" variant="outlined">
+										<CardContent align="center" fullWidth>
+											<h1>National Membership</h1>	
+									<br/>
+									<Divider/>
+									<br/>
+											<h5>Click <a href="swe.org/join">here</a> to become a member of the National SWE Organization</h5>
+										</CardContent>
+									</Card>
+							</Grid>
+							<Grid item sm={6} xs={12} className={classes.gridItem}>
+								<Card style={{width:'100%'}} className="movingItem" variant="outlined">
+									<CardContent align="center">
 										<h5 align="left">Membership Benefits:</h5>
 											<List dense="true" align="center">
 												<ListItem>Eligibility for scholarships</ListItem>
 												<ListItem>Access to the SWE Career Center</ListItem>
 												<ListItem>Networking opportunities with practicing women engineers and other collegiates</ListItem>
-												<ListItem>A support system of peer groups, mentors, advisors, and industry leaders</ListItem>
-												<ListItem>An opportunity to develop your leadership and management skills</ListItem>
 												<ListItem>SWE Annual and Regional Conferences</ListItem>
 												<ListItem>Annual subscription to the award-winning SWE Magazine</ListItem>
 											</List>
 									</CardContent>
 								</Card>
 							</Grid>
-							<Grid align="right" className={classes.gridItem} item md={6} xs={12}>
-								<Card className={classes.card} align="right" className="movingItem" variant="outlined" fullWidth>
-									<CardContent align="center" fullWidth>
+							<Grid  item sm={6} xs={12} className={classes.gridItem}>
+								<Card style={{width:'100%'}} className="movingItem" variant="outlined">
+									<CardContent align="center">
 										<h5 align="left">Membership Costs:</h5>
 										<List dense="true" align="center">
 											<ListItem>$20 for yearlong membership</ListItem>
@@ -111,7 +145,9 @@ class join extends Component {
 								</Card>
 							</Grid>
 						</Grid>
-				</Container>
+					</Grid>
+					</Grid>
+				</div>
 			</div>
 		);
 	}

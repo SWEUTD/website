@@ -11,7 +11,7 @@ const styles = (theme) => ({
 	
 });
 
-class contact extends Component {
+class swematch extends Component {
 	// needed for header animation
     constructor(props) {
         super(props);
@@ -29,13 +29,13 @@ class contact extends Component {
 			<div className={classes.root}>
 				<NavBar />
 				<div className={classNames('header', { 'ready': headerReady })}>
-		            <p className="heading">Contact Us</p>
+		            <p className="heading">SWEMatch</p>
                 </div>
 				<Container className={classes.container}>
-					<p align="center" class="movingItem">still want to add email form here</p>
+					<p align="center" class="movingItem">Come back for more information soon!</p>
 				</Container>
 			</div>
 		);
 	}
 }
-export default withStyles(styles)(contact);
+export default withStyles(styles)(swematch);

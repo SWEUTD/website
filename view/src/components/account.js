@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import withStyles from '@material-ui/core/styles/withStyles';
-import Typography from '@material-ui/core/Typography';
 import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
 import Select from '@material-ui/core/Select';
@@ -167,9 +166,9 @@ class account extends Component {
 							<div className={classes.details}>
 								<div>
 									<br/>
-									<Typography className={classes.locationText} gutterBottom variant="h4">
+									<h1>
 										{this.state.firstName} {this.state.lastName}
-									</Typography>
+									</h1>
 								</div>
 							</div>
 							<div className={classes.progress} />

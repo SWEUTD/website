@@ -43,12 +43,15 @@ class navbar extends Component {
                             <Navbar.Collapse id="basic-navbar-nav">
                                 <Nav className="mr-auto">
                                     <Nav.Link href="/about">About</Nav.Link>
-                                    <Nav.Link href="/officers">Officers</Nav.Link>
                                     <NavDropdown title="What We Do" id="basic-nav-dropdown">
                                         <NavDropdown.Item href="/events">Events</NavDropdown.Item>
+                                        <NavDropdown.Item href="/weconference">WE Conference</NavDropdown.Item>
+                                        <NavDropdown.Item href="/swematch">SWEmatch</NavDropdown.Item>
                                         <NavDropdown.Item href="https://hansikasundaresan.github.io/LadiesinTech/">Ladies in Tech</NavDropdown.Item>
                                         <NavDropdown.Item href="http://wehackutd.com">WEHack</NavDropdown.Item>
                                     </NavDropdown>
+                                    <Nav.Link href="/officers">Officers</Nav.Link>
+                                    <Nav.Link href="/swestars">SWE Stars</Nav.Link>
                                     <Nav.Link href="/join">Join</Nav.Link>
                                     <Nav.Link href="/portal">Member Portal</Nav.Link>
                                     <Nav.Link href="/contact">Contact</Nav.Link>

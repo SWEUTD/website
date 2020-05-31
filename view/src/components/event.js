@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
 
 import withStyles from '@material-ui/core/styles/withStyles';
-import Typography from '@material-ui/core/Typography';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { Card, CardActions, CardContent, Container, Divider, Button, Box, Grid, TextField } from '@material-ui/core';
-
-import clsx from 'clsx';
-
 import axios from 'axios';
 import { authMiddleWare } from '../util/auth';
 
@@ -165,15 +161,6 @@ class event extends Component {
 
 	render() {
 		const { classes } = this.props;
-
-		const header = 
-			<div fullWidth>
-				<Typography className={classes.locationText} gutterBottom variant="h4" fullWidth>
-					Your Attendance History
-				</Typography>
-				<Divider/>
-			</div>
-		
 		const history = this.state.events.map((item, key) =>
 			<div fullWidth>
 				<br/>
@@ -205,7 +192,7 @@ class event extends Component {
 			nextLevel = 5 - this.state.points
 			rewardStatus =
 				<div>
-					<Typography className={classes.locationText} gutterBottom variant="h4" align="center">You are a Bronze SWE Star!</Typography>
+					<h1 align="center">You are a Bronze SWE Star!</h1>
 					<Divider/>
 					<br />
 					<h4 align="center">You are {nextLevel} points away from the silver tier</h4>
@@ -224,7 +211,7 @@ class event extends Component {
 			nextLevel = 7 - this.state.points
 			rewardStatus =
 				<div>
-					<Typography className={classes.locationText} gutterBottom variant="h4" align="center">You are a Silver SWE Star!</Typography>
+					<h1 align="center">You are a Silver SWE Star!</h1>
 					<Divider/>
 					<br />
 					<h4 align="center">You are {nextLevel} points away from the gold tier</h4>
@@ -243,7 +230,7 @@ class event extends Component {
 		else {
 			rewardStatus =
 				<div>
-					<Typography className={classes.locationText} gutterBottom variant="h4" align="center">You are a Gold SWE Star!</Typography>
+					<h1 align="center">You are a Gold SWE Star!</h1>
 					<Divider/>
 					<br />
 					<h4 align="center">You have reached the SWE gold tier! Congratulations!</h4>
@@ -266,44 +253,45 @@ class event extends Component {
 			);
 		} else {
 			return (
-				<Container className={classes.content}>
+				<div>
 				<div className={classes.toolbar} />
-
+				<br/>
 				<Grid container
 					spacing={2}
 					height="100%"
 					width="100%"
 					alignItems="stretch"
 					justify="space-evenly"
+					style={{height: '100vh'}}
 				>
-					<Grid className={classes.gridItem} style={{flexDirection: 'column'}} item md={6} xs={12}>
-							<Card className="movingItem" variant="outlined" fullWidth>
-								<CardContent align="center" fullWidth>
-									<br/>
-									<Typography className={classes.locationText} gutterBottom variant="h4">
-										{this.state.points} SWE points
-									</Typography>
-								</CardContent>
-							</Card>
-							<br/>
-							<Card alignItems="stretch"  className="movingItem" variant="outlined" fullWidth>
-								<CardContent height="100%" align="left" fullWidth>
-									{rewardStatus}
-								</CardContent>
-							</Card>
+					<Grid className={classes.gridItem} style={{height: '90vh', flexDirection: 'column'}} item md={6} xs={12}>
+						<Card style={{height: '20vh'}} className="movingItem" variant="outlined" fullWidth>
+							<CardContent align="center" style={{padding:'10px'}}>
+								<br/>
+								<h1>
+									{this.state.points} SWE points
+								</h1>
+							</CardContent>
+						</Card>
+						<br/>
+						<Card style={{height: '70vh'}} alignItems="stretch"  className="movingItem" variant="outlined" style={{padding:'10px'}}>
+							<CardContent height="100%" align="left" fullWidth>
+								{rewardStatus}
+							</CardContent>
+						</Card>
 					</Grid>
-
-					<Grid className={classes.gridItem} item md={6} xs={12}>
-						<Card height="100%" className="movingItem" variant="outlined">
-							<CardContent height="100%" align="center" fullWidth>				
-									{header}
+					<Grid style={{height: '90vh'}} className={classes.gridItem} item md={6} xs={12}>
+						<Card height="100%" className="movingItem" variant="outlined" style={{padding:'10px'}}>
+							<CardContent height="100%" align="center">				
+							<h1 align="center">
+								Your Attendance History
+							</h1>
 									{history}
 							</CardContent>
 						</Card>
 					</Grid>
 				</Grid>
-
-				</Container>
+				</div>
 			);
 		}
 	}
