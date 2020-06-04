@@ -14,9 +14,7 @@ import swematch from './pages/swematch'
 import weconference from './pages/weconference'
 import contact from './pages/contact'
 import join from './pages/join'
-
-//temp
-import kickoff from './pages/kickoff'
+import calendar from './pages/calendar'
 
 const theme = createMuiTheme({
 	palette: {
@@ -49,7 +47,7 @@ function App() {
               <Route exact path="/SWEUTD-Website/weconference" component={weconference}/>
               <Route exact path="/SWEUTD-Website/join" component={join}/>
               <Route exact path="/SWEUTD-Website/contact" component={contact}/>
-              <Route exact path="/SWEUTD-Website/kickoff" component={kickoff}/>
+              <Route exact path="/SWEUTD-Website/calendar" component={calendar}/>
           </Switch>
       </BrowserRouter>
     </MuiThemeProvider>

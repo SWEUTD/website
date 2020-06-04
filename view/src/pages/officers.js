@@ -6,6 +6,8 @@ import Container from '@material-ui/core/Container'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import { Card, CardActions, CardContent, Divider, Button, Box, Grid, TextField, Typography } from '@material-ui/core';
 import NavBar from '../components/navbar'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 import AfridaTasnim from '../assets/OfficerPhotos/AfridaTasnim.jpg'
 import AngelleNazareno from '../assets/OfficerPhotos/AngelleNazareno.jpg'
@@ -20,11 +22,122 @@ import MedhaAiyah from '../assets/OfficerPhotos/MedhaAiyah.jpg'
 import MichaelaPerez from '../assets/OfficerPhotos/MichaelaPerez.jpg'
 import ShivaniGandhi from '../assets/OfficerPhotos/ShivaniGandhi.jpg'
 import SindhuBoppudi from '../assets/OfficerPhotos/SindhuBoppudi.jpg'
+import PushpaKumar from '../assets/OfficerPhotos/PushpaKumar.png'
+import ZainebAhmad from '../assets/OfficerPhotos/ZainebAhmad.png'
+import JerryAlexander from '../assets/OfficerPhotos/JerryAlexander.jpg'
+
+const officerList = [
+	{
+		name: 'Medha Aiyah',
+		image: MedhaAiyah,
+		position: "President",
+		linkedin: "https://www.linkedin.com/in/medha-aiyah/" 
+	},
+	{
+		name: 'Ankita Bantey',
+		image: AnkitaBantey,
+		position: "Vice President",
+		linkedin: "https://www.linkedin.com/in/ankita-bantey/"
+	},
+	{
+		name: 'Maaha Sakia',
+		image: MaahaSakia,
+		position: "Treasurer",
+		linkedin: "https://www.linkedin.com/in/maaha-sakhia-183298196/"
+	},
+	{
+		name: 'Arushi Agrawal',
+		image: ArushiAgrawal,
+		position: "Secretary",
+		linkedin: "https://www.linkedin.com/in/agrawal-arushi/"
+	},
+	{
+		name: 'Shivani Gandhi',
+		image: ShivaniGandhi,
+		position: "Marketing Chair",
+		linkedin: "https://www.linkedin.com/in/shivanirgandhi/"
+	},
+	{
+		name: 'Angelle Nazareno',
+		image: AngelleNazareno,
+		position: "Design Chair"
+	},
+	{
+		name: 'Janrose Samson',
+		image: JanroseSamson,
+		position: "Community Outreach Chair",
+		linkedin: "https://www.linkedin.com/in/janrosesamson/"
+	},
+	{
+		name: 'Sindhu Boppudi',
+		image: SindhuBoppudi,
+		position: "Industry Chair",
+		linkedin: "https://www.linkedin.com/in/sindhuraboppudi/"
+
+	},
+	{
+		name: 'Deesha Kumbham',
+		image: DeeshaKumbham,
+		position: "Conference Committee Chair",
+		linkedin: "https://www.linkedin.com/in/deesha-kumbham-86b4b6196/"
+	},
+	{
+		name: 'Michaela Perez',
+		image: MichaelaPerez,
+		position: "Operations Chair",
+		linkedin: "https://www.linkedin.com/in/michaela-perez/"
+	},
+	{
+		name: 'Caitlin Tibbetts',
+		image: CaitlinTibbetts,
+		position: "Competition Chair",
+		linkedin: "https://www.linkedin.com/in/caitlin-tibbetts/"
+	},
+	{
+		name: 'Cady Baltz',
+		image: CadyBaltz,
+		position: "Membership Chair",
+		linkedin: "https://www.linkedin.com/in/cadybaltz/"
+	},
+	{
+		name: 'Afrida Tasnim',
+		image: AfridaTasnim,
+		position: "WEHack Co-Director",
+		linkedin: "https://www.linkedin.com/in/afrida-tasnim/"
+	},
+	{
+		name: 'Zaineb Ahmad',
+		image: ZainebAhmad,
+		position: "SWE UTD Section Counselor"
+	},
+	{
+		name: 'Dr. Pushpa Kumar',
+		image: PushpaKumar,
+		position: 'Faculty Advisor',
+	},
+	{
+		name: 'Jerry Alexander',
+		image: JerryAlexander,
+		position: "ECS Assistant Dean for Student Development"
+	}
+];
 
 
 
 const styles = (theme) => ({
-	
+	gridItem: {
+		display: 'flex',
+		justifyContent: 'center'
+	},
+	card: {
+		display: 'flex',
+		justifyContent: 'space-between',
+		flexDirection: 'column'
+	},
+	image: {
+		width: '80%',
+		borderRadius: '50%'
+	}
 });
 
 class officers extends Component {
@@ -32,8 +145,8 @@ class officers extends Component {
 		constructor(props) {
 			super(props);
 			this.state = { headerReady: false };
-		  }
-		  componentDidMount() {
+		}
+		componentDidMount() {
 			setTimeout(() => {
 			  this.setState({ headerReady: true });
 			}, 0);
@@ -55,178 +168,26 @@ class officers extends Component {
 					alignItems="stretch"
 					justify="space-evenly"
 					>
-						<Grid item xs="6" sm="3">
-						
-							<Card className="movingItem"  variant="outlined">
-								<CardContent align="center">
-									<img src={MedhaAiyah} width="80%" />
-									<br />
-									<br />
-									<Divider />
-									<br />
-									<h6>Medha Aiyah</h6>
-									<h6>President</h6>
-								</CardContent>
-							</Card>
-
-						</Grid>
-						<Grid item xs="6" sm="3">
-							<Card className="movingItem"  variant="outlined">
-								<CardContent align="center">
-									<img src={AnkitaBantey} width="80%" />
-									<br />
-									<br />
-									<Divider />
-									<br />
-									<h6>Ankita Bantey</h6>
-									<h6>Vice President</h6>
-								</CardContent>
-							</Card>
-						</Grid>
-						<Grid item xs="6" sm="3">
-							<Card className="movingItem"   variant="outlined">
-								<CardContent align="center">
-									<img src={MaahaSakia} width="80%" />
-									<br />
-									<br />
-									<Divider />
-									<br />
-									<h6>Maaha Sakia</h6>
-									<h6>Treasurer</h6>
-								</CardContent>
-							</Card>
-						</Grid>
-						<Grid item xs="6" sm="3">
-							<Card className="movingItem"  variant="outlined">
-								<CardContent align="center">
-									<img src={ArushiAgrawal} width="80%" />
-									<br />
-									<br />
-									<Divider />
-									<br />
-									<h6>Arushi Agrawal</h6>
-									<h6>Secretary</h6>
-								</CardContent>
-							</Card>
-						</Grid>
-						<Grid item xs="6" sm="3">
-							<Card className="movingItem" variant="outlined">
-								<CardContent align="center">
-									<img src={ShivaniGandhi} width="80%" />
-									<br />
-									<br />
-									<Divider />
-									<br />
-									<h6>Shivani Gandhi</h6>
-									<h6>Marketing Chair</h6>
-								</CardContent>
-							</Card>
-						</Grid>
-						<Grid item xs="6" sm="3">
-							<Card className="movingItem"  variant="outlined">
-								<CardContent align="center">
-									<img src={AngelleNazareno} width="80%" />
-									<br />
-									<br />
-									<Divider />
-									<br />
-									<h6>Angelle Nazareno</h6>
-									<h6>Design Chair</h6>
-								</CardContent>
-							</Card>
-						</Grid>
-						<Grid item xs="6" sm="3">
-							<Card className="movingItem"  variant="outlined">
-								<CardContent align="center">
-									<img src={JanroseSamson} width="80%" />
-									<br />
-									<br />
-									<Divider />
-									<br />
-									<h6>Janrose Samson</h6>
-									<h6>Community Outreach Chair</h6>
-								</CardContent>
-							</Card>
-						</Grid>
-						<Grid item xs="6" sm="3">
-							<Card className="movingItem" variant="outlined">
-								<CardContent align="center">
-									<img src={SindhuBoppudi} width="80%" />
-									<br />
-									<br />
-									<Divider />
-									<br />
-									<h6>Sindhu Boppudi</h6>
-									<h6>Industry Chair</h6>
-								</CardContent>
-							</Card>
-						</Grid>
-						<Grid item xs="6" sm="3">
-							<Card className="movingItem" variant="outlined">
-								<CardContent align="center">
-									<img src={DeeshaKumbham} width="80%" />
-									<br />
-									<br />
-									<Divider />
-									<br />
-									<h6>Deesha Kumbham</h6>
-									<h6>Conference Committee Chair</h6>
-								</CardContent>
-							</Card>
-						</Grid>
-						<Grid item xs="6" sm="3">
-							<Card className="movingItem" variant="outlined">
-								<CardContent align="center">
-									<img src={MichaelaPerez} width="80%" />
-									<br />
-									<br />
-									<Divider />
-									<br />
-									<h6>Michaela Perez</h6>
-									<h6>Operations Chair</h6>
-								</CardContent>
-							</Card>
-						</Grid>
-						<Grid item xs="6" sm="3">
-							<Card className="movingItem" variant="outlined">
-								<CardContent align="center">
-									<img src={CaitlinTibbetts} width="80%" />
-									<br />
-									<br />
-									<Divider />
-									<br />
-									<h6>Caitlin Tibbetts</h6>
-									<h6>Competition Chair</h6>
-								</CardContent>
-							</Card>
-						</Grid>
-						<Grid item xs="6" sm="3">
-							<Card className="movingItem" variant="outlined">
-								<CardContent align="center">
-									<img src={CadyBaltz} width="80%" />
-									<br />
-									<br />
-									<Divider />
-									<br />
-									<h6>Cady Baltz</h6>
-									<h6>Membership Chair</h6>
-								</CardContent>
-							</Card>
-						</Grid>
-						<Grid item xs="6" sm="3">
-							<Card className="movingItem" variant="outlined">
-								<CardContent align="center">
-									<img src={AfridaTasnim} width="80%" />
-									<br />
-									<br />
-									<Divider />
-									<br />
-									<h6>Afrida Tasnim</h6>
-									<h6>WEHack Co-Director</h6>
-								</CardContent>
-							</Card>
-						</Grid>
-
+						{officerList.map((officer) => (
+							<Grid className={classes.gridItem} item xs="6" sm="3">
+								<Card className={classes.card} className="movingItem" variant="outlined">
+									<CardContent align="center">
+										<img src={officer.image} className={classes.image} />
+										<br />
+										<br />
+										<Divider />
+										<br />
+										<h6>{officer.name}</h6>
+										<h6>{officer.position}</h6>
+										<a href={officer.linkedin}>
+											{officer.linkedin &&
+												<FontAwesomeIcon icon={faLinkedin} className="imageLink" size="lg" style={{ color: '#5A5377' }}/>
+											}
+										</a>
+									</CardContent>
+								</Card>
+							</Grid>
+						))}
 					</Grid>
 				</Container>
 			</div>
