@@ -46,7 +46,7 @@ class navbar extends Component {
                                     <NavDropdown title="What We Do" id="basic-nav-dropdown">
                                         <NavDropdown.Item href="/SWEUTD-Website/events">Events</NavDropdown.Item>
                                         <NavDropdown.Item href="/SWEUTD-Website/weconference">WE Conference</NavDropdown.Item>
-                                        <NavDropdown.Item href="/SWEUTD-Website/swematch">SWEmatch</NavDropdown.Item>
+                                        <NavDropdown.Item href="/SWEUTD-Website/swematch">SWEMatch</NavDropdown.Item>
                                         <NavDropdown.Item href="https://hansikasundaresan.github.io/LadiesinTech/">Ladies in Tech</NavDropdown.Item>
                                         <NavDropdown.Item href="http://wehackutd.com">WEHack</NavDropdown.Item>
                                     </NavDropdown>
