@@ -4,7 +4,6 @@ import classNames from 'classnames';
 
 import withStyles from '@material-ui/core/styles/withStyles';
 import Container from '@material-ui/core/Container'
-import CssBaseline from '@material-ui/core/CssBaseline'
 
 import NavBar from '../components/navbar'
 import Logo from '../assets/MatchLogo.png'
@@ -86,24 +85,12 @@ class swematch extends Component {
 						<li><strong>20 October 2020 at 8:30PM:</strong> First General Meeting!</li>
 					</ul>
 					<div align="center">
-						<img class="movingItem" src={Logo} height={200}/>
+						<img class="movingItem" alt="SWEMatch logo" src={Logo} height={200}/>
 					</div>
 				</Container>
 			</div>
 		);
 	}
 }
-
-const columnStyles = {
-	container: {
-	  flex: 1,
-	  flexDirection: 'row',
-	  flexWrap: 'wrap',
-	  alignItems: 'flex-start'
-	},
-	item: {
-	  width: '50%'
-	}
-  }
 
 export default withStyles(styles)(swematch);
