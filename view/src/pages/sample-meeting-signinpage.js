@@ -47,7 +47,7 @@ const styles = (theme) => ({
 	}
 });
 
-class kickoff extends Component {
+class samplemeeting extends Component {
 	constructor(props) {
 		super(props);
 
@@ -102,9 +102,9 @@ class kickoff extends Component {
             eventDate: "05/31/2020"
 		};
 		axios
-			.post('https://us-central1-swe-utd.cloudfunctions.net/api/newEvent', newMemberData)
+			.post('https://us-central1-swe-utd-portal.cloudfunctions.net/api/newEvent', newMemberData)
 			.then(() => {
-				this.props.history.push('/SWEUTD-Website/');
+				this.props.history.push('/website/');
 			})
 			.catch((error) => {
 				this.setState({
@@ -306,4 +306,4 @@ class kickoff extends Component {
 	}
 }
 
-export default withStyles(styles)(kickoff);
+export default withStyles(styles)(samplemeeting);

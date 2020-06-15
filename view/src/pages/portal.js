@@ -68,7 +68,7 @@ class portal extends Component {
 
 	logoutHandler = (event) => {
 		localStorage.removeItem('AuthToken');
-		this.props.history.push('/SWEUTD-Website/login');
+		this.props.history.push('/website/login');
 	};
 
 	constructor(props) {
@@ -87,7 +87,7 @@ class portal extends Component {
 		const authToken = localStorage.getItem('AuthToken');
 		axios.defaults.headers.common = { Authorization: `${authToken}` };
 		axios
-			.get('https://us-central1-swe-utd.cloudfunctions.net/api/member')
+			.get('https://us-central1-swe-utd-portal.cloudfunctions.net/api/member')
 			.then((response) => {
 				console.log(response.data);
 				this.setState({
@@ -106,7 +106,7 @@ class portal extends Component {
 				if(error.response != undefined)
 				{
 					if(error.response.status === 403) {
-						this.props.history.push('/SWEUTD-Website/login')
+						this.props.history.push('/website/login')
 					}
 				}
 				console.log(error);

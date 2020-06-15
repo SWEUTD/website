@@ -7,22 +7,28 @@ import '../slideshow.css';
 import WePhoto from '../assets/SlideshowImages/WE.jpg'
 import OfficersPhoto from '../assets/SlideshowImages/Officers.jpg'
 import EventPhoto from '../assets/SlideshowImages/Events.jpg'
+import EventPhoto2 from '../assets/SlideshowImages/Events2.jpg'
 
 const slides = [
 	{
 	  title: 'Who WE Are',
 		img: WePhoto,
-		link: "/SWEUTD-Website/about"
-	},
-	{
-	  title: 'Meet Our Officers',
-		img: OfficersPhoto,
-		link: "/SWEUTD-Website/officers"
+		link: "/website/about"
 	},
 	{
 	  title: 'Get Involved',
 		img: EventPhoto,
-		link: "/SWEUTD-Website/join"
+		link: "/website/join"
+	},
+	{
+	  title: 'Our Events',
+		img: EventPhoto2,
+		link: "/website/events"
+	},
+	{
+	  title: 'Meet Our Officers',
+		img: OfficersPhoto,
+		link: "/website/officers"
 	},
 ];
 
