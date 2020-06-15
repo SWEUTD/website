@@ -77,7 +77,7 @@ class account extends Component {
 		const authToken = localStorage.getItem('AuthToken');
 		axios.defaults.headers.common = { Authorization: `${authToken}` };
 		axios
-			.get('https://us-central1-swe-utd.cloudfunctions.net/api/member')
+			.get('https://us-central1-swe-utd-portal.cloudfunctions.net/api/member')
 			.then((response) => {
 				console.log(response.data);
 				this.setState({
@@ -94,7 +94,7 @@ class account extends Component {
 			})
 			.catch((error) => {
 				if (error.response.status === 403) {
-					this.props.history.push('/SWEUTD-Website/login');
+					this.props.history.push('/website/login');
 				}
 				console.log(error);
 				this.setState({ errorMsg: 'Error in retrieving the data' });
@@ -131,13 +131,13 @@ class account extends Component {
 		};
 		
 		axios
-			.post('https://us-central1-swe-utd.cloudfunctions.net/api/member', formRequest)
+			.post('https://us-central1-swe-utd-portal.cloudfunctions.net/api/member', formRequest)
 			.then(() => {
 				this.setState({ buttonLoading: false });
 			})
 			.catch((error) => {
 				if (error.response.status === 403) {
-					this.props.history.push('/SWEUTD-Website/login');
+					this.props.history.push('/website/login');
 				}
 				console.log(error);
 				this.setState({

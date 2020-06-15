@@ -15,6 +15,7 @@ import weconference from './pages/weconference'
 import contact from './pages/contact'
 import join from './pages/join'
 import calendar from './pages/calendar'
+import samplemeeting from './pages/sample-meeting-signinpage'
 
 const theme = createMuiTheme({
 	palette: {
@@ -36,18 +37,19 @@ function App() {
     <MuiThemeProvider theme={theme}>
       <BrowserRouter>
           <Switch>
-              <Route exact path="/SWEUTD-Website/login" component={login}/>
-              <Route exact path="/SWEUTD-Website/" component={home}/>
-              <Route exact path="/SWEUTD-Website/portal" component={portal}/>
-              <Route exact path="/SWEUTD-Website/about" component={about}/>
-              <Route exact path="/SWEUTD-Website/officers" component={officers}/>
-              <Route exact path="/SWEUTD-Website/swestars" component={swestars}/>
-              <Route exact path="/SWEUTD-Website/events" component={events}/>
-              <Route exact path="/SWEUTD-Website/swematch" component={swematch}/>
-              <Route exact path="/SWEUTD-Website/weconference" component={weconference}/>
-              <Route exact path="/SWEUTD-Website/join" component={join}/>
-              <Route exact path="/SWEUTD-Website/contact" component={contact}/>
-              <Route exact path="/SWEUTD-Website/calendar" component={calendar}/>
+              <Route exact path="/website/login" component={login}/>
+              <Route exact path="/website/" component={home}/>
+              <Route exact path="/website/portal" component={portal}/>
+              <Route exact path="/website/about" component={about}/>
+              <Route exact path="/website/officers" component={officers}/>
+              <Route exact path="/website/swestars" component={swestars}/>
+              <Route exact path="/website/events" component={events}/>
+              <Route exact path="/website/swematch" component={swematch}/>
+              <Route exact path="/website/weconference" component={weconference}/>
+              <Route exact path="/website/join" component={join}/>
+              <Route exact path="/website/contact" component={contact}/>
+              <Route exact path="/website/calendar" component={calendar}/>
+              <Route exact path="/website/samplemeeting" component={samplemeeting}/>
           </Switch>
       </BrowserRouter>
     </MuiThemeProvider>

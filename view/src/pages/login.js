@@ -100,13 +100,13 @@ class login extends Component {
 			password: this.state.password
 		};
 		axios
-			.post('https://us-central1-swe-utd.cloudfunctions.net/api/login', memberData)
+			.post('https://us-central1-swe-utd-portal.cloudfunctions.net/api/login', memberData)
 			.then((response) => {
 				localStorage.setItem('AuthToken', `Bearer ${response.data.token}`);
 				this.setState({ 
 					loginLoading: false,
 				});		
-				this.props.history.push('/SWEUTD-Website/portal');
+				this.props.history.push('/website/portal');
 			})
 			.catch((error) => {				
 				this.setState({
@@ -121,6 +121,7 @@ class login extends Component {
 		this.setState({ signupLoading: true });
 		if(this.state.major != "Other")
 			this.state.otherMajor = "";
+		this.state.netid = this.state.netid.toLowerCase();
 		const newMemberData = {
 			firstName: this.state.firstName,
 			lastName: this.state.lastName,
@@ -134,13 +135,13 @@ class login extends Component {
 			confirmPassword: this.state.confirmPassword
 		};
 		axios
-			.post('https://us-central1-swe-utd.cloudfunctions.net/api/signup', newMemberData)
+			.post('https://us-central1-swe-utd-portal.cloudfunctions.net/api/signup', newMemberData)
 			.then((response) => {
 				localStorage.setItem('AuthToken', `Bearer ${response.data.token}`);
 				this.setState({ 
 					signupLoading: false,
 				});	
-				this.props.history.push('/SWEUTD-Website/portal');
+				this.props.history.push('/website/portal');
 			})
 			.catch((error) => {
 				this.setState({

@@ -6,6 +6,8 @@ import Grid from '@material-ui/core/Grid'
 import Card from '@material-ui/core/Card'
 import Officers from '../assets/SlideshowImages/Officers.jpg'
 import Fall2020 from '../assets/SlideshowImages/WE.jpg'
+import Statistics from '../assets/statistics.png'
+import Sponsor from '../assets/AT&T.png'
 
 import NavBar from '../components/navbar'
 
@@ -19,8 +21,11 @@ const styles = (theme) => ({
 		justifyContent: 'space-between',
 		flexDirection: 'column',
 		width: '100%',
-		padding: '30px',
-		backgroundColor: 'rgba(255,255,255,0.5)'
+		padding: '30px'
+	},
+	image: {
+		width: '80%',
+		borderRadius: '50%'
 	}
 });
 
@@ -52,23 +57,25 @@ class about extends Component {
 					justify="space-evenly"
 					className="movingItem"
 				>
-					<Grid className={classes.gridItem} style={{backgroundColor:"#DBC554", padding:'50px'}} item md={6} xs={12}>
-					<Card className={classes.card}>
-						<h2 className="verticalElement">The Society of Women Engineers (SWE) stimulates women to achieve full potential in careers as engineers and leaders, expand the image of the engineering profession as a positive force in improving the quality of life, and demonstrate the value of diversity.</h2>
-					</Card>
+					<Grid className={classes.gridItem} style={{backgroundColor:"white", color: "white", padding:'50px'}} item md={6} xs={12}>
+						<img src={Statistics} width="100%"/>
 					</Grid>
-					<Grid className={classes.gridItem} style={{backgroundColor:"#DBC554"}} item md={6} xs={12}>
-						<img src={Fall2020} width="100%"/>
+					<Grid className={classes.gridItem} style={{backgroundColor:"white",textAlign:"center", padding:'50px'}} item md={6} xs={12}>
+						<div className={classes.card}>
+							<h4>The Society of Women Engineers (SWE) stimulates women to achieve full potential in careers as engineers and leaders, expand the image of the engineering profession as a positive force in improving the quality of life, and demonstrate the value of diversity.</h4>
+							<br/>
+							<h4>SWE at UTD values service, professional development, and networking. Consequently, we host various development and recruitment events with companies in the Dallas/ Fort Worth area, identify relevant volunteer opportunities, and provide members with an opportunity to be sponsored to attend the SWE annual conference.</h4>
+						</div>
 					</Grid>
-					<Grid className={classes.gridItem} style={{backgroundColor:"#A9A8A9"}} item md={6} xs={12}>
-						<img src={Officers} width="100%"/>
-					</Grid>
-					<Grid className={classes.gridItem} style={{backgroundColor:"#A9A8A9", padding:'50px'}} item md={6} xs={12}>
-					<Card className={classes.card}>
-						<h2>So what does SWE at UTD do?</h2>
-						<br/>
-						<h3>SWE at UTD values service, professional development, and networking. Consequently, we host various development and recruitment events with companies in the Dallas/ Fort Worth area, identify relevant volunteer opportunities, and provide members with an opportunity to be sponsored to attend the SWE annual conference.</h3>
-					</Card>
+					<Grid className={classes.gridItem} style={{backgroundColor:"#DBC554"}} item xs={12}>
+						<div align="center">
+							<br/>
+							<h1>Our Sponsor</h1>
+							<h2>We give special thanks to our sponsor, AT&amp;T</h2>
+							<img src={Sponsor} width="50%"/>
+							<h4>Interested in sponsoring the UT-Dallas section of SWE? <a href="/website/contact">Let us know!</a></h4>
+							<br/>
+						</div>
 					</Grid>
 				</Grid>
 				</div>

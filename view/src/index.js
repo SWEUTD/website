@@ -4,6 +4,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import './custom.scss';
 import './custom.css';
+import './fonts/GillSansMTBook.ttf'
 
 ReactDOM.render(
   <React.StrictMode>

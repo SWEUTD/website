@@ -1,4 +1,13 @@
- .navbar {
+@font-face {
+  font-family: 'GillSansMTBook';
+  src: local('GillSansMTBook'), url(./fonts/GillSansMTBook.ttf) format('truetype');
+}
+
+body {
+    font-family: 'GillSansMTBook';
+}
+
+.navbar {
   min-height: 50px;
 }
 
