@@ -8,6 +8,7 @@ import Grid from '@material-ui/core/Grid'
 import Carousel from 'react-bootstrap/Carousel'
 import NavBar from '../components/navbar'
 
+// Slideshow Images
 import Image2 from '../assets/WEImages/1.HEIC'
 import Image1 from '../assets/WEImages/2.jpg'
 import Image3 from '../assets/WEImages/3.jpg'

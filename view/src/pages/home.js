@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 import withStyles from '@material-ui/core/styles/withStyles';
-import Container from '@material-ui/core/Container'
-import CssBaseline from '@material-ui/core/CssBaseline'
-
 import Slideshow from '../components/slideshow.js'
 import NavBar from '../components/navbar'
 

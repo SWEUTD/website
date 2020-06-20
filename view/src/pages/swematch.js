@@ -85,7 +85,7 @@ class swematch extends Component {
 						<li><strong>20 October 2020 at 8:30PM:</strong> First General Meeting!</li>
 					</ul>
 					<div align="center">
-						<img class="movingItem" alt="SWEMatch logo" src={Logo} height={200}/>
+						<img class="movingItem" alt="SWEMatch logo" src={Logo} width="100%"/>
 					</div>
 				</Container>
 			</div>

@@ -106,7 +106,7 @@ class login extends Component {
 				this.setState({ 
 					loginLoading: false,
 				});		
-				this.props.history.push('/website/portal');
+				this.props.history.push('/portal');
 			})
 			.catch((error) => {				
 				this.setState({
@@ -141,7 +141,7 @@ class login extends Component {
 				this.setState({ 
 					signupLoading: false,
 				});	
-				this.props.history.push('/website/portal');
+				this.props.history.push('/portal');
 			})
 			.catch((error) => {
 				this.setState({

@@ -68,7 +68,7 @@ class portal extends Component {
 
 	logoutHandler = (event) => {
 		localStorage.removeItem('AuthToken');
-		this.props.history.push('/website/login');
+		this.props.history.push('/login');
 	};
 
 	constructor(props) {
@@ -106,7 +106,7 @@ class portal extends Component {
 				if(error.response != undefined)
 				{
 					if(error.response.status === 403) {
-						this.props.history.push('/website/login')
+						this.props.history.push('/login')
 					}
 				}
 				console.log(error);

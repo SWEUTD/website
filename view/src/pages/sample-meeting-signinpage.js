@@ -104,7 +104,7 @@ class samplemeeting extends Component {
 		axios
 			.post('https://us-central1-swe-utd-portal.cloudfunctions.net/api/newEvent', newMemberData)
 			.then(() => {
-				this.props.history.push('/website/');
+				this.props.history.push('/');
 			})
 			.catch((error) => {
 				this.setState({

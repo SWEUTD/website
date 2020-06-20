@@ -1,28 +1,27 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
-
 import withStyles from '@material-ui/core/styles/withStyles';
 import Container from '@material-ui/core/Container'
-import CssBaseline from '@material-ui/core/CssBaseline'
-
 import NavBar from '../components/navbar'
-
 import Calendar from 'react_google_calendar'
- 
+
 const calendar_configuration = {
-    api_key: 'AIzaSyBiOhSoxcQNDHgeta3pxPz-KBGSLbvhxEM',
+    api_key: process.env.REACT_APP_CALENDAR_KEY,
     calendars: [
       {
         name: 'Community Outreach Events', // whatever you want to name it
-        url: '69gnk398bfu24fassk546qgmc8@group.calendar.google.com' // your calendar URL
+        url: '69gnk398bfu24fassk546qgmc8@group.calendar.google.com',
+        color: 'red'
       },
       {
         name: 'Corporate Events', // whatever you want to name it
-        url: '85556o7d5bvkvilesn659mekkc@group.calendar.google.com' // your calendar URL
+        url: '85556o7d5bvkvilesn659mekkc@group.calendar.google.com',
+        color: 'red'
       },
       {
         name: 'Events', // whatever you want to name it
-        url: 'qo4rmsgksc6pe3bfa9sso4f42s@group.calendar.google.com' // your calendar URL
+        url: 'qo4rmsgksc6pe3bfa9sso4f42s@group.calendar.google.com',
+        color: 'red'
       },
       {
         name: 'WE Hack', // whatever you want to name it
@@ -60,9 +59,14 @@ class calendar extends Component {
                 </div>
                 <Container width="80%">
                     <Calendar
-                    events={this.state.events}
-                    config={calendar_configuration}
-                    popup='true'
+                      events={this.state.events}
+                      config={calendar_configuration}
+                      popup='true'
+                      eventPropGetter={event => ({
+                        style: {
+                          backgroundColor: event.color,
+                        },
+                      })}
                      />
                      <br/>
                 </Container>

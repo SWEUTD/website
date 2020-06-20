@@ -27,6 +27,12 @@ const isNetId = (netid) => {
 	else return false;
 };
 
+const isPhoneNumber = (phoneNumber) => {
+	const phoneNumberRegEx = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/;
+	if (phoneNumber.match(phoneNumberRegEx)) return true;
+	else return false;
+};
+
 exports.validateSignUpData = (data) => {
 	let errors = {};
 
@@ -42,9 +48,14 @@ exports.validateSignUpData = (data) => {
 		errors.netid = 'Must be valid NetID';
 	}
 
+	if (isEmpty(data.phoneNumber)) {
+		errors.phoneNumber = 'Must not be empty';
+	} else if (!isPhoneNumber(data.phoneNumber)) {
+		errors.phoneNumber = 'Please enter a valid phone number';
+	}
+
 	if (isEmpty(data.firstName)) errors.firstName = 'Must not be empty';
 	if (isEmpty(data.lastName)) errors.lastName = 'Must not be empty';
-	if (isEmpty(data.phoneNumber)) errors.phoneNumber = 'Must not be empty';
 	if (isEmpty(data.classification)) errors.classification = 'Must not be empty';
 	if (isEmpty(data.major)) errors.major = 'Must not be empty';
 

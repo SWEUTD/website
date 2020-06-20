@@ -37,19 +37,19 @@ function App() {
     <MuiThemeProvider theme={theme}>
       <BrowserRouter>
           <Switch>
-              <Route exact path="/website/login" component={login}/>
-              <Route exact path="/website/" component={home}/>
-              <Route exact path="/website/portal" component={portal}/>
-              <Route exact path="/website/about" component={about}/>
-              <Route exact path="/website/officers" component={officers}/>
-              <Route exact path="/website/swestars" component={swestars}/>
-              <Route exact path="/website/events" component={events}/>
-              <Route exact path="/website/swematch" component={swematch}/>
-              <Route exact path="/website/weconference" component={weconference}/>
-              <Route exact path="/website/join" component={join}/>
-              <Route exact path="/website/contact" component={contact}/>
-              <Route exact path="/website/calendar" component={calendar}/>
-              <Route exact path="/website/samplemeeting" component={samplemeeting}/>
+              <Route exact path="/login" component={login}/>
+              <Route exact path="/" component={home}/>
+              <Route exact path="/portal" component={portal}/>
+              <Route exact path="/about" component={about}/>
+              <Route exact path="/officers" component={officers}/>
+              <Route exact path="/swestars" component={swestars}/>
+              <Route exact path="/events" component={events}/>
+              <Route exact path="/swematch" component={swematch}/>
+              <Route exact path="/weconference" component={weconference}/>
+              <Route exact path="/join" component={join}/>
+              <Route exact path="/contact" component={contact}/>
+              <Route exact path="/calendar" component={calendar}/>
+              <Route exact path="/samplemeeting" component={samplemeeting}/>
           </Switch>
       </BrowserRouter>
     </MuiThemeProvider>

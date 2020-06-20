@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import classNames from 'classnames';
 
 import withStyles from '@material-ui/core/styles/withStyles';
-import Container from '@material-ui/core/Container'
 import Card from '@material-ui/core/Card'
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
@@ -68,7 +67,7 @@ class join extends Component {
 									<br/>
 									<Divider/>
 									<br/>
-											<h5>Click <a href="/website/portal">here</a> to visit the member portal and create an account with UTD SWE</h5>
+											<h5>Click <a href="/portal">here</a> to visit the member portal and create an account with UTD SWE</h5>
 										</CardContent>
 									</Card>
 							</Grid>
@@ -115,11 +114,11 @@ class join extends Component {
 									<Card style={{width:'100%'}} className="movingItem" variant="outlined">
 										<CardContent align="center" fullWidth>
 											<br/>
-											<h1>National Membership</h1>	
+											<h1>Official Membership</h1>	
 									<br/>
 									<Divider/>
 									<br/>
-											<h5>Click <a href="swe.org/join">here</a> to become a member of the National SWE Organization</h5>
+											<h5>Click <a href="https://swe.org/join">here</a> to become a registered member of the Society of Women Engineers</h5>
 											<br/>
 										</CardContent>
 									</Card>

@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
-
 import withStyles from '@material-ui/core/styles/withStyles';
-import FormControl from '@material-ui/core/FormControl';
-import InputLabel from '@material-ui/core/InputLabel';
-import Select from '@material-ui/core/Select';
-import MenuItem from '@material-ui/core/MenuItem';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import { Card, CardActions, CardContent, Divider, Button, Grid, TextField } from '@material-ui/core';
+import { Button, Card, CardActions, CardContent, CircularProgress, Divider, FormControl, Grid, MenuItem, InputLabel, Select, TextField } from '@material-ui/core';
 
 import axios from 'axios';
 import { authMiddleWare } from '../util/auth';
@@ -94,7 +88,7 @@ class account extends Component {
 			})
 			.catch((error) => {
 				if (error.response.status === 403) {
-					this.props.history.push('/website/login');
+					this.props.history.push('/login');
 				}
 				console.log(error);
 				this.setState({ errorMsg: 'Error in retrieving the data' });
@@ -137,7 +131,7 @@ class account extends Component {
 			})
 			.catch((error) => {
 				if (error.response.status === 403) {
-					this.props.history.push('/website/login');
+					this.props.history.push('/login');
 				}
 				console.log(error);
 				this.setState({

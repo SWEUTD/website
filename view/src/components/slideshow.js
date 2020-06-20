@@ -13,22 +13,22 @@ const slides = [
 	{
 	  title: 'Who WE Are',
 		img: WePhoto,
-		link: "/website/about"
+		link: "/about"
 	},
 	{
 	  title: 'Get Involved',
 		img: EventPhoto,
-		link: "/website/join"
+		link: "/join"
 	},
 	{
 	  title: 'Our Events',
 		img: EventPhoto2,
-		link: "/website/events"
+		link: "/events"
 	},
 	{
 	  title: 'Meet Our Officers',
 		img: OfficersPhoto,
-		link: "/website/officers"
+		link: "/officers"
 	},
 ];
 

@@ -1,6 +1,6 @@
 {
-  "homepage": "https://SWEUTD.github.io/website",
-  "name": "sweutd-website",
+  "homepage": "https://sweutd.com",
+  "name": "website",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

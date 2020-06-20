@@ -9,6 +9,7 @@ import NavBar from '../components/navbar'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
+//Officers photos
 import AfridaTasnim from '../assets/OfficerPhotos/AfridaTasnim.jpg'
 import AngelleNazareno from '../assets/OfficerPhotos/AngelleNazareno.jpg'
 import AnkitaBantey from '../assets/OfficerPhotos/AnkitaBantey.jpg'

@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 
 import withStyles from '@material-ui/core/styles/withStyles';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import { Card, CardActions, CardContent, Container, Divider, Button, Box, Grid, TextField } from '@material-ui/core';
+import { Card, CardContent, CircularProgress, Divider, Grid } from '@material-ui/core';
 import axios from 'axios';
 import { authMiddleWare } from '../util/auth';
 
@@ -104,7 +103,7 @@ class event extends Component {
 				if(error.response != undefined)
 				{
 					if (error.response.status === 403) {
-						this.props.history.push('/website/login');
+						this.props.history.push('/login');
 					}
 				}
 				console.log(error);
@@ -150,7 +149,7 @@ class event extends Component {
 			})
 			.catch((error) => {
 				if (error.response.status === 403) {
-					this.props.history.push('/website/login');
+					this.props.history.push('/login');
 				}
 				console.log(error);
 				this.setState({

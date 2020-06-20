@@ -1,20 +1,13 @@
 import React, { Component } from 'react';
-import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
-import Select from '@material-ui/core/Select';
-import MenuItem from '@material-ui/core/MenuItem';
-import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import withStyles from '@material-ui/core/styles/withStyles';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import classNames from 'classnames';
-import { Card, CardActions, CardContent, Divider, Box, } from '@material-ui/core';
-
+import axios from 'axios'
 import NavBar from '../components/navbar'
 
 const styles = (theme) => ({
@@ -28,7 +21,11 @@ class contact extends Component {
 		this.state = { headerReady: false };
 		this.state = {
 			errors: [],
-			contactLoading: false
+			contactLoading: false,
+			name: "",
+			email: "",
+			subject: "",
+			message: ""
 		};
       }
       componentDidMount() {
@@ -51,6 +48,38 @@ class contact extends Component {
 			[event.target.name]: event.target.value
 		});
 	};
+
+	handleSubmit = (event) => {
+		this.setState({ contactLoading: true });
+		event.preventDefault();
+		const formData = {
+			name: this.state.name,
+			email: this.state.email,
+			subject: this.state.subject,
+			message: this.state.message
+		};
+		axios.post('https://us-central1-swe-utd-portal.cloudfunctions.net/submit', formData)
+			.then(() => {
+				this.setState({ 
+					contactLoading: false,
+					name: '',
+					email: '',
+					subject: '',
+					message: ''
+				});		
+			})
+			.catch((error) => {
+			  console.log(error)
+			  this.setState({
+				contactLoading: false,
+				name: '',
+				email: '',
+				subject: '',
+				message: ''
+			});
+		})
+	  }
+	 
     render() {
 		const { headerReady } = this.state;
 		const { errors, contactLoading } = this.state;
@@ -138,7 +167,7 @@ class contact extends Component {
 										variant="contained"
 										color="primary"
 										className={classes.contact}
-										onClick={this.handleContact}
+										onClick={this.handleSubmit}
 										disabled={contactLoading || !this.state.email || !this.state.name || !this.state.subject || !this.state.message}
 									>
 										Send

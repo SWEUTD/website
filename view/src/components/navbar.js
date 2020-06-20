@@ -1,20 +1,11 @@
 import React, { Component } from 'react';
-
-// material ui imports
 import withStyles from '@material-ui/core/styles/withStyles';
 import AppBar from '@material-ui/core/AppBar';
-
-// bootstrap imports
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import NavDropdown from 'react-bootstrap/NavDropdown'
-
-// my imports
 import logo from '../assets/logo.png'
-
-import { faFacebook } from "@fortawesome/free-brands-svg-icons";
-import { faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -29,7 +20,7 @@ class navbar extends Component {
             <div>
                 <AppBar position="fixed" className={classes.appBar}>
                         <Navbar bg="dark" variant="dark" expand="lg">
-                            <Navbar.Brand href="/website/">
+                            <Navbar.Brand href="/">
                             <img
                                 alt=""
                                 src={logo}
@@ -42,20 +33,20 @@ class navbar extends Component {
                             <Navbar.Toggle aria-controls="basic-navbar-nav" />
                             <Navbar.Collapse id="basic-navbar-nav">
                                 <Nav className="mr-auto">
-                                    <Nav.Link href="/website/about">About</Nav.Link>
+                                    <Nav.Link href="/about">About</Nav.Link>
                                     <NavDropdown title="What We Do" id="basic-nav-dropdown">
-                                        <NavDropdown.Item href="/website/events">Events</NavDropdown.Item>
-                                        <NavDropdown.Item href="/website/weconference">WE Conference</NavDropdown.Item>
-                                        <NavDropdown.Item href="/website/swematch">SWEMatch</NavDropdown.Item>
+                                        <NavDropdown.Item href="/events">Events</NavDropdown.Item>
+                                        <NavDropdown.Item href="/weconference">WE Conference</NavDropdown.Item>
+                                        <NavDropdown.Item href="/swematch">SWEMatch</NavDropdown.Item>
                                         <NavDropdown.Item href="https://hansikasundaresan.github.io/LadiesInTech/">Ladies in Tech</NavDropdown.Item>
                                         <NavDropdown.Item href="http://wehackutd.com">WEHack</NavDropdown.Item>
                                     </NavDropdown>
-                                    <Nav.Link href="/website/calendar">Calendar</Nav.Link>
-                                    <Nav.Link href="/website/join">Join</Nav.Link>
-                                    <Nav.Link href="/website/portal">Member Portal</Nav.Link>
-                                    <Nav.Link href="/website/officers">Officers</Nav.Link>
-                                    <Nav.Link href="/website/swestars">SWE Stars</Nav.Link>
-                                    <Nav.Link href="/website/contact">Contact</Nav.Link>
+                                    <Nav.Link href="/calendar">Calendar</Nav.Link>
+                                    <Nav.Link href="/join">Join</Nav.Link>
+                                    <Nav.Link href="/portal">Member Portal</Nav.Link>
+                                    <Nav.Link href="/officers">Officers</Nav.Link>
+                                    <Nav.Link href="/swestars">SWE Stars</Nav.Link>
+                                    <Nav.Link href="/contact">Contact</Nav.Link>
                                 </Nav>
                                 <Navbar.Brand href="https://www.facebook.com/sweutd" pullRight>
                                     <FontAwesomeIcon icon={faFacebook} size="lg" className="imageLink" style={{ color: '#DBC554' }}/>{' '}

@@ -3,13 +3,11 @@ import classNames from 'classnames';
 
 import withStyles from '@material-ui/core/styles/withStyles';
 import Grid from '@material-ui/core/Grid'
-import Card from '@material-ui/core/Card'
-import Officers from '../assets/SlideshowImages/Officers.jpg'
-import Fall2020 from '../assets/SlideshowImages/WE.jpg'
+import NavBar from '../components/navbar'
+
+//images
 import Statistics from '../assets/statistics.png'
 import Sponsor from '../assets/AT&T.png'
-
-import NavBar from '../components/navbar'
 
 const styles = (theme) => ({
 	gridItem: {
@@ -73,7 +71,7 @@ class about extends Component {
 							<h1>Our Sponsor</h1>
 							<h2>We give special thanks to our sponsor, AT&amp;T</h2>
 							<img src={Sponsor} width="50%"/>
-							<h4>Interested in sponsoring the UT-Dallas section of SWE? <a href="/website/contact">Let us know!</a></h4>
+							<h4>Interested in sponsoring the UT-Dallas section of SWE? <a href="/contact">Let us know!</a></h4>
 							<br/>
 						</div>
 					</Grid>
