@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.ede841bf.chunk.css",
-    "main.js": "/static/js/main.8240b559.chunk.js",
-    "main.js.map": "/static/js/main.8240b559.chunk.js.map",
+    "main.js": "/static/js/main.a4760db4.chunk.js",
+    "main.js.map": "/static/js/main.a4760db4.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.94a6af97.js",
     "runtime-main.js.map": "/static/js/runtime-main.94a6af97.js.map",
     "static/css/2.c1f9cd9a.chunk.css": "/static/css/2.c1f9cd9a.chunk.css",
-    "static/js/2.1ce73794.chunk.js": "/static/js/2.1ce73794.chunk.js",
-    "static/js/2.1ce73794.chunk.js.map": "/static/js/2.1ce73794.chunk.js.map",
+    "static/js/2.f556c2b7.chunk.js": "/static/js/2.f556c2b7.chunk.js",
+    "static/js/2.f556c2b7.chunk.js.map": "/static/js/2.f556c2b7.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.7a61d4254bfa7da58cf0f99037bc82e7.js": "/precache-manifest.7a61d4254bfa7da58cf0f99037bc82e7.js",
+    "precache-manifest.096ab9f81f9f9c0cdfd2a9d23f970c7a.js": "/precache-manifest.096ab9f81f9f9c0cdfd2a9d23f970c7a.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.c1f9cd9a.chunk.css.map": "/static/css/2.c1f9cd9a.chunk.css.map",
     "static/css/main.ede841bf.chunk.css.map": "/static/css/main.ede841bf.chunk.css.map",
-    "static/js/2.1ce73794.chunk.js.LICENSE.txt": "/static/js/2.1ce73794.chunk.js.LICENSE.txt",
+    "static/js/2.f556c2b7.chunk.js.LICENSE.txt": "/static/js/2.f556c2b7.chunk.js.LICENSE.txt",
     "static/media/1.HEIC": "/static/media/1.ff820100.HEIC",
     "static/media/2.jpg": "/static/media/2.a6cb3cc9.jpg",
     "static/media/3.jpg": "/static/media/3.46504d3d.jpg",
@@ -43,6 +43,7 @@
     "static/media/Summer2020.png": "/static/media/Summer2020.2482eaeb.png",
     "static/media/Tiers.png": "/static/media/Tiers.859f0fb1.png",
     "static/media/WE.jpg": "/static/media/WE.7f0776b4.jpg",
+    "static/media/WhySWE.mp4": "/static/media/WhySWE.97a2f40e.mp4",
     "static/media/ZainebAhmad.png": "/static/media/ZainebAhmad.db7d88d0.png",
     "static/media/logo.png": "/static/media/logo.9e78e613.png",
     "static/media/statistics.png": "/static/media/statistics.6f847234.png"
@@ -50,8 +51,8 @@
   "entrypoints": [
     "static/js/runtime-main.94a6af97.js",
     "static/css/2.c1f9cd9a.chunk.css",
-    "static/js/2.1ce73794.chunk.js",
+    "static/js/2.f556c2b7.chunk.js",
     "static/css/main.ede841bf.chunk.css",
-    "static/js/main.8240b559.chunk.js"
+    "static/js/main.a4760db4.chunk.js"
   ]
 }
