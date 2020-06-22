@@ -9,6 +9,10 @@ import NavBar from '../components/navbar'
 import Statistics from '../assets/statistics.png'
 import Sponsor from '../assets/AT&T.png'
 
+import WhySWE from '../assets/WhySWE.mp4'
+
+import { Player } from 'video-react';
+
 const styles = (theme) => ({
 	gridItem: {
 		display: 'flex',
@@ -47,7 +51,7 @@ class about extends Component {
 				<div className={classNames('header', { 'ready': headerReady })}>
 		            <p className="heading">About the UT-Dallas Society of Women Engineers</p>
                 </div>
-				<div className="fullscreen">
+
 				<Grid container
 					height="100%"
 					width="100%"
@@ -55,6 +59,9 @@ class about extends Component {
 					justify="space-evenly"
 					className="movingItem"
 				>
+					<Grid className={classes.gridItem} style={{backgroundColor:"#A9A8A9", color: "white", paddingLeft:'100px', paddingRight:'100px', align:'center'}} item xs={12}>
+						<Player align="50%" src={WhySWE}/>
+					</Grid>
 					<Grid className={classes.gridItem} style={{backgroundColor:"white", color: "white", padding:'50px'}} item md={6} xs={12}>
 						<img src={Statistics} width="100%"/>
 					</Grid>
@@ -76,7 +83,6 @@ class about extends Component {
 						</div>
 					</Grid>
 				</Grid>
-				</div>
 			</div>
 		);
 	}

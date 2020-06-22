@@ -55,21 +55,21 @@ class calendar extends Component {
 			<div className={classes.root}>
 				<NavBar />
 				<div className={classNames('header', { 'ready': headerReady })}>
-                    <p className="heading">Calendar</p>
-                </div>
-                <Container width="80%">
-                    <Calendar
-                      events={this.state.events}
-                      config={calendar_configuration}
-                      popup='true'
-                      eventPropGetter={event => ({
-                        style: {
-                          backgroundColor: event.color,
-                        },
-                      })}
-                     />
-                     <br/>
-                </Container>
+          <p className="heading">Calendar</p>
+        </div>
+        <Container width="80%">
+            <Calendar
+              events={this.state.events}
+              config={calendar_configuration}
+              popup='true'
+              eventPropGetter={event => ({
+                style: {
+                  backgroundColor: event.color,
+                },
+              })}
+              />
+              <br/>
+        </Container>
 			</div>
 		);
 	}
