@@ -11,7 +11,7 @@ import Sponsor from '../assets/AT&T.png'
 
 import WhySWE from '../assets/WhySWE.mp4'
 
-import { Player } from 'video-react';
+import ReactPlayer from 'react-player'
 
 const styles = (theme) => ({
 	gridItem: {
@@ -58,10 +58,10 @@ class about extends Component {
 					alignItems="stretch"
 					justify="space-evenly"
 					className="movingItem"
-				>
-					<Grid className={classes.gridItem} style={{backgroundColor:"#A9A8A9", color: "white", paddingLeft:'100px', paddingRight:'100px', align:'center'}} item xs={12}>
-						<Player align="50%" src={WhySWE}/>
-					</Grid>
+				>	
+						<Grid className={classes.gridItem} style={{backgroundColor:"#A9A8A9", color: "white"}} item xs={12}>
+							<ReactPlayer url={WhySWE} playing={true} controls={true} />
+						</Grid>
 					<Grid className={classes.gridItem} style={{backgroundColor:"white", color: "white", padding:'50px'}} item md={6} xs={12}>
 						<img src={Statistics} width="100%"/>
 					</Grid>
