@@ -1,3 +1,7 @@
+// calendar.js
+
+// calendar page
+
 import React, { Component } from 'react';
 import classNames from 'classnames';
 import withStyles from '@material-ui/core/styles/withStyles';
@@ -5,27 +9,28 @@ import Container from '@material-ui/core/Container'
 import NavBar from '../components/navbar'
 import Calendar from 'react_google_calendar'
 
+// list of imported Google Calendars
 const calendar_configuration = {
-    api_key: process.env.REACT_APP_CALENDAR_KEY,
+    api_key: process.env.REACT_APP_CALENDAR_KEY,  // must be setup in terminal
     calendars: [
       {
-        name: 'Community Outreach Events', // whatever you want to name it
+        name: 'Community Outreach Events',
         url: '69gnk398bfu24fassk546qgmc8@group.calendar.google.com',
         color: 'red'
       },
       {
-        name: 'Corporate Events', // whatever you want to name it
+        name: 'Corporate Events',
         url: '85556o7d5bvkvilesn659mekkc@group.calendar.google.com',
         color: 'red'
       },
       {
-        name: 'Events', // whatever you want to name it
+        name: 'Events',
         url: 'qo4rmsgksc6pe3bfa9sso4f42s@group.calendar.google.com',
         color: 'red'
       },
       {
-        name: 'WE Hack', // whatever you want to name it
-        url: 'sja9rbblc0h3toc3ldbdnuqbn8@group.calendar.google.com' // your calendar URL
+        name: 'WE Hack',
+        url: 'sja9rbblc0h3toc3ldbdnuqbn8@group.calendar.google.com'
       },
     ],
     dailyRecurrence: 700,
@@ -38,7 +43,6 @@ const styles = (theme) => ({
 });
 
 class calendar extends Component {
-	// needed for header animation
     constructor(props) {
         super(props);
         this.state = { headerReady: false, events: [] };
@@ -57,16 +61,11 @@ class calendar extends Component {
 				<div className={classNames('header', { 'ready': headerReady })}>
           <p className="heading">Calendar</p>
         </div>
-        <Container width="80%">
+        <Container width="80%" className="movingItem">
             <Calendar
               events={this.state.events}
               config={calendar_configuration}
               popup='true'
-              eventPropGetter={event => ({
-                style: {
-                  backgroundColor: event.color,
-                },
-              })}
               />
               <br/>
         </Container>

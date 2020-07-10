@@ -1,3 +1,7 @@
+// account.js
+
+// component containing user's account data, with option to edit
+
 import React, { Component } from 'react';
 import withStyles from '@material-ui/core/styles/withStyles';
 import { Button, Card, CardActions, CardContent, CircularProgress, Divider, FormControl, Grid, MenuItem, InputLabel, Select, TextField } from '@material-ui/core';
@@ -66,6 +70,7 @@ class account extends Component {
 		};
 	}
 
+	// makes sure user is logged in
 	componentWillMount = () => {
 		authMiddleWare(this.props.history);
 		const authToken = localStorage.getItem('AuthToken');
@@ -95,18 +100,14 @@ class account extends Component {
 			});
 	};
 
+	// function for handling when a field is modified
 	handleChange = (event) => {
 		this.setState({
 			[event.target.name]: event.target.value
 		});
 	};
 
-	handleImageChange = (event) => {
-		this.setState({
-			image: event.target.files[0]
-		});
-	};
-
+	// updates user in the database with modified information
 	updateFormValues = (event) => {
 		event.preventDefault();
 		this.setState({ buttonLoading: true });

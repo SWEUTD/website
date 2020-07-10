@@ -1,3 +1,7 @@
+// auth.js
+
+// checks if the user is logged in
+
 const { admin, db } = require('./admin');
 
 module.exports = (request, response, next) => {

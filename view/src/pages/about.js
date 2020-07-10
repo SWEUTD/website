@@ -1,6 +1,9 @@
+// about.js
+
+// about page
+
 import React, { Component } from 'react';
 import classNames from 'classnames';
-
 import withStyles from '@material-ui/core/styles/withStyles';
 import Grid from '@material-ui/core/Grid'
 import NavBar from '../components/navbar'
@@ -9,8 +12,8 @@ import NavBar from '../components/navbar'
 import Statistics from '../assets/statistics.png'
 import Sponsor from '../assets/AT&T.png'
 
+// video
 import WhySWE from '../assets/WhySWE.mp4'
-
 import ReactPlayer from 'react-player'
 
 const styles = (theme) => ({
@@ -51,7 +54,6 @@ class about extends Component {
 				<div className={classNames('header', { 'ready': headerReady })}>
 		            <p className="heading">About the UT-Dallas Society of Women Engineers</p>
                 </div>
-
 				<Grid container
 					height="100%"
 					width="100%"
@@ -59,9 +61,9 @@ class about extends Component {
 					justify="space-evenly"
 					className="movingItem"
 				>	
-						<Grid className={classes.gridItem} style={{backgroundColor:"#A9A8A9", color: "white"}} item xs={12}>
-							<ReactPlayer url={WhySWE} playing={true} controls={true} />
-						</Grid>
+					<Grid className={classes.gridItem} style={{backgroundColor:"#A9A8A9", color: "white"}} item xs={12}>
+						<ReactPlayer url={WhySWE} playing={true} controls={true} />
+					</Grid>
 					<Grid className={classes.gridItem} style={{backgroundColor:"white", color: "white", padding:'50px'}} item md={6} xs={12}>
 						<img src={Statistics} width="100%"/>
 					</Grid>
@@ -87,5 +89,4 @@ class about extends Component {
 		);
 	}
 }
-
 export default withStyles(styles)(about);

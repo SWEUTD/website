@@ -1,8 +1,14 @@
+// validators.js
+
+// various functions to validate API request data
+
+// makes sure field is not empty
 const isEmpty = (string) => {
 	if (string.trim() === '') return true;
 	else return false;
 };
 
+// makes sure both login fields are filled
 exports.validateLoginData = (data) => {
 	let errors = {};
 
@@ -15,24 +21,28 @@ exports.validateLoginData = (data) => {
 	};
 };
 
+// makes sure email is correctly formatted
 const isEmail = (email) => {
 	const emailRegEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 	if (email.match(emailRegEx)) return true;
 	else return false;
 };
 
+// makes sure netid has three letters followed by six numbers
 const isNetId = (netid) => {
 	const netidRegEx = /^[a-zA-Z]{3}[0-9]{6}$/;
 	if (netid.match(netidRegEx)) return true;
 	else return false;
 };
 
+// makes sure phone number is a valid format
 const isPhoneNumber = (phoneNumber) => {
 	const phoneNumberRegEx = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/;
 	if (phoneNumber.match(phoneNumberRegEx)) return true;
 	else return false;
 };
 
+// makes sure every signup field is filled
 exports.validateSignUpData = (data) => {
 	let errors = {};
 
@@ -69,6 +79,7 @@ exports.validateSignUpData = (data) => {
 	};
 };
 
+// makes sure every event field is filled
 exports.validateAddEventData = (data) => {
 	let errors = {};
 

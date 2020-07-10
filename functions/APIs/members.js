@@ -1,5 +1,11 @@
-const { admin, db } = require('../util/admin');
-const config = require('../util/config');
+// members.js
+
+// modifying a SWE member's entry in the Firebase database
+
+// created with help from the article: https://www.freecodecamp.org/news/how-to-build-a-todo-application-using-reactjs-and-firebase/
+
+const { db } = require('../util/admin');
+const config = require('../util/config'); // this config file is not in the github, found in firebase console
 
 const firebase = require('firebase');
 
@@ -7,7 +13,7 @@ firebase.initializeApp(config);
 
 const { validateLoginData, validateSignUpData, validateAddEventData } = require('../util/validators');
 
-// Login
+// Login a user given their email and password
 exports.loginMember = (request, response) => {
     const member = {
         email: request.body.email,
@@ -17,6 +23,7 @@ exports.loginMember = (request, response) => {
     const { valid, errors } = validateLoginData(member);
 	if (!valid) return response.status(400).json(errors);
 
+    // idtoken is returned from firebase once user is authenticated
     firebase
         .auth()
         .signInWithEmailAndPassword(member.email, member.password)
@@ -36,8 +43,9 @@ exports.loginMember = (request, response) => {
         })
 };
 
-// Sign up
+// Sign up a new user
 exports.signUpMember = (request, response) => {
+    // only allow user to set other major if they do not have one of the pre-defined majors
     if(request.body.major != "Other")
         request.body.otherMajor = "";
     let newMember = {
@@ -55,24 +63,28 @@ exports.signUpMember = (request, response) => {
         points: 0
     };
 
+    // validate all data (make sure it is proper format)
     const { valid, errors } = validateSignUpData(newMember);
 
 	if (!valid) return response.status(400).json(errors);
 
     let token, memberId;
     db
+        // check if that netid is already in use
         .doc(`/members/${newMember.netid}`)
         .get()
         .then((doc) => {
             if (doc.exists && doc.data().isUser == true) {
                 return response.status(400).json({ netid: 'This NetID is already associated with an account' });
             } else {
+                // if netid already exists, but is not connected to an account, copy over the data to the new account and delete the old record
                 if (doc.exists){
                     newMember.events = doc.data().events;
                     newMember.points = doc.data().points;
                     const document = db.doc(`/members/${newMember.netid}`);
                     document.delete();
                 }
+                // create user auth with firebase
                 return firebase
                         .auth()
                         .createUserWithEmailAndPassword(
@@ -81,6 +93,7 @@ exports.signUpMember = (request, response) => {
                     );
             }
         })
+        // get the idtoken to log the user in
         .then((data) => {
             memberId = data.user.uid;
             return data.user.getIdToken();
@@ -120,6 +133,7 @@ exports.signUpMember = (request, response) => {
 		});
 }
 
+// get a member's information based on their netid
 exports.getMemberDetail = (request, response) => {
     let memberData = {};
 	db
@@ -137,6 +151,7 @@ exports.getMemberDetail = (request, response) => {
 		});
 }
 
+// update a member's details in the database
 exports.updateMemberDetails = (request, response) => {
     let document = db.collection('members').doc(`${request.member.netid}`);
     document.update(request.body)
@@ -151,13 +166,15 @@ exports.updateMemberDetails = (request, response) => {
     });
 }
 
-// Add event and points to member
+// Add new event to a member
 exports.addEventMember = (request, response) => {
+    // each event has a points value, name, and date
     const eventToAdd = {
         eventPoints: request.body.eventPoints,
         eventName: request.body.eventName,
         eventDate: request.body.eventDate
     }
+    // also need to connect this event to a new or existing member
     const memberRequest = {
         firstName: request.body.firstName,
         lastName: request.body.lastName,
@@ -176,6 +193,7 @@ exports.addEventMember = (request, response) => {
         .doc(`/members/${memberRequest.netid}`)
         .get()
         .then((doc) => {
+            // adds to an existing member if that netid already exists in the database
             if (doc.exists) {
                 let eventsList = doc.data().events
                 eventsList.push(eventToAdd)
@@ -185,8 +203,9 @@ exports.addEventMember = (request, response) => {
                     points: newPointTotal
                 }
                 db.doc(`/members/${memberRequest.netid}`).update(updatedMember)
-                return response.status(201).json({ general: 'Member updated' });
+                return response.status(200).json({ general: 'Member updated' });
             } else {
+                // creates a new member in the database if the netid doesn't exist
                 memberId = memberRequest.netid
                 const memberInfo = {
                     firstName: memberRequest.firstName,

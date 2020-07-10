@@ -1,3 +1,7 @@
+// admin.js
+
+// initializes admin and db
+
 const admin = require('firebase-admin');
 
 admin.initializeApp();

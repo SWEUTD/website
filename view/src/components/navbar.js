@@ -1,9 +1,13 @@
+// navbar.js
+
+// creates the navigation bar component
+
 import React, { Component } from 'react';
 import withStyles from '@material-ui/core/styles/withStyles';
 import AppBar from '@material-ui/core/AppBar';
-import Navbar from 'react-bootstrap/Navbar'
-import Nav from 'react-bootstrap/Nav'
-import NavDropdown from 'react-bootstrap/NavDropdown'
+import { Nav, Navbar, NavDropdown} from 'react-bootstrap'
+
+// logos
 import logo from '../assets/logo.png'
 import { faFacebook, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
@@ -21,14 +25,14 @@ class navbar extends Component {
                 <AppBar position="fixed" className={classes.appBar}>
                         <Navbar bg="dark" variant="dark" expand="lg">
                             <Navbar.Brand href="/">
-                            <img
-                                alt=""
-                                src={logo}
-                                width="37"
-                                height="31"
-                                className="d-inline-block align-center"
-                            />{' '}
-                            UTD SWE
+                                <img
+                                    alt=""
+                                    src={logo}
+                                    width="37"
+                                    height="31"
+                                    className="d-inline-block align-center"
+                                />{' '}
+                                UTD SWE
                             </Navbar.Brand>
                             <Navbar.Toggle aria-controls="basic-navbar-nav" />
                             <Navbar.Collapse id="basic-navbar-nav">
@@ -68,5 +72,4 @@ class navbar extends Component {
         );
     }
 }
-
 export default withStyles(styles)(navbar);

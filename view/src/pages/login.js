@@ -5,6 +5,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
+import OutlinedInput from '@material-ui/core/OutlinedInput';
 import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
@@ -19,6 +20,7 @@ import NavBar from '../components/navbar'
 
 import axios from 'axios';
 import { FormControl, InputLabel, Menu } from '@material-ui/core';
+import { log } from 'util';
 
 const styles = (theme) => ({
 	content: {
@@ -70,6 +72,7 @@ class login extends Component {
 			email: '',
 			password: '',
 			confirmPassword: '',
+			resume: null,
 			errors: [],
 			signupLoading: false
 		};
@@ -89,6 +92,12 @@ class login extends Component {
 	handleChange = (event) => {
 		this.setState({
 			[event.target.name]: event.target.value
+		});
+	};
+
+	handleFileChange = (event) => {
+		this.setState({
+			[event.target.name]: event.target.files[0]
 		});
 	};
 
@@ -142,10 +151,39 @@ class login extends Component {
 					signupLoading: false,
 				});	
 				this.props.history.push('/portal');
+				if(this.state.resume != null) {
+					console.log("called")
+					this.handleResumeUpload();
+				}
 			})
 			.catch((error) => {
 				this.setState({
-					errors: error.response.data,
+					errors: error.response,
+					signupLoading: false
+				});
+			});
+	};
+
+	handleResumeUpload() {
+		let fileData = new FormData();
+		console.log(this.state.resume)
+		// Setting the 'image' field and the selected file
+		fileData.set(
+			'file',
+			this.state.resume,
+			`${this.state.resume.lastModified}-${this.state.resume.name}`
+		);
+		console.log("hi")
+		
+		console.log(fileData)
+		axios
+			.post('https://us-central1-swe-utd-portal.cloudfunctions.net/upload', fileData)
+			.then((response) => {
+				console.log("Resume Uploaded")
+			})
+			.catch((error) => {
+				this.setState({
+					errors: error.response,
 					signupLoading: false
 				});
 			});
@@ -400,6 +438,18 @@ class login extends Component {
 												id="confirmPassword"
 												autoComplete="current-password"
 												onChange={this.handleChange}
+											/>
+										</Grid>
+										<Grid item xs={12}>
+											<p>Upload Resume (Optional):</p>
+											<OutlinedInput
+												fullWidth
+												name="resume"
+												label="Upload Resume"
+												type="resume"
+												id="resume"
+												type="file"
+												onChange={this.handleFileChange}
 											/>
 										</Grid>
 									</Grid>

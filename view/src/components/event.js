@@ -1,3 +1,7 @@
+// event.js
+
+// component for displaying user's event history and points status
+
 import React, { Component } from 'react';
 
 import withStyles from '@material-ui/core/styles/withStyles';
@@ -77,6 +81,7 @@ class event extends Component {
 		};
 	}
 
+	// makes sure user is logged in
 	componentWillMount = () => {
 		authMiddleWare(this.props.history);
 		const authToken = localStorage.getItem('AuthToken');
@@ -108,53 +113,6 @@ class event extends Component {
 				}
 				console.log(error);
 				this.setState({ errorMsg: 'Error in retrieving the data' });
-			});
-	};
-
-	handleChange = (event) => {
-		this.setState({
-			[event.target.name]: event.target.value
-		});
-	};
-
-	handleImageChange = (event) => {
-		this.setState({
-			image: event.target.files[0]
-		});
-	};
-
-	updateFormValues = (event) => {
-		event.preventDefault();
-		this.setState({ buttonLoading: true });
-		authMiddleWare(this.props.history);
-		const authToken = localStorage.getItem('AuthToken');
-		axios.defaults.headers.common = { Authorization: `${authToken}` };
-		if(this.state.major != "Other")
-			this.state.otherMajor = "";
-		const formRequest = {
-			firstName: this.state.firstName,
-			lastName: this.state.lastName,
-			classification: this.state.classification,
-			major: this.state.major,
-			otherMajor: this.state.otherMajor,
-			phoneNumber: this.state.phoneNumber,
-			events: this.state.events,
-			points: this.state.points
-		};
-		
-		axios
-			.post('https://us-central1-swe-utd-portal.cloudfunctions.net/api/member', formRequest)
-			.then(() => {
-				this.setState({ buttonLoading: false });
-			})
-			.catch((error) => {
-				if (error.response.status === 403) {
-					this.props.history.push('/login');
-				}
-				console.log(error);
-				this.setState({
-					buttonLoading: false
-				});
 			});
 	};
 
@@ -253,43 +211,43 @@ class event extends Component {
 		} else {
 			return (
 				<div>
-				<div className={classes.toolbar} />
-				<br/>
-				<Grid container
-					spacing={2}
-					height="100%"
-					width="100%"
-					alignItems="stretch"
-					justify="space-evenly"
-					style={{height: '100vh'}}
-				>
-					<Grid className={classes.gridItem} style={{height: '90vh', flexDirection: 'column'}} item md={6} xs={12}>
-						<Card style={{height: '20vh'}} className="movingItem" variant="outlined" fullWidth>
-							<CardContent align="center" style={{padding:'10px'}}>
-								<br/>
-								<h1>
-									{this.state.points} SWE points
-								</h1>
-							</CardContent>
-						</Card>
-						<br/>
-						<Card style={{height: '70vh'}} alignItems="stretch"  className="movingItem" variant="outlined" style={{padding:'10px'}}>
-							<CardContent height="100%" align="left" fullWidth>
-								{rewardStatus}
-							</CardContent>
-						</Card>
-					</Grid>
-					<Grid style={{height: '90vh'}} className={classes.gridItem} item md={6} xs={12}>
-						<Card height="100%" className="movingItem" variant="outlined" style={{padding:'10px'}}>
-							<CardContent height="100%" align="center">				
-							<h1 align="center">
-								Your Attendance History
-							</h1>
+					<div className={classes.toolbar} />
+					<br/>
+					<Grid container
+						spacing={2}
+						height="100%"
+						width="100%"
+						alignItems="stretch"
+						justify="space-evenly"
+						style={{height: '100vh'}}
+					>
+						<Grid className={classes.gridItem} style={{height: '90vh', flexDirection: 'column'}} item md={6} xs={12}>
+							<Card style={{height: '20vh'}} className="movingItem" variant="outlined" fullWidth>
+								<CardContent align="center" style={{padding:'10px'}}>
+									<br/>
+									<h1>
+										{this.state.points} SWE points
+									</h1>
+								</CardContent>
+							</Card>
+							<br/>
+							<Card style={{height: '70vh'}} alignItems="stretch"  className="movingItem" variant="outlined" style={{padding:'10px'}}>
+								<CardContent height="100%" align="left" fullWidth>
+									{rewardStatus}
+								</CardContent>
+							</Card>
+						</Grid>
+						<Grid style={{height: '90vh'}} className={classes.gridItem} item md={6} xs={12}>
+							<Card height="100%" className="movingItem" variant="outlined" style={{padding:'10px'}}>
+								<CardContent height="100%" align="center">				
+									<h1 align="center">
+										Your Attendance History
+									</h1>
 									{history}
-							</CardContent>
-						</Card>
+								</CardContent>
+							</Card>
+						</Grid>
 					</Grid>
-				</Grid>
 				</div>
 			);
 		}
