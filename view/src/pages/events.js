@@ -58,7 +58,9 @@ class events extends Component {
 							<Grid item md={6} xs={12} className={classes.gridItem}>
 									<Card style={{width:'100%'}} className="movingItem" variant="outlined">
 										<CardContent align="center" fullWidth>
-											<img src={Summer2020} verticalAlign="center" width = "100%"/>	
+											<a href="https://www.badgelist.com/SWE-UTD-Summer-2020#">
+											<img src={Summer2020} verticalAlign="center" width = "100%"/>
+											</a>	
 										</CardContent>
 									</Card>
 							</Grid>

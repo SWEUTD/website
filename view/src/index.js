@@ -4,7 +4,6 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import './custom.scss';
 import './custom.css';
-//import "node_modules/video-react/dist/video-react.css";
 import './fonts/GillSansMTBook.ttf'
 
 ReactDOM.render(

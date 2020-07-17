@@ -80,7 +80,7 @@ class about extends Component {
 							<h1>Our Sponsor</h1>
 							<h2>We give special thanks to our sponsor, AT&amp;T</h2>
 							<img src={Sponsor} width="50%"/>
-							<h4>Interested in sponsoring the UT-Dallas section of SWE? <a href="/contact">Let us know!</a></h4>
+							<h4>Interested in sponsoring the UT-Dallas section of SWE? <a class="yellowBG" href="/contact">Let us know!</a></h4>
 							<br/>
 						</div>
 					</Grid>

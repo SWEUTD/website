@@ -3,16 +3,12 @@
 // contact page
 
 import React, { Component } from 'react';
-import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import Container from '@material-ui/core/Container';
+import { Button, CircularProgress, Container, Grid, TextField, Typography } from '@material-ui/core';
 import withStyles from '@material-ui/core/styles/withStyles';
-import CircularProgress from '@material-ui/core/CircularProgress';
 import classNames from 'classnames';
 import axios from 'axios'
 import NavBar from '../components/navbar'
+import Mailchimp from '../components/mailchimp'
 
 const styles = (theme) => ({
 	
@@ -62,6 +58,7 @@ class contact extends Component {
 			subject: this.state.subject,
 			message: this.state.message
 		};
+		// POST request for sending email to SWE gmail
 		axios.post('https://us-central1-swe-utd-portal.cloudfunctions.net/submit', formData)
 			.then(() => {
 				this.setState({ 
@@ -94,7 +91,7 @@ class contact extends Component {
 				<div className={classNames('header', { 'ready': headerReady })}>
 		            <p className="heading">Contact Us</p>
                 </div>
-				<Container width="50%">
+				<Container>
 					<div>			
 						<Grid container
 							spacing={10}
@@ -104,7 +101,8 @@ class contact extends Component {
 							justify="space-evenly"
 						>
 							<Grid item sm={6} xs={12}>
-								<form className={classes.form} noValidate>		
+								<h4 align="center">Send us an email!</h4>	
+								<form className={classes.form} noValidate>	
 									<TextField
 										variant="outlined"
 										margin="normal"
@@ -172,7 +170,7 @@ class contact extends Component {
 										color="primary"
 										className={classes.contact}
 										onClick={this.handleSubmit}
-										disabled={contactLoading || !this.state.email || !this.state.name || !this.state.subject || !this.state.message}
+										
 									>
 										Send
 										{contactLoading && <CircularProgress size={30} className={classes.progess} />}
@@ -184,9 +182,23 @@ class contact extends Component {
 									)}
 								</form>	
 							</Grid>
+							<Grid item sm={6} xs={12} align="center">
+								<h4>Subscribe to our mailing list</h4>
+								<Mailchimp
+								action='https://facebook.us19.list-manage.com/subscribe/post?u=ada9150cb4cf2450b2870f9b7&amp;id=ae471c90b0'
+								fields={[
+								{
+									name: 'EMAIL',
+									placeholder: 'Email',
+									type: 'email',
+									required: true
+								}
+								]}
+								className='mailchimp'
+								/>
+							</Grid>
 						</Grid>
 					</div>
-
 				</Container>
 			</div>
 		);

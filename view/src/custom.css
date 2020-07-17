@@ -7,6 +7,29 @@ body {
     font-family: 'GillSansMTBook';
 }
 
+a {
+  color: #DBC554;
+  z-index: 9999;
+}
+
+.yellowBG {
+  color: #5A5377;
+}
+
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  text-decoration-color: #5A5377;
+}
+
+#mc_embed_signup {
+  background:#fff;
+  clear:left;
+  font:14px Helvetica,Arial,sans-serif;
+  width:100%;
+}
+
 .navbar {
   min-height: 50px;
 }
