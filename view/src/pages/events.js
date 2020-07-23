@@ -10,6 +10,7 @@ import Divider from '@material-ui/core/Divider'
 
 import Summer2020 from '../assets/Summer2020.png'
 import Fall2020 from '../assets/SlideshowImages/WE.jpg'
+import gamenight from '../assets/gamenight.png'
 
 import NavBar from '../components/navbar'
 
@@ -53,9 +54,9 @@ class events extends Component {
 							alignItems="stretch"
 							justify="space-evenly"
 							className={classes.gridItem}
-							style={{padding:'40px',backgroundColor:"#DBC554"}}
+							style={{padding:'40px'}}
 						>
-							<Grid item md={6} xs={12} className={classes.gridItem}>
+							<Grid item md={5} xs={12} className={classes.gridItem}>
 									<Card style={{width:'100%'}} className="movingItem" variant="outlined">
 										<CardContent align="center" fullWidth>
 											<a href="https://www.badgelist.com/SWE-UTD-Summer-2020#">
@@ -65,7 +66,7 @@ class events extends Component {
 									</Card>
 							</Grid>
 
-							<Grid item item md={6} xs={12} align="center" className={classes.gridItem}>
+							{/* <Grid item item md={6} xs={12} align="center" className={classes.gridItem}>
 									<Card style={{width:'100%'}} className="movingItem" variant="outlined">
 										<CardContent align="center" fullWidth>
 											<br/>
@@ -77,7 +78,16 @@ class events extends Component {
 											<br/>
 											<h4>Be sure to visit our new <a href="/portal">member portal</a> to keep up with your SWE points</h4>
 											<br/>
-											<img src={Fall2020} width="100%"/>
+										</CardContent>
+									</Card>
+							</Grid> */}
+
+							<Grid item md={5} xs={12} className={classes.gridItem}>
+									<Card style={{width:'100%'}} className="movingItem" variant="outlined">
+										<CardContent align="center" fullWidth>
+											<a href="https://bit.ly/SWEGameNight">
+											<img src={gamenight} verticalAlign="center" width = "100%"/>
+											</a>	
 										</CardContent>
 									</Card>
 							</Grid>

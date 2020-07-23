@@ -16,6 +16,7 @@ import contact from './pages/contact'
 import join from './pages/join'
 import calendar from './pages/calendar'
 import samplemeeting from './pages/sample-meeting-signinpage'
+import gamenight from './pages/gamenight-signinpage'
 
 const theme = createMuiTheme({
 	palette: {
@@ -50,6 +51,7 @@ function App() {
               <Route exact path="/contact" component={contact}/>
               <Route exact path="/calendar" component={calendar}/>
               <Route exact path="/samplemeeting" component={samplemeeting}/>
+              <Route exact path="/gamenight" component={gamenight}/>
           </Switch>
       </BrowserRouter>
     </MuiThemeProvider>
