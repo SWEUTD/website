@@ -1,38 +1,17 @@
 import React, { Component } from 'react';
-import Avatar from '@material-ui/core/Avatar';
-import Button from '@material-ui/core/Button';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import TextField from '@material-ui/core/TextField';
-import Select from '@material-ui/core/Select';
-import MenuItem from '@material-ui/core/MenuItem';
-import Link from '@material-ui/core/Link';
-import Grid from '@material-ui/core/Grid';
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
-import Typography from '@material-ui/core/Typography';
-import Container from '@material-ui/core/Container';
+import { Button, Select, MenuItem, Grid, Container, TextField, CircularProgress, FormControl, InputLabel } from '@material-ui/core';
 import withStyles from '@material-ui/core/styles/withStyles';
-import CircularProgress from '@material-ui/core/CircularProgress';
 import classNames from 'classnames';
-import { Card, CardActions, CardContent, Divider, Box, } from '@material-ui/core';
 
 import NavBar from '../components/navbar'
-
 import axios from 'axios';
-import { FormControl, InputLabel, Menu } from '@material-ui/core';
 
 const styles = (theme) => ({
-	content: {
-		flexGrow: 1,
-		padding: theme.spacing(3)
-	},
 	paper: {
 		marginTop: theme.spacing(8),
 		display: 'flex',
 		flexDirection: 'column',
 		alignItems: 'center'
-	},
-	login: {
-		margin: theme.spacing(3, 0, 2)
 	},
 	signin: {
 		margin: theme.spacing(3, 0, 2)
@@ -47,8 +26,10 @@ const styles = (theme) => ({
 	}
 });
 
-class samplemeeting extends Component {
+class gamenight extends Component {
 	constructor(props) {
+		console.log("helo")
+		console.log(props);
 		super(props);
 
 		this.state = { headerReady: false };
@@ -62,7 +43,8 @@ class samplemeeting extends Component {
 			netid: '',
 			email: '',
 			errors: [],
-			signinLoading: false
+			signinLoading: false,
+			secretWord: ''
 		};
 	}
 
@@ -96,10 +78,11 @@ class samplemeeting extends Component {
 			major: this.state.major,
 			otherMajor: this.state.otherMajor,
 			netid: this.state.netid,
-            email: this.state.email,
-            eventPoints: 1,
-            eventName: "Kickoff",
-            eventDate: "05/31/2020"
+			email: this.state.email,
+            eventPoints: this.props.eventPoints,
+            eventName: this.props.eventName,
+			eventDate: this.props.eventDate,
+			secretWord: this.state.secretWord
 		};
 		axios
 			.post('https://us-central1-swe-utd-portal.cloudfunctions.net/api/newEvent', newMemberData)
@@ -112,8 +95,7 @@ class samplemeeting extends Component {
 					signinLoading: false
 				});
 			});
-	};
-
+		}
 	// needed for header animation
       componentDidMount() {
         setTimeout(() => {
@@ -128,7 +110,7 @@ class samplemeeting extends Component {
 			<div>
 				<NavBar />
 				<div className={classNames('header', { 'ready': headerReady })}>
-					<p className="heading">Sign In to the SWE Kickoff</p>
+					<p className="heading">{this.props.eventHeading}</p>
 				</div>
 				<Container width="75%">
 					<Grid container
@@ -142,6 +124,20 @@ class samplemeeting extends Component {
 							<div className={classes.paper}>
 								<form className={classes.form} noValidate>
 									<Grid container spacing={2}>
+										<Grid item xs={12} sm={12}>
+											<TextField
+												variant="outlined"
+												required
+												fullWidth
+												id="secretWord"
+												label="Secret Word (given out during meeting)"
+												name="secretWord"
+												autoComplete="secretWord"
+												helperText={errors.secretWord}
+												error={errors.secretWord ? true : false}
+												onChange={this.handleChange}
+											/>
+										</Grid>
 										<Grid item xs={12} sm={6}>
 											<TextField
 												variant="outlined"
@@ -285,6 +281,7 @@ class samplemeeting extends Component {
 										className={classes.signin}
 										onClick={this.handleSignin}
 										disabled={signinLoading || 
+											!this.state.secretWord ||
 											!this.state.email || 
 											!this.state.firstName || 
 											!this.state.lastName ||
@@ -306,4 +303,4 @@ class samplemeeting extends Component {
 	}
 }
 
-export default withStyles(styles)(samplemeeting);
+export default withStyles(styles)(gamenight);

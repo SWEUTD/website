@@ -15,8 +15,7 @@ import weconference from './pages/weconference'
 import contact from './pages/contact'
 import join from './pages/join'
 import calendar from './pages/calendar'
-import samplemeeting from './pages/sample-meeting-signinpage'
-import gamenight from './pages/gamenight-signinpage'
+import meetingform from './pages/meetingform'
 
 const theme = createMuiTheme({
 	palette: {
@@ -31,6 +30,21 @@ const theme = createMuiTheme({
     }
 	}
 });
+
+const renderMergedProps = (component, ...rest) => {
+  const finalProps = Object.assign({}, ...rest);
+  return (
+    React.createElement(component, finalProps)
+  );
+}
+
+const PropsRoute = ({ component, ...rest }) => {
+  return (
+    <Route {...rest} render={routeProps => {
+      return renderMergedProps(component, routeProps, rest);
+    }}/>
+  );
+}
 
 function App() {
 
@@ -50,8 +64,11 @@ function App() {
               <Route exact path="/join" component={join}/>
               <Route exact path="/contact" component={contact}/>
               <Route exact path="/calendar" component={calendar}/>
-              <Route exact path="/samplemeeting" component={samplemeeting}/>
-              <Route exact path="/gamenight" component={gamenight}/>
+              <PropsRoute exact path="/awsday1" eventHeading="AWS Series Day 1" eventPoints={1} eventName = "AWS Series Day 1" eventDate = "8/03/2020" component={meetingform}/>
+              <PropsRoute exact path="/awsday2" eventHeading="AWS Series Day 2" eventPoints={1} eventName = "AWS Series Day 2" eventDate = "8/04/2020" component={meetingform}/>
+              <PropsRoute exact path="/awsday3" eventHeading="AWS Series Day 3" eventPoints={1} eventName = "AWS Series Day 3" eventDate = "8/05/2020" component={meetingform}/>
+              <PropsRoute exact path="/awsday4" eventHeading="AWS Series Day 4" eventPoints={1} eventName = "AWS Series Day 4" eventDate = "8/06/2020" component={meetingform}/>
+              <PropsRoute exact path="/awsday5" eventHeading="AWS Series Day 5" eventPoints={1} eventName = "AWS Series Day 5" eventDate = "8/07/2020" component={meetingform}/>
           </Switch>
       </BrowserRouter>
     </MuiThemeProvider>

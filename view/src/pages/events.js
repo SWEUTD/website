@@ -8,9 +8,12 @@ import CardContent from '@material-ui/core/CardContent'
 import Grid from '@material-ui/core/Grid'
 import Divider from '@material-ui/core/Divider'
 
-import Summer2020 from '../assets/Summer2020.png'
-import Fall2020 from '../assets/SlideshowImages/WE.jpg'
-import gamenight from '../assets/gamenight.png'
+import Summer2020 from '../assets/EventFlyers/Summer2020.png'
+import aws1 from '../assets/EventFlyers/day1.jpg'
+import aws2 from '../assets/EventFlyers/day2.jpg'
+import aws3 from '../assets/EventFlyers/day3.jpg'
+import aws4 from '../assets/EventFlyers/day4.jpg'
+import aws5 from '../assets/EventFlyers/day5.jpg'
 
 import NavBar from '../components/navbar'
 
@@ -56,7 +59,7 @@ class events extends Component {
 							className={classes.gridItem}
 							style={{padding:'40px'}}
 						>
-							<Grid item md={5} xs={12} className={classes.gridItem}>
+							<Grid item md={4} xs={12} className={classes.gridItem}>
 									<Card style={{width:'100%'}} className="movingItem" variant="outlined">
 										<CardContent align="center" fullWidth>
 											<a href="https://www.badgelist.com/SWE-UTD-Summer-2020#">
@@ -66,30 +69,54 @@ class events extends Component {
 									</Card>
 							</Grid>
 
-							{/* <Grid item item md={6} xs={12} align="center" className={classes.gridItem}>
-									<Card style={{width:'100%'}} className="movingItem" variant="outlined">
-										<CardContent align="center" fullWidth>
-											<br/>
-											<h1>Stay connected with SWE this summer!</h1>
-											<br/>
-											<Divider/>
-											<br/>
-											<h4>Click <a href="https://www.badgelist.com/SWE-UTD-Summer-2020#">here</a> to participate in #SWEUTDSummer2020 challenges</h4>
-											<br/>
-											<h4>Be sure to visit our new <a href="/portal">member portal</a> to keep up with your SWE points</h4>
-											<br/>
-										</CardContent>
-									</Card>
-							</Grid> */}
+							<Grid item md={4} xs={12} className={classes.gridItem}>
+								<Card style={{width:'100%'}} className="movingItem" variant="outlined">
+									<CardContent align="center" fullWidth>
+										<a href="https://app.chime.aws/meetings/2842567391">
+										<img src={aws1} verticalAlign="center" width = "100%"/>
+										</a>	
+									</CardContent>
+								</Card>
+							</Grid>
 
-							<Grid item md={5} xs={12} className={classes.gridItem}>
-									<Card style={{width:'100%'}} className="movingItem" variant="outlined">
-										<CardContent align="center" fullWidth>
-											<a href="https://bit.ly/SWEGameNight">
-											<img src={gamenight} verticalAlign="center" width = "100%"/>
-											</a>	
-										</CardContent>
-									</Card>
+							<Grid item md={4} xs={12} className={classes.gridItem}>
+								<Card style={{width:'100%'}} className="movingItem" variant="outlined">
+									<CardContent align="center" fullWidth>
+										<a href="https://app.chime.aws/meetings/2842567391">
+										<img src={aws2} verticalAlign="center" width = "100%"/>
+										</a>	
+									</CardContent>
+								</Card>
+							</Grid>
+
+							<Grid item md={4} xs={12} className={classes.gridItem}>
+								<Card style={{width:'100%'}} className="movingItem" variant="outlined">
+									<CardContent align="center" fullWidth>
+										<a href="https://app.chime.aws/meetings/2842567391">
+										<img src={aws3} verticalAlign="center" width = "100%"/>
+										</a>	
+									</CardContent>
+								</Card>
+							</Grid>
+
+							<Grid item md={4} xs={12} className={classes.gridItem}>
+								<Card style={{width:'100%'}} className="movingItem" variant="outlined">
+									<CardContent align="center" fullWidth>
+										<a href="https://app.chime.aws/meetings/2842567391">
+										<img src={aws4} verticalAlign="center" width = "100%"/>
+										</a>	
+									</CardContent>
+								</Card>
+							</Grid>
+
+							<Grid item md={4} xs={12} className={classes.gridItem}>
+								<Card style={{width:'100%'}} className="movingItem" variant="outlined">
+									<CardContent align="center" fullWidth>
+										<a href="https://app.chime.aws/meetings/2842567391">
+										<img src={aws5} verticalAlign="center" width = "100%"/>
+										</a>	
+									</CardContent>
+								</Card>
 							</Grid>
 							
 						</Grid>
