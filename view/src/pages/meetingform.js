@@ -26,10 +26,8 @@ const styles = (theme) => ({
 	}
 });
 
-class gamenight extends Component {
+class meetingform extends Component {
 	constructor(props) {
-		console.log("helo")
-		console.log(props);
 		super(props);
 
 		this.state = { headerReady: false };
@@ -77,25 +75,33 @@ class gamenight extends Component {
 			classification: this.state.classification,
 			major: this.state.major,
 			otherMajor: this.state.otherMajor,
-			netid: this.state.netid,
-			email: this.state.email,
+			netid: this.state.netid.toLowerCase(),
+			email: this.state.email.toLowerCase(),
             eventPoints: this.props.eventPoints,
             eventName: this.props.eventName,
 			eventDate: this.props.eventDate,
-			secretWord: this.state.secretWord
 		};
-		axios
-			.post('https://us-central1-swe-utd-portal.cloudfunctions.net/api/newEvent', newMemberData)
-			.then(() => {
-				this.props.history.push('/');
-			})
-			.catch((error) => {
-				this.setState({
-					errors: error.response.data,
-					signinLoading: false
+		if(this.state.secretWord.toLowerCase() === this.props.secretWord)
+		{
+			axios
+				.post('https://us-central1-swe-utd-portal.cloudfunctions.net/api/newEvent', newMemberData)
+				.then(() => {
+					this.props.history.push('/');
+				})
+				.catch((error) => {
+					this.setState({
+						errors: error.response.data,
+						signinLoading: false
+					});
 				});
+		}
+		else {
+			this.state.errors.secretWord = "This secret word is invalid"
+			this.setState({
+				signinLoading: false
 			});
 		}
+	}
 	// needed for header animation
       componentDidMount() {
         setTimeout(() => {
@@ -303,4 +309,4 @@ class gamenight extends Component {
 	}
 }
 
-export default withStyles(styles)(gamenight);
+export default withStyles(styles)(meetingform);

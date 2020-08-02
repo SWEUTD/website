@@ -105,7 +105,7 @@ class login extends Component {
 		event.preventDefault();
 		this.setState({ loginLoading: true });
 		const memberData = {
-			email: this.state.email,
+			email: this.state.email.toLowerCase(),
 			password: this.state.password
 		};
 		axios
@@ -130,7 +130,6 @@ class login extends Component {
 		this.setState({ signupLoading: true });
 		if(this.state.major != "Other")
 			this.state.otherMajor = "";
-		this.state.netid = this.state.netid.toLowerCase();
 		const newMemberData = {
 			firstName: this.state.firstName,
 			lastName: this.state.lastName,
@@ -138,8 +137,8 @@ class login extends Component {
 			classification: this.state.classification,
 			major: this.state.major,
 			otherMajor: this.state.otherMajor,
-			netid: this.state.netid,
-			email: this.state.email,
+			netid: this.state.netid.toLowerCase(),
+			email: this.state.email.toLowerCase(),
 			password: this.state.password,
 			confirmPassword: this.state.confirmPassword
 		};
@@ -152,7 +151,6 @@ class login extends Component {
 				});	
 				this.props.history.push('/portal');
 				if(this.state.resume != null) {
-					console.log("called")
 					this.handleResumeUpload();
 				}
 			})
@@ -173,7 +171,6 @@ class login extends Component {
 			this.state.resume,
 			`${this.state.resume.lastModified}-${this.state.resume.name}`
 		);
-		console.log("hi")
 		
 		console.log(fileData)
 		axios
