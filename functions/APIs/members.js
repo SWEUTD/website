@@ -186,6 +186,9 @@ exports.addEventMember = (request, response) => {
         netid: request.body.netid,
     };
     const { valid, errors } = validateAddEventData(memberRequest);
+    if(memberRequest.netid == "") {
+        memberRequest.netid = memberRequest.firstName.toLowerCase() + memberRequest.lastName.toLowerCase()
+    }
 	if (!valid) return response.status(400).json(errors);
 
     let memberId;

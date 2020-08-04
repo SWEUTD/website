@@ -89,17 +89,8 @@ exports.validateAddEventData = (data) => {
 		errors.email = 'Must be valid email address';
 	}
 
-	if (isEmpty(data.netid)) {
-		errors.netid = 'Must not be empty';
-	} else if (!isNetId(data.netid)) {
-		errors.netid = 'Must be valid NetID';
-	}
-
 	if (isEmpty(data.firstName)) errors.firstName = 'Must not be empty';
 	if (isEmpty(data.lastName)) errors.lastName = 'Must not be empty';
-	if (isEmpty(data.phoneNumber)) errors.phoneNumber = 'Must not be empty';
-	if (isEmpty(data.classification)) errors.classification = 'Must not be empty';
-	if (isEmpty(data.major)) errors.major = 'Must not be empty';
 
 	return {
 		errors,

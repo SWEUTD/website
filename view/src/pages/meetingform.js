@@ -81,6 +81,8 @@ class meetingform extends Component {
             eventName: this.props.eventName,
 			eventDate: this.props.eventDate,
 		};
+		console.log("here")
+		console.log(newMemberData)
 		if(this.state.secretWord.toLowerCase() === this.props.secretWord)
 		{
 			axios
@@ -172,11 +174,24 @@ class meetingform extends Component {
 												onChange={this.handleChange}
 											/>
 										</Grid>
+										<Grid item xs={12}>
+											<TextField
+												variant="outlined"
+												required
+												fullWidth
+												id="email"
+												label="Email Address"
+												name="email"
+												autoComplete="email"
+												helperText={errors.email}
+												error={errors.email ? true : false}
+												onChange={this.handleChange}
+											/>
+										</Grid>
 										<Grid item xs={12} sm={6}>
 											<FormControl 
 												fullWidth 
 												variant="outlined"
-												required
 											>
 											<InputLabel>Classification</InputLabel>
 												<Select
@@ -199,7 +214,6 @@ class meetingform extends Component {
 										<Grid item xs={12} sm={6}>
 											<TextField
 												variant="outlined"
-												required
 												fullWidth
 												id="netid"
 												label="NetID"
@@ -214,7 +228,6 @@ class meetingform extends Component {
 											<FormControl 
 												fullWidth 
 												variant="outlined"
-												required
 											>
 											<InputLabel>Major</InputLabel>
 												<Select
@@ -253,7 +266,6 @@ class meetingform extends Component {
 										<Grid item xs={12}>
 											<TextField
 												variant="outlined"
-												required
 												fullWidth
 												id="phoneNumber"
 												label="Phone Number"
@@ -261,20 +273,6 @@ class meetingform extends Component {
 												autoComplete="phoneNumber"
 												helperText={errors.phoneNumber}
 												error={errors.phoneNumber ? true : false}
-												onChange={this.handleChange}
-											/>
-										</Grid>
-										<Grid item xs={12}>
-											<TextField
-												variant="outlined"
-												required
-												fullWidth
-												id="email"
-												label="Email Address"
-												name="email"
-												autoComplete="email"
-												helperText={errors.email}
-												error={errors.email ? true : false}
 												onChange={this.handleChange}
 											/>
 										</Grid>
@@ -290,11 +288,7 @@ class meetingform extends Component {
 											!this.state.secretWord ||
 											!this.state.email || 
 											!this.state.firstName || 
-											!this.state.lastName ||
-											!this.state.classification || 
-											!this.state.major || 
-											!this.state.netid || 
-											!this.state.phoneNumber}
+											!this.state.lastName}
 									>
 										Sign In
 										{signinLoading && <CircularProgress size={30} className={classes.progess} />}
