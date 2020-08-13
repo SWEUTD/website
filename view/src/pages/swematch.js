@@ -76,7 +76,7 @@ class swematch extends Component {
 					</p>
 					<h3 class="movingItem">Dates to Save:</h3>
 					<ul class="movingItem">
-						<li><strong>7 September 2020:</strong> SWE Match Mentor and Participant Applications open</li>
+						<li><strong>7 September 2020:</strong> SWE Match Advanced and Beginner track Applications open</li>
 						<li><strong>2 October 2020:</strong> Applications close</li>
 						<li><strong>5-9 October 2020:</strong> Interviews!</li>
 						<li><strong>11 October 2020:</strong> Candidates notified of their statuses; there will be a waitlist</li>
