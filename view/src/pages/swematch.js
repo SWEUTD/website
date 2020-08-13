@@ -49,21 +49,21 @@ class swematch extends Component {
 					<h3 class="movingItem">Get Involved!</h3>
 					<Row>
 						<Col>
-							<h4 class="movingItem">Participant</h4>
+							<h4 class="movingItem">Beginner Track</h4>
 							<p class="movingItem">
-								Participants are beginner collegiate engineers looking to hone their craft and get some experience. 
-								Participants should be excited about engineering and willing to learn!
+								Our beginner collegiate engineers looking to hone their craft and get some experience. 
+								Beginner track participants should be excited about engineering and willing to learn!
 							</p>
 						</Col>
 						<Col>
-							<h4 class="movingItem">Mentor</h4>
+							<h4 class="movingItem">Advanced Track</h4>
 							<p class="movingItem">
-								Mentors are more experienced collegiate engineers looking to teach, lead, and guide the design and construction of the project.
-								Mentors will be required to show their qualification by bringing in some portfolio work.
+								Advanced track participants are more experienced collegiate engineers looking to teach, lead, and guide the design and construction of the project.
+								Advanced track participants will be required to show their qualification by bringing in some portfolio work.
 							</p>
 						</Col>
 					</Row>
-					<p align="center" class="movingItem">Each of these two paths constitute being a full member of the team. Participants will be partnered up with a mentor as a point of contact for technical questions.</p>
+					<p align="center" class="movingItem">Each of these two tracks constitute being a full member of the team. Beginner track participants will be partnered up with an advanced track participant as a point of contact for technical questions.</p>
 					<h3 class="movingItem">About <a href="https://swe.org/awards/collegiate-competitions/">Team Tech:</a></h3>
 					<p class="movingItem">
 						For the Team Tech competition, we will be partnering up with an industry partner to help us
