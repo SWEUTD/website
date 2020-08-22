@@ -52,11 +52,11 @@ class swestars extends Component {
                 </div>
 				<div className="fullscreen">
 				<Grid container
-						height="100%"
-						width="100%"
-						alignItems="stretch"
-						justify="space-evenly"
-						className="movingItem"
+					height="100%"
+					width="100%"
+					alignItems="stretch"
+					justify="space-evenly"
+					className="movingItem"
 				>
 					<Grid style={{padding:'50px'}} className={classes.gridItem} md={3} xs={12}>
 						<div>
@@ -68,11 +68,19 @@ class swestars extends Component {
 								<ListItem>Volunteering</ListItem>
 								<ListItem>Emailing us helpful homework suggestions</ListItem>
 							</List>
-							<br/>
-							<h1 align="center">Rewards:</h1>
+							<br/><br/>
+							<h1 align="center">Tier Prizes for Fall 2020</h1>
 							<Divider/>
-							<br/>
-							<img src={Tiers} width="100%"/>
+							<List dense="true">
+								<ListSubheader>Gold Tier:</ListSubheader>
+								<ListItem>SWE Gift Bag</ListItem>
+								<br/>
+								<ListSubheader>Silver Tier:</ListSubheader>
+								<ListItem>Social media shoutout</ListItem>
+								<br/>
+								<ListSubheader>Bronze Tier:</ListSubheader>
+								<ListItem>Invitation to a virtual networking session</ListItem>
+							</List>
 						</div>
 					</Grid>
 					<Grid container
@@ -82,32 +90,50 @@ class swestars extends Component {
 						justify="space-evenly"
 						className="movingItem"
 						md={9} xs={12}
+						style={{color:'white'}}
 					>
 						<Grid className={classes.gridItem} style={{backgroundColor:"#DBC554", padding:'50px'}} item xs={12}>
 							<div>
-								<h1 align="center">Gold Members</h1>
+								<h1 align="center">Gold Tier</h1>
 								<br/>
 								<Divider/>
 								<br/>
-								<p align="center">We have no gold members yet, become our first!</p>
+								<List alignItems="center">
+									<ListSubheader align="center">Fall 2020:</ListSubheader>
+									<ListItemText align="center"><h2>Become our first Fall 2020 SWE Star!</h2></ListItemText>
+									<ListSubheader align="center">Summer 2020:</ListSubheader>
+									<ListItemText align="center"><h2>Lisa Chen</h2></ListItemText>
+								</List>
 							</div>
 						</Grid>
-						<Grid className={classes.gridItem} style={{backgroundColor:"#A9A8A9", padding:'50px'}} item xs={12}>
+						<Grid className={classes.gridItem} style={{backgroundColor:"#A9A8A9", padding:'50px'}} item xs={7}>
 							<div>
-								<h1 align="center">Silver Members</h1>
+								<h1 align="center">Silver Tier</h1>
 								<br/>
 								<Divider/>
 								<br/>
-								<p align="center">We have no gold members yet, become our first!</p>
+								<List alignItems="center">
+									<ListSubheader align="center">Fall 2020:</ListSubheader>
+									<ListItemText align="center"><h4>Become our first Fall 2020 SWE Star!</h4></ListItemText>
+									<ListSubheader align="center">Summer 2020:</ListSubheader>
+									<ListItemText align="center"><h4>Lan Bui</h4></ListItemText>
+									<ListItemText align="center"><h4>Aishani De Sirkar</h4></ListItemText>
+								</List>
 							</div>
 						</Grid>
-						<Grid className={classes.gridItem} style={{backgroundColor:"#916f51", padding:'50px'}} item xs={12}>
+						<Grid className={classes.gridItem} style={{backgroundColor:"#916f51", padding:'50px'}} item xs={5}>
 							<div>
-								<h1 align="center">Bronze Members</h1>
+								<h1 align="center">Bronze Tier</h1>
 								<br/>
 								<Divider/>
 								<br/>
-								<p align="center">We have no gold members yet, become our first!</p>
+								<List alignItems="center">
+									<ListSubheader align="center">Fall 2020:</ListSubheader>
+									<ListItemText align="center"><h4>Become our first Fall 2020 SWE Star!</h4></ListItemText>
+									<ListSubheader align="center">Summer 2020:</ListSubheader>
+									<ListItemText align="center"><h6>Jyostna Thanjavur</h6></ListItemText>
+									<ListItemText align="center"><h6>Kendra Huang</h6></ListItemText>
+								</List>
 							</div>
 						</Grid>
 					</Grid>

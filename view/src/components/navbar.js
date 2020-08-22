@@ -42,7 +42,7 @@ class navbar extends Component {
                                         <NavDropdown.Item href="/events">Events</NavDropdown.Item>
                                         <NavDropdown.Item href="/weconference">WE Conference</NavDropdown.Item>
                                         <NavDropdown.Item href="/swematch">SWEMatch</NavDropdown.Item>
-                                        <NavDropdown.Item href="https://hansikasundaresan.github.io/LadiesInTech/">Ladies in Tech</NavDropdown.Item>
+                                        <NavDropdown.Item href="http://utdlitmp.com/">Ladies in Tech</NavDropdown.Item>
                                         <NavDropdown.Item href="http://wehackutd.com">WEHack</NavDropdown.Item>
                                     </NavDropdown>
                                     <Nav.Link href="/calendar">Calendar</Nav.Link>

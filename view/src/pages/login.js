@@ -437,7 +437,7 @@ class login extends Component {
 												onChange={this.handleChange}
 											/>
 										</Grid>
-										<Grid item xs={12}>
+										{/* <Grid item xs={12}>
 											<p>Upload Resume (Optional):</p>
 											<OutlinedInput
 												fullWidth
@@ -448,7 +448,7 @@ class login extends Component {
 												type="file"
 												onChange={this.handleFileChange}
 											/>
-										</Grid>
+										</Grid> */}
 									</Grid>
 									<Button
 										type="signup"
