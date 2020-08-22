@@ -106,7 +106,7 @@ class swestars extends Component {
 								</List>
 							</div>
 						</Grid>
-						<Grid className={classes.gridItem} style={{backgroundColor:"#A9A8A9", padding:'50px'}} item xs={7}>
+						<Grid className={classes.gridItem} style={{backgroundColor:"#A9A8A9", padding:'50px'}} item md={7} xs={12}>
 							<div>
 								<h1 align="center">Silver Tier</h1>
 								<br/>
@@ -121,7 +121,7 @@ class swestars extends Component {
 								</List>
 							</div>
 						</Grid>
-						<Grid className={classes.gridItem} style={{backgroundColor:"#916f51", padding:'50px'}} item xs={5}>
+						<Grid className={classes.gridItem} style={{backgroundColor:"#916f51", padding:'50px'}} item md={5} xs={12}>
 							<div>
 								<h1 align="center">Bronze Tier</h1>
 								<br/>
