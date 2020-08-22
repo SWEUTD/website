@@ -142,7 +142,7 @@ class event extends Component {
 					<Divider />
 					<br />
 					<h5>Reach the bronze tier and unlock:</h5>
-					<p>★ SWE gift bag</p>
+					<p>★ Social Media Shoutout</p>
 				</div>
 		}
 		else if (this.state.points < 5) {

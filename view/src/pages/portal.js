@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import Account from '../components/account';
 import Event from '../components/event';
+import Recordings from '../components/recordings';
 
 import Drawer from '@material-ui/core/Drawer';
 import Box from '@material-ui/core/Box';
@@ -16,6 +17,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import withStyles from '@material-ui/core/styles/withStyles';
 import AccountBoxIcon from '@material-ui/icons/AccountBox';
 import NotesIcon from '@material-ui/icons/Notes';
+import VideoLibrary from '@material-ui/icons/VideoLibrary';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import NavBar from '../components/navbar'
@@ -53,17 +55,35 @@ const styles = (theme) => ({
 	toolbar: theme.mixins.toolbar
 });
 
+function Screen(props) {
+	const screen = props.screen;
+	if (screen === "account") {
+	  return <Account />;
+	}
+	else if (screen === "event") {
+		return <Event />
+	}
+	else if (screen === "recordings") {
+		return <Recordings />
+	}
+	return <Event />
+}
+
 class portal extends Component {
 	state = {
-		render: false
+		render: "event"
 	};
 
 	loadAccountPage = (event) => {
-		this.setState({ render: true });
+		this.setState({ render: "account" });
 	};
 
 	loadEventPage = (event) => {
-		this.setState({ render: false });
+		this.setState({ render: "event" });
+	};
+
+	loadRecordings = (event) => {
+		this.setState({ render: "recordings" });
 	};
 
 	logoutHandler = (event) => {
@@ -162,6 +182,14 @@ class portal extends Component {
 								<ListItemText primary="Account" />
 							</ListItem>
 
+							<ListItem button key="Recordings" onClick={this.loadRecordings}>
+								<ListItemIcon>
+									{' '}
+									<VideoLibrary />{' '}
+								</ListItemIcon>
+								<ListItemText primary="Recordings" />
+							</ListItem>
+
 							<ListItem button key="Logout" onClick={this.logoutHandler}>
 								<ListItemIcon>
 									{' '}
@@ -171,7 +199,9 @@ class portal extends Component {
 							</ListItem>
 						</List>
 					</Drawer>
-					<div>{this.state.render ? <Account /> : <Event />}</div>
+					<div>
+						<Screen screen={this.state.render}/>
+					</div>
 				</div>
 				
 			);
