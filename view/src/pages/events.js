@@ -55,7 +55,7 @@ class events extends Component {
 							<Grid item md={4} xs={12} className={classes.gridItem}>
 									<Card style={{width:'100%'}} className="movingItem" variant="outlined">
 										<CardContent align="center" fullWidth>
-											<a href="#">
+											<a href="https://teams.microsoft.com/l/meetup-join/19%3a46bb0aaae7f94d35a5bdce5975dc5327%40thread.v2/0">
 											<img src={kickoff} verticalAlign="center" width = "100%"/>
 											</a>	
 										</CardContent>
