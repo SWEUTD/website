@@ -1,20 +1,13 @@
+// swestars.js
+
+// page displaying information about the SWE Stars program
+
 import React, { Component } from 'react';
 import classNames from 'classnames';
 
 import withStyles from '@material-ui/core/styles/withStyles';
-import Grid from '@material-ui/core/Grid'
-import Divider from '@material-ui/core/Divider'
-import List from '@material-ui/core/List'
-import ListItem from '@material-ui/core/ListItem'
-import ListItemText from '@material-ui/core/ListItemText'
-import Select from '@material-ui/core/Select';
-import FormControl from '@material-ui/core/FormControl';
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-import ListSubheader from '@material-ui/core/ListSubheader'
-import Tiers from '../assets/Tiers.png'
 
-
+import { Divider, FormControl, Grid, List, ListItem, ListItemText, ListSubheader } from '@material-ui/core'
 import NavBar from '../components/navbar'
 
 const styles = (theme) => ({
@@ -31,7 +24,6 @@ const styles = (theme) => ({
 });
 
 class swestars extends Component {
-	// needed for header animation
     constructor(props) {
         super(props);
         this.state = { headerReady: false };

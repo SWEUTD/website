@@ -1,3 +1,7 @@
+// swematch.js
+
+// page displaying information about the SWE Match program
+
 import React, { Component } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import classNames from 'classnames';
@@ -13,7 +17,6 @@ const styles = (theme) => ({
 });
 
 class swematch extends Component {
-	// needed for header animation
     constructor(props) {
         super(props);
         this.state = { headerReady: false };

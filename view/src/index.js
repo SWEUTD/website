@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import './custom.scss';
-import './custom.css';
+import './styles/custom.scss';
+import './styles/custom.css';
 import './fonts/GillSansMTBook.ttf'
 
 ReactDOM.render(

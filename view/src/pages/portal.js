@@ -1,3 +1,7 @@
+// portal.js
+
+// page controlling what a user sees on the portal page
+
 import React, { Component } from 'react';
 import axios from 'axios';
 
@@ -5,21 +9,16 @@ import Account from '../components/account';
 import Event from '../components/event';
 import Recordings from '../components/recordings';
 
-import Drawer from '@material-ui/core/Drawer';
-import Box from '@material-ui/core/Box';
-import Toolbar from '@material-ui/core/Toolbar';
-import CssBaseline from '@material-ui/core/CssBaseline'
-import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
+import { Box, CircularProgress, CssBaseline, Divider, Drawer, List, ListItem, ListItemIcon, ListItemText, Toolbar } from '@material-ui/core';
+
 import withStyles from '@material-ui/core/styles/withStyles';
-import AccountBoxIcon from '@material-ui/icons/AccountBox';
+
+// Icons
+import AccountBoxIcon from '@material-ui/icons/Notes';
 import NotesIcon from '@material-ui/icons/Notes';
 import VideoLibrary from '@material-ui/icons/VideoLibrary';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
-import CircularProgress from '@material-ui/core/CircularProgress';
+
 import NavBar from '../components/navbar'
 
 import { authMiddleWare } from '../util/auth'

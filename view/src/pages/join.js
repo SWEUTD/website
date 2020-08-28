@@ -1,13 +1,14 @@
+// join.js
+
+// Page containing information about how to join SWE
+
 import React, { Component } from 'react';
 import classNames from 'classnames';
 
 import withStyles from '@material-ui/core/styles/withStyles';
-import Card from '@material-ui/core/Card'
-import List from '@material-ui/core/List'
-import ListItem from '@material-ui/core/ListItem'
-import CardContent from '@material-ui/core/CardContent'
-import Grid from '@material-ui/core/Grid'
-import Divider from '@material-ui/core/Divider'
+
+import { Card, CardContent, Divider, Grid, List, ListItem } from '@material-ui/core'
+
 import NavBar from '../components/navbar'
 
 const styles = (theme) => ({

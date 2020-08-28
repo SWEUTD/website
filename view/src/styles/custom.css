@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'GillSansMTBook';
-  src: local('GillSansMTBook'), url(./fonts/GillSansMTBook.ttf) format('truetype');
+  src: local('GillSansMTBook'), url(../fonts/GillSansMTBook.ttf) format('truetype');
 }
 
 body {

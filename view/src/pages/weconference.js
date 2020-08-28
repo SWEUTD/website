@@ -1,10 +1,13 @@
+// weconference.js
+
+// page displaying information about the WE Conference
+
 import React, { Component } from 'react';
 import classNames from 'classnames';
-
 import withStyles from '@material-ui/core/styles/withStyles';
-import Container from '@material-ui/core/Container'
-import CssBaseline from '@material-ui/core/CssBaseline'
-import Grid from '@material-ui/core/Grid'
+
+import { Container, CssBaseline, Grid} from '@material-ui/core'
+
 import Carousel from 'react-bootstrap/Carousel'
 import NavBar from '../components/navbar'
 
@@ -16,11 +19,10 @@ import Image4 from '../assets/WEImages/4.png'
 import Image5 from '../assets/WEImages/5.png'
 
 const styles = (theme) => ({
-	
+
 });
 
 class weconference extends Component {
-	// needed for header animation
     constructor(props) {
         super(props);
         this.state = { headerReady: false };

@@ -39,7 +39,7 @@ const calendar_configuration = {
 }
 
 const styles = (theme) => ({
-	
+
 });
 
 class calendar extends Component {

@@ -8,7 +8,7 @@ import withStyles from '@material-ui/core/styles/withStyles';
 import Grid from '@material-ui/core/Grid'
 import NavBar from '../components/navbar'
 
-//images
+// images
 import Statistics from '../assets/statistics.png'
 import Sponsor from '../assets/AT&T.png'
 
@@ -35,7 +35,6 @@ const styles = (theme) => ({
 });
 
 class about extends Component {
-	// needed for header animation
     constructor(props) {
         super(props);
         this.state = { headerReady: false };

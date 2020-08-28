@@ -1,3 +1,7 @@
+// mailchimp.js
+
+// handles subscribing to SWE mailchimp
+
 import React from "react"
 import jsonp from "jsonp"
 import PropTypes from 'prop-types';

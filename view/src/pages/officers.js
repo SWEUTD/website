@@ -1,15 +1,17 @@
+// officers.js
+
+// page containing officer photos and information
+
 import React, { Component } from 'react';
 import classNames from 'classnames';
 
 import withStyles from '@material-ui/core/styles/withStyles';
-import Container from '@material-ui/core/Container'
-import CssBaseline from '@material-ui/core/CssBaseline'
-import { Card, CardActions, CardContent, Divider, Button, Box, Grid, TextField, Typography } from '@material-ui/core';
+import { Card, CardActions, CardContent, CssBaseline, Container, Divider, Button, Box, Grid, TextField, Typography } from '@material-ui/core';
 import NavBar from '../components/navbar'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
-//Officers photos
+// Officer photos
 import AfridaTasnim from '../assets/OfficerPhotos/AfridaTasnim.jpg'
 import AngelleNazareno from '../assets/OfficerPhotos/AngelleNazareno.jpg'
 import AnkitaBantey from '../assets/OfficerPhotos/AnkitaBantey.jpg'
@@ -142,7 +144,6 @@ const styles = (theme) => ({
 });
 
 class officers extends Component {
-		// needed for header animation
 		constructor(props) {
 			super(props);
 			this.state = { headerReady: false };

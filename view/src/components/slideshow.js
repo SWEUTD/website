@@ -8,8 +8,8 @@ import React from 'react';
 import classNames from 'classnames';
 
 // custom styles for slideshow
-import '../slideshow.scss';
-import '../slideshow.css';
+import '../styles/slideshow.scss';
+import '../styles/slideshow.css';
 
 // photos displayed
 import WePhoto from '../assets/SlideshowImages/WE.jpg'

@@ -11,11 +11,10 @@ import NavBar from '../components/navbar'
 import Mailchimp from '../components/mailchimp'
 
 const styles = (theme) => ({
-	
+
 });
 
 class contact extends Component {
-	// needed for header animation
     constructor(props) {
         super(props);
 		this.state = { headerReady: false };

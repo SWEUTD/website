@@ -1,3 +1,7 @@
+// meetingform.js
+
+// Meeting form for SWE events
+
 import React, { Component } from 'react';
 import { Button, Select, MenuItem, Grid, Container, TextField, CircularProgress, FormControl, InputLabel } from '@material-ui/core';
 import withStyles from '@material-ui/core/styles/withStyles';

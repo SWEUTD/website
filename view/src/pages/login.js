@@ -1,26 +1,15 @@
+// login.js
+
+// Handles user login to portal
+
 import React, { Component } from 'react';
-import Avatar from '@material-ui/core/Avatar';
-import Button from '@material-ui/core/Button';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import TextField from '@material-ui/core/TextField';
-import Select from '@material-ui/core/Select';
-import MenuItem from '@material-ui/core/MenuItem';
-import OutlinedInput from '@material-ui/core/OutlinedInput';
-import Link from '@material-ui/core/Link';
-import Grid from '@material-ui/core/Grid';
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
-import Typography from '@material-ui/core/Typography';
-import Container from '@material-ui/core/Container';
 import withStyles from '@material-ui/core/styles/withStyles';
-import CircularProgress from '@material-ui/core/CircularProgress';
 import classNames from 'classnames';
-import { Card, CardActions, CardContent, Divider, Box, } from '@material-ui/core';
+import { Button, Grid, CardContent, CircularProgress, Container, Divider, FormControl, InputLabel, MenuItem, Select, TextField, Typography } from '@material-ui/core';
 
 import NavBar from '../components/navbar'
 
 import axios from 'axios';
-import { FormControl, InputLabel, Menu } from '@material-ui/core';
-import { log } from 'util';
 
 const styles = (theme) => ({
 	content: {
