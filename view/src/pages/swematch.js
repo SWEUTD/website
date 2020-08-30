@@ -52,14 +52,14 @@ class swematch extends Component {
 					<h3 class="movingItem">Get Involved!</h3>
 					<Row>
 						<Col>
-							<h4 class="movingItem">Beginner Track</h4>
+							<h4 class="movingItem"><a href="https://form.jotform.com/202226926996062">Beginner Track</a></h4>
 							<p class="movingItem">
 								Our beginner collegiate engineers looking to hone their craft and get some experience. 
 								Beginner track participants should be excited about engineering and willing to learn!
 							</p>
 						</Col>
 						<Col>
-							<h4 class="movingItem">Advanced Track</h4>
+							<h4 class="movingItem"><a href="https://form.jotform.com/202226333501137">Advanced Track</a></h4>
 							<p class="movingItem">
 								Advanced track participants are more experienced collegiate engineers looking to teach, lead, and guide the design and construction of the project.
 								Advanced track participants will be required to show their qualification by bringing in some portfolio work.
