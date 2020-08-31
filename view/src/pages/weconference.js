@@ -6,7 +6,7 @@ import React, { Component } from 'react';
 import classNames from 'classnames';
 import withStyles from '@material-ui/core/styles/withStyles';
 
-import { Container, CssBaseline, Grid} from '@material-ui/core'
+import { Button, Container, CssBaseline, Grid} from '@material-ui/core'
 
 import Carousel from 'react-bootstrap/Carousel'
 import NavBar from '../components/navbar'
@@ -97,15 +97,15 @@ class weconference extends Component {
 							<p> Laura Maxwell, Senior Vice President, Supply Chain for Frito-Lay North America, Pepsico</p>
 							<p>Sundari Mitra, Vice President, General Manager of SEG, Intel Corporation</p>
  							<p>Linda DuCharme, President of Upstream Integrated Solutions, ExxonMobil</p>
+							<p>Jennifer Rumsey, Vice President, Cummins Inc. President-Components Business</p>
 							<h6><b>Career fair:</b></h6>
 							<p>The conference gives you an opportunity to attend a career fair with many companies recruiting students.</p>
-							<h6><b>CLI:</b></h6> 
-							<p>Collegiate Leadership Institute gives skills, knowledge, and leadership experience to use in engineering fields and teaches participants how to network with companies.</p>
 							<h6><b>When and where?</b></h6>
-							<p>New Orleans, Louisiana Nov 5-7th Ernest N. Memorial Convention Center</p>
+							<p>WE20 is a two week virtual conference and career fair from November 2-13</p>
 							<h6><b>When we are recruiting?</b></h6>
-							<p>Fill out the application from August 18th until September 10th </p>
-							<p>SWE is looking for 6 people who are involved with SWE and have a passion for engineering</p>
+							<p>Fill out the application from August 31st until September 18th </p>
+							<p>SWE is looking for 14 people who are involved with SWE and have a passion for engineering</p>
+							<Button href="https://forms.gle/VPLjYEPrBwJ9LdiPA" variant="contained" color="primary">Apply Now</Button>
 							</div>
 						</Grid>
 					</Grid>

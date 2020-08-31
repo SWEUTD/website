@@ -65,7 +65,8 @@ class swestars extends Component {
 							<Divider/>
 							<List dense="true">
 								<ListSubheader>Gold Tier:</ListSubheader>
-								<ListItem>SWE Gift Bag</ListItem>
+								<ListItem>(Top 15 SWE Gold Stars) SWE Gift Bags</ListItem>
+								<ListItem>1x1 Resume Critiquing Session</ListItem>
 								<br/>
 								<ListSubheader>Silver Tier:</ListSubheader>
 								<ListItem>Social media shoutout</ListItem>
