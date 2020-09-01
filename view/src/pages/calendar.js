@@ -7,36 +7,6 @@ import classNames from 'classnames';
 import withStyles from '@material-ui/core/styles/withStyles';
 import Container from '@material-ui/core/Container'
 import NavBar from '../components/navbar'
-import Calendar from 'react_google_calendar'
-
-// list of imported Google Calendars
-const calendar_configuration = {
-    api_key: process.env.REACT_APP_CALENDAR_KEY,  // must be setup in terminal
-    calendars: [
-      {
-        name: 'Community Outreach Events',
-        url: '69gnk398bfu24fassk546qgmc8@group.calendar.google.com',
-        color: 'red'
-      },
-      {
-        name: 'Corporate Events',
-        url: '85556o7d5bvkvilesn659mekkc@group.calendar.google.com',
-        color: 'red'
-      },
-      {
-        name: 'Events',
-        url: 'qo4rmsgksc6pe3bfa9sso4f42s@group.calendar.google.com',
-        color: 'red'
-      },
-      {
-        name: 'WE Hack',
-        url: 'sja9rbblc0h3toc3ldbdnuqbn8@group.calendar.google.com'
-      },
-    ],
-    dailyRecurrence: 700,
-    weeklyRecurrence: 500,
-    monthlyRecurrence: 20
-}
 
 const styles = (theme) => ({
 
@@ -62,12 +32,7 @@ class calendar extends Component {
           <p className="heading">Calendar</p>
         </div>
         <Container width="80%" className="movingItem">
-            <Calendar
-              events={this.state.events}
-              config={calendar_configuration}
-              popup='true'
-              />
-              <br/>
+            <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%235a5377&amp;ctz=America%2FChicago&amp;src=c3dldXRkQGdtYWlsLmNvbQ&amp;src=NjlnbmszOThiZnUyNGZhc3NrNTQ2cWdtYzhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ODU1NTZvN2Q1YnZrdmlsZXNuNjU5bWVra2NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=cW80cm1zZ2tzYzZwZTNiZmE5c3NvNGY0MnNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=c2phOXJiYmxjMGgzdG9jM2xkYmRudXFibjhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%238E24AA&amp;color=%23039BE5&amp;color=%239E69AF&amp;color=%233F51B5&amp;color=%23D81B60&amp;showTabs=0&amp;showPrint=0&amp;showTitle=0&amp;showDate=0" style="border:solid 1px #777" style={{border: "0", width:"100%", height:"100vh", frameborder:"0", scrolling:"no"}}></iframe>
         </Container>
 			</div>
 		);
