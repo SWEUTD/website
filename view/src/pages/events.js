@@ -12,11 +12,6 @@ import NavBar from '../components/navbar'
 
 const upcomingEvents = [
 	{
-		name: 'Success in a Virtual Environment - AT&T',
-		date: '9/1/2020 12:00 PM', 
-		link: 'https://teams.microsoft.com/l/meetup-join/19%3ad48be07d98004295a4b8456acd03e507%40thread.tacv2/1598935212577?context=%7b%22Tid%22%3a%228d281d1d-9c4d-4bf7-b16e-032d15de9f6c%22%2c%22Oid%22%3a%22aa5e36e9-8e5b-4f97-8e0b-58e79a137a07%22%7d'
-	},
-	{
 		name: 'Bob Ross Painting Social',
 		date: '9/4/2020 5:30 PM - 7:30 PM',
 		link: 'https://teams.microsoft.com/l/meetup-join/19%3a687fa9fbc9504449acf4b078af95f856%40thread.tacv2/1598904689303?context=%7b%22Tid%22%3a%228d281d1d-9c4d-4bf7-b16e-032d15de9f6c%22%2c%22Oid%22%3a%22aa5e36e9-8e5b-4f97-8e0b-58e79a137a07%22%7d'
@@ -82,21 +77,22 @@ class events extends Component {
 						className={classes.gridItem}
 						style={{padding:'40px'}}
 					>
-						<Grid item md={4} xs={12} className={classes.gridItem}>
+						{/* <Grid item md={4} xs={12} className={classes.gridItem}>
 							<div>
 								<br/>
 								<a href="https://teams.microsoft.com/l/meetup-join/19%3ad48be07d98004295a4b8456acd03e507%40thread.tacv2/1598935212577?context=%7b%22Tid%22%3a%228d281d1d-9c4d-4bf7-b16e-032d15de9f6c%22%2c%22Oid%22%3a%22aa5e36e9-8e5b-4f97-8e0b-58e79a137a07%22%7d">
 									<img className="movingItem"  src={flyer} verticalAlign="center" width = "100%"/>
 								</a>
 							</div>
-						</Grid>
+						</Grid> */}
 
 						<Grid item className={classes.gridItem}>
 							<div align="center">
 								<h1>Upcoming Events</h1>
+								<br/>
 								{upcomingEvents.map((event) => (
 								<List alignItems="center">
-									<ListItem align="center">{event.name}</ListItem>
+									<h4>{event.name}</h4>
 									<ListSubheader>{event.date}</ListSubheader>
 									<Button href={event.link} align="center" variant="contained" color="primary">Join Meeting</Button>
 									<br/>

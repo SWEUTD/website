@@ -95,9 +95,22 @@ class recordings extends Component {
 			return (
 				<div className={classes.content}>
 					<div className={classes.toolbar} />
-					<h1 class="movingItem">
-						Check Back Soon!
-					</h1>
+					<Grid container
+					spacing={5}
+					height="100%"
+					width="100%"
+					alignItems="stretch"
+					justify="space-evenly"
+					>
+						<Grid className={classes.gridItem} item sm="12" md="6">
+							<iframe src="https://web.microsoftstream.com/embed/video/ded9e85d-93ed-4775-b782-52a1f31eb1bb?autoplay=false&amp;showinfo=true" style={{border:"none"}}></iframe>
+							<h6>AT&amp;T Success in a Virtual Environment - 9/1/2020</h6>
+						</Grid>
+						<Grid className={classes.gridItem} item sm="12" md="6">
+							<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSYy2zWDUDc4FiB89J-gLFDbnyJwPD-b-2i3peHB2bQPPHsA97xK9ZfOs0sSbNhizqYW4RCNGtUbJPC/embed?start=true&loop=true&delayms=9000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+							<h6>SWE Kickoff Slides - 8/31/2020</h6>
+						</Grid>
+					</Grid>
 				</div>
 			);
 		}

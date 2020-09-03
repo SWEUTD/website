@@ -186,7 +186,7 @@ class portal extends Component {
 									{' '}
 									<VideoLibrary />{' '}
 								</ListItemIcon>
-								<ListItemText primary="Recordings" />
+								<ListItemText primary="Recordings/Slides" />
 							</ListItem>
 
 							<ListItem button key="Logout" onClick={this.logoutHandler}>
