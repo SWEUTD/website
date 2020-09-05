@@ -105,7 +105,7 @@ const officerList = [
 	{
 		name: 'Afrida Tasnim',
 		image: AfridaTasnim,
-		position: "WEHack Co-Director",
+		position: "WEHack Assistant Director",
 		linkedin: "https://www.linkedin.com/in/afrida-tasnim/"
 	},
 	{
