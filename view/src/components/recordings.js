@@ -9,6 +9,28 @@ import { Button, Card, CardActions, CardContent, CircularProgress, Divider, Form
 import axios from 'axios';
 import { authMiddleWare } from '../util/auth';
 
+const videos = [
+	{
+		link: 'https://web.microsoftstream.com/embed/video/6b0e2f2a-f03f-45a1-9ec3-ed442d15d6b1?autoplay=false&amp;showinfo=true',
+		title: 'Debunking Recruiting Myths - 9/9/2020', 
+	},
+	{
+		link: 'https://web.microsoftstream.com/embed/video/205eb824-8a39-431b-8620-c72361a09ce4?autoplay=false&amp;showinfo=true',
+		title: 'LinkedIn 101 - 9/8/2020'
+	},
+	{
+		link: 'https://web.microsoftstream.com/embed/video/eab0eb2b-638b-4975-a055-0262bbb7d8ed?autoplay=false&amp;showinfo=true',
+		title: 'Pitch Yourself 101 - 9/7/2020'
+	},
+	{
+		link: 'https://web.microsoftstream.com/embed/video/ded9e85d-93ed-4775-b782-52a1f31eb1bb?autoplay=false&amp;showinfo=true',
+		title: 'AT&T Success in a Virtual Environment - 9/1/2020'
+	},
+	{
+		link: 'https://docs.google.com/presentation/d/e/2PACX-1vSYy2zWDUDc4FiB89J-gLFDbnyJwPD-b-2i3peHB2bQPPHsA97xK9ZfOs0sSbNhizqYW4RCNGtUbJPC/embed?start=true&loop=true&delayms=9000',
+		title: 'SWE Kickoff Slides - 8/31/2020'
+	}
+]
 const styles = (theme) => ({
 	content: {
 		flexGrow: 1,
@@ -95,34 +117,22 @@ class recordings extends Component {
 			return (
 				<div className={classes.content}>
 					<div className={classes.toolbar} />
-					<Grid container
-					spacing={5}
-					height="100%"
-					width="100%"
-					alignItems="stretch"
-					justify="space-evenly"
-					>
-						<Grid className={classes.gridItem} item sm="12" md="3">
-							<iframe src="https://web.microsoftstream.com/embed/video/6b0e2f2a-f03f-45a1-9ec3-ed442d15d6b1?autoplay=false&amp;showinfo=true" style={{border:"none"}}></iframe>
-							<h6>Debunking Recruiting Myths - 9/9/2020</h6>
+					<div style={{ padding: 20 }}>
+						<Grid container
+						spacing={5}
+						height="100%"
+						width="100%"
+						alignItems="stretch"
+						justify="space-evenly"
+						>
+							{videos.map((video) => (
+							<Grid className={classes.gridItem} item sm="12" md="4">
+								<iframe src={video.link} style={{border:"none"}} frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+								<h6>{video.title}</h6>
+							</Grid>
+							))}
 						</Grid>
-						<Grid className={classes.gridItem} item sm="12" md="3">
-							<iframe src="https://web.microsoftstream.com/embed/video/205eb824-8a39-431b-8620-c72361a09ce4?autoplay=false&amp;showinfo=true" style={{border:"none"}}></iframe>
-							<h6>LinkedIn 101 - 9/8/2020</h6>
-						</Grid>
-						<Grid className={classes.gridItem} item sm="12" md="3">
-							<iframe src="https://web.microsoftstream.com/embed/video/eab0eb2b-638b-4975-a055-0262bbb7d8ed?autoplay=false&amp;showinfo=true" style={{border:"none"}}></iframe>
-							<h6>Pitch Yourself 101 - 9/7/2020</h6>
-						</Grid>
-						<Grid className={classes.gridItem} item sm="12" md="3">
-							<iframe src="https://web.microsoftstream.com/embed/video/ded9e85d-93ed-4775-b782-52a1f31eb1bb?autoplay=false&amp;showinfo=true" style={{border:"none"}}></iframe>
-							<h6>AT&amp;T Success in a Virtual Environment - 9/1/2020</h6>
-						</Grid>
-						<Grid className={classes.gridItem} item sm="12" md="3">
-							<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSYy2zWDUDc4FiB89J-gLFDbnyJwPD-b-2i3peHB2bQPPHsA97xK9ZfOs0sSbNhizqYW4RCNGtUbJPC/embed?start=true&loop=true&delayms=9000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-							<h6>SWE Kickoff Slides - 8/31/2020</h6>
-						</Grid>
-					</Grid>
+					</div>
 				</div>
 			);
 		}
