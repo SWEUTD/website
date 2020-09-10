@@ -103,6 +103,14 @@ class recordings extends Component {
 					justify="space-evenly"
 					>
 						<Grid className={classes.gridItem} item sm="12" md="3">
+							<iframe src="https://web.microsoftstream.com/embed/video/6b0e2f2a-f03f-45a1-9ec3-ed442d15d6b1?autoplay=false&amp;showinfo=true" style={{border:"none"}}></iframe>
+							<h6>Debunking Recruiting Myths - 9/9/2020</h6>
+						</Grid>
+						<Grid className={classes.gridItem} item sm="12" md="3">
+							<iframe src="https://web.microsoftstream.com/embed/video/205eb824-8a39-431b-8620-c72361a09ce4?autoplay=false&amp;showinfo=true" style={{border:"none"}}></iframe>
+							<h6>LinkedIn 101 - 9/8/2020</h6>
+						</Grid>
+						<Grid className={classes.gridItem} item sm="12" md="3">
 							<iframe src="https://web.microsoftstream.com/embed/video/eab0eb2b-638b-4975-a055-0262bbb7d8ed?autoplay=false&amp;showinfo=true" style={{border:"none"}}></iframe>
 							<h6>Pitch Yourself 101 - 9/7/2020</h6>
 						</Grid>
