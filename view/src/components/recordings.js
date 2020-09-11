@@ -11,20 +11,28 @@ import { authMiddleWare } from '../util/auth';
 
 const videos = [
 	{
-		link: 'https://web.microsoftstream.com/embed/video/6b0e2f2a-f03f-45a1-9ec3-ed442d15d6b1?autoplay=false&amp;showinfo=true',
+		link: 'https://youtube.com/embed/gfsL_gt_4uA',
+		title: 'Personal Website Workshop - 9/10/2020', 
+	},
+	{
+		link: 'https://youtube.com/embed/IlkwJMCpS8w',
 		title: 'Debunking Recruiting Myths - 9/9/2020', 
 	},
 	{
-		link: 'https://web.microsoftstream.com/embed/video/205eb824-8a39-431b-8620-c72361a09ce4?autoplay=false&amp;showinfo=true',
+		link: 'https://youtube.com/embed/YXqaIhw1aTo',
 		title: 'LinkedIn 101 - 9/8/2020'
 	},
 	{
-		link: 'https://web.microsoftstream.com/embed/video/eab0eb2b-638b-4975-a055-0262bbb7d8ed?autoplay=false&amp;showinfo=true',
+		link: 'https://youtube.com/embed/MvPGDGnla04',
 		title: 'Pitch Yourself 101 - 9/7/2020'
 	},
 	{
-		link: 'https://web.microsoftstream.com/embed/video/ded9e85d-93ed-4775-b782-52a1f31eb1bb?autoplay=false&amp;showinfo=true',
+		link: 'https://youtube.com/embed/mJAWac2KPFE',
 		title: 'AT&T Success in a Virtual Environment - 9/1/2020'
+	},
+	{
+		link: 'https://www.youtube.com/embed/7bCIpC4gprM',
+		title: 'SWE Kickoff - 8/31/2020'
 	},
 	{
 		link: 'https://docs.google.com/presentation/d/e/2PACX-1vSYy2zWDUDc4FiB89J-gLFDbnyJwPD-b-2i3peHB2bQPPHsA97xK9ZfOs0sSbNhizqYW4RCNGtUbJPC/embed?start=true&loop=true&delayms=9000',
