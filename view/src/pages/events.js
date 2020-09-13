@@ -16,8 +16,24 @@ import NavBar from '../components/navbar'
 
 const upcomingEvents = [
 	{
-		name: 'Private Networking Sessions',
-		date: '9/15/2020 - 9/18/2020', 
+		name: 'Private Networking Sessions - AT&T',
+		date: '9/16/2020 - 10:00 AM', 
+	},
+	{
+		name: 'Private Networking Sessions - Bell',
+		date: '9/16/2020 - 4:00 PM', 
+	},
+	{
+		name: 'Private Networking Sessions - Fannie Mae',
+		date: '9/17/2020 - 11:00 AM', 
+	},
+	{
+		name: 'Private Networking Sessions - Credera',
+		date: '9/17/2020 - 4:00 PM', 
+	},
+	{
+		name: 'Private Networking Sessions - Match',
+		date: '9/16/2020 - 5:00 PM', 
 	},
 	{
 		name: 'Career Fair Follow-Up',
@@ -32,26 +48,7 @@ const upcomingEvents = [
 ];
 
 const flyers = [
-	{
-		image: flyer1,
-		link: 'https://tinyurl.com/y2mcxwnl', 
-	},
-	{
-		image: flyer2,
-		link: 'https://tinyurl.com/y4yyktbe', 
-	},
-	{
-		image: flyer3,
-		link: 'https://tinyurl.com/y2nkeqk7', 
-	},
-	{
-		image: flyer4,
-		link: 'https://tinyurl.com/y213plbt', 
-	},
-	{
-		image: flyer5,
-		link: 'https://tinyurl.com/y6r5h8vz', 
-	}
+
 ];
 
 const styles = (theme) => ({
@@ -95,7 +92,7 @@ class events extends Component {
 						className={classes.gridItem}
 						style={{padding:'40px'}}
 					>
-						<Grid container
+						{/* <Grid container
 						item md={8} xs={12}
 							spacing={2}
 							height="100%"
@@ -115,7 +112,7 @@ class events extends Component {
 								</div>
 							</Grid>
 							))}
-						</Grid>
+						</Grid> */}
 						<Grid item md={4} xs={12} className={classes.gridItem}>
 							<div align="center">
 								<h1>Upcoming Events</h1>

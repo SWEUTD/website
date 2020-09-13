@@ -56,9 +56,9 @@ class swestars extends Component {
 							<Divider/>
 							<List dense="true">
 								<ListSubheader>Earn SWE Points by:</ListSubheader>
-								<ListItem>Participating in events</ListItem>
+								<ListItem>Attending industry events</ListItem>
+								<ListItem>Meeting other SWE members at socials</ListItem>
 								<ListItem>Volunteering</ListItem>
-								<ListItem>Emailing us helpful homework suggestions</ListItem>
 							</List>
 							<br/><br/>
 							<h1 align="center">Tier Prizes for Fall 2020</h1>

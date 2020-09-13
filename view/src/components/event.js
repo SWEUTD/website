@@ -75,6 +75,7 @@ class event extends Component {
 			otherMajor: '',
 			events: [],
 			points: 0,
+			previousPoints: [],
 			uiLoading: true,
 			buttonLoading: false,
 			imageError: ''
@@ -101,6 +102,7 @@ class event extends Component {
 					netid: response.data.memberInfo.netid,
 					events: response.data.memberInfo.events,
 					points: response.data.memberInfo.points,
+					previousPoints: response.data.memberInfo.previousPoints,
 					uiLoading: false
 				});
 			})
@@ -132,21 +134,35 @@ class event extends Component {
 			</div>
 		);
 
+		if(this.state.previousPoints === undefined)
+			this.state.previousPoints = []
+		const previousPoints = this.state.previousPoints.map((item, key) =>
+			<div fullWidth>
+				<br/>
+				<table width="100%">
+					<tr>
+						<td align="center">Summer 2020: {item.summer2020} points</td>
+					</tr>
+				</table>
+			<br />
+			</div>
+		);
+
 		let rewardStatus;
 		let nextLevel;
-		if(this.state.points < 3) {
-			nextLevel = 3 - this.state.points
+		if(this.state.points < 5) {
+			nextLevel = 5 - this.state.points
 			rewardStatus = 
 				<div>
 					<h4 align="center">You are {nextLevel} points away from becoming a SWE Star!</h4>
 					<Divider />
 					<br />
 					<h5>Reach the bronze tier and unlock:</h5>
-					<p>★ Social Media Shoutout</p>
+					<p>★ Invitation to a virtual networking session</p>
 				</div>
 		}
-		else if (this.state.points < 5) {
-			nextLevel = 5 - this.state.points
+		else if (this.state.points < 7) {
+			nextLevel = 7 - this.state.points
 			rewardStatus =
 				<div>
 					<h1 align="center">You are a Bronze SWE Star!</h1>
@@ -157,15 +173,15 @@ class event extends Component {
 					<Divider />
 					<br/>
 					<h5>Reach the silver tier and unlock:</h5>
-					<p>★ Exclusive invite to our end-of-summer celebration</p>
+					<p>★ Social Media Shoutout</p>
 					<Divider/>
 					<br />
 					<h5>You have unlocked:</h5>
-					<p>★ SWE gift bag</p>
+					<p>★ Virtual Networking Session</p>
 				</div>
 		}
-		else if (this.state.points < 7) {
-			nextLevel = 7 - this.state.points
+		else if (this.state.points < 9) {
+			nextLevel = 9 - this.state.points
 			rewardStatus =
 				<div>
 					<h1 align="center">You are a Silver SWE Star!</h1>
@@ -176,12 +192,12 @@ class event extends Component {
 					<Divider />
 					<br/>
 					<h5>Reach the gold tier and unlock:</h5>
-					<p>★ Social Media Shoutout</p>
+					<p>★ 1x1 Resume Critiquing Session</p>
 					<Divider/>
 					<br />
 					<h5>You have unlocked:</h5>
-					<p>★ Exclusive invite to our end-of-summer celebration</p>
-					<p>★ SWE gift bag</p>
+					<p>★ Virtual Networking Session</p>
+					<p>★ Social Media Shoutout</p>
 				</div>
 		}
 		else {
@@ -231,6 +247,16 @@ class event extends Component {
 								</CardContent>
 							</Card>
 							<br/>
+							<Card style={{height: '20vh'}} className="movingItem" variant="outlined" fullWidth>
+								<CardContent align="center" style={{padding:'10px'}}>
+									<div>
+										<h4 align="center">Previous Semesters</h4>
+										<Divider/>
+										{previousPoints[0]}
+									</div>
+								</CardContent>
+							</Card>
+							<br/>
 							<Card style={{height: '70vh'}} alignItems="stretch"  className="movingItem" variant="outlined" style={{padding:'10px'}}>
 								<CardContent height="100%" align="left" fullWidth>
 									{rewardStatus}
@@ -243,6 +269,7 @@ class event extends Component {
 									<h1 align="center">
 										Your Attendance History
 									</h1>
+									<Divider/>
 									{history}
 								</CardContent>
 							</Card>
