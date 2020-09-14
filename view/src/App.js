@@ -64,6 +64,15 @@ function App() {
               <Route exact path="/join" component={join}/>
               <Route exact path="/contact" component={contact}/>
               <Route exact path="/calendar" component={calendar}/>
+	 	 <PropsRoute exact path="/day5" eventHeading="Sign in to the event" eventPoints={1} eventName = "Steps After Career Fair" eventDate = "9/11/2020" secretWord = "job" component={meetingform}/>
+          </Switch>
+      </BrowserRouter>
+    </MuiThemeProvider>
+  );
+}
+
+export default App;
+
           </Switch>
       </BrowserRouter>
     </MuiThemeProvider>
