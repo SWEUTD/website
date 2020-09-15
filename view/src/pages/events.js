@@ -18,7 +18,7 @@ const upcomingEvents = [
 	{
 		name: 'Private Networking Sessions - CBRE',
 		date: '9/15/2020 - 12:00 PM', 
-		link: https://cbre.zoom.us/j/93200806204?pwd=SGhKcHhUVzhSRjBTNXdnNTdUc0NQQT09
+		link: 'https://cbre.zoom.us/j/93200806204?pwd=SGhKcHhUVzhSRjBTNXdnNTdUc0NQQT09'
 	},
 	{
 		name: 'Private Networking Sessions - AT&T',
