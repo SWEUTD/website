@@ -38,12 +38,7 @@ const upcomingEvents = [
 	},
 	{
 		name: 'Private Networking Sessions - Match',
-		date: '9/16/2020 - 5:00 PM', 
-	},
-	{
-		name: 'Career Fair Follow-Up',
-		date: '9/14/2020 2:00 PM', 
-		link: 'https://teams.microsoft.com/l/meetup-join/19%3aa4a313ea39474a2eaa091d3f16cb192c%40thread.tacv2/1598930291176?context=%7b%22Tid%22%3a%228d281d1d-9c4d-4bf7-b16e-032d15de9f6c%22%2c%22Oid%22%3a%22aa5e36e9-8e5b-4f97-8e0b-58e79a137a07%22%7d'
+		date: '9/17/2020 - 5:00 PM', 
 	},
 	{
 		name: 'UTD Gender Center, Dallas SWE Feminism Talk',
