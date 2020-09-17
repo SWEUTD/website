@@ -26,11 +26,6 @@ const upcomingEvents = [
 	{
 		name: 'Private Networking Sessions - Match',
 		date: '9/17/2020 - 5:00 PM', 
-	},
-	{
-		name: 'UTD Gender Center, Dallas SWE Feminism Talk',
-		date: '9/17/2020 6:30 PM',
-		link: 'https://teams.microsoft.com/l/meetup-join/19%3ameeting_NGQ4ZDkxNmItMzhiYS00OTI1LTg2Y2ItMzg5YWNjMGI1ZDg0%40thread.v2/0?context=%7b%22Tid%22%3a%228d281d1d-9c4d-4bf7-b16e-032d15de9f6c%22%2c%22Oid%22%3a%22587a8462-52c5-40cf-8825-6128295cbe3c%22%7d'
 	}
 ];
 
