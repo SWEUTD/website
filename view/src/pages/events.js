@@ -16,19 +16,6 @@ import NavBar from '../components/navbar'
 
 const upcomingEvents = [
 	{
-		name: 'Private Networking Sessions - CBRE',
-		date: '9/15/2020 - 12:00 PM', 
-		link: 'https://cbre.zoom.us/j/93200806204?pwd=SGhKcHhUVzhSRjBTNXdnNTdUc0NQQT09'
-	},
-	{
-		name: 'Private Networking Sessions - AT&T',
-		date: '9/16/2020 - 10:00 AM', 
-	},
-	{
-		name: 'Private Networking Sessions - Bell',
-		date: '9/16/2020 - 4:00 PM', 
-	},
-	{
 		name: 'Private Networking Sessions - Fannie Mae',
 		date: '9/17/2020 - 11:00 AM', 
 	},

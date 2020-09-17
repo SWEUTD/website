@@ -64,15 +64,13 @@ function App() {
               <Route exact path="/join" component={join}/>
               <Route exact path="/contact" component={contact}/>
               <Route exact path="/calendar" component={calendar}/>
-	 	 <PropsRoute exact path="/day5" eventHeading="Sign in to the event" eventPoints={1} eventName = "Steps After Career Fair" eventDate = "9/11/2020" secretWord = "job" component={meetingform}/>
-          </Switch>
-      </BrowserRouter>
-    </MuiThemeProvider>
-  );
-}
-
-export default App;
-
+              <PropsRoute exact path="/cbre" eventHeading="Sign in to the CBRE event" eventPoints={1} eventName = "CBRE Info Session" eventDate = "9/15/2020" secretWord = "interview" component={meetingform}/>
+              <PropsRoute exact path="/att" eventHeading="Sign in to the AT&T event" eventPoints={1} eventName = "AT&T Info Session" eventDate = "9/16/2020" secretWord = "intern" component={meetingform}/>
+              <PropsRoute exact path="/bell" eventHeading="Sign in to the Bell event" eventPoints={1} eventName = "Bell Info Session" eventDate = "9/16/2020" secretWord = "info" component={meetingform}/>
+              <PropsRoute exact path="/fanniemae" eventHeading="Sign in to the Fannie Mae event" eventPoints={1} eventName = "Fannie Mae Info Session" eventDate = "9/17/2020" secretWord = "work" component={meetingform}/>
+              <PropsRoute exact path="/credera" eventHeading="Sign in to the Credera event" eventPoints={1} eventName = "Credera Info Session" eventDate = "9/17/2020" secretWord = "network" component={meetingform}/>
+              <PropsRoute exact path="/match" eventHeading="Sign in to the Match event" eventPoints={1} eventName = "Match Info Session" eventDate = "9/17/2020" secretWord = "resume" component={meetingform}/>
+              <PropsRoute exact path="/feminism" eventHeading="Sign in to the talk" eventPoints={1} eventName = "UTD Gender Center, Dallas SWE Feminism Talk" eventDate = "9/17/2020" secretWord = "ally" component={meetingform}/>
           </Switch>
       </BrowserRouter>
     </MuiThemeProvider>
