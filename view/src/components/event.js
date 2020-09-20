@@ -120,7 +120,7 @@ class event extends Component {
 
 	render() {
 		const { classes } = this.props;
-		const history = this.state.events.map((item, key) =>
+		const history = this.state.events.slice(0).reverse().map((item, key) =>
 			<div fullWidth>
 				<br/>
 				<table width="100%">
@@ -235,10 +235,9 @@ class event extends Component {
 						width="100%"
 						alignItems="stretch"
 						justify="space-evenly"
-						style={{height: '100vh'}}
 					>
-						<Grid className={classes.gridItem} style={{height: '90vh', flexDirection: 'column'}} item md={6} xs={12}>
-							<Card style={{height: '20vh'}} className="movingItem" variant="outlined" fullWidth>
+						<Grid className={classes.gridItem} style={{flexDirection: 'column'}} item md={6} xs={12}>
+							<Card className="movingItem" variant="outlined" fullWidth>
 								<CardContent align="center" style={{padding:'10px'}}>
 									<br/>
 									<h1>
@@ -247,7 +246,7 @@ class event extends Component {
 								</CardContent>
 							</Card>
 							<br/>
-							<Card style={{height: '20vh'}} className="movingItem" variant="outlined" fullWidth>
+							<Card className="movingItem" variant="outlined" fullWidth>
 								<CardContent align="center" style={{padding:'10px'}}>
 									<div>
 										<h4 align="center">Previous Semesters</h4>
@@ -257,13 +256,13 @@ class event extends Component {
 								</CardContent>
 							</Card>
 							<br/>
-							<Card style={{height: '70vh'}} alignItems="stretch"  className="movingItem" variant="outlined" style={{padding:'10px'}}>
+							<Card alignItems="stretch"  className="movingItem" variant="outlined" style={{padding:'10px'}}>
 								<CardContent height="100%" align="left" fullWidth>
 									{rewardStatus}
 								</CardContent>
 							</Card>
 						</Grid>
-						<Grid style={{height: '90vh'}} className={classes.gridItem} item md={6} xs={12}>
+						<Grid className={classes.gridItem} item md={6} xs={12}>
 							<Card height="100%" className="movingItem" variant="outlined" style={{padding:'10px'}}>
 								<CardContent height="100%" align="center">				
 									<h1 align="center">
