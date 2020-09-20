@@ -16,17 +16,9 @@ import NavBar from '../components/navbar'
 
 const upcomingEvents = [
 	{
-		name: 'Private Networking Sessions - Fannie Mae',
-		date: '9/17/2020 - 11:00 AM', 
+		name: 'SWE Social: Meet the Officers',
+		date: '9/25/2020 - 5:00 PM', 
 	},
-	{
-		name: 'Private Networking Sessions - Credera',
-		date: '9/17/2020 - 4:00 PM', 
-	},
-	{
-		name: 'Private Networking Sessions - Match',
-		date: '9/17/2020 - 5:00 PM', 
-	}
 ];
 
 const flyers = [
@@ -103,7 +95,10 @@ class events extends Component {
 								<List alignItems="center">
 									<h4>{event.name}</h4>
 									<ListSubheader>{event.date}</ListSubheader>
-									<Button href={event.link} align="center" variant="contained" color="primary">Join Meeting</Button>
+									{event.link != ''
+										? <Button href={event.link} align="center" variant="contained" color="primary">Join Meeting</Button>
+										:
+								      	}
 									<br/>
 									<br/>
 									<Divider/>
