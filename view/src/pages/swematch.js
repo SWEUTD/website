@@ -39,7 +39,8 @@ class swematch extends Component {
 					<p align="center" class="movingItem">
 						Due to complications around COVID-19, SWE Match cannot proceed as planned this season. 
 						We are deeply saddened because this was going to be the inaugural season, but we have some ideas to make it just as valuable! 
-						We will be having a virtual engineering competition instead! 
+						We will be having a virtual engineering competition instead!
+						<strong>All the applications on this page are updated and valid, APPLY NOW.</strong>
 						And SWE Match will proceed to the Team Tech competition at WE22 next season. 
 						More details to come.
 					</p>
@@ -91,7 +92,7 @@ class swematch extends Component {
 						<li><strong>5-9 October 2020:</strong> Interviews!</li>
 						<li><strong>11 October 2020:</strong> Candidates notified of their statuses; there will be a waitlist</li>
 						<li><strong>15 October 2020:</strong> RSVP due</li>
-						<li><strong>19 October 2020 at 7PM:</strong> Mentor Training</li>
+						<li><strong>19 October 2020 at 7PM:</strong>Advanced Track Check-in</li>
 						<li><strong>20 October 2020 at 8:30PM:</strong> First General Meeting!</li>
 					</ul>
 					<div align="center">
