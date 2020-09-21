@@ -37,6 +37,13 @@ class swematch extends Component {
                 </div>
 				<Container className={classes.container}>
 					<p align="center" class="movingItem">
+						Due to complications around COVID-19, SWE Match cannot proceed as planned this season. 
+						We are deeply saddened because this was going to be the inaugural season, but we have some ideas to make it just as valuable! 
+						We will be having a virtual engineering competition instead! 
+						And SWE Match will proceed to the Team Tech competition at WE22 next season. 
+						More details to come.
+					</p>
+					<p align="center" class="movingItem">
 						Introducing a new SWE UTD program, <strong>SWE Match</strong>! 
 						The purpose of SWE Match is to get more all-female teams in engineering competitions. 
 						Starting next semester, SWE will be taking applications to join SWE Match and be matched 
