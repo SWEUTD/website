@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.3657b60e.chunk.css",
-    "main.js": "/static/js/main.390d4be4.chunk.js",
-    "main.js.map": "/static/js/main.390d4be4.chunk.js.map",
+    "main.js": "/static/js/main.8790f146.chunk.js",
+    "main.js.map": "/static/js/main.8790f146.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.94a6af97.js",
     "runtime-main.js.map": "/static/js/runtime-main.94a6af97.js.map",
     "static/js/2.3170cccf.chunk.js": "/static/js/2.3170cccf.chunk.js",
     "static/js/2.3170cccf.chunk.js.map": "/static/js/2.3170cccf.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.7177d64fe94b32011dd4aebccae26a33.js": "/precache-manifest.7177d64fe94b32011dd4aebccae26a33.js",
+    "precache-manifest.116fef413b6550cb63ae18c54614e811.js": "/precache-manifest.116fef413b6550cb63ae18c54614e811.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.3657b60e.chunk.css.map": "/static/css/main.3657b60e.chunk.css.map",
     "static/js/2.3170cccf.chunk.js.LICENSE.txt": "/static/js/2.3170cccf.chunk.js.LICENSE.txt",
@@ -34,7 +34,7 @@
     "static/media/JanroseSamson.jpg": "/static/media/JanroseSamson.5a5670ee.jpg",
     "static/media/JerryAlexander.jpg": "/static/media/JerryAlexander.7508d85b.jpg",
     "static/media/MaahaSakia.jpg": "/static/media/MaahaSakia.80bba231.jpg",
-    "static/media/MatchLogo.png": "/static/media/MatchLogo.4b7200d8.png",
+    "static/media/MatchLogo.png": "/static/media/MatchLogo.7072f632.png",
     "static/media/MedhaAiyah.jpg": "/static/media/MedhaAiyah.1446ca84.jpg",
     "static/media/MichaelaPerez.jpg": "/static/media/MichaelaPerez.0c805827.jpg",
     "static/media/Officers.jpg": "/static/media/Officers.87156e40.jpg",
@@ -51,6 +51,6 @@
     "static/js/runtime-main.94a6af97.js",
     "static/js/2.3170cccf.chunk.js",
     "static/css/main.3657b60e.chunk.css",
-    "static/js/main.390d4be4.chunk.js"
+    "static/js/main.8790f146.chunk.js"
   ]
 }
