@@ -12,21 +12,32 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 // Officer photos
+import AarushiPandey from '../assets/OfficerPhotos/AarushiPandey.jpg'
+import AayushiChoudhary from '../assets/OfficerPhotos/AayushiChoudhary.png'
 import AfridaTasnim from '../assets/OfficerPhotos/AfridaTasnim.jpg'
 import AngelleNazareno from '../assets/OfficerPhotos/AngelleNazareno.jpg'
 import AnkitaBantey from '../assets/OfficerPhotos/AnkitaBantey.jpg'
+import AreebaQazi from '../assets/OfficerPhotos/AreebaQazi.jpg'
 import ArushiAgrawal from '../assets/OfficerPhotos/ArushiAgrawal.jpg'
 import CadyBaltz from '../assets/OfficerPhotos/CadyBaltz.jpg'
 import CaitlinTibbetts from '../assets/OfficerPhotos/CaitlinTibbetts.jpg'
 import DeeshaKumbham from '../assets/OfficerPhotos/DeeshaKumbham.jpg'
+import HansikaSundaresan from '../assets/OfficerPhotos/HansikaSundaresan.jpg'
 import JanroseSamson from '../assets/OfficerPhotos/JanroseSamson.jpg'
+import JeshnaGupta from '../assets/OfficerPhotos/JeshnaGupta.jpg'
 import MaahaSakia from '../assets/OfficerPhotos/MaahaSakia.jpg'
+import ManshaFatima from '../assets/OfficerPhotos/ManshaFatima.heic'
 import MedhaAiyah from '../assets/OfficerPhotos/MedhaAiyah.jpg'
 import MichaelaPerez from '../assets/OfficerPhotos/MichaelaPerez.jpg'
+import NivethaNarayana from '../assets/OfficerPhotos/NivethaNarayana.jpg'
+import PallaviVayalali from '../assets/OfficerPhotos/PallaviVayalali.png'
+import ReshmiRanjith from '../assets/OfficerPhotos/ReshmiRanjith.jpg'
 import ShivaniGandhi from '../assets/OfficerPhotos/ShivaniGandhi.jpg'
+import ShreyaChauk from '../assets/OfficerPhotos/ShreyaChauk.jpg'
 import SindhuBoppudi from '../assets/OfficerPhotos/SindhuBoppudi.jpg'
-import PushpaKumar from '../assets/OfficerPhotos/PushpaKumar.png'
+import VamikaChatlani from '../assets/OfficerPhotos/VamikaChatlani.heic'
 import ZainebAhmad from '../assets/OfficerPhotos/ZainebAhmad.png'
+import PushpaKumar from '../assets/OfficerPhotos/PushpaKumar.png'
 import JerryAlexander from '../assets/OfficerPhotos/JerryAlexander.jpg'
 
 const officerList = [
@@ -37,22 +48,28 @@ const officerList = [
 		linkedin: "https://www.linkedin.com/in/medha-aiyah/" 
 	},
 	{
-		name: 'Ankita Bantey',
-		image: AnkitaBantey,
-		position: "Vice President",
-		linkedin: "https://www.linkedin.com/in/ankita-bantey/"
-	},
-	{
 		name: 'Maaha Sakia',
 		image: MaahaSakia,
-		position: "Treasurer",
+		position: "Vice President of External Affairs",
 		linkedin: "https://www.linkedin.com/in/maaha-sakhia-183298196/"
+	},
+	{
+		name: 'Cady Baltz',
+		image: CadyBaltz,
+		position: "Vice President of Internal Affairs",
+		linkedin: "https://www.linkedin.com/in/cadybaltz/"
 	},
 	{
 		name: 'Arushi Agrawal',
 		image: ArushiAgrawal,
 		position: "Secretary",
 		linkedin: "https://www.linkedin.com/in/agrawal-arushi/"
+	},
+	{
+		name: 'Ankita Bantey',
+		image: AnkitaBantey,
+		position: "Vice President",
+		linkedin: "https://www.linkedin.com/in/ankita-bantey/"
 	},
 	{
 		name: 'Shivani Gandhi',
@@ -97,12 +114,6 @@ const officerList = [
 		linkedin: "https://www.linkedin.com/in/caitlin-tibbetts/"
 	},
 	{
-		name: 'Cady Baltz',
-		image: CadyBaltz,
-		position: "Membership Chair",
-		linkedin: "https://www.linkedin.com/in/cadybaltz/"
-	},
-	{
 		name: 'Afrida Tasnim',
 		image: AfridaTasnim,
 		position: "WEHack Assistant Director",
@@ -112,6 +123,18 @@ const officerList = [
 		name: 'Zaineb Ahmad',
 		image: ZainebAhmad,
 		position: "SWE UTD Section Counselor"
+	},
+	{
+		name: 'Aarushi Pandey',
+		image: AarushiPandey,
+		position: "Website Development Committee Member",
+		linkedin: "https://www.linkedin.com/in/aarushi-s-pandey/" 
+	},
+	{
+		name: 'Aayushi Choudhary',
+		image: AayushiChoudhary,
+		position: "Website Development Committee Member",
+		linkedin: "https://www.linkedin.com/in/aarushi-s-pandey/" 
 	},
 	{
 		name: 'Dr. Pushpa Kumar',
