@@ -29,13 +29,13 @@ import MaahaSakia from '../assets/OfficerPhotos/MaahaSakia.jpg'
 import ManshaFatima from '../assets/OfficerPhotos/ManshaFatima.heic'
 import MedhaAiyah from '../assets/OfficerPhotos/MedhaAiyah.jpg'
 import MichaelaPerez from '../assets/OfficerPhotos/MichaelaPerez.jpg'
-import NivethaNarayana from '../assets/OfficerPhotos/NivethaNarayana.jpg'
+import NivethaNarayanan from '../assets/OfficerPhotos/NivethaNarayanan.jpg'
 import PallaviVayalali from '../assets/OfficerPhotos/PallaviVayalali.png'
 import ReshmiRanjith from '../assets/OfficerPhotos/ReshmiRanjith.jpg'
 import ShivaniGandhi from '../assets/OfficerPhotos/ShivaniGandhi.jpg'
 import ShreyaChauk from '../assets/OfficerPhotos/ShreyaChauk.jpg'
 import SindhuBoppudi from '../assets/OfficerPhotos/SindhuBoppudi.jpg'
-import VamikaChatlani from '../assets/OfficerPhotos/VamikaChatlani.heic'
+import VamikaChatlani from '../assets/OfficerPhotos/VamikaChatlani.HEIC'
 import ZainebAhmad from '../assets/OfficerPhotos/ZainebAhmad.png'
 import PushpaKumar from '../assets/OfficerPhotos/PushpaKumar.png'
 import JerryAlexander from '../assets/OfficerPhotos/JerryAlexander.jpg'
@@ -60,16 +60,43 @@ const officerList = [
 		linkedin: "https://www.linkedin.com/in/cadybaltz/"
 	},
 	{
+		name: 'Dr. Pushpa Kumar',
+		image: PushpaKumar,
+		position: 'Faculty Advisor',
+	},
+	{
+		name: 'Zaineb Ahmad',
+		image: ZainebAhmad,
+		position: "SWE UTD Section Counselor"
+	},
+	{
+		name: 'Jerry Alexander',
+		image: JerryAlexander,
+		position: "ECS Assistant Dean for Student Development",
+		linkedin: "https://www.linkedin.com/in/internguy/"
+	},
+	{
 		name: 'Arushi Agrawal',
 		image: ArushiAgrawal,
 		position: "Secretary",
 		linkedin: "https://www.linkedin.com/in/agrawal-arushi/"
 	},
 	{
-		name: 'Ankita Bantey',
-		image: AnkitaBantey,
-		position: "Vice President",
-		linkedin: "https://www.linkedin.com/in/ankita-bantey/"
+		name: 'Nivetha Narayanan',
+		image: NivethaNarayanan,
+		position: "Treasurer",
+		linkedin: "https://www.linkedin.com/in/nivetha-narayanan-751ab8167/"
+	},
+	{
+		name: 'Afrida Tasnim',
+		image: AfridaTasnim,
+		position: "WEHack Co-Director",
+		linkedin: "https://www.linkedin.com/in/afrida-tasnim/"
+	},
+	{
+		name: 'Angelle Nazareno',
+		image: AngelleNazareno,
+		position: "Design Chair"
 	},
 	{
 		name: 'Shivani Gandhi',
@@ -78,15 +105,10 @@ const officerList = [
 		linkedin: "https://www.linkedin.com/in/shivanirgandhi/"
 	},
 	{
-		name: 'Angelle Nazareno',
-		image: AngelleNazareno,
-		position: "Design Chair"
-	},
-	{
-		name: 'Janrose Samson',
-		image: JanroseSamson,
-		position: "Community Outreach Chair",
-		linkedin: "https://www.linkedin.com/in/janrosesamson/"
+		name: 'Deesha Kumbham',
+		image: DeeshaKumbham,
+		position: "Conference Committee Chair",
+		linkedin: "https://www.linkedin.com/in/deesha-kumbham-86b4b6196/"
 	},
 	{
 		name: 'Sindhu Boppudi',
@@ -96,10 +118,10 @@ const officerList = [
 
 	},
 	{
-		name: 'Deesha Kumbham',
-		image: DeeshaKumbham,
-		position: "Conference Committee Chair",
-		linkedin: "https://www.linkedin.com/in/deesha-kumbham-86b4b6196/"
+		name: 'Janrose Samson',
+		image: JanroseSamson,
+		position: "Community Outreach Chair",
+		linkedin: "https://www.linkedin.com/in/janrosesamson/"
 	},
 	{
 		name: 'Michaela Perez',
@@ -114,15 +136,16 @@ const officerList = [
 		linkedin: "https://www.linkedin.com/in/caitlin-tibbetts/"
 	},
 	{
-		name: 'Afrida Tasnim',
-		image: AfridaTasnim,
-		position: "WEHack Assistant Director",
-		linkedin: "https://www.linkedin.com/in/afrida-tasnim/"
+		name: 'Gabi Duncan',
+		
+		position: "Operations Chair",
+		linkedin: "https://www.linkedin.com/in/michaela-perez/"
 	},
 	{
-		name: 'Zaineb Ahmad',
-		image: ZainebAhmad,
-		position: "SWE UTD Section Counselor"
+		name: 'Areeba Qazi',
+		image: AreebaQazi,
+		position: "Webmaster Chair",
+		linkedin: "https://www.linkedin.com/in/areebaqazi/"
 	},
 	{
 		name: 'Aarushi Pandey',
@@ -135,16 +158,6 @@ const officerList = [
 		image: AayushiChoudhary,
 		position: "Website Development Committee Member",
 		linkedin: "https://www.linkedin.com/in/aarushi-s-pandey/" 
-	},
-	{
-		name: 'Dr. Pushpa Kumar',
-		image: PushpaKumar,
-		position: 'Faculty Advisor',
-	},
-	{
-		name: 'Jerry Alexander',
-		image: JerryAlexander,
-		position: "ECS Assistant Dean for Student Development"
 	}
 ];
 
