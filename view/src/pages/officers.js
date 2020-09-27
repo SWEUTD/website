@@ -16,17 +16,17 @@ import AarushiPandey from '../assets/OfficerPhotos/AarushiPandey.jpg'
 import AayushiChoudhary from '../assets/OfficerPhotos/AayushiChoudhary.png'
 import AfridaTasnim from '../assets/OfficerPhotos/AfridaTasnim.jpg'
 import AngelleNazareno from '../assets/OfficerPhotos/AngelleNazareno.jpg'
-import AnkitaBantey from '../assets/OfficerPhotos/AnkitaBantey.jpg'
 import AreebaQazi from '../assets/OfficerPhotos/AreebaQazi.jpg'
 import ArushiAgrawal from '../assets/OfficerPhotos/ArushiAgrawal.jpg'
 import CadyBaltz from '../assets/OfficerPhotos/CadyBaltz.jpg'
 import CaitlinTibbetts from '../assets/OfficerPhotos/CaitlinTibbetts.jpg'
 import DeeshaKumbham from '../assets/OfficerPhotos/DeeshaKumbham.jpg'
+import GabrielleDuncan from '../assets/OfficerPhotos/GabrielleDuncan.jpg'
 import HansikaSundaresan from '../assets/OfficerPhotos/HansikaSundaresan.jpg'
 import JanroseSamson from '../assets/OfficerPhotos/JanroseSamson.jpg'
 import JeshnaGupta from '../assets/OfficerPhotos/JeshnaGupta.jpg'
 import MaahaSakia from '../assets/OfficerPhotos/MaahaSakia.jpg'
-import ManshaFatima from '../assets/OfficerPhotos/ManshaFatima.heic'
+import ManshaFatima from '../assets/OfficerPhotos/ManshaFatima.jpg'
 import MedhaAiyah from '../assets/OfficerPhotos/MedhaAiyah.jpg'
 import MichaelaPerez from '../assets/OfficerPhotos/MichaelaPerez.jpg'
 import NivethaNarayanan from '../assets/OfficerPhotos/NivethaNarayanan.jpg'
@@ -35,7 +35,7 @@ import ReshmiRanjith from '../assets/OfficerPhotos/ReshmiRanjith.jpg'
 import ShivaniGandhi from '../assets/OfficerPhotos/ShivaniGandhi.jpg'
 import ShreyaChauk from '../assets/OfficerPhotos/ShreyaChauk.jpg'
 import SindhuBoppudi from '../assets/OfficerPhotos/SindhuBoppudi.jpg'
-import VamikaChatlani from '../assets/OfficerPhotos/VamikaChatlani.HEIC'
+import VamikaChatlani from '../assets/OfficerPhotos/VamikaChatlani.jpg'
 import ZainebAhmad from '../assets/OfficerPhotos/ZainebAhmad.png'
 import PushpaKumar from '../assets/OfficerPhotos/PushpaKumar.png'
 import JerryAlexander from '../assets/OfficerPhotos/JerryAlexander.jpg'
@@ -136,16 +136,58 @@ const officerList = [
 		linkedin: "https://www.linkedin.com/in/caitlin-tibbetts/"
 	},
 	{
-		name: 'Gabi Duncan',
-		
-		position: "Operations Chair",
-		linkedin: "https://www.linkedin.com/in/michaela-perez/"
-	},
-	{
 		name: 'Areeba Qazi',
 		image: AreebaQazi,
 		position: "Webmaster Chair",
 		linkedin: "https://www.linkedin.com/in/areebaqazi/"
+	},
+	{
+		name: 'Pallavi Vayalali',
+		image: PallaviVayalali,
+		position: "Conference Committee Member",
+		linkedin: "https://www.linkedin.com/in/pallavi-vayalali/" 
+	},
+	{
+		name: 'Hansika Sundaresan',
+		image: HansikaSundaresan,
+		position: "Conference Committee Member",
+		linkedin: "https://www.linkedin.com/in/hansika-sundaresan/" 
+	},
+	{
+		name: 'Jeshna Gupta',
+		image: JeshnaGupta,
+		position: "Industry Committee Member",
+		linkedin: "https://www.linkedin.com/in/jeshna-gupta/"
+	},
+	{
+		name: 'Aayushi Choudhary',
+		image: AayushiChoudhary,
+		position: "Marketing Committee Member",
+		linkedin: "https://www.linkedin.com/in/aayushitech/" 
+	},
+	{
+		name: 'Vamika Chatlani',
+		image: VamikaChatlani,
+		position: "Marketing Committee Member",
+		linkedin: "https://www.linkedin.com/in/vamika-chatlani-b844aa16b/" 
+	},
+	{
+		name: 'Shreya Chauk',
+		image: ShreyaChauk,
+		position: "Outreach Committee Member",
+		linkedin: "https://www.linkedin.com/in/shreyachauk/"
+	},
+	{
+		name: 'Gabrielle Duncan',
+		image: GabrielleDuncan,
+		position: "Outreach Committee Member",
+		linkedin: "https://www.linkedin.com/in/gabrielle-duncan-085822185/"
+	},
+	{
+		name: 'Reshmi Ranjith',
+		image: ReshmiRanjith,
+		position: "Website Development Committee Member",
+		linkedin: "https://www.linkedin.com/in/reshmi-ranjith/" 
 	},
 	{
 		name: 'Aarushi Pandey',
@@ -154,10 +196,10 @@ const officerList = [
 		linkedin: "https://www.linkedin.com/in/aarushi-s-pandey/" 
 	},
 	{
-		name: 'Aayushi Choudhary',
-		image: AayushiChoudhary,
+		name: 'Mansha Fatima',
+		image: ManshaFatima,
 		position: "Website Development Committee Member",
-		linkedin: "https://www.linkedin.com/in/aarushi-s-pandey/" 
+		linkedin: "https://www.linkedin.com/in/mansha-fatima-2a485412b/" 
 	}
 ];
 
@@ -175,7 +217,8 @@ const styles = (theme) => ({
 	},
 	image: {
 		width: '80%',
-		borderRadius: '50%'
+		borderRadius: '50%',
+		height: '200px'
 	}
 });
 
@@ -217,7 +260,7 @@ class officers extends Component {
 										<br />
 										<h6>{officer.name}</h6>
 										<h6>{officer.position}</h6>
-										<a href={officer.linkedin}>
+										<a href={officer.linkedin} target="_blank">
 											{officer.linkedin &&
 												<FontAwesomeIcon icon={faLinkedin} className="imageLink" size="lg" style={{ color: '#5A5377' }}/>
 											}
