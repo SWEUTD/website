@@ -16,8 +16,8 @@ import NavBar from '../components/navbar'
 
 const upcomingEvents = [
 	{
-		name: 'SWE Social: Meet the Officers',
-		date: '9/25/2020 - 5:00 PM',
+		name: 'Allen HS Panel',
+		date: '9/29/2020',
 		link: ''
 	},
 	{
@@ -28,6 +28,16 @@ const upcomingEvents = [
 	{
 		name: 'Fall Social',
 		date: '10/3/2020',
+		link: ''
+	},
+	{
+		name: 'Git it Together',
+		date: '10/5/2020',
+		link: 'https://teams.microsoft.com/l/meetup-join/19%3aa4a313ea39474a2eaa091d3f16cb192c%40thread.tacv2/1600739448176?context=%7b%22Tid%22%3a%228d281d1d-9c4d-4bf7-b16e-032d15de9f6c%22%2c%22Oid%22%3a%22aa5e36e9-8e5b-4f97-8e0b-58e79a137a07%22%7d'
+	},
+	{
+		name: 'Sponsor API Pre-Event',
+		date: '10/5/2020',
 		link: ''
 	},
 	{
