@@ -7,12 +7,8 @@ import classNames from 'classnames';
 
 import withStyles from '@material-ui/core/styles/withStyles';
 import { Button, Divider, Grid, List, ListItem, ListSubheader } from '@material-ui/core'
-import flyer1 from '../assets/EventFlyers/1.png'
-import flyer2 from '../assets/EventFlyers/2.png'
-import flyer3 from '../assets/EventFlyers/3.png'
-import flyer4 from '../assets/EventFlyers/4.png'
-import flyer5 from '../assets/EventFlyers/5.png'
 import NavBar from '../components/navbar'
+import { CenterFocusStrong } from '@material-ui/icons';
 
 const upcomingEvents = [
 	{
@@ -80,7 +76,7 @@ class events extends Component {
 			<div className={classes.root}>
 				<NavBar />
 				<div className={classNames('header', { 'ready': headerReady })}>
-		            <p className="heading">Events</p>
+          			<p className="heading">Events</p>
                 </div>
 				<div className="fullscreen">
 					<Grid container
@@ -113,7 +109,7 @@ class events extends Component {
 							</Grid>
 							))}
 						</Grid> */}
-						<Grid item md={4} xs={12} className={classes.gridItem}>
+						<Grid item md={3} xs={12} className={classes.gridItem}>
 							<div align="center">
 								<h1>Upcoming Events</h1>
 								<br/>
