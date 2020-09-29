@@ -7,11 +7,6 @@ import classNames from 'classnames';
 
 import withStyles from '@material-ui/core/styles/withStyles';
 import { Button, Divider, Grid, List, ListItem, ListSubheader } from '@material-ui/core'
-import flyer1 from '../assets/EventFlyers/1.png'
-import flyer2 from '../assets/EventFlyers/2.png'
-import flyer3 from '../assets/EventFlyers/3.png'
-import flyer4 from '../assets/EventFlyers/4.png'
-import flyer5 from '../assets/EventFlyers/5.png'
 import NavBar from '../components/navbar'
 
 const upcomingEvents = [
@@ -21,6 +16,11 @@ const upcomingEvents = [
 		link: ''
 	},
 	{
+		name: "AI vs Machine Learning vs Data Science: What is it and what's the hype?",
+		date: '10/1/2020 - 5:00 PM',
+		link: 'https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffacebook.us19.list-manage.com%2Ftrack%2Fclick%3Fu%3Dada9150cb4cf2450b2870f9b7%26id%3D836639344e%26e%3D09a746bd56&data=02%7C01%7CAarushi.Pandey%40UTDallas.edu%7Cfb53efc075e34232dc8308d863d1d921%7C8d281d1d9c4d4bf7b16e032d15de9f6c%7C0%7C0%7C637369100234301226&sdata=PjHXzScANd2KHlFlrzxe6%2B3xCjUF8CNEU0iVpaQ3vU4%3D&reserved=0'
+	},
+	{
 		name: 'SWE Match Applications Close',
 		date: '10/2/2020',
 		link: ''
@@ -28,17 +28,17 @@ const upcomingEvents = [
 	{
 		name: 'Fall Social',
 		date: '10/3/2020 - 5:30 PM',
-		link: 'https://teams.microsoft.com/l/meetup-join/19%3aa4a313ea39474a2eaa091d3f16cb192c%40thread.tacv2/1600739448176?context=%7b%22Tid%22%3a%228d281d1d-9c4d-4bf7-b16e-032d15de9f6c%22%2c%22Oid%22%3a%22aa5e36e9-8e5b-4f97-8e0b-58e79a137a07%22%7d'
+		link: 'https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffacebook.us19.list-manage.com%2Ftrack%2Fclick%3Fu%3Dada9150cb4cf2450b2870f9b7%26id%3D47771a8fc6%26e%3D09a746bd56&data=02%7C01%7CAarushi.Pandey%40UTDallas.edu%7Cfb53efc075e34232dc8308d863d1d921%7C8d281d1d9c4d4bf7b16e032d15de9f6c%7C0%7C0%7C637369100234301226&sdata=MJ2U7RIIcEm733Q3kFAl24q24QisRtmBDlsK9Mt40T4%3D&reserved=0'
 	},
 	{
 		name: 'Git It Together Workshop',
 		date: '10/5/2020 - 6:00 PM',
-		link: ''
+		link: 'https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffacebook.us19.list-manage.com%2Ftrack%2Fclick%3Fu%3Dada9150cb4cf2450b2870f9b7%26id%3D512213acc7%26e%3D09a746bd56&data=02%7C01%7CAarushi.Pandey%40UTDallas.edu%7Cfb53efc075e34232dc8308d863d1d921%7C8d281d1d9c4d4bf7b16e032d15de9f6c%7C0%7C0%7C637369100234311219&sdata=EGS%2FITiLImgOC2S9kyv83K8nKEcYH89Ki2Qf%2FBcIqd4%3D&reserved=0'
 	},
 	{
-		name: 'Tech Demo Night',
+		name: 'Tech Demo Night + WEHack Meet N Greet',
 		date: '10/9/2020 - 5:00 PM',
-		link: ''
+		link: 'https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffacebook.us19.list-manage.com%2Ftrack%2Fclick%3Fu%3Dada9150cb4cf2450b2870f9b7%26id%3D02d6bc993f%26e%3D09a746bd56&data=02%7C01%7CAarushi.Pandey%40UTDallas.edu%7Cfb53efc075e34232dc8308d863d1d921%7C8d281d1d9c4d4bf7b16e032d15de9f6c%7C0%7C0%7C637369100234311219&sdata=O%2BaPLUH1CKk15g2Ut%2FRBTzT8plj4KHYwjvKGNAYIieE%3D&reserved=0'
 	},
 	{
 		name: 'WEHack',

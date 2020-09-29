@@ -60,22 +60,6 @@ const officerList = [
 		linkedin: "https://www.linkedin.com/in/cadybaltz/"
 	},
 	{
-		name: 'Dr. Pushpa Kumar',
-		image: PushpaKumar,
-		position: 'Faculty Advisor',
-	},
-	{
-		name: 'Zaineb Ahmad',
-		image: ZainebAhmad,
-		position: "SWE UTD Section Counselor"
-	},
-	{
-		name: 'Jerry Alexander',
-		image: JerryAlexander,
-		position: "ECS Assistant Dean for Student Development",
-		linkedin: "https://www.linkedin.com/in/internguy/"
-	},
-	{
 		name: 'Arushi Agrawal',
 		image: ArushiAgrawal,
 		position: "Secretary",
@@ -200,6 +184,22 @@ const officerList = [
 		image: ManshaFatima,
 		position: "Website Development Committee Member",
 		linkedin: "https://www.linkedin.com/in/mansha-fatima-2a485412b/" 
+	},
+	{
+		name: 'Dr. Pushpa Kumar',
+		image: PushpaKumar,
+		position: 'Faculty Advisor',
+	},
+	{
+		name: 'Zaineb Ahmad',
+		image: ZainebAhmad,
+		position: "SWE UTD Section Counselor"
+	},
+	{
+		name: 'Jerry Alexander',
+		image: JerryAlexander,
+		position: "ECS Assistant Dean for Student Development",
+		linkedin: "https://www.linkedin.com/in/internguy/"
 	}
 ];
 
