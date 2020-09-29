@@ -1,25 +1,22 @@
 {
   "files": {
     "main.css": "/static/css/main.3657b60e.chunk.css",
-    "main.js": "/static/js/main.9c70b9b8.chunk.js",
-    "main.js.map": "/static/js/main.9c70b9b8.chunk.js.map",
+    "main.js": "/static/js/main.8b4fee4f.chunk.js",
+    "main.js.map": "/static/js/main.8b4fee4f.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.94a6af97.js",
     "runtime-main.js.map": "/static/js/runtime-main.94a6af97.js.map",
-    "static/js/2.6c193d22.chunk.js": "/static/js/2.6c193d22.chunk.js",
-    "static/js/2.6c193d22.chunk.js.map": "/static/js/2.6c193d22.chunk.js.map",
+    "static/js/2.7911443b.chunk.js": "/static/js/2.7911443b.chunk.js",
+    "static/js/2.7911443b.chunk.js.map": "/static/js/2.7911443b.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.1b92cdb19ab519b4831f2e9b7647d4b3.js": "/precache-manifest.1b92cdb19ab519b4831f2e9b7647d4b3.js",
+    "precache-manifest.7801a2b71e1fc4944d3c5c0e796da77f.js": "/precache-manifest.7801a2b71e1fc4944d3c5c0e796da77f.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.3657b60e.chunk.css.map": "/static/css/main.3657b60e.chunk.css.map",
-    "static/js/2.6c193d22.chunk.js.LICENSE.txt": "/static/js/2.6c193d22.chunk.js.LICENSE.txt",
-    "static/media/1.png": "/static/media/1.266c3bd4.png",
+    "static/js/2.7911443b.chunk.js.LICENSE.txt": "/static/js/2.7911443b.chunk.js.LICENSE.txt",
     "static/media/1.HEIC": "/static/media/1.ff820100.HEIC",
-    "static/media/2.png": "/static/media/2.76b97e1a.png",
     "static/media/2.jpg": "/static/media/2.a6cb3cc9.jpg",
-    "static/media/3.png": "/static/media/3.1ba438f4.png",
     "static/media/3.jpg": "/static/media/3.46504d3d.jpg",
-    "static/media/4.png": "/static/media/4.9b846293.png",
-    "static/media/5.png": "/static/media/5.dd10d8de.png",
+    "static/media/4.png": "/static/media/4.16b7e144.png",
+    "static/media/5.png": "/static/media/5.96b6b1d1.png",
     "static/media/AT&T.png": "/static/media/AT&T.2b225577.png",
     "static/media/AarushiPandey.jpg": "/static/media/AarushiPandey.351bacba.jpg",
     "static/media/AayushiChoudhary.png": "/static/media/AayushiChoudhary.f1ea4c4f.png",
@@ -60,8 +57,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.94a6af97.js",
-    "static/js/2.6c193d22.chunk.js",
+    "static/js/2.7911443b.chunk.js",
     "static/css/main.3657b60e.chunk.css",
-    "static/js/main.9c70b9b8.chunk.js"
+    "static/js/main.8b4fee4f.chunk.js"
   ]
 }
