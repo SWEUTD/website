@@ -11,16 +11,6 @@ import NavBar from '../components/navbar'
 
 const upcomingEvents = [
 	{
-		name: 'Allen High School Panel - Robotics',
-		date: '9/29/2020 - 5:00 PM',
-		link: ''
-	},
-	{
-		name: "AI vs Machine Learning vs Data Science: What is it and what's the hype?",
-		date: '10/1/2020 - 5:00 PM',
-		link: 'https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffacebook.us19.list-manage.com%2Ftrack%2Fclick%3Fu%3Dada9150cb4cf2450b2870f9b7%26id%3D836639344e%26e%3D09a746bd56&data=02%7C01%7CAarushi.Pandey%40UTDallas.edu%7Cfb53efc075e34232dc8308d863d1d921%7C8d281d1d9c4d4bf7b16e032d15de9f6c%7C0%7C0%7C637369100234301226&sdata=PjHXzScANd2KHlFlrzxe6%2B3xCjUF8CNEU0iVpaQ3vU4%3D&reserved=0'
-	},
-	{
 		name: 'SWE Match Applications Close',
 		date: '10/2/2020',
 		link: ''
