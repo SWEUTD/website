@@ -11,16 +11,6 @@ import NavBar from '../components/navbar'
 
 const upcomingEvents = [
 	{
-		name: 'SWE Match Applications Close',
-		date: '10/2/2020',
-		link: ''
-	},
-	{
-		name: 'Fall Social',
-		date: '10/3/2020 - 5:30 PM',
-		link: 'https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffacebook.us19.list-manage.com%2Ftrack%2Fclick%3Fu%3Dada9150cb4cf2450b2870f9b7%26id%3D47771a8fc6%26e%3D09a746bd56&data=02%7C01%7CAarushi.Pandey%40UTDallas.edu%7Cfb53efc075e34232dc8308d863d1d921%7C8d281d1d9c4d4bf7b16e032d15de9f6c%7C0%7C0%7C637369100234301226&sdata=MJ2U7RIIcEm733Q3kFAl24q24QisRtmBDlsK9Mt40T4%3D&reserved=0'
-	},
-	{
 		name: 'Git It Together Workshop',
 		date: '10/5/2020 - 6:00 PM',
 		link: 'https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffacebook.us19.list-manage.com%2Ftrack%2Fclick%3Fu%3Dada9150cb4cf2450b2870f9b7%26id%3D512213acc7%26e%3D09a746bd56&data=02%7C01%7CAarushi.Pandey%40UTDallas.edu%7Cfb53efc075e34232dc8308d863d1d921%7C8d281d1d9c4d4bf7b16e032d15de9f6c%7C0%7C0%7C637369100234311219&sdata=EGS%2FITiLImgOC2S9kyv83K8nKEcYH89Ki2Qf%2FBcIqd4%3D&reserved=0'
@@ -34,7 +24,17 @@ const upcomingEvents = [
 		name: 'WEHack',
 		date: '10/10/2020 - 10/11/2020',
 		link: ''
-	}
+	}/*,
+	{
+		name: 'Trivia Night with CBRE and WWC',
+		date: '10/12/2020 - 7:00 PM',
+		link: ''
+	},
+	{
+		name: 'Samsung Collab with ACM and IEEE',
+		date: '10/14/2020 - 6:00 PM',
+		link: ''
+	} */
 ];
 
 const flyers = [
