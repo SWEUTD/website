@@ -203,8 +203,6 @@ const officerList = [
 	}
 ];
 
-
-
 const styles = (theme) => ({
 	gridItem: {
 		display: 'flex',
@@ -251,7 +249,7 @@ class officers extends Component {
 					>
 						{officerList.map((officer) => (
 							<Grid className={classes.gridItem} item xs="6" sm="3">
-								<Card className={classes.card} className="movingItem" variant="outlined">
+								<Card className={classes.card} className="movingItem" variant="outlined">	
 									<CardContent align="center">
 										<img src={officer.image} className={classes.image} />
 										<br />

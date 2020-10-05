@@ -24,7 +24,7 @@ const upcomingEvents = [
 		name: 'WEHack',
 		date: '10/10/2020 - 10/11/2020',
 		link: ''
-	}/*,
+	},
 	{
 		name: 'Trivia Night with CBRE and WWC',
 		date: '10/12/2020 - 7:00 PM',
@@ -34,7 +34,12 @@ const upcomingEvents = [
 		name: 'Samsung Collab with ACM and IEEE',
 		date: '10/14/2020 - 6:00 PM',
 		link: ''
-	} */
+	},
+	{
+		name: 'Netflix Party/Game Night with other SWE Sections',
+		date: '10/17/2020 - 5:00 PM',
+		link: 'https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffacebook.us19.list-manage.com%2Ftrack%2Fclick%3Fu%3Dada9150cb4cf2450b2870f9b7%26id%3D31843dcf19%26e%3D09a746bd56&data=02%7C01%7CAarushi.Pandey%40UTDallas.edu%7C2d1a50e8db9b4879c2c708d86952f74a%7C8d281d1d9c4d4bf7b16e032d15de9f6c%7C0%7C0%7C637375152384018565&sdata=uFt6YJSuzWBhoWHFnCoRHt0aV8RCOsQgdhUmFL613ew%3D&reserved=0'
+	} 
 ];
 
 const flyers = [
