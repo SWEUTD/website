@@ -12,35 +12,35 @@ import { CenterFocusStrong } from '@material-ui/icons';
 
 const upcomingEvents = [
 	{
-		name: 'Allen HS Panel',
-		date: '9/29/2020',
-		link: ''
+		name: 'Git It Together Workshop',
+		date: '10/5/2020 - 6:00 PM',
+		link: 'https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffacebook.us19.list-manage.com%2Ftrack%2Fclick%3Fu%3Dada9150cb4cf2450b2870f9b7%26id%3D512213acc7%26e%3D09a746bd56&data=02%7C01%7CAarushi.Pandey%40UTDallas.edu%7Cfb53efc075e34232dc8308d863d1d921%7C8d281d1d9c4d4bf7b16e032d15de9f6c%7C0%7C0%7C637369100234311219&sdata=EGS%2FITiLImgOC2S9kyv83K8nKEcYH89Ki2Qf%2FBcIqd4%3D&reserved=0'
 	},
 	{
-		name: 'SWE Match Applications Close',
-		date: '10/2/2020',
-		link: ''
-	},
-	{
-		name: 'Fall Social',
-		date: '10/3/2020',
-		link: ''
-	},
-	{
-		name: 'Git it Together',
-		date: '10/5/2020',
-		link: 'https://teams.microsoft.com/l/meetup-join/19%3aa4a313ea39474a2eaa091d3f16cb192c%40thread.tacv2/1600739448176?context=%7b%22Tid%22%3a%228d281d1d-9c4d-4bf7-b16e-032d15de9f6c%22%2c%22Oid%22%3a%22aa5e36e9-8e5b-4f97-8e0b-58e79a137a07%22%7d'
-	},
-	{
-		name: 'Sponsor API Pre-Event',
-		date: '10/5/2020',
-		link: ''
+		name: 'Tech Demo Night + WEHack Meet N Greet',
+		date: '10/9/2020 - 5:00 PM',
+		link: 'https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffacebook.us19.list-manage.com%2Ftrack%2Fclick%3Fu%3Dada9150cb4cf2450b2870f9b7%26id%3D02d6bc993f%26e%3D09a746bd56&data=02%7C01%7CAarushi.Pandey%40UTDallas.edu%7Cfb53efc075e34232dc8308d863d1d921%7C8d281d1d9c4d4bf7b16e032d15de9f6c%7C0%7C0%7C637369100234311219&sdata=O%2BaPLUH1CKk15g2Ut%2FRBTzT8plj4KHYwjvKGNAYIieE%3D&reserved=0'
 	},
 	{
 		name: 'WEHack',
 		date: '10/10/2020 - 10/11/2020',
 		link: ''
 	},
+	{
+		name: 'Trivia Night with CBRE and WWC',
+		date: '10/12/2020 - 7:00 PM',
+		link: ''
+	},
+	{
+		name: 'Samsung Collab with ACM and IEEE',
+		date: '10/14/2020 - 6:00 PM',
+		link: ''
+	},
+	{
+		name: 'Netflix Party/Game Night with other SWE Sections',
+		date: '10/17/2020 - 5:00 PM',
+		link: 'https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffacebook.us19.list-manage.com%2Ftrack%2Fclick%3Fu%3Dada9150cb4cf2450b2870f9b7%26id%3D31843dcf19%26e%3D09a746bd56&data=02%7C01%7CAarushi.Pandey%40UTDallas.edu%7C2d1a50e8db9b4879c2c708d86952f74a%7C8d281d1d9c4d4bf7b16e032d15de9f6c%7C0%7C0%7C637375152384018565&sdata=uFt6YJSuzWBhoWHFnCoRHt0aV8RCOsQgdhUmFL613ew%3D&reserved=0'
+	} 
 ];
 
 const flyers = [

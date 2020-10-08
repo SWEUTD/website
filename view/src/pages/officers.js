@@ -60,22 +60,6 @@ const officerList = [
 		linkedin: "https://www.linkedin.com/in/cadybaltz/"
 	},
 	{
-		name: 'Dr. Pushpa Kumar',
-		image: PushpaKumar,
-		position: 'Faculty Advisor',
-	},
-	{
-		name: 'Zaineb Ahmad',
-		image: ZainebAhmad,
-		position: "SWE UTD Section Counselor"
-	},
-	{
-		name: 'Jerry Alexander',
-		image: JerryAlexander,
-		position: "ECS Assistant Dean for Student Development",
-		linkedin: "https://www.linkedin.com/in/internguy/"
-	},
-	{
 		name: 'Arushi Agrawal',
 		image: ArushiAgrawal,
 		position: "Secretary",
@@ -200,10 +184,24 @@ const officerList = [
 		image: ManshaFatima,
 		position: "Website Development Committee Member",
 		linkedin: "https://www.linkedin.com/in/mansha-fatima-2a485412b/" 
+	},
+	{
+		name: 'Dr. Pushpa Kumar',
+		image: PushpaKumar,
+		position: 'Faculty Advisor',
+	},
+	{
+		name: 'Zaineb Ahmad',
+		image: ZainebAhmad,
+		position: "SWE UTD Section Counselor"
+	},
+	{
+		name: 'Jerry Alexander',
+		image: JerryAlexander,
+		position: "ECS Assistant Dean for Student Development",
+		linkedin: "https://www.linkedin.com/in/internguy/"
 	}
 ];
-
-
 
 const styles = (theme) => ({
 	gridItem: {
@@ -251,7 +249,7 @@ class officers extends Component {
 					>
 						{officerList.map((officer) => (
 							<Grid className={classes.gridItem} item xs="6" sm="3">
-								<Card className={classes.card} className="movingItem" variant="outlined">
+								<Card className={classes.card} className="movingItem" variant="outlined">	
 									<CardContent align="center">
 										<img src={officer.image} className={classes.image} />
 										<br />
