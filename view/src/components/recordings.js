@@ -11,6 +11,10 @@ import { authMiddleWare } from '../util/auth';
 
 const videos = [
 	{
+		link: 'https://www.youtube.com/embed/eDUQArp7SK8',
+		title: 'Git It Together Workshop - 10/5/2020', 
+	},
+	{
 		link: 'https://youtube.com/embed/mDiIx_zEtSk',
 		title: 'Steps After the Career Fair - 9/14/2020', 
 	},
