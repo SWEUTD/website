@@ -8,13 +8,9 @@ import classNames from 'classnames';
 import withStyles from '@material-ui/core/styles/withStyles';
 import { Button, Divider, Grid, List, ListItem, ListSubheader } from '@material-ui/core'
 import NavBar from '../components/navbar'
+import { CenterFocusStrong } from '@material-ui/icons';
 
 const upcomingEvents = [
-	{
-		name: 'Git It Together Workshop',
-		date: '10/5/2020 - 6:00 PM',
-		link: 'https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffacebook.us19.list-manage.com%2Ftrack%2Fclick%3Fu%3Dada9150cb4cf2450b2870f9b7%26id%3D512213acc7%26e%3D09a746bd56&data=02%7C01%7CAarushi.Pandey%40UTDallas.edu%7Cfb53efc075e34232dc8308d863d1d921%7C8d281d1d9c4d4bf7b16e032d15de9f6c%7C0%7C0%7C637369100234311219&sdata=EGS%2FITiLImgOC2S9kyv83K8nKEcYH89Ki2Qf%2FBcIqd4%3D&reserved=0'
-	},
 	{
 		name: 'Tech Demo Night + WEHack Meet N Greet',
 		date: '10/9/2020 - 5:00 PM',
@@ -75,7 +71,7 @@ class events extends Component {
 			<div className={classes.root}>
 				<NavBar />
 				<div className={classNames('header', { 'ready': headerReady })}>
-		            <p className="heading">Events</p>
+          			<p className="heading">Events</p>
                 </div>
 				<div className="fullscreen">
 					<Grid container
