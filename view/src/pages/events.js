@@ -12,22 +12,12 @@ import { CenterFocusStrong } from '@material-ui/icons';
 
 const upcomingEvents = [
 	{
-		name: 'Tech Demo Night + WEHack Meet N Greet',
-		date: '10/9/2020 - 5:00 PM',
-		link: 'https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffacebook.us19.list-manage.com%2Ftrack%2Fclick%3Fu%3Dada9150cb4cf2450b2870f9b7%26id%3D02d6bc993f%26e%3D09a746bd56&data=02%7C01%7CAarushi.Pandey%40UTDallas.edu%7Cfb53efc075e34232dc8308d863d1d921%7C8d281d1d9c4d4bf7b16e032d15de9f6c%7C0%7C0%7C637369100234311219&sdata=O%2BaPLUH1CKk15g2Ut%2FRBTzT8plj4KHYwjvKGNAYIieE%3D&reserved=0'
-	},
-	{
-		name: 'WEHack',
-		date: '10/10/2020 - 10/11/2020',
-		link: ''
-	},
-	{
 		name: 'Trivia Night with CBRE and WWC',
 		date: '10/12/2020 - 7:00 PM',
 		link: ''
 	},
 	{
-		name: 'Samsung Collab with ACM and IEEE',
+		name: 'Samsung Collab with ACM + IEEE',
 		date: '10/14/2020 - 6:00 PM',
 		link: ''
 	},
@@ -35,7 +25,17 @@ const upcomingEvents = [
 		name: 'Netflix Party/Game Night with other SWE Sections',
 		date: '10/17/2020 - 5:00 PM',
 		link: 'https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffacebook.us19.list-manage.com%2Ftrack%2Fclick%3Fu%3Dada9150cb4cf2450b2870f9b7%26id%3D31843dcf19%26e%3D09a746bd56&data=02%7C01%7CAarushi.Pandey%40UTDallas.edu%7C2d1a50e8db9b4879c2c708d86952f74a%7C8d281d1d9c4d4bf7b16e032d15de9f6c%7C0%7C0%7C637375152384018565&sdata=uFt6YJSuzWBhoWHFnCoRHt0aV8RCOsQgdhUmFL613ew%3D&reserved=0'
-	} 
+	},
+	{
+		name: 'Hacktoberfest',
+		date: '10/17/2020 - All day',
+		link: ''
+	},
+	{
+		name: 'AutoCAD with ASME',
+		date: '10/22/2020 - 7:00 PM',
+		link: 'https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffacebook.us19.list-manage.com%2Ftrack%2Fclick%3Fu%3Dada9150cb4cf2450b2870f9b7%26id%3D3c18722279%26e%3D09a746bd56&data=02%7C01%7CAarushi.Pandey%40UTDallas.edu%7C75d7ba8d505c432aa84808d86ed08538%7C8d281d1d9c4d4bf7b16e032d15de9f6c%7C0%7C0%7C637381189184646320&sdata=2KPbtx6Jf%2FoQwDdZhtnlXx3NM5fQX1NCwUBicfbdHrc%3D&reserved=0'
+	}  
 ];
 
 const flyers = [
