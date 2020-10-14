@@ -10,7 +10,9 @@ import NavBar from '../components/navbar'
 
 // images
 import Statistics from '../assets/statistics.png'
-import Sponsor from '../assets/AT&T.png'
+import SponsorA from '../assets/AT&T.png'
+import SponsorB from '../assets/CBRE.png'
+import SponsorC from '../assets/XILINX.png'
 
 // video
 import WhySWE from '../assets/WhySWE.mp4'
@@ -76,9 +78,11 @@ class about extends Component {
 					<Grid className={classes.gridItem} style={{backgroundColor:"#DBC554"}} item xs={12}>
 						<div align="center">
 							<br/>
-							<h1>Our Sponsor</h1>
-							<h2>We give special thanks to our sponsor, AT&amp;T</h2>
-							<img src={Sponsor} width="50%"/>
+							<h1>Our Sponsors</h1>
+							<h2>We give special thanks to our sponsors: AT&amp;T, CBRE, and Xilinx</h2>
+							<img src={SponsorA} width="25%"/>
+							<img src={SponsorB} width="25%"/>
+							<img src={SponsorC} width="25%"/>
 							<h4>Interested in sponsoring the UT-Dallas section of SWE? <a class="yellowBG" href="/contact">Let us know!</a></h4>
 							<br/>
 						</div>
