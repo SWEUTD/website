@@ -61,7 +61,7 @@ class about extends Component {
 					className="movingItem"
 				>	
 					<Grid className={classes.gridItem} style={{backgroundColor:"#A9A8A9", color: "white"}} item xs={12}>
-						<ReactPlayer url={WhySWE} playing={true} controls={true} />
+						<ReactPlayer url={WhySWE} playing={false} controls={true} />
 					</Grid>
 					<Grid className={classes.gridItem} style={{backgroundColor:"white", color: "white", padding:'50px'}} item md={6} xs={12}>
 						<img src={Statistics} width="100%"/>
