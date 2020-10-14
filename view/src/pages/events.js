@@ -12,11 +12,6 @@ import { CenterFocusStrong } from '@material-ui/icons';
 
 const upcomingEvents = [
 	{
-		name: 'Trivia Night with CBRE and WWC',
-		date: '10/12/2020 - 7:00 PM',
-		link: ''
-	},
-	{
 		name: 'Samsung Collab with ACM + IEEE',
 		date: '10/14/2020 - 6:00 PM',
 		link: ''
