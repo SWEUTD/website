@@ -5,6 +5,7 @@
 import React, { Component } from 'react';
 import withStyles from '@material-ui/core/styles/withStyles';
 import { Button, Card, CardActions, CardContent, CircularProgress, Divider, FormControl, Grid, MenuItem, InputLabel, Select, TextField } from '@material-ui/core';
+import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 
 import axios from 'axios';
 import { authMiddleWare } from '../util/auth';
@@ -167,7 +168,34 @@ class account extends Component {
 							<div className={classes.progress} />
 						</CardContent>
 					</Card>
-
+					<br/>
+					<Card className={classes.root} className="movingItem" variant="outlined">
+						<CardContent>
+							<div className={classes.details}>
+								<div>
+									<br/>
+									<h1>
+										Upload Resume Here
+									</h1>
+									<br/>
+									<Button
+										color="primary"
+										variant="contained"
+										type="submit"	
+										startIcon={<CloudUploadIcon />}
+										onClick={() => {
+											const url = 'https://forms.gle/62h6cNTnVyJ8JhVbA';
+											window.open(url, '_blank');
+										}}							
+									 >
+										Upload
+									 </Button>
+									 <br/>
+								</div>
+							</div>
+							<div className={classes.progress} />
+						</CardContent>
+					</Card>
 					<br />
 					<Card className={classes.root} className="movingItem" variant="outlined">
 						<form autoComplete="off" noValidate>
