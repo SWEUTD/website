@@ -34,28 +34,34 @@ const styles = (theme) => ({
 class swestars extends Component {
   constructor(props) {
     super(props);
-    this.state = { headerReady: false };
+    this.state = { headerReady: false, tierMembers: null };
   }
   componentDidMount() {
     setTimeout(() => {
       this.setState({ headerReady: true });
     }, 0);
+    this.getGoldStars();
+  }
+  getGoldStars = () => {
     database
       .collection("members")
-      .where("points", ">", 0)
+      .where("points", ">", 8)
       .get()
-      .then(function (querySnapshot) {
-        querySnapshot.forEach(function (doc) {
-          // doc.data() is never undefined for query doc snapshots
-          console.log(doc.id, " => ", doc.data());
-        });
+      .then((querySnapshot) => {
+        const goldMembers = querySnapshot.docs.map((doc) => (
+          <ListItemText align="center">
+            <h2>{`${doc.data().firstName} ${doc.data().lastName}`}</h2>
+          </ListItemText>
+        ));
+        this.setState({ tierMembers: { gold: goldMembers } });
       })
       .catch(function (error) {
         console.log("Error getting documents: ", error);
       });
-  }
+  };
+
   render() {
-    const { headerReady } = this.state;
+    const { headerReady, tierMembers } = this.state;
     const { classes } = this.props;
     return (
       <div className={classes.root}>
@@ -133,6 +139,7 @@ class swestars extends Component {
                     <ListItemText align="center">
                       <h2>Become our first Fall 2020 SWE Star!</h2>
                     </ListItemText>
+                    {tierMembers && tierMembers.gold}
                     <ListSubheader align="center">Summer 2020:</ListSubheader>
                     <ListItemText align="center">
                       <h2>Lisa Chen</h2>
