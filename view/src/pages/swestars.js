@@ -40,20 +40,30 @@ class swestars extends Component {
     setTimeout(() => {
       this.setState({ headerReady: true });
     }, 0);
-    this.getGoldStars();
+    this.getStars();
   }
-  getGoldStars = () => {
+  getStars = () => {
     database
       .collection("members")
-      .where("points", ">", 8)
+      .where("points", ">", 0)
       .get()
       .then((querySnapshot) => {
-        const goldMembers = querySnapshot.docs.map((doc) => (
-          <ListItemText align="center">
-            <h2>{`${doc.data().firstName} ${doc.data().lastName}`}</h2>
-          </ListItemText>
-        ));
-        this.setState({ tierMembers: { gold: goldMembers } });
+        let goldMem = [],
+          silverMem = [],
+          bronzeMem = [];
+        querySnapshot.forEach((doc) => {
+          const name = `${doc.data().firstName} ${doc.data().lastName}`;
+          if (doc.data().points > 9) {
+            goldMem.push(name);
+          } else if (doc.data().points > 7) {
+            silverMem.push(name);
+          } else if (doc.data().points > 5) {
+            bronzeMem.push(name);
+          }
+        });
+        this.setState({
+          tierMembers: { gold: goldMem, silver: silverMem, bronze: bronzeMem },
+        });
       })
       .catch(function (error) {
         console.log("Error getting documents: ", error);
@@ -136,10 +146,12 @@ class swestars extends Component {
                   <br />
                   <List alignItems="center">
                     <ListSubheader align="center">Fall 2020:</ListSubheader>
-                    <ListItemText align="center">
-                      <h2>Become our first Fall 2020 SWE Star!</h2>
-                    </ListItemText>
-                    {tierMembers && tierMembers.gold}
+                    {tierMembers &&
+                      tierMembers.gold.map((val) => (
+                        <ListItemText align="center">
+                          <h2>{val}</h2>
+                        </ListItemText>
+                      ))}
                     <ListSubheader align="center">Summer 2020:</ListSubheader>
                     <ListItemText align="center">
                       <h2>Lisa Chen</h2>
@@ -161,9 +173,12 @@ class swestars extends Component {
                   <br />
                   <List alignItems="center">
                     <ListSubheader align="center">Fall 2020:</ListSubheader>
-                    <ListItemText align="center">
-                      <h4>Become our first Fall 2020 SWE Star!</h4>
-                    </ListItemText>
+                    {tierMembers &&
+                      tierMembers.silver.map((val) => (
+                        <ListItemText align="center">
+                          <h4>{val}</h4>
+                        </ListItemText>
+                      ))}
                     <ListSubheader align="center">Summer 2020:</ListSubheader>
                     <ListItemText align="center">
                       <h4>Lan Bui</h4>
@@ -188,9 +203,12 @@ class swestars extends Component {
                   <br />
                   <List alignItems="center">
                     <ListSubheader align="center">Fall 2020:</ListSubheader>
-                    <ListItemText align="center">
-                      <h4>Become our first Fall 2020 SWE Star!</h4>
-                    </ListItemText>
+                    {tierMembers &&
+                      tierMembers.bronze.map((val) => (
+                        <ListItemText align="center">
+                          <h6>{val}</h6>
+                        </ListItemText>
+                      ))}
                     <ListSubheader align="center">Summer 2020:</ListSubheader>
                     <ListItemText align="center">
                       <h6>Jyostna Thanjavur</h6>
