@@ -7,6 +7,7 @@ import classNames from 'classnames';
 import withStyles from '@material-ui/core/styles/withStyles';
 import Grid from '@material-ui/core/Grid'
 import NavBar from '../components/navbar'
+import Footer from '../components/footer'
 
 // images
 import Statistics from '../assets/statistics.png'
@@ -130,6 +131,7 @@ class about extends Component {
 						</div>
 					</Grid>
 				</Grid>
+				<Footer/>
 			</div>
 		);
 	}
