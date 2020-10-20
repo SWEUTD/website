@@ -87,41 +87,9 @@ class swestars extends Component {
             alignItems="stretch"
             justify="space-evenly"
             className="movingItem"
-          >
-            <Grid
-              style={{ padding: "50px" }}
-              className={classes.gridItem}
-              md={3}
-              xs={12}
-            >
-              <div>
-                <h1 align="center">Become a SWE Star</h1>
-                <Divider />
-                <List dense="true">
-                  <ListSubheader>Earn SWE Points by:</ListSubheader>
-                  <ListItem>Attending industry events</ListItem>
-                  <ListItem>Meeting other SWE members at socials</ListItem>
-                  <ListItem>Volunteering</ListItem>
-                </List>
-                <br />
-                <br />
-                <h1 align="center">Tier Prizes for Fall 2020</h1>
-                <Divider />
-                <List dense="true">
-                  <ListSubheader>Gold Tier:</ListSubheader>
-                  <ListItem>(Top 15 SWE Gold Stars) SWE Gift Bags</ListItem>
-                  <ListItem>1x1 Resume Critiquing Session</ListItem>
-                  <br />
-                  <ListSubheader>Silver Tier:</ListSubheader>
-                  <ListItem>Social media shoutout</ListItem>
-                  <br />
-                  <ListSubheader>Bronze Tier:</ListSubheader>
-                  <ListItem>
-                    Invitation to a virtual networking session
-                  </ListItem>
-                </List>
-              </div>
-            </Grid>
+            direction="column">
+            
+            
             <Grid
               container
               height="100%"
@@ -129,7 +97,7 @@ class swestars extends Component {
               alignItems="stretch"
               justify="space-evenly"
               className="movingItem"
-              md={9}
+              //md={9}
               xs={12}
               style={{ color: "white" }}
             >
@@ -137,24 +105,27 @@ class swestars extends Component {
                 className={classes.gridItem}
                 style={{ backgroundColor: "#DBC554", padding: "50px" }}
                 item
+                md={4}
                 xs={12}
               >
-                <div>
+                <div className="gold">
+
                   <h1 align="center">Gold Tier</h1>
                   <br />
                   <Divider />
                   <br />
                   <List alignItems="center">
-                    <ListSubheader align="center">Fall 2020:</ListSubheader>
+                    <ListSubheader align="center"><h4>Fall 2020:</h4></ListSubheader> <br></br>
                     {tierMembers &&
                       tierMembers.gold.map((val) => (
                         <ListItemText align="center">
-                          <h2>{val}</h2>
+                          <h4>{val}</h4>
                         </ListItemText>
                       ))}
-                    <ListSubheader align="center">Summer 2020:</ListSubheader>
+                    <br></br>
+                    <ListSubheader align="center"><h4>Summer 2020:</h4></ListSubheader><br></br>
                     <ListItemText align="center">
-                      <h2>Lisa Chen</h2>
+                      <h4>Lisa Chen</h4>
                     </ListItemText>
                   </List>
                 </div>
@@ -163,8 +134,9 @@ class swestars extends Component {
                 className={classes.gridItem}
                 style={{ backgroundColor: "#A9A8A9", padding: "50px" }}
                 item
-                md={7}
+                md={4}
                 xs={12}
+                direction='row'
               >
                 <div>
                   <h1 align="center">Silver Tier</h1>
@@ -172,14 +144,15 @@ class swestars extends Component {
                   <Divider />
                   <br />
                   <List alignItems="center">
-                    <ListSubheader align="center">Fall 2020:</ListSubheader>
+                    <ListSubheader align="center"><h4>Fall 2020:</h4></ListSubheader><br></br>
                     {tierMembers &&
                       tierMembers.silver.map((val) => (
                         <ListItemText align="center">
                           <h4>{val}</h4>
                         </ListItemText>
                       ))}
-                    <ListSubheader align="center">Summer 2020:</ListSubheader>
+                    <br></br>
+                    <ListSubheader align="center"><h4>Summer 2020:</h4></ListSubheader><br></br>
                     <ListItemText align="center">
                       <h4>Lan Bui</h4>
                     </ListItemText>
@@ -193,7 +166,7 @@ class swestars extends Component {
                 className={classes.gridItem}
                 style={{ backgroundColor: "#916f51", padding: "50px" }}
                 item
-                md={5}
+                md={4}
                 xs={12}
               >
                 <div>
@@ -202,24 +175,61 @@ class swestars extends Component {
                   <Divider />
                   <br />
                   <List alignItems="center">
-                    <ListSubheader align="center">Fall 2020:</ListSubheader>
+                    <ListSubheader align="center"><h4>Fall 2020:</h4></ListSubheader><br></br>
                     {tierMembers &&
                       tierMembers.bronze.map((val) => (
                         <ListItemText align="center">
-                          <h6>{val}</h6>
+                          <h4>{val}</h4>
                         </ListItemText>
                       ))}
-                    <ListSubheader align="center">Summer 2020:</ListSubheader>
+                      <br></br>
+                    <ListSubheader align="center"><h4>Summer 2020:</h4></ListSubheader><br></br>
                     <ListItemText align="center">
-                      <h6>Jyostna Thanjavur</h6>
+                      <h4>Jyostna Thanjavur</h4>
                     </ListItemText>
                     <ListItemText align="center">
-                      <h6>Kendra Huang</h6>
+                      <h4>Kendra Huang</h4>
                     </ListItemText>
                   </List>
                 </div>
               </Grid>
             </Grid>
+            
+            <div className="howTo">
+            <Grid
+              style={{ padding: "50px" }}
+              className={classes.gridItem}
+              //md={3}
+              xs={12}>
+              <div>
+                <h1 align="center">Become a SWE Star</h1>
+                <Divider />
+                <List dense="true">
+                  <ListSubheader><h3>Earn SWE Points by:</h3></ListSubheader>
+                  <ListItem ><h4>Attending industry events</h4></ListItem>
+                  <ListItem><h4>Meeting other SWE members at socials</h4></ListItem>
+                  <ListItem><h4>Volunteering</h4></ListItem>
+                </List>
+                <br />
+                <br />
+                <h1 align="center">Tier Prizes for Fall 2020</h1>
+                <Divider />
+                <List dense="true">
+                  <ListSubheader><h3>Gold Tier:</h3></ListSubheader>
+                  <ListItem><h4>(Top 15 SWE Gold Stars) SWE Gift Bags</h4></ListItem>
+                  <ListItem><h4>1x1 Resume Critiquing Session</h4></ListItem>
+                  <br />
+                  <ListSubheader><h3>Silver Tier:</h3></ListSubheader>
+                  <ListItem><h4>Social media shoutout</h4></ListItem>
+                  <br />
+                  <ListSubheader><h3>Bronze Tier:</h3></ListSubheader>
+                  <ListItem>
+                  <h4>Invitation to a virtual networking session</h4>
+                  </ListItem>
+                </List>
+              </div>
+            </Grid>
+            </div>
           </Grid>
         </div>
       </div>
