@@ -3,7 +3,7 @@
 // Meeting form for SWE events
 
 import React, { Component } from 'react';
-import { Button, Select, MenuItem, Grid, Container, TextField, CircularProgress, FormControl, InputLabel } from '@material-ui/core';
+import { Button, Select, MenuItem, Grid, Container, TextField, CircularProgress, FormControl, InputLabel, Typography } from '@material-ui/core';
 import withStyles from '@material-ui/core/styles/withStyles';
 import classNames from 'classnames';
 
@@ -37,6 +37,13 @@ class meetingform extends Component {
 		this.state = { headerReady: false };
 
 		this.state = {
+			email: '',
+			password: '',
+			errors: [],
+			loginLoading: false
+		};
+
+		this.state = {
 			firstName: '',
 			lastName: '',
 			phoneNumber: '',
@@ -46,7 +53,7 @@ class meetingform extends Component {
 			email: '',
 			errors: [],
 			signinLoading: false,
-			secretWord: ''
+			secretWord: '',
 		};
 	}
 
@@ -65,6 +72,30 @@ class meetingform extends Component {
 		this.setState({
 			[event.target.name]: event.target.value
 		});
+	};
+
+	handleLogin = (event) => {
+		event.preventDefault();
+		this.setState({ loginLoading: true });
+		const memberData = {
+			email: this.state.email.toLowerCase(),
+			password: this.state.password
+		};
+		axios
+			.post('https://us-central1-swe-utd-portal.cloudfunctions.net/api/login', memberData)
+			.then((response) => {
+				localStorage.setItem('AuthToken', `Bearer ${response.data.token}`);
+				this.setState({ 
+					loginLoading: false,
+				});		
+				this.props.history.push('/portal');
+			})
+			.catch((error) => {				
+				this.setState({
+					errors: error.response.data,
+					loginLoading: false
+				});
+			});
 	};
 
 	handleSignin = (event) => {
@@ -117,10 +148,11 @@ class meetingform extends Component {
     render() {
         const { headerReady } = this.state;
 		const { classes } = this.props;
-		const { errors, signinLoading } = this.state;
+		const { errors, loginLoading, signinLoading } = this.state;
 		return (
 			<div>
 				<NavBar />
+				
 				<div className={classNames('header', { 'ready': headerReady })}>
 					<p className="heading">{this.props.eventHeading}</p>
 				</div>
@@ -134,6 +166,86 @@ class meetingform extends Component {
 					>
 						<Grid item sm={6} xs={12}>
 							<div className={classes.paper}>
+								<Typography component="h1" variant="h5">
+									Already a member? Log in!
+								</Typography>
+								<br/>					
+								<form className={classes.form} noValidate>
+								<Grid container spacing={2}>
+									<TextField
+										variant="outlined"
+										required
+										fullWidth
+										id="secretWord"
+										label="Secret Word (given out during meeting)"
+										name="secretWord"
+										autoComplete="secretWord"
+										autoFocus
+										helperText={errors.secretWord}
+										error={errors.secretWord ? true : false}
+										onChange={this.handleChange}
+									/>						
+									<TextField
+										variant="outlined"
+										margin="normal"
+										required
+										fullWidth
+										id="email"
+										label="Email Address"
+										name="email"
+										autoComplete="email"
+										helperText={errors.email}
+										error={errors.email ? true : false}
+										onChange={this.handleChange}
+									/>
+									<TextField
+										variant="outlined"
+										margin="normal"
+										required
+										fullWidth
+										name="password"
+										label="Password"
+										type="password"
+										id="password"
+										autoComplete="current-password"
+										helperText={errors.password}
+										error={errors.password ? true : false}
+										onChange={this.handleChange}
+									/>
+									<Button
+										type="login"
+										fullWidth
+										variant="contained"
+										color="primary"
+										className={classes.login}
+										onClick={this.handleLogin}
+										disabled={loginLoading || !this.state.email || !this.state.password}
+									>
+										Log In
+										{loginLoading && <CircularProgress size={30} className={classes.progess} />}
+									</Button>
+									{errors.general && (
+										<Typography variant="body2" className={classes.customError}>
+											{errors.general}
+										</Typography>
+									)}
+									</Grid>
+								</form>	
+							</div>
+						</Grid>
+						{/*<Grid container
+						spacing={10}
+						height="100%"
+						width="80%"
+						alignItems="stretch"
+						justify="space-evenly"
+						> */}
+						<Grid item sm={6} xs={12}>
+							<div className={classes.paper}>
+							<Typography component="h1" variant="h5">
+											New to SWE? Sign in to get your point!
+										</Typography>
+										<br />
 								<form className={classes.form} noValidate>
 									<Grid container spacing={2}>
 										<Grid item xs={12} sm={12}>
@@ -300,6 +412,7 @@ class meetingform extends Component {
 								</form>
 							</div>
 						</Grid>
+						{/*</Grid>*/}
 					</Grid>
 				</Container>
 			</div>
