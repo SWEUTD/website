@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.be9c6b42.chunk.css",
-    "main.js": "/static/js/main.560b285e.chunk.js",
-    "main.js.map": "/static/js/main.560b285e.chunk.js.map",
+    "main.css": "/static/css/main.de752e8f.chunk.css",
+    "main.js": "/static/js/main.527d2d24.chunk.js",
+    "main.js.map": "/static/js/main.527d2d24.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.94a6af97.js",
     "runtime-main.js.map": "/static/js/runtime-main.94a6af97.js.map",
-    "static/js/2.46c41931.chunk.js": "/static/js/2.46c41931.chunk.js",
-    "static/js/2.46c41931.chunk.js.map": "/static/js/2.46c41931.chunk.js.map",
+    "static/js/2.521a0fe3.chunk.js": "/static/js/2.521a0fe3.chunk.js",
+    "static/js/2.521a0fe3.chunk.js.map": "/static/js/2.521a0fe3.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.14327ae7f8387f1010398fab1473094d.js": "/precache-manifest.14327ae7f8387f1010398fab1473094d.js",
+    "precache-manifest.dc31389ad9b7609e262378edf52315dc.js": "/precache-manifest.dc31389ad9b7609e262378edf52315dc.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.be9c6b42.chunk.css.map": "/static/css/main.be9c6b42.chunk.css.map",
-    "static/js/2.46c41931.chunk.js.LICENSE.txt": "/static/js/2.46c41931.chunk.js.LICENSE.txt",
+    "static/css/main.de752e8f.chunk.css.map": "/static/css/main.de752e8f.chunk.css.map",
+    "static/js/2.521a0fe3.chunk.js.LICENSE.txt": "/static/js/2.521a0fe3.chunk.js.LICENSE.txt",
     "static/media/1.HEIC": "/static/media/1.ff820100.HEIC",
     "static/media/2.jpg": "/static/media/2.a6cb3cc9.jpg",
     "static/media/3.jpg": "/static/media/3.46504d3d.jpg",
@@ -50,6 +50,8 @@
     "static/media/ShreyaChauk.jpg": "/static/media/ShreyaChauk.c8597afa.jpg",
     "static/media/SilverAward.png": "/static/media/SilverAward.c7f71d61.png",
     "static/media/SindhuBoppudi.jpg": "/static/media/SindhuBoppudi.131170b0.jpg",
+    "static/media/Technical_Interview_101.png": "/static/media/Technical_Interview_101.2b148f21.png",
+    "static/media/Technical_and_Behavioral_Interview.png": "/static/media/Technical_and_Behavioral_Interview.9ccb67bb.png",
     "static/media/VamikaChatlani.jpg": "/static/media/VamikaChatlani.ba10b73e.jpg",
     "static/media/WE.jpg": "/static/media/WE.7f0776b4.jpg",
     "static/media/WhySWE.mp4": "/static/media/WhySWE.97a2f40e.mp4",
@@ -60,8 +62,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.94a6af97.js",
-    "static/js/2.46c41931.chunk.js",
-    "static/css/main.be9c6b42.chunk.css",
-    "static/js/main.560b285e.chunk.js"
+    "static/js/2.521a0fe3.chunk.js",
+    "static/css/main.de752e8f.chunk.css",
+    "static/js/main.527d2d24.chunk.js"
   ]
 }
