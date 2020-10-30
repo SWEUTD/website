@@ -11,6 +11,14 @@ import { authMiddleWare } from '../util/auth';
 
 const videos = [
 	{
+		link: 'https://youtube.com/embed/UY3S_uQLyik',
+		title: 'Beginner Game Development with Construct 3 by SWE - 10/27/2020', 
+	},
+	{
+		link: 'https://www.youtube.com/embed/duLCzciTHro',
+		title: 'Technical Interviews 101 - 10/26/2020', 
+	},
+	{
 		link: 'https://www.youtube.com/embed/eDUQArp7SK8',
 		title: 'Git It Together Workshop - 10/5/2020', 
 	},

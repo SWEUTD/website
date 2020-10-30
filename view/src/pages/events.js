@@ -15,24 +15,6 @@ import Technical_and_Behavioral_Interview from '../assets/EventFlyers/Technical_
 
 const upcomingEvents = [
 	{
-		name: 'Technical Interview 101 with ACM',
-		date: '10/26/2020 - 7:00 PM',
-		description: "Come learn about technical interviews with SWE x ACM! Learn useful tips and tricks on approaching technical problems, and test that new knowledge with some mock questions! This is a beginner friendly workshop where you’ll brush up on skills that can get you your next internship!",
-		link: 'https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffacebook.us19.list-manage.com%2Ftrack%2Fclick%3Fu%3Dada9150cb4cf2450b2870f9b7%26id%3Ddd4687d47c%26e%3D09a746bd56&data=04%7C01%7CAarushi.Pandey%40UTDallas.edu%7Cefe56688b47b41ebc97a08d879dbf603%7C8d281d1d9c4d4bf7b16e032d15de9f6c%7C0%7C0%7C637393332941356668%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=d0R512exKHscB8NjKQtF3fIvFO6cnr7AOfHharMnLiY%3D&reserved=0'
-	},
-	{
-		name: 'SWE at HackUTD GameJam',
-		date: '10/27/2020 - 7:00 PM',
-		description: "HackUTD is bringing you GameJam on October 25th-31st. This is a weeklong event for you to learn how to develop games! On October 27th at 7pm, SWE will be hosting a beginner workshop that will teach you how to develop your own game using Construct 3. This event is completely free and includes a $1,000 prize pool! HackUTD will also be sending out free T-shirts by mail for those that submit a game. Registration is open until October 11th at https://gamejam.hackutd.co/! Note that you MUST be registered to obtain a free T-shirt / win any prizes. We'll see you at the GameJam! ",
-		link: 'https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffacebook.us19.list-manage.com%2Ftrack%2Fclick%3Fu%3Dada9150cb4cf2450b2870f9b7%26id%3D64baa6223b%26e%3D09a746bd56&data=04%7C01%7CAarushi.Pandey%40UTDallas.edu%7Cefe56688b47b41ebc97a08d879dbf603%7C8d281d1d9c4d4bf7b16e032d15de9f6c%7C0%7C0%7C637393332941366661%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=Ui3DjNEm%2BDVxjVWUw1fQy5a22iSInDgXHhuiBGsd2UY%3D&reserved=0'
-	},
-	{
-		name: 'Acing your Behavioral Interview with WITB',
-		date: '10/28/2020 - 7:00 PM',
-		description: "Learn how to ace your behavioral interview with SWE x WITB!  Gain exclusive knowledge about how to crack that interview from Harman International’s recruiter, Jacqueline Joseph! Additionally, you’ll practice answering mock interview questions and receive individual feedback to improve! No prior experience with interviews is required to attend.",
-		link: 'https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffacebook.us19.list-manage.com%2Ftrack%2Fclick%3Fu%3Dada9150cb4cf2450b2870f9b7%26id%3De8e5eb850e%26e%3D09a746bd56&data=04%7C01%7CAarushi.Pandey%40UTDallas.edu%7Cefe56688b47b41ebc97a08d879dbf603%7C8d281d1d9c4d4bf7b16e032d15de9f6c%7C0%7C0%7C637393332941376655%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=wpNm9nrylxZFkhRsR2%2BBAATBgTDjYJ6WBrZD%2BDnoKiw%3D&reserved=0'
-	},
-	{
 		name: 'USAA Tech Talk',
 		date: '11/05/2020 - 6:30 PM',
 		description: "Come learn about the “Tech” part of “InsureTech”, meaning how financial institutions are leveraging cutting-edge technology to do things to help USAA's customers like never before.",
