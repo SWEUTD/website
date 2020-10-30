@@ -143,7 +143,6 @@ class swematch extends Component {
             </li>
             <li>
               <strong>20 October 2020 at 8:30PM:</strong> First General Meeting!
-              {process.env.REACT_APP_APIKEY}
             </li>
           </ul>
           <div align="center">
