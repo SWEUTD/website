@@ -16,8 +16,9 @@ jobs:
 
       - name: Build
         run: |
+          cd view/
           npm install
-          npm run-script build
+          npm run build
         env:
           REACT_APP_APIKEY: ${{ secrets.REACT_APP_APIKEY }}
 
