@@ -25,7 +25,6 @@ class swematch extends Component {
     }, 0);
   }
   render() {
-    console.log("here: " + process.env.REACT_APP_APIKEY);
     const { headerReady } = this.state;
     const { classes } = this.props;
     return (
@@ -144,6 +143,7 @@ class swematch extends Component {
             </li>
             <li>
               <strong>20 October 2020 at 8:30PM:</strong> First General Meeting!
+              {process.env.REACT_APP_APIKEY}
             </li>
           </ul>
           <div align="center">
