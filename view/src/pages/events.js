@@ -82,7 +82,7 @@ class events extends Component {
 						className={classes.gridItem}
 						style={{padding:'40px'}}
 					>
-						{/* <Grid container
+						 <Grid container
 						item md={8} xs={12}
 							spacing={2}
 							height="100%"
@@ -102,7 +102,7 @@ class events extends Component {
 								</div>
 							</Grid>
 							))}
-						</Grid> */}
+						</Grid> 
 						<Grid item md={3} xs={12} className={classes.gridItem}>
 							<div align="center">
 								<h1>Upcoming Events</h1>
