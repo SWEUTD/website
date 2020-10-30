@@ -8,16 +8,12 @@ import classNames from "classnames";
 import withStyles from "@material-ui/core/styles/withStyles";
 import {
   Card,
-  CardActions,
   CardContent,
-  CssBaseline,
   Container,
   Divider,
   Button,
-  Box,
+  ButtonGroup,
   Grid,
-  TextField,
-  Typography,
 } from "@material-ui/core";
 import NavBar from "../components/navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -77,8 +73,8 @@ const officerList = [
   {
     name: "Arushi Agrawal",
     image: ArushiAgrawal,
-    position: "Secretary",
-    committee: "Board Members",
+    position: "Secretary, Social Committee Member",
+    committee: "Board Members, Outreach Committee",
     linkedin: "https://www.linkedin.com/in/agrawal-arushi/",
   },
   {
@@ -200,13 +196,6 @@ const officerList = [
     linkedin: "https://www.linkedin.com/in/gabrielle-duncan-085822185/",
   },
   {
-    name: "Arushi Agrawal",
-    image: ArushiAgrawal,
-    position: "Social Committee Member",
-    committee: "Outreach Committee",
-    linkedin: "https://www.linkedin.com/in/agrawal-arushi/",
-  },
-  {
     name: "Reshmi Ranjith",
     image: ReshmiRanjith,
     position: "Website Development Committee Member",
@@ -273,12 +262,21 @@ class officers extends Component {
   }
   componentDidMount() {
     setTimeout(() => {
-      this.setState({ headerReady: true });
+      this.setState({ headerReady: true, committeeSelection: "ALL" });
     }, 0);
   }
   render() {
-    const { headerReady } = this.state;
+    const { headerReady, committeeSelection } = this.state;
     const { classes } = this.props;
+    const boards = [
+      "ALL",
+      ...new Set(
+        officerList
+          .filter((item) => !item.committee.includes(",")) // if on multiple commitees, don't want to show it as a seperate choice
+          .map((item) => item.committee)
+      ),
+    ];
+
     return (
       <div className={classes.root}>
         <NavBar />
@@ -286,12 +284,29 @@ class officers extends Component {
           <p className="heading">Meet Our Officers</p>
         </div>
         <Container className={classes.container}>
+          <ButtonGroup
+            color="primary"
+            aria-label="outlined primary button group"
+          >
+            {boards.map((commiteeName) => (
+              <Button
+                onClick={() =>
+                  this.setState({
+                    ...this.state,
+                    committeeSelection: commiteeName,
+                  })
+                }
+              >
+                {commiteeName}
+              </Button>
+            ))}
+          </ButtonGroup>
           <div
             className="officerHeading"
             style={({ height: "50px" }, { padding: "20px" })}
           >
             <h2>
-              <center>Board Members</center>
+              <center>{committeeSelection}</center>
             </h2>
           </div>
           <Grid
@@ -303,314 +318,10 @@ class officers extends Component {
             justify="space-evenly"
           >
             {officerList
-              .filter((person) => person.committee == "Board Members")
-              .map((officer) => (
-                <Grid className={classes.gridItem} item xs="6" sm="3">
-                  <Card
-                    className={classes.card}
-                    className="movingItem"
-                    variant="outlined"
-                  >
-                    <CardContent align="center">
-                      <img src={officer.image} className={classes.image} />
-                      <br />
-                      <br />
-                      <Divider />
-                      <br />
-                      <h6>{officer.name}</h6>
-                      <h6>{officer.position}</h6>
-                      <a href={officer.linkedin} target="_blank">
-                        {officer.linkedin && (
-                          <FontAwesomeIcon
-                            icon={faLinkedin}
-                            className="imageLink"
-                            size="lg"
-                            style={{ color: "#5A5377" }}
-                          />
-                        )}
-                      </a>
-                    </CardContent>
-                  </Card>
-                </Grid>
-              ))}
-          </Grid>
-        </Container>
-        <Container className={classes.container}>
-          <div
-            className="officerHeading"
-            style={({ height: "100px" }, { padding: "50px 0 20px 0" })}
-          >
-            <h2>
-              <center>Conference Committee</center>
-            </h2>
-          </div>
-          <Grid
-            container
-            spacing={5}
-            height="100%"
-            width="100%"
-            alignItems="stretch"
-            justify="space-evenly"
-          >
-            {officerList
-              .filter((person) => person.committee == "Conference Committee")
-              .map((officer) => (
-                <Grid className={classes.gridItem} item xs="6" sm="3">
-                  <Card
-                    className={classes.card}
-                    className="movingItem"
-                    variant="outlined"
-                  >
-                    <CardContent align="center">
-                      <img src={officer.image} className={classes.image} />
-                      <br />
-                      <br />
-                      <Divider />
-                      <br />
-                      <h6>{officer.name}</h6>
-                      <h6>{officer.position}</h6>
-                      <a href={officer.linkedin} target="_blank">
-                        {officer.linkedin && (
-                          <FontAwesomeIcon
-                            icon={faLinkedin}
-                            className="imageLink"
-                            size="lg"
-                            style={{ color: "#5A5377" }}
-                          />
-                        )}
-                      </a>
-                    </CardContent>
-                  </Card>
-                </Grid>
-              ))}
-          </Grid>
-        </Container>
-
-        <Container className={classes.container}>
-          <div
-            className="officerHeading"
-            style={({ height: "100px" }, { padding: "50px 0 20px 0" })}
-          >
-            <h2>
-              <center>Industry Committee</center>
-            </h2>
-          </div>
-          <Grid
-            container
-            spacing={5}
-            height="100%"
-            width="100%"
-            alignItems="stretch"
-            justify="space-evenly"
-          >
-            {officerList
-              .filter((person) => person.committee == "Industry Committee")
-              .map((officer) => (
-                <Grid className={classes.gridItem} item xs="6" sm="3">
-                  <Card
-                    className={classes.card}
-                    className="movingItem"
-                    variant="outlined"
-                  >
-                    <CardContent align="center">
-                      <img src={officer.image} className={classes.image} />
-                      <br />
-                      <br />
-                      <Divider />
-                      <br />
-                      <h6>{officer.name}</h6>
-                      <h6>{officer.position}</h6>
-                      <a href={officer.linkedin} target="_blank">
-                        {officer.linkedin && (
-                          <FontAwesomeIcon
-                            icon={faLinkedin}
-                            className="imageLink"
-                            size="lg"
-                            style={{ color: "#5A5377" }}
-                          />
-                        )}
-                      </a>
-                    </CardContent>
-                  </Card>
-                </Grid>
-              ))}
-          </Grid>
-        </Container>
-
-        <Container className={classes.container}>
-          <div
-            className="officerHeading"
-            style={({ height: "100px" }, { padding: "50px 0 20px 0" })}
-          >
-            <h2>
-              <center>Marketing Committee</center>
-            </h2>
-          </div>
-          <Grid
-            container
-            spacing={5}
-            height="100%"
-            width="100%"
-            alignItems="stretch"
-            justify="space-evenly"
-          >
-            {officerList
-              .filter((person) => person.committee == "Marketing Committee")
-              .map((officer) => (
-                <Grid className={classes.gridItem} item xs="6" sm="3">
-                  <Card
-                    className={classes.card}
-                    className="movingItem"
-                    variant="outlined"
-                  >
-                    <CardContent align="center">
-                      <img src={officer.image} className={classes.image} />
-                      <br />
-                      <br />
-                      <Divider />
-                      <br />
-                      <h6>{officer.name}</h6>
-                      <h6>{officer.position}</h6>
-                      <a href={officer.linkedin} target="_blank">
-                        {officer.linkedin && (
-                          <FontAwesomeIcon
-                            icon={faLinkedin}
-                            className="imageLink"
-                            size="lg"
-                            style={{ color: "#5A5377" }}
-                          />
-                        )}
-                      </a>
-                    </CardContent>
-                  </Card>
-                </Grid>
-              ))}
-          </Grid>
-        </Container>
-
-        <Container className={classes.container}>
-          <div
-            className="officerHeading"
-            style={({ height: "100px" }, { padding: "50px 0 20px 0" })}
-          >
-            <h2>
-              <center>Community Outreach Committee</center>
-            </h2>
-          </div>
-          <Grid
-            container
-            spacing={5}
-            height="100%"
-            width="100%"
-            alignItems="stretch"
-            justify="space-evenly"
-          >
-            {officerList
-              .filter((person) => person.committee == "Outreach Committee")
-              .map((officer) => (
-                <Grid className={classes.gridItem} item xs="6" sm="3">
-                  <Card
-                    className={classes.card}
-                    className="movingItem"
-                    variant="outlined"
-                  >
-                    <CardContent align="center">
-                      <img src={officer.image} className={classes.image} />
-                      <br />
-                      <br />
-                      <Divider />
-                      <br />
-                      <h6>{officer.name}</h6>
-                      <h6>{officer.position}</h6>
-                      <a href={officer.linkedin} target="_blank">
-                        {officer.linkedin && (
-                          <FontAwesomeIcon
-                            icon={faLinkedin}
-                            className="imageLink"
-                            size="lg"
-                            style={{ color: "#5A5377" }}
-                          />
-                        )}
-                      </a>
-                    </CardContent>
-                  </Card>
-                </Grid>
-              ))}
-          </Grid>
-        </Container>
-
-        <Container className={classes.container}>
-          <div
-            className="officerHeading"
-            style={({ height: "100px" }, { padding: "50px 0 20px 0" })}
-          >
-            <h2>
-              <center>Website Development Committee</center>
-            </h2>
-          </div>
-          <Grid
-            container
-            spacing={5}
-            height="100%"
-            width="100%"
-            alignItems="stretch"
-            justify="space-evenly"
-          >
-            {officerList
-              .filter(
-                (person) => person.committee == "Website Development Committee"
-              )
-              .map((officer) => (
-                <Grid className={classes.gridItem} item xs="6" sm="3">
-                  <Card
-                    className={classes.card}
-                    className="movingItem"
-                    variant="outlined"
-                  >
-                    <CardContent align="center">
-                      <img src={officer.image} className={classes.image} />
-                      <br />
-                      <br />
-                      <Divider />
-                      <br />
-                      <h6>{officer.name}</h6>
-                      <h6>{officer.position}</h6>
-                      <a href={officer.linkedin} target="_blank">
-                        {officer.linkedin && (
-                          <FontAwesomeIcon
-                            icon={faLinkedin}
-                            className="imageLink"
-                            size="lg"
-                            style={{ color: "#5A5377" }}
-                          />
-                        )}
-                      </a>
-                    </CardContent>
-                  </Card>
-                </Grid>
-              ))}
-          </Grid>
-        </Container>
-
-        <Container className={classes.container}>
-          <div
-            className="officerHeading"
-            style={({ height: "100px" }, { padding: "50px 0 20px 0" })}
-          >
-            <h2>
-              <center>Faculty Advisors</center>
-            </h2>
-          </div>
-          <Grid
-            container
-            spacing={5}
-            height="100%"
-            width="100%"
-            alignItems="stretch"
-            justify="space-evenly"
-          >
-            {officerList
-              .filter((person) => person.committee == "Faculty Advisors")
+              .filter((person) => {
+                if (committeeSelection == "ALL") return person;
+                else return person.committee.includes(committeeSelection);
+              })
               .map((officer) => (
                 <Grid className={classes.gridItem} item xs="6" sm="3">
                   <Card
