@@ -69,8 +69,9 @@ function App() {
               <PropsRoute exact path="/match4" eventHeading="Sign in to the SWE Match event" eventPoints={0} eventName = "Match Night 4" eventDate = "11/03/2020" secretWord = "competition" component={meetingform}/>
               <PropsRoute exact path="/match5" eventHeading="Sign in to the SWE Match event" eventPoints={0} eventName = "Match Night 5" eventDate = "11/10/2020" secretWord = "competition" component={meetingform}/>
               <PropsRoute exact path="/match6" eventHeading="Sign in to the SWE Match event" eventPoints={0} eventName = "Match Night 6" eventDate = "11/17/2020" secretWord = "competition" component={meetingform}/>
-              <PropsRoute exact path="/samsung" eventHeading="Sign in to the Samsung Collab with ACM + IEEE event" eventPoints={1} eventName = "Samsung Collab with ACM + IEEE" eventDate = "10/14/2020" secretWord = "questions" component={meetingform}/>
-              <PropsRoute exact path="/swe" eventHeading="Sign in to the Netflix Party/Game Night with other SWE Sections social" eventPoints={1} eventName = "Netflix Party/Game Night" eventDate = "10/17/2020" secretWord = "friends" component={meetingform}/>
+              <PropsRoute exact path="/interview" eventHeading="Sign in to the Technical Interview 101 with ACM event" eventPoints={1} eventName = "Technical Interview 101 with ACM" eventDate = "10/26/2020" secretWord = "internship" component={meetingform}/>
+              <PropsRoute exact path="/witb" eventHeading="Sign in to the Acing your Behavioral Interview with WITB event" eventPoints={1} eventName = "Acing your Behavioral Interview with WITB" eventDate = "10/28/2020" secretWord = "feedback" component={meetingform}/>
+              <PropsRoute exact path="/gamejam" eventHeading="Sign in to the Workshop" eventPoints={1} eventName = "SWE at HackUTD GameJam" eventDate = "10/27/2020" secretWord = "construct" component={meetingform}/>
           </Switch>
       </BrowserRouter>
     </MuiThemeProvider>
