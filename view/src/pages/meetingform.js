@@ -79,9 +79,36 @@ class meetingform extends Component {
 		this.setState({ loginLoading: true });
 		const memberData = {
 			email: this.state.email.toLowerCase(),
-			password: this.state.password
+			password: this.state.password,
+            eventPoints: this.props.eventPoints,
+            eventName: this.props.eventName,
+			eventDate: this.props.eventDate,
 		};
-		axios
+		if(this.state.secretWord.toLowerCase() === this.props.secretWord)
+		{
+			/*axios.all[(axios
+				.post('https://us-central1-swe-utd-portal.cloudfunctions.net/api/login', memberData), 
+				axios.post('https://us-central1-swe-utd-portal.cloudfunctions.net/api/newEvent', memberData) */
+				axios
+				.post('https://us-central1-swe-utd-portal.cloudfunctions.net/api/login', memberData)
+			.then((response) => {
+				console.log("in response");
+				console.log(response);
+					localStorage.setItem('AuthToken', `Bearer ${response.data.token}`);
+					this.setState({ 
+						loginLoading: false,
+					});		
+					this.props.history.push('/portal');
+			})
+			.catch((error) => {	
+				console.log(error);
+				this.setState({
+					errors: error.response.data,
+					loginLoading: false
+				});
+			});
+
+			{/*axios
 			.post('https://us-central1-swe-utd-portal.cloudfunctions.net/api/login', memberData)
 			.then((response) => {
 				localStorage.setItem('AuthToken', `Bearer ${response.data.token}`);
@@ -90,12 +117,18 @@ class meetingform extends Component {
 				});		
 				this.props.history.push('/portal');
 			})
-			.catch((error) => {				
-				this.setState({
-					errors: error.response.data,
-					loginLoading: false
-				});
+			axios
+				.post('https://us-central1-swe-utd-portal.cloudfunctions.net/api/newEvent', memberData)
+				.then(() => {
+					this.props.history.push('/');
+				}) */}
+		}
+		else {
+			this.state.errors.secretWord1 = "This secret word is invalid"
+			this.setState({
+				loginLoading: false
 			});
+		}
 	};
 
 	handleSignin = (event) => {
@@ -133,7 +166,7 @@ class meetingform extends Component {
 				});
 		}
 		else {
-			this.state.errors.secretWord = "This secret word is invalid"
+			this.state.errors.secretWord2 = "This secret word is invalid"
 			this.setState({
 				signinLoading: false
 			});
@@ -152,7 +185,6 @@ class meetingform extends Component {
 		return (
 			<div>
 				<NavBar />
-				
 				<div className={classNames('header', { 'ready': headerReady })}>
 					<p className="heading">{this.props.eventHeading}</p>
 				</div>
@@ -169,9 +201,10 @@ class meetingform extends Component {
 								<Typography component="h1" variant="h5">
 									Already a member? Log in!
 								</Typography>
-								<br/>					
+								<br/>				
 								<form className={classes.form} noValidate>
 								<Grid container spacing={2}>
+									<Grid item xs={12} sm={12}>
 									<TextField
 										variant="outlined"
 										required
@@ -181,13 +214,14 @@ class meetingform extends Component {
 										name="secretWord"
 										autoComplete="secretWord"
 										autoFocus
-										helperText={errors.secretWord}
-										error={errors.secretWord ? true : false}
+										helperText={errors.secretWord1}
+										error={errors.secretWord1 ? true : false}
 										onChange={this.handleChange}
-									/>						
+									/>	
+									</Grid>	
+									<Grid item xs={12} sm={12}>			
 									<TextField
 										variant="outlined"
-										margin="normal"
 										required
 										fullWidth
 										id="email"
@@ -198,9 +232,10 @@ class meetingform extends Component {
 										error={errors.email ? true : false}
 										onChange={this.handleChange}
 									/>
+									</Grid>	
+									<Grid item xs={12} sm={12}>
 									<TextField
 										variant="outlined"
-										margin="normal"
 										required
 										fullWidth
 										name="password"
@@ -212,6 +247,7 @@ class meetingform extends Component {
 										error={errors.password ? true : false}
 										onChange={this.handleChange}
 									/>
+									</Grid>
 									<Button
 										type="login"
 										fullWidth
@@ -219,7 +255,7 @@ class meetingform extends Component {
 										color="primary"
 										className={classes.login}
 										onClick={this.handleLogin}
-										disabled={loginLoading || !this.state.email || !this.state.password}
+										disabled={loginLoading || !this.state.email || !this.state.password || !this.state.secretWord}
 									>
 										Log In
 										{loginLoading && <CircularProgress size={30} className={classes.progess} />}
@@ -257,8 +293,8 @@ class meetingform extends Component {
 												label="Secret Word (given out during meeting)"
 												name="secretWord"
 												autoComplete="secretWord"
-												helperText={errors.secretWord}
-												error={errors.secretWord ? true : false}
+												helperText={errors.secretWord2}
+												error={errors.secretWord2 ? true : false}
 												onChange={this.handleChange}
 											/>
 										</Grid>
