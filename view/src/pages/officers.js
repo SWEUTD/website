@@ -288,16 +288,21 @@ class officers extends Component {
             color="primary"
             aria-label="outlined primary button group"
           >
-            {boards.map((commiteeName) => (
+            {boards.map((committeeName) => (
               <Button
+                variant={
+                  committeeName === committeeSelection
+                    ? "contained"
+                    : "outlined"
+                }
                 onClick={() =>
                   this.setState({
                     ...this.state,
-                    committeeSelection: commiteeName,
+                    committeeSelection: committeeName,
                   })
                 }
               >
-                {commiteeName}
+                {committeeName}
               </Button>
             ))}
           </ButtonGroup>
