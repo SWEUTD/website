@@ -2,24 +2,25 @@ name: CI Deployement
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
+  pull_request:
+    branches: [master]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Checkout
         uses: actions/checkout@v2
-      
+
       - name: Build
         run: |
           npm install
           npm run-script build
         env:
-          REACT_APP_APIKey: ${{ secrets.REACT_APP_APIKey }}
-      
+          REACT_APP_APIKEY: ${{ secrets.REACT_APP_APIKEY }}
+
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
