@@ -10,6 +10,7 @@ import withStyles from '@material-ui/core/styles/withStyles';
 import Container from '@material-ui/core/Container'
 
 import NavBar from '../components/navbar'
+import Footer from '../components/footer'
 import Logo from '../assets/MatchLogo.png'
 
 const styles = (theme) => ({
@@ -99,6 +100,7 @@ class swematch extends Component {
 						<img class="movingItem" alt="SWEMatch logo" src={Logo} width="100%"/>
 					</div>
 				</Container>
+				<Footer />
 			</div>
 		);
 	}

@@ -8,6 +8,7 @@ import classNames from 'classnames';
 import withStyles from '@material-ui/core/styles/withStyles';
 import { Button, Divider, Grid, List, ListItem, ListSubheader } from '@material-ui/core'
 import NavBar from '../components/navbar'
+import Footer from '../components/footer'
 import { CenterFocusStrong } from '@material-ui/icons';
 
 const upcomingEvents = [
@@ -121,6 +122,7 @@ class events extends Component {
 							</div>
 						</Grid>
 					</Grid>
+					<Footer />
 				</div>
 			</div>
 		);

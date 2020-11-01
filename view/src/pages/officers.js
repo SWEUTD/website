@@ -8,6 +8,7 @@ import classNames from 'classnames';
 import withStyles from '@material-ui/core/styles/withStyles';
 import { Card, CardActions, CardContent, CssBaseline, Container, Divider, Button, Box, Grid, TextField, Typography } from '@material-ui/core';
 import NavBar from '../components/navbar'
+import Footer from '../components/footer'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
@@ -512,6 +513,7 @@ class officers extends Component {
 						))}
 					</Grid>
 				</Container>
+				<Footer />
 			</div>
 
 		);

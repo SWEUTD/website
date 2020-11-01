@@ -8,6 +8,7 @@ import classNames from 'classnames';
 import { Button, Grid, CardContent, CircularProgress, Container, Divider, FormControl, InputLabel, MenuItem, Select, TextField, Typography } from '@material-ui/core';
 
 import NavBar from '../components/navbar'
+import Footer from '../components/footer'
 
 import axios from 'axios';
 
@@ -465,6 +466,8 @@ class login extends Component {
 						</Grid>
 					</Grid>
 				</Container>
+				<br/><br/>
+				<Footer />
 			</div>
 		);
 	}

@@ -9,6 +9,7 @@ import withStyles from '@material-ui/core/styles/withStyles';
 
 import { Divider, FormControl, Grid, List, ListItem, ListItemText, ListSubheader } from '@material-ui/core'
 import NavBar from '../components/navbar'
+import Footer from '../components/footer'
 
 const styles = (theme) => ({
 	gridItem: {
@@ -131,6 +132,7 @@ class swestars extends Component {
 						</Grid>
 					</Grid>
 				</Grid>
+				<Footer />
 				</div>
 			</div>
 		);

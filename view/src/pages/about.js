@@ -84,6 +84,8 @@ class about extends Component {
 					<Grid className={classes.gridItem} style={{backgroundColor:"#DBC554", textAlign:"center", padding:'50px'}} item xs={12}>
 						<div align="center">
 							<h1>Awards</h1>
+							<br/>
+							<h3>SWE Mission Award 2020 - Silver</h3>
 							<h4>
 								The SWE Mission Awards recognize SWE groups that embody SWE core values and demonstrate continuous improvement and growth as they work to achieve the Society’s strategic goals. UT-Dallas SWE is proud to have been awarded a 2020 Collegiate Silver award.
 							</h4>
@@ -115,6 +117,9 @@ class about extends Component {
 									</div>
 								</Grid>	
 							</Grid>
+							<br/>
+							<h3>Outstanding Jonsson School Student Organization Award</h3>
+							<br/>
 						</div>
 					</Grid>
 					<Grid className={classes.gridItem} style={{backgroundColor:"white"}} item xs={12}>
