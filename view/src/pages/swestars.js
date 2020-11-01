@@ -16,6 +16,7 @@ import {
   ListSubheader,
 } from "@material-ui/core";
 import NavBar from "../components/navbar";
+import Footer from '../components/footer'
 import database from "../components/firebase";
 
 const styles = (theme) => ({
@@ -231,6 +232,7 @@ class swestars extends Component {
             </Grid>
             </div>
           </Grid>
+          <Footer />
         </div>
       </div>
     );

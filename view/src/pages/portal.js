@@ -28,7 +28,8 @@ import NotesIcon from "@material-ui/icons/Notes";
 import VideoLibrary from "@material-ui/icons/VideoLibrary";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 
-import NavBar from "../components/navbar";
+import NavBar from '../components/navbar'
+import Footer from '../components/footer'
 
 import { authMiddleWare } from "../util/auth";
 
@@ -214,6 +215,7 @@ class portal extends Component {
           <div>
             <Screen screen={this.state.render} />
           </div>
+        <Footer />
         </div>
       );
     }

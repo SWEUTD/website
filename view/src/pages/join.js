@@ -10,6 +10,7 @@ import withStyles from '@material-ui/core/styles/withStyles';
 import { Card, CardContent, Divider, Grid, List, ListItem } from '@material-ui/core'
 
 import NavBar from '../components/navbar'
+import Footer from '../components/footer'
 
 const styles = (theme) => ({
 	root:  {
@@ -152,7 +153,9 @@ class join extends Component {
 						</Grid>
 					</Grid>
 					</Grid>
+					<Footer />
 				</div>
+				
 			</div>
 		);
 	}

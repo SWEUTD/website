@@ -8,6 +8,7 @@ import classNames from "classnames";
 import withStyles from "@material-ui/core/styles/withStyles";
 import { Button, Divider, Grid, List, ListSubheader } from "@material-ui/core";
 import NavBar from "../components/navbar";
+import Footer from '../components/footer'
 
 import Technical_Interview_101 from "../assets/EventFlyers/Technical_Interview_101.png";
 import Technical_and_Behavioral_Interview from "../assets/EventFlyers/Technical_and_Behavioral_Interview.png";
@@ -165,6 +166,7 @@ class events extends Component {
               </div>
             </Grid>
           </Grid>
+          <Footer />
         </div>
       </div>
     );

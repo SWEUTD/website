@@ -10,6 +10,7 @@ import { Button, Container, CssBaseline, Grid} from '@material-ui/core'
 
 import Carousel from 'react-bootstrap/Carousel'
 import NavBar from '../components/navbar'
+import Footer from '../components/footer'
 
 // Slideshow Images
 import Image2 from '../assets/WEImages/1.HEIC'
@@ -109,7 +110,9 @@ class weconference extends Component {
 							</div>
 						</Grid>
 					</Grid>
+					<br/>
 				</Container>
+				<Footer />
 			</div>
 		);
 	}
