@@ -25,6 +25,12 @@ const upcomingEvents = [
 		date: '11/06/2020 - 12:00 PM',
 		description: "The Office of Research fosters the advancement of cutting-edge research discoveries and technology at the University of Texas at Dallas, an innovative institution in the heart of North Texas that has achieved Tier One national research status. Women have played an integral role in the tech world, which is constantly changing every day. Join us to learn more about how women in tech can contribute to the ongoing research in technology!",
 		link: 'https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffacebook.us19.list-manage.com%2Ftrack%2Fclick%3Fu%3Dada9150cb4cf2450b2870f9b7%26id%3Defd9f05be3%26e%3D09a746bd56&data=04%7C01%7CAarushi.Pandey%40UTDallas.edu%7Cefe56688b47b41ebc97a08d879dbf603%7C8d281d1d9c4d4bf7b16e032d15de9f6c%7C0%7C0%7C637393332941386649%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=5PlY2eMDQnTAqMYSllYTxjAI%2BCX7i0O6%2B%2B5NsOHTdro%3D&reserved=0'
+	},
+	{
+		name: 'hackTAMS Panel',
+		date: '11/07/2020 - 5:00 PM',
+		description: "",
+		link: 'https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffacebook.us19.list-manage.com%2Ftrack%2Fclick%3Fu%3Dada9150cb4cf2450b2870f9b7%26id%3D7c2b2569e4%26e%3D09a746bd56&data=04%7C01%7CAarushi.Pandey%40UTDallas.edu%7C1549fd44d61342cc1b3a08d87f77385a%7C8d281d1d9c4d4bf7b16e032d15de9f6c%7C0%7C0%7C637399497316161995%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=n4%2BPnRDbwnQClrDQiAX%2FBiHw5kqkxfSmZSIO%2FHeSMq8%3D&reserved=0'
 	}
 ];
 
@@ -113,10 +119,11 @@ class events extends Component {
 								<List alignItems="center">
 									<h4>{event.name}</h4>
 									<ListSubheader>{event.date}</ListSubheader>
-									<h5>{event.description}</h5><br />
+									{event.description != '' ?
+										(<div><h5>{event.description}</h5><br /> </div>) : null }
 									{event.link != '' && event.link != null
 										? (<div>
-												<Button href={event.link} align="center" variant="contained" color="primary">Join Meeting</Button>
+												<Button href={event.link} align="center" variant="contained" color="primary" position="relative" zIndex="-3000">Join Meeting</Button>
 												<br/>
 												<br/>
 											</div>)
