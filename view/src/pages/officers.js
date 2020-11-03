@@ -16,6 +16,8 @@ import {
   Grid,
 } from "@material-ui/core";
 import NavBar from "../components/navbar";
+import Footer from '../components/footer'
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
@@ -53,167 +55,167 @@ const officerList = [
     name: "Medha Aiyah",
     image: MedhaAiyah,
     position: "President",
-    committee: "Board Members",
+    committee: "Board",
     linkedin: "https://www.linkedin.com/in/medha-aiyah/",
   },
   {
     name: "Maaha Sakia",
     image: MaahaSakia,
     position: "Vice President of External Affairs",
-    committee: "Board Members",
+    committee: "Board",
     linkedin: "https://www.linkedin.com/in/maaha-sakhia-183298196/",
   },
   {
     name: "Cady Baltz",
     image: CadyBaltz,
     position: "Vice President of Internal Affairs",
-    committee: "Board Members",
+    committee: "Board",
     linkedin: "https://www.linkedin.com/in/cadybaltz/",
   },
   {
     name: "Arushi Agrawal",
     image: ArushiAgrawal,
     position: "Secretary, Social Committee Member",
-    committee: "Board Members, Outreach Committee",
+    committee: "Board, Outreach",
     linkedin: "https://www.linkedin.com/in/agrawal-arushi/",
   },
   {
     name: "Nivetha Narayanan",
     image: NivethaNarayanan,
     position: "Treasurer",
-    committee: "Board Members",
+    committee: "Board",
     linkedin: "https://www.linkedin.com/in/nivetha-narayanan-751ab8167/",
   },
   {
     name: "Afrida Tasnim",
     image: AfridaTasnim,
     position: "WEHack Co-Director",
-    committee: "Board Members",
+    committee: "Board",
     linkedin: "https://www.linkedin.com/in/afrida-tasnim/",
   },
   {
     name: "Angelle Nazareno",
     image: AngelleNazareno,
-    committee: "Board Members",
+    committee: "Board",
     position: "Design Chair",
   },
   {
     name: "Shivani Gandhi",
     image: ShivaniGandhi,
     position: "Marketing Chair",
-    committee: "Board Members",
+    committee: "Board",
     linkedin: "https://www.linkedin.com/in/shivanirgandhi/",
   },
   {
     name: "Deesha Kumbham",
     image: DeeshaKumbham,
     position: "Conference Committee Chair",
-    committee: "Board Members",
+    committee: "Board",
     linkedin: "https://www.linkedin.com/in/deesha-kumbham-86b4b6196/",
   },
   {
     name: "Sindhu Boppudi",
     image: SindhuBoppudi,
     position: "Industry Chair",
-    committee: "Board Members",
+    committee: "Board",
     linkedin: "https://www.linkedin.com/in/sindhuraboppudi/",
   },
   {
     name: "Janrose Samson",
     image: JanroseSamson,
     position: "Community Outreach Chair",
-    committee: "Board Members",
+    committee: "Board",
     linkedin: "https://www.linkedin.com/in/janrosesamson/",
   },
   {
     name: "Michaela Perez",
     image: MichaelaPerez,
     position: "Operations Chair",
-    committee: "Board Members",
+    committee: "Board",
     linkedin: "https://www.linkedin.com/in/michaela-perez/",
   },
   {
     name: "Caitlin Tibbetts",
     image: CaitlinTibbetts,
     position: "Competition Chair",
-    committee: "Board Members",
+    committee: "Board",
     linkedin: "https://www.linkedin.com/in/caitlin-tibbetts/",
   },
   {
     name: "Areeba Qazi",
     image: AreebaQazi,
     position: "Webmaster Chair",
-    committee: "Board Members",
+    committee: "Board",
     linkedin: "https://www.linkedin.com/in/areebaqazi/",
   },
   {
     name: "Pallavi Vayalali",
     image: PallaviVayalali,
     position: "Conference Committee Member",
-    committee: "Conference Committee",
+    committee: "Conference",
     linkedin: "https://www.linkedin.com/in/pallavi-vayalali/",
   },
   {
     name: "Hansika Sundaresan",
     image: HansikaSundaresan,
     position: "Conference Committee Member",
-    committee: "Conference Committee",
+    committee: "Conference",
     linkedin: "https://www.linkedin.com/in/hansika-sundaresan/",
   },
   {
     name: "Jeshna Gupta",
     image: JeshnaGupta,
     position: "Industry Committee Member",
-    committee: "Industry Committee",
+    committee: "Industry",
     linkedin: "https://www.linkedin.com/in/jeshna-gupta/",
   },
   {
     name: "Aayushi Choudhary",
     image: AayushiChoudhary,
     position: "Marketing Committee Member",
-    committee: "Marketing Committee",
+    committee: "Marketing",
     linkedin: "https://www.linkedin.com/in/aayushitech/",
   },
   {
     name: "Vamika Chatlani",
     image: VamikaChatlani,
     position: "Marketing Committee Member",
-    committee: "Marketing Committee",
+    committee: "Marketing",
     linkedin: "https://www.linkedin.com/in/vamika-chatlani-b844aa16b/",
   },
   {
     name: "Shreya Chauk",
     image: ShreyaChauk,
     position: "Outreach Committee Member",
-    committee: "Outreach Committee",
+    committee: "Outreach",
     linkedin: "https://www.linkedin.com/in/shreyachauk/",
   },
   {
     name: "Gabrielle Duncan",
     image: GabrielleDuncan,
     position: "Volunteering Committee Member",
-    committee: "Outreach Committee",
+    committee: "Outreach",
     linkedin: "https://www.linkedin.com/in/gabrielle-duncan-085822185/",
   },
   {
     name: "Reshmi Ranjith",
     image: ReshmiRanjith,
     position: "Website Development Committee Member",
-    committee: "Website Development Committee",
+    committee: "Website Development",
     linkedin: "https://www.linkedin.com/in/reshmi-ranjith/",
   },
   {
     name: "Aarushi Pandey",
     image: AarushiPandey,
     position: "Website Development Committee Member",
-    committee: "Website Development Committee",
+    committee: "Website Development",
     linkedin: "https://www.linkedin.com/in/aarushi-s-pandey/",
   },
   {
     name: "Mansha Fatima",
     image: ManshaFatima,
     position: "Website Development Committee Member",
-    committee: "Website Development Committee",
+    committee: "Website Development",
     linkedin: "https://www.linkedin.com/in/mansha-fatima-2a485412b/",
   },
   {
@@ -250,7 +252,6 @@ const styles = (theme) => ({
   image: {
     width: "80%",
     borderRadius: "50%",
-    height: "200px",
   },
   officerHeading: {},
 });
@@ -260,11 +261,13 @@ class officers extends Component {
     super(props);
     this.state = { headerReady: false };
   }
+
   componentDidMount() {
     setTimeout(() => {
       this.setState({ headerReady: true, committeeSelection: "ALL" });
     }, 0);
   }
+
   render() {
     const { headerReady, committeeSelection } = this.state;
     const { classes } = this.props;
@@ -287,6 +290,8 @@ class officers extends Component {
           <ButtonGroup
             color="primary"
             aria-label="outlined primary button group"
+            fullWidth="true"
+            orientation={window.innerWidth < 900 ? "vertical" : "horizontal"}
           >
             {boards.map((committeeName) => (
               <Button
@@ -317,8 +322,6 @@ class officers extends Component {
           <Grid
             container
             spacing={5}
-            height="100%"
-            width="100%"
             alignItems="stretch"
             justify="space-evenly"
           >

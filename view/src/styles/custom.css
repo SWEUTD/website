@@ -16,11 +16,18 @@ a {
   color: #5A5377;
 }
 
+li a {
+  color: #929598;
+}
 
 a:hover {
   text-decoration: underline;
   text-decoration-style: dashed;
   text-decoration-color: #5A5377;
+}
+
+li a:hover {
+  color: white; 
 }
 
 #mc_embed_signup {
