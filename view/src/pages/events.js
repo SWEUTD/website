@@ -138,6 +138,7 @@ class events extends Component {
 							</div>
 						</Grid>
 					</Grid>
+					<Footer/>
 				</div>
 			</div>
 		);
