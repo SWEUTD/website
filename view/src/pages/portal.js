@@ -215,7 +215,6 @@ class portal extends Component {
           <div>
             <Screen screen={this.state.render} />
           </div>
-        <Footer />
         </div>
       );
     }

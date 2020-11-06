@@ -361,6 +361,8 @@ class officers extends Component {
               ))}
           </Grid>
         </Container>
+        <br/>
+        <Footer />
       </div>
     );
   }
