@@ -69,7 +69,8 @@ function App() {
               <PropsRoute exact path="/match4" eventHeading="Sign in to the SWE Match event" eventPoints={0} eventName = "Match Night 4" eventDate = "11/03/2020" secretWord = "competition" component={meetingform}/>
               <PropsRoute exact path="/match5" eventHeading="Sign in to the SWE Match event" eventPoints={0} eventName = "Match Night 5" eventDate = "11/10/2020" secretWord = "competition" component={meetingform}/>
               <PropsRoute exact path="/match6" eventHeading="Sign in to the SWE Match event" eventPoints={0} eventName = "Match Night 6" eventDate = "11/17/2020" secretWord = "competition" component={meetingform}/>
-              <PropsRoute exact path="/usaa" eventHeading="Sign in to the USAA Tech Talk" eventPoints={1} eventName = "USAA Tech Talk" eventDate = "11/5/2020" secretWord = "finance" component={meetingform}/>
+              <PropsRoute exact path="/diversity" eventHeading="Sign in to the Diversity and Inclusion in Research Collab with ACM and WWC" eventPoints={1} eventName = "Diversity and Inclusion in Research Collab" eventDate = "11/6/2020" secretWord = "facts" component={meetingform}/>
+              <PropsRoute exact path="/hack" eventHeading="Sign in to the hackTAMS Panel" eventPoints={1} eventName = "hackTAMS Panel" eventDate = "11/7/2020" secretWord = "advice" component={meetingform}/>
           </Switch>
       </BrowserRouter>
     </MuiThemeProvider>

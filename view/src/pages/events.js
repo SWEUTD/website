@@ -15,12 +15,6 @@ import Technical_and_Behavioral_Interview from "../assets/EventFlyers/Technical_
 
 const upcomingEvents = [
 	{
-		name: 'USAA Tech Talk',
-		date: '11/05/2020 - 6:30 PM',
-		description: "Come learn about the “Tech” part of “InsureTech”, meaning how financial institutions are leveraging cutting-edge technology to do things to help USAA's customers like never before.",
-		link: 'https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffacebook.us19.list-manage.com%2Ftrack%2Fclick%3Fu%3Dada9150cb4cf2450b2870f9b7%26id%3D02b7e8d6e8%26e%3D09a746bd56&data=04%7C01%7CAarushi.Pandey%40UTDallas.edu%7Cefe56688b47b41ebc97a08d879dbf603%7C8d281d1d9c4d4bf7b16e032d15de9f6c%7C0%7C0%7C637393332941376655%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=WZXEFGul5yVU9BKVwxFTloZ0g%2BLCe6DVXz7p%2B%2FDlcZk%3D&reserved=0'
-	},
-	{
 		name: 'Diversity and Inclusion in Research Collab with ACM and WWC',
 		date: '11/06/2020 - 12:00 PM',
 		description: "The Office of Research fosters the advancement of cutting-edge research discoveries and technology at the University of Texas at Dallas, an innovative institution in the heart of North Texas that has achieved Tier One national research status. Women have played an integral role in the tech world, which is constantly changing every day. Join us to learn more about how women in tech can contribute to the ongoing research in technology!",
