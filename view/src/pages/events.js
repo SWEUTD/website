@@ -7,11 +7,11 @@ import classNames from "classnames";
 
 import withStyles from "@material-ui/core/styles/withStyles";
 import { Button, Divider, Grid, List, ListSubheader } from "@material-ui/core";
+import {Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@material-ui/core';
 import NavBar from "../components/navbar";
 import Footer from '../components/footer'
 
-import Technical_Interview_101 from "../assets/EventFlyers/Technical_Interview_101.png";
-import Technical_and_Behavioral_Interview from "../assets/EventFlyers/Technical_and_Behavioral_Interview.png";
+import IBM_TST from "../assets/EventFlyers/IBM_TST.png";
 
 const upcomingEvents = [
 	{
@@ -35,18 +35,19 @@ const upcomingEvents = [
 ];
 
 const flyers = [
-  {
-    /*
 	{
-		image: Technical_Interview_101,
-		link: 'https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffacebook.us19.list-manage.com%2Ftrack%2Fclick%3Fu%3Dada9150cb4cf2450b2870f9b7%26id%3Ddd4687d47c%26e%3D09a746bd56&data=04%7C01%7CAarushi.Pandey%40UTDallas.edu%7Cefe56688b47b41ebc97a08d879dbf603%7C8d281d1d9c4d4bf7b16e032d15de9f6c%7C0%7C0%7C637393332941356668%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=d0R512exKHscB8NjKQtF3fIvFO6cnr7AOfHharMnLiY%3D&reserved=0'
+		image: IBM_TST,
+		link: ''
 	},
 	{
-		image: Technical_and_Behavioral_Interview,
-		link: 'https://xxx.com'
+		image: '',
+		link: ''
 	},
-*/
-  },
+	{
+		image: '',
+		link: ''
+	}
+	
 ];
 
 const styles = (theme) => ({
@@ -59,7 +60,24 @@ const styles = (theme) => ({
     flexDirection: "column",
     width: "100%",
   },
+  table: {
+	minWidth: "50%",
+	maxWidth: "70%",
+  },
+  imgResponsive: {
+	width: "200 px",
+  }
 });
+
+function createData(event, flyer) {
+	return { event, flyer };
+  }
+
+const rows = [
+	createData(upcomingEvents[0], flyers[0].image),
+	createData(upcomingEvents[1], flyers[1].image),
+	createData(upcomingEvents[2], flyers[2].image),
+  ];
 
 class events extends Component {
   constructor(props) {
@@ -71,6 +89,8 @@ class events extends Component {
       this.setState({ headerReady: true });
     }, 0);
   }
+  
+  
   render() {
     const { headerReady } = this.state;
     const { classes } = this.props;
@@ -89,7 +109,7 @@ class events extends Component {
             alignItems="stretch"
             justify="space-evenly"
             className={classes.gridItem}
-            style={{ padding: "40px" }}
+            style={{ "padding-top": "40px" }}
           >
             {/*
 					 <Grid container
@@ -114,31 +134,45 @@ class events extends Component {
 							))}
 						</Grid> 
 							*/}
-						<Grid item md={3} xs={12} className={classes.gridItem}>
 							<div align="center">
 								<h1>Upcoming Events</h1>
-								<br/>
-								{upcomingEvents.map((event) => (
-								<List alignItems="center">
-									<h4>{event.name}</h4>
-									<ListSubheader>{event.date}</ListSubheader>
-									{event.description != '' ?
-										(<div><h5>{event.description}</h5><br /> </div>) : null }
-									{event.link != '' && event.link != null
-										? (<div>
-												<Button href={event.link} align="center" variant="contained" color="primary" position="relative" zIndex="-3000">Join Meeting</Button>
-												<br/>
-												<br/>
-											</div>)
-										: null
-									}
-									<Divider/>
-								</List>
-								))}
 							</div>
-						</Grid>
 					</Grid>
-					<Footer/>
+					<TableContainer component={Paper} align="center">
+      <Table className={classes.table} aria-label="simple table">
+        <TableHead>
+          <TableRow>
+            <TableCell align="center" width="45%"><h2></h2></TableCell>
+            <TableCell align="center" width="55%"><h2></h2></TableCell>
+          </TableRow>
+		</TableHead>
+        <TableBody>
+          {rows.map((row) => (
+            <TableRow key={row.event.name}>
+              <TableCell component="th" scope="row" align="center">
+			  <br/>
+				<h4>{row.event.name}</h4>
+				<ListSubheader>{row.event.date}</ListSubheader>
+				{row.event.description != '' ?
+				(<div><h5 align="left">{row.event.description}</h5><br /> </div>) : null }
+				{row.event.link != '' && row.event.link != null
+				? (<div>
+				<Button href={row.event.link} align="center" variant="contained" color="primary" position="relative" zIndex="-3000">Join Meeting</Button>
+				<br/>
+				<br/>
+				</div>)
+				: null
+				}
+			  </TableCell>
+			  <TableCell component="th" scope="row" align="center">
+			  {row.flyer != '' ?
+				(<img src={row.flyer} width="55%" />) : null }
+              </TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
 				</div>
 			</div>
 		);
