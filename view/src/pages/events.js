@@ -15,16 +15,22 @@ import Technical_and_Behavioral_Interview from "../assets/EventFlyers/Technical_
 
 const upcomingEvents = [
 	{
-		name: 'Diversity and Inclusion in Research Collab with ACM and WWC',
-		date: '11/06/2020 - 12:00 PM',
-		description: "The Office of Research fosters the advancement of cutting-edge research discoveries and technology at the University of Texas at Dallas, an innovative institution in the heart of North Texas that has achieved Tier One national research status. Women have played an integral role in the tech world, which is constantly changing every day. Join us to learn more about how women in tech can contribute to the ongoing research in technology!",
-		link: 'https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffacebook.us19.list-manage.com%2Ftrack%2Fclick%3Fu%3Dada9150cb4cf2450b2870f9b7%26id%3Defd9f05be3%26e%3D09a746bd56&data=04%7C01%7CAarushi.Pandey%40UTDallas.edu%7Cefe56688b47b41ebc97a08d879dbf603%7C8d281d1d9c4d4bf7b16e032d15de9f6c%7C0%7C0%7C637393332941386649%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=5PlY2eMDQnTAqMYSllYTxjAI%2BCX7i0O6%2B%2B5NsOHTdro%3D&reserved=0'
+		name: 'IBM TST - A Day in the Life',
+		date: '11/16/2020 - 4:30 PM',
+		description: "SWE and IBM's Technical Sales Track will be featuring 4 experienced professionals who will be talking about their career paths and roles at IBM to give some insight on the job scope of various roles. Panelists include Cloud Architect (Data and AI), Software Engineer (Cloud and Cognitive Software), Client Technical Manager (System z), Project Manager (Services). All from STEM backgrounds, they will be describing their roles and answering questions so that you can learn about possible future opportunities. Register here: https://www.eventbrite.com/e/swe-utd-ibm-technical-sales-track-tickets-126137607981.",
+		link: ''
 	},
 	{
-		name: 'hackTAMS Panel',
-		date: '11/07/2020 - 5:00 PM',
-		description: "",
-		link: 'https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffacebook.us19.list-manage.com%2Ftrack%2Fclick%3Fu%3Dada9150cb4cf2450b2870f9b7%26id%3D7c2b2569e4%26e%3D09a746bd56&data=04%7C01%7CAarushi.Pandey%40UTDallas.edu%7C1549fd44d61342cc1b3a08d87f77385a%7C8d281d1d9c4d4bf7b16e032d15de9f6c%7C0%7C0%7C637399497316161995%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=n4%2BPnRDbwnQClrDQiAX%2FBiHw5kqkxfSmZSIO%2FHeSMq8%3D&reserved=0'
+		name: 'Friendsgiving Social',
+		date: '11/19/2020 - 4:00 PM',
+		description: "Come join us to celebrate the end of the semester and Thanksgiving! Don't miss a chance to meet fellow engineers/computer scientists from our co-hosts SHPE and other tech orgs.",
+		link: 'https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffacebook.us19.list-manage.com%2Ftrack%2Fclick%3Fu%3Dada9150cb4cf2450b2870f9b7%26id%3D2d083053fc%26e%3D09a746bd56&data=04%7C01%7CAarushi.Pandey%40UTDallas.edu%7C77361f5a3adf4e06325c08d8851c4af9%7C8d281d1d9c4d4bf7b16e032d15de9f6c%7C0%7C0%7C637405703858160604%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=jHu%2FiW1JZiMFWmHx186NbWoIX52S78pYzZLx%2B1iw3pg%3D&reserved=0'
+	},
+	{
+		name: 'Folsom HS Panel',
+		date: '11/20/2020',
+		description: "Join us for a discussion with Folsom HS SWE section in California to discuss ways to persevere and succeed in a male-dominated career and what these high school students could expect in college as an engineering and computer science major.",
+		link: ''
 	}
 ];
 
