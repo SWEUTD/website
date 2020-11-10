@@ -15,12 +15,15 @@ import Technical_and_Behavioral_Interview from "../assets/EventFlyers/Technical_
 
 const upcomingEvents = [
 <<<<<<< HEAD
+<<<<<<< HEAD
 	{
 		name: 'USAA Tech Talk',
 		date: '11/05/2020 - 6:30 PM',
 		description: "Come learn about the “Tech” part of “InsureTech”, meaning how financial institutions are leveraging cutting-edge technology to do things to help USAA's customers like never before.",
 		link: 'https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffacebook.us19.list-manage.com%2Ftrack%2Fclick%3Fu%3Dada9150cb4cf2450b2870f9b7%26id%3D02b7e8d6e8%26e%3D09a746bd56&data=04%7C01%7CAarushi.Pandey%40UTDallas.edu%7Cefe56688b47b41ebc97a08d879dbf603%7C8d281d1d9c4d4bf7b16e032d15de9f6c%7C0%7C0%7C637393332941376655%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=WZXEFGul5yVU9BKVwxFTloZ0g%2BLCe6DVXz7p%2B%2FDlcZk%3D&reserved=0'
 	},
+=======
+>>>>>>> 9a55a5f987a427f07d4fea4b6863064c592b81ad
 	{
 		name: 'Diversity and Inclusion in Research Collab with ACM and WWC',
 		date: '11/06/2020 - 12:00 PM',
@@ -33,6 +36,7 @@ const upcomingEvents = [
 		description: "",
 		link: 'https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffacebook.us19.list-manage.com%2Ftrack%2Fclick%3Fu%3Dada9150cb4cf2450b2870f9b7%26id%3D7c2b2569e4%26e%3D09a746bd56&data=04%7C01%7CAarushi.Pandey%40UTDallas.edu%7C1549fd44d61342cc1b3a08d87f77385a%7C8d281d1d9c4d4bf7b16e032d15de9f6c%7C0%7C0%7C637399497316161995%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=n4%2BPnRDbwnQClrDQiAX%2FBiHw5kqkxfSmZSIO%2FHeSMq8%3D&reserved=0'
 	}
+<<<<<<< HEAD
 =======
   {
     name: "Technical Interview 101 with ACM",
@@ -75,6 +79,8 @@ const upcomingEvents = [
       "https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffacebook.us19.list-manage.com%2Ftrack%2Fclick%3Fu%3Dada9150cb4cf2450b2870f9b7%26id%3Defd9f05be3%26e%3D09a746bd56&data=04%7C01%7CAarushi.Pandey%40UTDallas.edu%7Cefe56688b47b41ebc97a08d879dbf603%7C8d281d1d9c4d4bf7b16e032d15de9f6c%7C0%7C0%7C637393332941386649%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=5PlY2eMDQnTAqMYSllYTxjAI%2BCX7i0O6%2B%2B5NsOHTdro%3D&reserved=0",
   },
 >>>>>>> 031f73491acb49850a7c45ac30e5bf23b16ed25a
+=======
+>>>>>>> 9a55a5f987a427f07d4fea4b6863064c592b81ad
 ];
 
 const flyers = [
@@ -158,6 +164,9 @@ class events extends Component {
 						</Grid> 
 							*/}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 9a55a5f987a427f07d4fea4b6863064c592b81ad
 						<Grid item md={3} xs={12} className={classes.gridItem}>
 							<div align="center">
 								<h1>Upcoming Events</h1>
@@ -182,10 +191,15 @@ class events extends Component {
 							</div>
 						</Grid>
 					</Grid>
+<<<<<<< HEAD
+=======
+					<Footer/>
+>>>>>>> 9a55a5f987a427f07d4fea4b6863064c592b81ad
 				</div>
 			</div>
 		);
 	}
+<<<<<<< HEAD
 =======
             <Grid item md={3} xs={12} className={classes.gridItem}>
               <div align="center">
@@ -223,6 +237,8 @@ class events extends Component {
     );
   }
 >>>>>>> 031f73491acb49850a7c45ac30e5bf23b16ed25a
+=======
+>>>>>>> 9a55a5f987a427f07d4fea4b6863064c592b81ad
 }
 
 export default withStyles(styles)(events);
