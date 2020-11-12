@@ -1,6 +1,6 @@
-// event.js
+// resources.js
 
-// component for displaying user's event history and points status
+// component for displaying exclusive resources for SWEsters
 
 import React, { Component } from "react";
 
@@ -125,7 +125,6 @@ class event extends Component {
 
   render() {
     const { classes } = this.props;
-
     if (this.state.uiLoading === true) {
       return (
         <main className={classes.content}>
@@ -137,11 +136,46 @@ class event extends Component {
       );
     } else {
       return (
-        <div>
+        <main className={classes.content}>
           <div className={classes.toolbar} />
           <br />
-          
-        </div>
+          <Card
+            className={classes.details}
+            className="movingItem"
+            variant="outlined"
+          >
+            <CardContent>
+              <div className={classes.details}>
+                <div>
+                  <br />
+                  <h1>Resources</h1>
+                </div>
+              </div>
+              <div className={classes.progress} />
+            </CardContent>
+          </Card>
+          <br />
+          <Card
+            className={classes.details}
+            className="movingItem"
+            variant="outlined"
+          >
+            <CardContent>
+              <div className={classes.details}>
+                <div>
+                  <br />
+                  <h5>Question question question question question?</h5>
+                  <p>Quis amet tempor magna mollit ad voluptate exercitation magna duis ea. 
+                    Pariatur ea qui nisi aliquip laboris consectetur consequat consectetur laboris. 
+                    Pariatur anim eiusmod deserunt ad consequat eu. Adipisicing proident id nulla et et labore sunt anim esse pariatur ea. 
+                    Fugiat enim ea mollit nostrud esse anim ut ipsum est. Veniam aute aute pariatur est. 
+                    Qui mollit excepteur nisi est tempor voluptate.</p>
+                </div>
+              </div>
+              <div className={classes.progress} />
+            </CardContent>
+          </Card>
+        </main>
       );
     }
   }
