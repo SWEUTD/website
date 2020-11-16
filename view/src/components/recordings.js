@@ -10,6 +10,10 @@ import axios from "axios";
 import { authMiddleWare } from "../util/auth";
 
 const videos = [
+  {
+		link: 'https://www.youtube.com/embed/UfW7lxHX5cc',
+		title: 'Diversity and Inclusion Research Panel - 11/6/2020', 
+	},
 	{
 		link: 'https://youtube.com/embed/UY3S_uQLyik',
 		title: 'Beginner Game Development with Construct 3 by SWE - 10/27/2020', 
