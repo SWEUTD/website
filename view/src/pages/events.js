@@ -66,6 +66,9 @@ const styles = (theme) => ({
   },
   imgResponsive: {
 	width: "200 px",
+  },
+  appBar: {
+    zIndex: theme.zIndex.drawer + 1,
   }
 });
 
@@ -96,7 +99,7 @@ class events extends Component {
     const { classes } = this.props;
     return (
       <div className={classes.root}>
-        <NavBar />
+            <NavBar />
         <div className={classNames("header", { ready: headerReady })}>
           <p className="heading">Events</p>
         </div>

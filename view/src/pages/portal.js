@@ -167,9 +167,9 @@ class portal extends Component {
             <Divider />
             <br />
             <center width="drawerWidth">
-              <p>
+              <h4>
                 {this.state.firstName} {this.state.lastName}
-              </p>
+              </h4>
             </center>
             <Divider />
 

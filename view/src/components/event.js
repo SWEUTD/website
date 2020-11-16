@@ -3,6 +3,7 @@
 // component for displaying user's event history and points status
 
 import React, { Component } from "react";
+import {Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@material-ui/core';
 
 import withStyles from "@material-ui/core/styles/withStyles";
 import {
@@ -128,18 +129,24 @@ class event extends Component {
     const history = this.state.events
       .slice(0)
       .reverse()
-      .map((item, key) => (
-        <div fullWidth>
-          <br />
-          <table width="100%">
-            <tr>
-              <td align="left">{item.eventName}</td>
-              <td align="left">{item.eventDate}</td>
-              <td align="right">{item.eventPoints} pt</td>
-            </tr>
-          </table>
-          <br />
-        </div>
+      .map ((item, key) => (
+        <TableContainer component={Paper} align="center">
+      <Table className={classes.table} aria-label="simple table">
+        <TableBody>
+        <TableRow key={key}>
+              <TableCell component="th" width="60%" scope="row" align="center">
+                {item.eventName}
+              </TableCell>
+              <TableCell component="th" width="25%" scope="row" align="center">
+                {item.eventDate}
+              </TableCell>
+              <TableCell component="th" width="15%" scope="row" align="center">
+                {item.eventPoints} pt
+              </TableCell>
+        </TableRow>
+        </TableBody>
+        </Table>
+        </TableContainer>
       ));
 
     const previousPoints = this.state.previousPoints.map((item, key) => (
@@ -298,6 +305,8 @@ class event extends Component {
               >
                 <CardContent height="100%" align="center">
                   <h1 align="center">Your Attendance History</h1>
+                  <Divider />
+                  <br/>
                   <Divider />
                   {history}
                 </CardContent>
