@@ -9,9 +9,9 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import { Button, Divider, Grid, List, ListSubheader } from "@material-ui/core";
 import {Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@material-ui/core';
 import NavBar from "../components/navbar";
-import Footer from '../components/footer'
 
 import IBM_TST from "../assets/EventFlyers/IBM_TST.png";
+import Friendsgiving from "../assets/EventFlyers/Friendsgiving.png";
 
 const upcomingEvents = [
 	{
@@ -40,7 +40,7 @@ const flyers = [
 		link: ''
 	},
 	{
-		image: '',
+		image: Friendsgiving,
 		link: ''
 	},
 	{
