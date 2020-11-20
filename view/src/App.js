@@ -69,7 +69,7 @@ function App() {
               <PropsRoute exact path="/match4" eventHeading="Sign in to the SWE Match event" eventPoints={0} eventName = "Match Night 4" eventDate = "11/03/2020" secretWord = "competition" component={meetingform}/>
               <PropsRoute exact path="/match5" eventHeading="Sign in to the SWE Match event" eventPoints={0} eventName = "Match Night 5" eventDate = "11/10/2020" secretWord = "competition" component={meetingform}/>
               <PropsRoute exact path="/match6" eventHeading="Sign in to the SWE Match event" eventPoints={0} eventName = "Match Night 6" eventDate = "11/17/2020" secretWord = "competition" component={meetingform}/>
-              <PropsRoute exact path="/present" eventHeading="Sign in to the Match Presentation Night" eventPoints={0} eventName = "Match Presentation Night" eventDate = "11/20/2020" secretWord = "competition" component={meetingform}/>
+              <PropsRoute exact path="/present" eventHeading="Sign in to the Match Presentation Night" eventPoints={1} eventName = "Match Presentation Night" eventDate = "11/20/2020" secretWord = "competition" component={meetingform}/>
               <PropsRoute exact path="/panel" eventHeading="Sign in to the Folsom HS Panel" eventPoints={1} eventName = "Folsom HS Panel" eventDate = "11/20/2020" secretWord = "career" component={meetingform}/>
           </Switch>
       </BrowserRouter>
