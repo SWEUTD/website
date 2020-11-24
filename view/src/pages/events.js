@@ -14,29 +14,9 @@ import Folsom_HS_Panel from "../assets/EventFlyers/Folsom_HS_Panel.png";
 import SWE_Match_Presentation from "../assets/EventFlyers/SWE_Match_Presentation.png"
 
 const upcomingEvents = [
-	{
-		name: 'SWE Match Presentation Night',
-		date: '11/20/2020 - 7:00 PM',
-		description: "Hey y'all! SWE Match is a virtual engineering competition run by SWE UTD! We have our Fall Presentation Night coming up on Friday, November 20th at 7 PM on Teams! The competitors have been working super hard this semester on their impactful projects, so this is a night you will not want to miss!",
-		link: 'https://teams.microsoft.com/l/meetup-join/19%3a5b52916c6b544a9eba19736b1b82f4cc%40thread.tacv2/1605305403583?context=%7b%22Tid%22%3a%228d281d1d-9c4d-4bf7-b16e-032d15de9f6c%22%2c%22Oid%22%3a%22c8b45e33-89cb-466e-91f4-ac79324cea15%22%7d'
-	},
-	{
-		name: 'Folsom HS Panel',
-		date: '11/20/2020 - 1:30 PM',
-		description: "Join us for a discussion with Folsom HS SWE section in California to discuss ways to persevere and succeed in a male-dominated career and what these high school students could expect in college as an engineering and computer science major.",
-		link: ''
-	}
 ];
 
 const flyers = [
-	{
-		image: SWE_Match_Presentation,
-		link: ''
-	},
-	{
-		image: Folsom_HS_Panel,
-		link: ''
-	}
 	
 ];
 
@@ -67,8 +47,6 @@ function createData(event, flyer) {
   }
 
 const rows = [
-	createData(upcomingEvents[0], flyers[0].image),
-	createData(upcomingEvents[1], flyers[1].image),
   ];
 
 class events extends Component {
@@ -127,9 +105,10 @@ class events extends Component {
 						</Grid> 
 							*/}
 							<div align="center">
-								<h1>Upcoming Events</h1>
+								<h1>Stay tuned for Upcoming Events for Spring 2021!</h1>
 							</div>
 					</Grid>
+					{/*
 					<TableContainer component={Paper} align="center">
       <Table className={classes.table} aria-label="simple table">
         <TableHead>
@@ -164,7 +143,7 @@ class events extends Component {
           ))}
         </TableBody>
       </Table>
-    </TableContainer>
+			</TableContainer> */}
 				</div>
 			</div>
 		);
