@@ -98,19 +98,17 @@ class meetingform extends Component {
     if (this.state.secretWord.toLowerCase() === this.props.secretWord) {
       axios
         .all([
-          /*axios.post(
+          axios.post(
             "https://us-central1-swe-utd-portal.cloudfunctions.net/api/login",
             memberData
-          ),*/
+          ),
           axios.post(
             "https://us-central1-swe-utd-portal.cloudfunctions.net/api/newEvent",
             memberData
           ),
         ])
         .then((resArr) => {
-          console.log("in response");
-          console.log(resArr);
-          //localStorage.setItem("AuthToken", `Bearer ${resArr[0].data.token}`);
+          localStorage.setItem("AuthToken", `Bearer ${resArr[0].data.token}`);
           this.setState({
             loginLoading: false,
           });
@@ -122,44 +120,6 @@ class meetingform extends Component {
             signinLoading: false,
           });
         });
-      /*axios
-        .post(
-          "https://us-central1-swe-utd-portal.cloudfunctions.net/api/login",
-          memberData
-        )
-        .then((response) => {
-          console.log("in response");
-          console.log(response);
-          localStorage.setItem("AuthToken", `Bearer ${response.data.token}`);
-          this.setState({
-            loginLoading: false,
-          });
-          this.props.history.push("/portal");
-        })
-        .catch((error) => {
-          console.log(error);
-          this.setState({
-            errors: error.response.data,
-            loginLoading: false,
-          });
-        });*/
-
-      {
-        /*axios
-			.post('https://us-central1-swe-utd-portal.cloudfunctions.net/api/login', memberData)
-			.then((response) => {
-				localStorage.setItem('AuthToken', `Bearer ${response.data.token}`);
-				this.setState({ 
-					loginLoading: false,
-				});		
-				this.props.history.push('/portal');
-			})
-			axios
-				.post('https://us-central1-swe-utd-portal.cloudfunctions.net/api/newEvent', memberData)
-				.then(() => {
-					this.props.history.push('/');
-				}) */
-      }
     } else {
       this.state.errors.secretWord1 = "This secret word is invalid";
       this.setState({
@@ -242,13 +202,13 @@ class meetingform extends Component {
                 <br />
                 <form className={classes.form} noValidate>
                   <Grid container spacing={2}>
-                    <Grid item xs={12} sm={12}>
+                    <Grid item xs={12} sm={6}>
                       <TextField
                         variant="outlined"
                         required
                         fullWidth
                         id="secretWord"
-                        label="Secret Word (given out during meeting)"
+                        label="Secret Word (given during meeting)"
                         name="secretWord"
                         autoComplete="secretWord"
                         autoFocus
@@ -260,6 +220,7 @@ class meetingform extends Component {
                     <Grid item xs={12} sm={6}>
                       <TextField
                         variant="outlined"
+                        required
                         fullWidth
                         id="netid"
                         label="NetID"
@@ -354,7 +315,7 @@ class meetingform extends Component {
                         required
                         fullWidth
                         id="secretWord"
-                        label="Secret Word (given out during meeting)"
+                        label="Secret Word (given during meeting)"
                         name="secretWord"
                         autoComplete="secretWord"
                         helperText={errors.secretWord2}

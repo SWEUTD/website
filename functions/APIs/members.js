@@ -185,7 +185,7 @@ exports.addEventMember = (request, response) => {
     netid: request.body.netid,
   };
 
-  if (phoneNumber != undefined) {
+  if (memberRequest.phoneNumber != undefined) {
     // trying to make a new user so validate
     const { valid, errors } = validateAddEventData(memberRequest);
     if (!valid) return response.status(400).json(errors);
