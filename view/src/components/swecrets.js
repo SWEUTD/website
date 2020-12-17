@@ -9,8 +9,8 @@ import {
   Card,
   CardContent,
   CircularProgress,
-  Divider,
-  Grid,
+  Button,
+  ButtonGroup,
 } from "@material-ui/core";
 import axios from "axios";
 import { authMiddleWare } from "../util/auth";
@@ -108,7 +108,8 @@ class event extends Component {
           netid: response.data.memberInfo.netid,
           events: response.data.memberInfo.events,
           points: response.data.memberInfo.points,
-          previousPoints: response.data.memberInfo.previousPoints || [],
+          previousPoints: response.data.memberInfo.previousPoints,
+          currentSection: "Referrals" || [],
           uiLoading: false,
         });
       })
@@ -125,6 +126,19 @@ class event extends Component {
 
   render() {
     const { classes } = this.props;
+    const currentSection = this.state;
+    const sectionList = [
+        "Referrals",
+        "Interview Questions",
+        "Company Info",
+        "Recruiters"
+    ];
+    const sections = [
+        "Referrals",
+        ...new Set(
+            sectionList
+        )
+    ];
     if (this.state.uiLoading === true) {
       return (
         <main className={classes.content}>
@@ -162,10 +176,30 @@ class event extends Component {
           >
             <CardContent>
               <div className={classes.details}>
-                <div>
-                  <br />
-
-                </div>
+                <ButtonGroup
+                    color="primary"
+                    aria-label="outlined primary button group"
+                    fullWidth="true"
+                    orientation={window.innerWidth < 900 ? "vertical" : "horizontal"}
+                >
+                    {sections.map((sectionName) => (
+                    <Button
+                        variant={
+                        sectionName === currentSection
+                            ? "contained"
+                            : "outlined"
+                        }
+                        onClick={() =>
+                        this.setState({
+                            ...this.state,
+                            currentSection: sectionName,
+                        })
+                        }
+                    >
+                        {sectionName}
+                    </Button>
+                    ))}
+                </ButtonGroup>
               </div>
               <div className={classes.progress} />
             </CardContent>
