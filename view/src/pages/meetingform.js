@@ -117,7 +117,7 @@ class meetingform extends Component {
         .catch((error) => {
           this.setState({
             errors: error.response.data,
-            signinLoading: false,
+            loginLoading: false,
           });
         });
     } else {
@@ -271,7 +271,8 @@ class meetingform extends Component {
                         loginLoading ||
                         !this.state.email ||
                         !this.state.password ||
-                        !this.state.secretWord
+                        !this.state.secretWord ||
+                        !this.state.netid
                       }
                     >
                       Log In

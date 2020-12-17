@@ -185,7 +185,7 @@ exports.addEventMember = (request, response) => {
     netid: request.body.netid,
   };
 
-  if (memberRequest.phoneNumber != undefined) {
+  if (memberRequest.firstName != undefined) {
     // trying to make a new user so validate
     const { valid, errors } = validateAddEventData(memberRequest);
     if (!valid) return response.status(400).json(errors);
@@ -213,6 +213,11 @@ exports.addEventMember = (request, response) => {
         db.doc(`/members/${memberRequest.netid}`).update(updatedMember);
         return response.status(200).json({ general: "Member updated" });
       } else {
+        if (memberRequest.firstName == undefined) {
+          return response.status(500).json({
+            general: "NetID not associated with an account.",
+          });
+        }
         // creates a new member in the database if the netid doesn't exist
         memberId = memberRequest.netid;
         const memberInfo = {
