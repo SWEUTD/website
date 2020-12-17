@@ -7,6 +7,7 @@ import axios from "axios";
 
 import Account from "../components/account";
 import Event from "../components/event";
+import SWEcrets from "../components/swecrets";
 import Recordings from "../components/recordings";
 
 import {
@@ -70,6 +71,8 @@ function Screen(props) {
     return <Account />;
   } else if (screen === "event") {
     return <Event />;
+  } else if (screen === "swecrets") {
+    return <SWEcrets />;
   } else if (screen === "recordings") {
     return <Recordings />;
   }
@@ -88,6 +91,10 @@ class portal extends Component {
   loadEventPage = (event) => {
     this.setState({ render: "event" });
   };
+
+  loadSwecrets = (event) => {
+    this.setState({ render: "swecrets" });
+  }
 
   loadRecordings = (event) => {
     this.setState({ render: "recordings" });
@@ -193,6 +200,14 @@ class portal extends Component {
                   <AccountBoxIcon />{" "}
                 </ListItemIcon>
                 <ListItemText primary="Account" />
+              </ListItem>
+
+              <ListItem button key="SWEcrets" onClick={this.loadSwecrets}>
+                <ListItemIcon>
+                  {" "}
+                  <AccountBoxIcon />{" "}
+                </ListItemIcon>
+                <ListItemText primary="SWEscrets" />
               </ListItem>
 
               <ListItem button key="Recordings" onClick={this.loadRecordings}>
