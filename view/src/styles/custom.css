@@ -102,7 +102,7 @@ li a:hover {
 .howTo{
 
   background: rgb(202,202,203);
-  background: linear-gradient(90deg, rgba(202,202,203,1) 8%, rgba(255,255,255,1) 50%, rgba(202,202,203,1) 93%);
+  background: linear-gradient(90deg, rgba(202, 202, 203, 0.651) 8%, rgba(255,255,255,1) 50%, rgba(202,202,203,1) 93%);
 
 }
 

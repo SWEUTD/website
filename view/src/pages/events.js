@@ -9,44 +9,14 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import { Button, Divider, Grid, List, ListSubheader } from "@material-ui/core";
 import {Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@material-ui/core';
 import NavBar from "../components/navbar";
-import Footer from '../components/footer'
 
-import IBM_TST from "../assets/EventFlyers/IBM_TST.png";
+import Folsom_HS_Panel from "../assets/EventFlyers/Folsom_HS_Panel.png";
+import SWE_Match_Presentation from "../assets/EventFlyers/SWE_Match_Presentation.png"
 
 const upcomingEvents = [
-	{
-		name: 'IBM TST - A Day in the Life',
-		date: '11/16/2020 - 4:30 PM',
-		description: "SWE and IBM's Technical Sales Track will be featuring 4 experienced professionals who will be talking about their career paths and roles at IBM to give some insight on the job scope of various roles. Panelists include Cloud Architect (Data and AI), Software Engineer (Cloud and Cognitive Software), Client Technical Manager (System z), Project Manager (Services). All from STEM backgrounds, they will be describing their roles and answering questions so that you can learn about possible future opportunities. Register here: https://www.eventbrite.com/e/swe-utd-ibm-technical-sales-track-tickets-126137607981.",
-		link: ''
-	},
-	{
-		name: 'Friendsgiving Social',
-		date: '11/19/2020 - 4:00 PM',
-		description: "Come join us to celebrate the end of the semester and Thanksgiving! Don't miss a chance to meet fellow engineers/computer scientists from our co-hosts SHPE and other tech orgs.",
-		link: 'https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffacebook.us19.list-manage.com%2Ftrack%2Fclick%3Fu%3Dada9150cb4cf2450b2870f9b7%26id%3D2d083053fc%26e%3D09a746bd56&data=04%7C01%7CAarushi.Pandey%40UTDallas.edu%7C77361f5a3adf4e06325c08d8851c4af9%7C8d281d1d9c4d4bf7b16e032d15de9f6c%7C0%7C0%7C637405703858160604%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=jHu%2FiW1JZiMFWmHx186NbWoIX52S78pYzZLx%2B1iw3pg%3D&reserved=0'
-	},
-	{
-		name: 'Folsom HS Panel',
-		date: '11/20/2020',
-		description: "Join us for a discussion with Folsom HS SWE section in California to discuss ways to persevere and succeed in a male-dominated career and what these high school students could expect in college as an engineering and computer science major.",
-		link: ''
-	}
 ];
 
 const flyers = [
-	{
-		image: IBM_TST,
-		link: ''
-	},
-	{
-		image: '',
-		link: ''
-	},
-	{
-		image: '',
-		link: ''
-	}
 	
 ];
 
@@ -66,6 +36,9 @@ const styles = (theme) => ({
   },
   imgResponsive: {
 	width: "200 px",
+  },
+  appBar: {
+    zIndex: theme.zIndex.drawer + 1,
   }
 });
 
@@ -74,9 +47,6 @@ function createData(event, flyer) {
   }
 
 const rows = [
-	createData(upcomingEvents[0], flyers[0].image),
-	createData(upcomingEvents[1], flyers[1].image),
-	createData(upcomingEvents[2], flyers[2].image),
   ];
 
 class events extends Component {
@@ -96,7 +66,7 @@ class events extends Component {
     const { classes } = this.props;
     return (
       <div className={classes.root}>
-        <NavBar />
+            <NavBar />
         <div className={classNames("header", { ready: headerReady })}>
           <p className="heading">Events</p>
         </div>
@@ -135,9 +105,10 @@ class events extends Component {
 						</Grid> 
 							*/}
 							<div align="center">
-								<h1>Upcoming Events</h1>
+								<h1>Stay tuned for Upcoming Events for Spring 2021!</h1>
 							</div>
 					</Grid>
+					{/*
 					<TableContainer component={Paper} align="center">
       <Table className={classes.table} aria-label="simple table">
         <TableHead>
@@ -172,7 +143,7 @@ class events extends Component {
           ))}
         </TableBody>
       </Table>
-    </TableContainer>
+			</TableContainer> */}
 				</div>
 			</div>
 		);
