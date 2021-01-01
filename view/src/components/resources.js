@@ -3,6 +3,7 @@
 // component for displaying exclusive resources for SWEsters
 
 import React, { Component } from "react";
+import Faq from 'react-faq-component';
 
 import withStyles from "@material-ui/core/styles/withStyles";
 import {
@@ -66,6 +67,27 @@ const styles = (theme) => ({
   },
 });
 
+const data = {
+  title: "FAQ (How it works)",
+  rows: [
+    {
+      title: "Lorem ipsum dolor sit amet,",
+      content: "Lorem ipsum dolor sit amet, consectetur "
+    },
+    {
+      title: "Nunc maximus, magna at ultricies elementum",
+      content: "Nunc maximus, magna at ultricies elementum, risus turpis vulputate quam."
+    },
+    {
+      title: "Curabitur laoreet, mauris vel blandit fringilla",
+      content: "Curabitur laoreet, mauris vel blandit fringilla, leo elit rhoncus nunc"
+    },
+    {
+      title: "What is the package version",
+      content: "v1.0.5"
+    }]
+}
+
 class event extends Component {
   constructor(props) {
     super(props);
@@ -124,18 +146,27 @@ class event extends Component {
   };
 
   render() {
+    
     const { classes } = this.props;
     if (this.state.uiLoading === true) {
       return (
+        <div>
         <main className={classes.content}>
           <div className={classes.toolbar} />
           {this.state.uiLoading && (
             <CircularProgress size={150} className={classes.uiProgess} />
           )}
         </main>
+        <main className={classes.content}>
+        <div className={classes.toolbar} />
+        <br />
+        <Faq data={data}/>
+      </main>
+      </div>
       );
     } else {
       return (
+        <div>
         <main className={classes.content}>
           <div className={classes.toolbar} />
           <br />
@@ -176,6 +207,12 @@ class event extends Component {
             </CardContent>
           </Card>
         </main>
+        <main className={classes.content}>
+        <div className={classes.toolbar} />
+        <br />
+        <Faq data={data}/>
+      </main>
+      </div>
       );
     }
   }
