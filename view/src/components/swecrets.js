@@ -82,6 +82,7 @@ class event extends Component {
       events: [],
       points: 0,
       previousPoints: [],
+      currentSection: "",
       uiLoading: true,
       buttonLoading: false,
       imageError: "",
@@ -108,8 +109,8 @@ class event extends Component {
           netid: response.data.memberInfo.netid,
           events: response.data.memberInfo.events,
           points: response.data.memberInfo.points,
-          previousPoints: response.data.memberInfo.previousPoints,
-          currentSection: "Referrals" || [],
+          previousPoints: response.data.memberInfo.previousPoints || [],
+          currentSection: "Referrals",
           uiLoading: false,
         });
       })
@@ -133,12 +134,7 @@ class event extends Component {
         "Company Info",
         "Recruiters"
     ];
-    const sections = [
-        "Referrals",
-        ...new Set(
-            sectionList
-        )
-    ];
+
     if (this.state.uiLoading === true) {
       return (
         <main className={classes.content}>
@@ -182,7 +178,7 @@ class event extends Component {
                     fullWidth="true"
                     orientation={window.innerWidth < 900 ? "vertical" : "horizontal"}
                 >
-                    {sections.map((sectionName) => (
+                    {sectionList.map((sectionName) => (
                     <Button
                         variant={
                         sectionName === currentSection
