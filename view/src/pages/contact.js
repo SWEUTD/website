@@ -9,6 +9,7 @@ import classNames from 'classnames';
 import axios from 'axios'
 import NavBar from '../components/navbar'
 import Mailchimp from '../components/mailchimp'
+import Footer from '../components/footer'
 
 const styles = (theme) => ({
 
@@ -198,7 +199,9 @@ class contact extends Component {
 							</Grid>
 						</Grid>
 					</div>
+					<br/>
 				</Container>
+				<Footer />
 			</div>
 		);
 	}

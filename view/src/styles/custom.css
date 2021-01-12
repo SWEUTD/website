@@ -16,11 +16,18 @@ a {
   color: #5A5377;
 }
 
+li a {
+  color: #929598;
+}
 
 a:hover {
   text-decoration: underline;
   text-decoration-style: dashed;
   text-decoration-color: #5A5377;
+}
+
+li a:hover {
+  color: white; 
 }
 
 #mc_embed_signup {
@@ -95,7 +102,7 @@ a:hover {
 .howTo{
 
   background: rgb(202,202,203);
-  background: linear-gradient(90deg, rgba(202,202,203,1) 8%, rgba(255,255,255,1) 50%, rgba(202,202,203,1) 93%);
+  background: linear-gradient(90deg, rgba(202, 202, 203, 0.651) 8%, rgba(255,255,255,1) 50%, rgba(202,202,203,1) 93%);
 
 }
 

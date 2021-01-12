@@ -6,6 +6,7 @@ import React, { Component } from 'react';
 import withStyles from '@material-ui/core/styles/withStyles';
 import Slideshow from '../components/slideshow.js'
 import NavBar from '../components/navbar'
+import Footer from '../components/footer'
 
 const styles = (theme) => ({
 
@@ -18,6 +19,7 @@ class home extends Component {
 			<div className={classes.root}>
 				<NavBar />
 				<Slideshow/>
+				<Footer />
 			</div>
 		);
 	}
