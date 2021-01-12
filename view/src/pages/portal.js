@@ -8,6 +8,7 @@ import axios from "axios";
 import Account from "../components/account";
 import Event from "../components/event";
 import Recordings from "../components/recordings";
+import AlumniList from "../components/alumniList";
 
 import {
   CircularProgress,
