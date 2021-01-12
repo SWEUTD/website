@@ -165,6 +165,28 @@ exports.updateMemberDetails = (request, response) => {
     });
 };
 
+// get a list of users for the alumni page
+exports.getAlumniList = async (request, response) => {
+  db.collection("members")
+    .where("showAlum", "==", true)
+    .select("major")
+    .get()
+    .then((snapshot) => {
+      if (snapshot.empty) {
+        return response.status(200).json({ users: [] });
+      }
+      return response
+        .status(200)
+        .json({ users: snapshot.docs.map((doc) => doc.data()) });
+    })
+    .catch((error) => {
+      console.error(error);
+      return response.status(500).json({
+        message: "Cannot provide the list.",
+      });
+    });
+};
+
 // Add new event to a member
 exports.addEventMember = (request, response) => {
   // each event has a points value, name, and date
