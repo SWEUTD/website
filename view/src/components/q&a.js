@@ -263,7 +263,7 @@ const bookRecs = [
   "Atomic Habits by James Clear"
 ]
 
-class event extends Component {
+class Questions extends Component {
   constructor(props) {
     super(props);
 
@@ -398,4 +398,4 @@ class event extends Component {
   }
 }
 
-export default withStyles(styles)(event);
+export default withStyles(styles)(Questions);

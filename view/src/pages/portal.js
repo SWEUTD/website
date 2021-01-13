@@ -8,7 +8,7 @@ import axios from "axios";
 import Account from "../components/account";
 import Event from "../components/event";
 import Recordings from "../components/recordings";
-import Resources from "../components/resources";
+import Questions from "../components/q&a";
 
 import {
   CircularProgress,
@@ -73,8 +73,8 @@ function Screen(props) {
     return <Event />;
   } else if (screen === "recordings") {
     return <Recordings />;
-  } else if (screen === "resources") {
-    return <Resources />;
+  } else if (screen === "q&a") {
+    return <Questions />;
   }
   return <Event />;
 }
@@ -92,8 +92,8 @@ class portal extends Component {
     this.setState({ render: "event" });
   };
 
-  loadResources = (event) => {
-    this.setState({ render: "resources" });
+  loadQandA = (event) => {
+    this.setState({ render: "q&a" });
   };
 
   loadRecordings = (event) => {
@@ -202,12 +202,12 @@ class portal extends Component {
                 <ListItemText primary="Account" />
               </ListItem>
 
-              <ListItem button key="Resources" onClick={this.loadResources}>
+              <ListItem button key="Q/A" onClick={this.loadQandA}>
                 <ListItemIcon>
                   {" "}
                   <AccountBoxIcon />{" "}
                 </ListItemIcon>
-                <ListItemText primary="Resources" />
+                <ListItemText primary="Q/A" />
               </ListItem>
 
               <ListItem button key="Recordings" onClick={this.loadRecordings}>
