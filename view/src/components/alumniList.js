@@ -1,26 +1,16 @@
 // AlumniList.js
 
-// component containing user's AlumniList data, with option to edit
+// component containing the list of opted in alumni
 
 import React, { Component } from "react";
 import withStyles from "@material-ui/core/styles/withStyles";
 import {
-  Button,
+  List,
+  ListItem,
   Card,
-  CardActions,
   CardContent,
   CircularProgress,
-  Divider,
-  FormControl,
-  Grid,
-  MenuItem,
-  FormControlLabel,
-  Switch,
-  InputLabel,
-  Select,
-  TextField,
 } from "@material-ui/core";
-import CloudUploadIcon from "@material-ui/icons/CloudUpload";
 
 import axios from "axios";
 import { authMiddleWare } from "../util/auth";
@@ -46,6 +36,7 @@ class AlumniList extends Component {
     super(props);
 
     this.state = {
+      uiLoading: true,
       users: null,
     };
   }
@@ -63,6 +54,7 @@ class AlumniList extends Component {
       .then((response) => {
         this.setState({
           users: response.data.users,
+          uiLoading: false,
         });
       })
       .catch((error) => {
@@ -89,16 +81,24 @@ class AlumniList extends Component {
       return (
         <main className={classes.content}>
           <div className={classes.toolbar} />
-          {this.state.users.map(() => (
-            <Card className="movingItem" variant="outlined">
-              <CardContent>
-                <div>
-                  <br />
-                  <h1>account hewwo</h1>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+          {this.state.users.length == 0 ? (
+            <h2>No users are currently on the Alumni List.</h2>
+          ) : (
+            <List>
+              {this.state.users.map((user) => (
+                <ListItem>
+                  <Card className="movingItem" variant="outlined">
+                    <CardContent>
+                      <h1>
+                        {user.firstName} {user.lastName}
+                      </h1>
+                      <p>{user.alumDesc}</p>
+                    </CardContent>
+                  </Card>
+                </ListItem>
+              ))}
+            </List>
+          )}
         </main>
       );
     }

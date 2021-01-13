@@ -205,7 +205,7 @@ class portal extends Component {
                 <ListItemIcon>
                   <PeopleIcon />
                 </ListItemIcon>
-                <ListItemText primary="Alumni" />
+                <ListItemText primary="Alumni Network" />
               </ListItem>
 
               <ListItem button key="Recordings" onClick={this.loadRecordings}>
