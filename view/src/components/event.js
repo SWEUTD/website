@@ -117,7 +117,7 @@ class event extends Component {
           netid: response.data.memberInfo.netid,
           events: response.data.memberInfo.events,
           points: response.data.memberInfo.points,
-          previousPoints: response.data.memberInfo.previousPoints || [],
+          previousPoints: response.data.memberInfo.previousPoints || {},
           uiLoading: false,
         });
       })
@@ -172,17 +172,15 @@ class event extends Component {
         </TableContainer>
       ));
 
-    const previousPoints = this.state.previousPoints.map((item, key) => (
-      <div fullWidth>
-        <br />
-        <table width="100%">
-          <tr>
-            <td align="center">Summer 2020: {item.summer2020} points</td>
-          </tr>
-        </table>
-        <br />
-      </div>
-    ));
+    var summer2020Points;
+    if(this.state.previousPoints.summer2020 != undefined) {
+      summer2020Points = <td align="center">Summer 2020: {this.state.previousPoints.summer2020} points</td>   
+    }
+
+    var fall2020Points;
+    if(this.state.previousPoints.fall2020 != undefined) {
+      fall2020Points = <td align="center">Fall 2020: {this.state.previousPoints.fall2020} points</td>
+    }
 
     let rewardStatus;
     let nextLevel;
@@ -303,7 +301,16 @@ class event extends Component {
                   <div>
                     <h4 align="center">Previous Semesters</h4>
                     <Divider />
-                    {previousPoints[0]}
+                    <div fullWidth>
+                      <br />
+                      <table width="100%">
+                        <tr>
+                          {fall2020Points}
+                          {summer2020Points}
+                        </tr>
+                      </table>
+                      <br />
+                    </div>
                   </div>
                 </CardContent>
               </Card>
