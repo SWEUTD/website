@@ -25,6 +25,7 @@ import {
 import withStyles from "@material-ui/core/styles/withStyles";
 
 // Icons
+import AccountBoxIcon from "@material-ui/icons/LiveHelp";
 import PersonIcon from "@material-ui/icons/Person";
 import NotesIcon from "@material-ui/icons/Notes";
 import PeopleIcon from "@material-ui/icons/People";
@@ -208,19 +209,19 @@ class portal extends Component {
                 <ListItemText primary="Profile" />
               </ListItem>
 
-              <ListItem button key="Alumni" onClick={this.loadAlumniPage}>
-                <ListItemIcon>
-                  <PeopleIcon />
-                </ListItemIcon>
-                <ListItemText primary="Alumni Network" />
-              </ListItem>
-
               <ListItem button key="Q/A" onClick={this.loadQandA}>
                 <ListItemIcon>
                   {" "}
                   <AccountBoxIcon />{" "}
                 </ListItemIcon>
                 <ListItemText primary="Q/A" />
+              </ListItem>
+
+              <ListItem button key="Alumni" onClick={this.loadAlumniPage}>
+                <ListItemIcon>
+                  <PeopleIcon />
+                </ListItemIcon>
+                <ListItemText primary="Alumni Network" />
               </ListItem>
 
               <ListItem button key="Recordings" onClick={this.loadRecordings}>
