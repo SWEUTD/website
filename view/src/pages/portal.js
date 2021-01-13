@@ -8,6 +8,7 @@ import axios from "axios";
 import Account from "../components/account";
 import Event from "../components/event";
 import Recordings from "../components/recordings";
+import Questions from "../components/q&a";
 import AlumniList from "../components/alumniList";
 
 import {
@@ -24,6 +25,7 @@ import {
 import withStyles from "@material-ui/core/styles/withStyles";
 
 // Icons
+import AccountBoxIcon from "@material-ui/icons/LiveHelp";
 import PersonIcon from "@material-ui/icons/Person";
 import NotesIcon from "@material-ui/icons/Notes";
 import PeopleIcon from "@material-ui/icons/People";
@@ -74,6 +76,8 @@ function Screen(props) {
     return <Event />;
   } else if (screen === "recordings") {
     return <Recordings />;
+  } else if (screen === "q&a") {
+    return <Questions />;
   } else if (screen === "alumni") {
     return <AlumniList />;
   }
@@ -95,6 +99,10 @@ class portal extends Component {
 
   loadEventPage = (event) => {
     this.setState({ render: "event" });
+  };
+
+  loadQandA = (event) => {
+    this.setState({ render: "q&a" });
   };
 
   loadRecordings = (event) => {
@@ -199,6 +207,14 @@ class portal extends Component {
                   <PersonIcon />
                 </ListItemIcon>
                 <ListItemText primary="Profile" />
+              </ListItem>
+
+              <ListItem button key="Q/A" onClick={this.loadQandA}>
+                <ListItemIcon>
+                  {" "}
+                  <AccountBoxIcon />{" "}
+                </ListItemIcon>
+                <ListItemText primary="Q/A" />
               </ListItem>
 
               <ListItem button key="Alumni" onClick={this.loadAlumniPage}>
