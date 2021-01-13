@@ -48,8 +48,7 @@ class AlumniList extends Component {
     axios.defaults.headers.common = { Authorization: `${authToken}` };
     axios
       .get(
-        "http://localhost:5000/swe-utd-portal/us-central1/api/alumniList"
-        //"https://us-central1-swe-utd-portal.cloudfunctions.net/api/alumniList"
+        "https://us-central1-swe-utd-portal.cloudfunctions.net/api/alumniList"
       )
       .then((response) => {
         this.setState({
