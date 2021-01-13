@@ -169,7 +169,6 @@ exports.updateMemberDetails = (request, response) => {
 exports.getAlumniList = async (request, response) => {
   db.collection("members")
     .where("showAlum", "==", true)
-    .select("alumDesc")
     .get()
     .then((snapshot) => {
       if (snapshot.empty) {

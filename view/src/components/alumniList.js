@@ -57,10 +57,10 @@ class AlumniList extends Component {
     axios.defaults.headers.common = { Authorization: `${authToken}` };
     axios
       .get(
-        "https://us-central1-swe-utd-portal.cloudfunctions.net/api/alumniList"
+        "http://localhost:5000/swe-utd-portal/us-central1/api/alumniList"
+        //"https://us-central1-swe-utd-portal.cloudfunctions.net/api/alumniList"
       )
       .then((response) => {
-        console.log(response.data);
         this.setState({
           users: response.data.users,
         });
@@ -89,14 +89,16 @@ class AlumniList extends Component {
       return (
         <main className={classes.content}>
           <div className={classes.toolbar} />
-          <Card className="movingItem" variant="outlined">
-            <CardContent>
-              <div>
-                <br />
-                <h1>account hewwo</h1>
-              </div>
-            </CardContent>
-          </Card>
+          {this.state.users.map(() => (
+            <Card className="movingItem" variant="outlined">
+              <CardContent>
+                <div>
+                  <br />
+                  <h1>account hewwo</h1>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
         </main>
       );
     }
@@ -104,3 +106,5 @@ class AlumniList extends Component {
 }
 
 export default withStyles(styles)(AlumniList);
+
+// {"users":[{"alumDesc":"hi"}]} NEED TO SHOW MORE INFO
