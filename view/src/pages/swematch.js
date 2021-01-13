@@ -9,9 +9,9 @@ import classNames from "classnames";
 import withStyles from "@material-ui/core/styles/withStyles";
 import Container from "@material-ui/core/Container";
 
-import NavBar from '../components/navbar'
-import Footer from '../components/footer'
-import Logo from '../assets/MatchLogo.png'
+import NavBar from "../components/navbar";
+import Footer from "../components/footer";
+import Logo from "../assets/MatchLogo.png";
 
 const styles = (theme) => ({});
 

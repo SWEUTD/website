@@ -7,18 +7,23 @@ import classNames from "classnames";
 
 import withStyles from "@material-ui/core/styles/withStyles";
 import { Button, Divider, Grid, List, ListSubheader } from "@material-ui/core";
-import {Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@material-ui/core';
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Paper,
+} from "@material-ui/core";
 import NavBar from "../components/navbar";
 
 import Folsom_HS_Panel from "../assets/EventFlyers/Folsom_HS_Panel.png";
-import SWE_Match_Presentation from "../assets/EventFlyers/SWE_Match_Presentation.png"
+import SWE_Match_Presentation from "../assets/EventFlyers/SWE_Match_Presentation.png";
 
-const upcomingEvents = [
-];
+const upcomingEvents = [];
 
-const flyers = [
-	
-];
+const flyers = [];
 
 const styles = (theme) => ({
   gridItem: {
@@ -31,23 +36,22 @@ const styles = (theme) => ({
     width: "100%",
   },
   table: {
-	minWidth: "50%",
-	maxWidth: "70%",
+    minWidth: "50%",
+    maxWidth: "70%",
   },
   imgResponsive: {
-	width: "200 px",
+    width: "200 px",
   },
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
-  }
+  },
 });
 
 function createData(event, flyer) {
-	return { event, flyer };
-  }
+  return { event, flyer };
+}
 
-const rows = [
-  ];
+const rows = [];
 
 class events extends Component {
   constructor(props) {
@@ -59,14 +63,13 @@ class events extends Component {
       this.setState({ headerReady: true });
     }, 0);
   }
-  
-  
+
   render() {
     const { headerReady } = this.state;
     const { classes } = this.props;
     return (
       <div className={classes.root}>
-            <NavBar />
+        <NavBar />
         <div className={classNames("header", { ready: headerReady })}>
           <p className="heading">Events</p>
         </div>
@@ -104,11 +107,11 @@ class events extends Component {
 							))}
 						</Grid> 
 							*/}
-							<div align="center">
-								<h1>Stay tuned for Upcoming Events for Spring 2021!</h1>
-							</div>
-					</Grid>
-					{/*
+            <div align="center">
+              <h1>Stay tuned for Upcoming Events for Spring 2021!</h1>
+            </div>
+          </Grid>
+          {/*
 					<TableContainer component={Paper} align="center">
       <Table className={classes.table} aria-label="simple table">
         <TableHead>
@@ -144,10 +147,10 @@ class events extends Component {
         </TableBody>
       </Table>
 			</TableContainer> */}
-				</div>
-			</div>
-		);
-	}
+        </div>
+      </div>
+    );
+  }
 }
 
 export default withStyles(styles)(events);
