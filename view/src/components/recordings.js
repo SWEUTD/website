@@ -11,57 +11,58 @@ import { authMiddleWare } from "../util/auth";
 
 const videos = [
   {
-		link: 'https://www.youtube.com/embed/uWRT_R3QOfA',
-		title: 'IBM TST - Day in The Life - 11/16/2020', 
-	},
+    link: "https://www.youtube.com/embed/uWRT_R3QOfA",
+    title: "IBM TST - Day in The Life - 11/16/2020",
+  },
   {
-		link: 'https://www.youtube.com/embed/UfW7lxHX5cc',
-		title: 'Diversity and Inclusion Research Panel - 11/6/2020', 
-	},
-	{
-		link: 'https://youtube.com/embed/UY3S_uQLyik',
-		title: 'Beginner Game Development with Construct 3 by SWE - 10/27/2020', 
-	},
-	{
-		link: 'https://www.youtube.com/embed/duLCzciTHro',
-		title: 'Technical Interviews 101 - 10/26/2020', 
-	},
-	{
-		link: 'https://www.youtube.com/embed/eDUQArp7SK8',
-		title: 'Git It Together Workshop - 10/5/2020', 
-	},
-	{
-		link: 'https://youtube.com/embed/mDiIx_zEtSk',
-		title: 'Steps After the Career Fair - 9/14/2020', 
-	},
-	{
-		link: 'https://youtube.com/embed/gfsL_gt_4uA',
-		title: 'Personal Website Workshop - 9/10/2020', 
-	},
-	{
-		link: 'https://youtube.com/embed/IlkwJMCpS8w',
-		title: 'Debunking Recruiting Myths - 9/9/2020', 
-	},
-	{
-		link: 'https://youtube.com/embed/YXqaIhw1aTo',
-		title: 'LinkedIn 101 - 9/8/2020'
-	},
-	{
-		link: 'https://youtube.com/embed/MvPGDGnla04',
-		title: 'Pitch Yourself 101 - 9/7/2020'
-	},
-	{
-		link: 'https://youtube.com/embed/mJAWac2KPFE',
-		title: 'AT&T Success in a Virtual Environment - 9/1/2020'
-	},
-	{
-		link: 'https://www.youtube.com/embed/7bCIpC4gprM',
-		title: 'SWE Kickoff - 8/31/2020'
-	},
-	{
-		link: 'https://docs.google.com/presentation/d/e/2PACX-1vSYy2zWDUDc4FiB89J-gLFDbnyJwPD-b-2i3peHB2bQPPHsA97xK9ZfOs0sSbNhizqYW4RCNGtUbJPC/embed?start=true&loop=true&delayms=9000',
-		title: 'SWE Kickoff Slides - 8/31/2020'
-	}
+    link: "https://www.youtube.com/embed/UfW7lxHX5cc",
+    title: "Diversity and Inclusion Research Panel - 11/6/2020",
+  },
+  {
+    link: "https://youtube.com/embed/UY3S_uQLyik",
+    title: "Beginner Game Development with Construct 3 by SWE - 10/27/2020",
+  },
+  {
+    link: "https://www.youtube.com/embed/duLCzciTHro",
+    title: "Technical Interviews 101 - 10/26/2020",
+  },
+  {
+    link: "https://www.youtube.com/embed/eDUQArp7SK8",
+    title: "Git It Together Workshop - 10/5/2020",
+  },
+  {
+    link: "https://youtube.com/embed/mDiIx_zEtSk",
+    title: "Steps After the Career Fair - 9/14/2020",
+  },
+  {
+    link: "https://youtube.com/embed/gfsL_gt_4uA",
+    title: "Personal Website Workshop - 9/10/2020",
+  },
+  {
+    link: "https://youtube.com/embed/IlkwJMCpS8w",
+    title: "Debunking Recruiting Myths - 9/9/2020",
+  },
+  {
+    link: "https://youtube.com/embed/YXqaIhw1aTo",
+    title: "LinkedIn 101 - 9/8/2020",
+  },
+  {
+    link: "https://youtube.com/embed/MvPGDGnla04",
+    title: "Pitch Yourself 101 - 9/7/2020",
+  },
+  {
+    link: "https://youtube.com/embed/mJAWac2KPFE",
+    title: "AT&T Success in a Virtual Environment - 9/1/2020",
+  },
+  {
+    link: "https://www.youtube.com/embed/7bCIpC4gprM",
+    title: "SWE Kickoff - 8/31/2020",
+  },
+  {
+    link:
+      "https://docs.google.com/presentation/d/e/2PACX-1vSYy2zWDUDc4FiB89J-gLFDbnyJwPD-b-2i3peHB2bQPPHsA97xK9ZfOs0sSbNhizqYW4RCNGtUbJPC/embed?start=true&loop=true&delayms=9000",
+    title: "SWE Kickoff Slides - 8/31/2020",
+  },
 ];
 
 const styles = (theme) => ({
