@@ -368,7 +368,7 @@ class account extends Component {
                           color="primary"
                         />
                       }
-                      label="Show on Alumni List"
+                      label="Show on Member List"
                     />
                   </Grid>
                   {this.state.showAlum && (
@@ -379,7 +379,7 @@ class account extends Component {
                         rows={3}
                         label="Description"
                         margin="dense"
-                        helperText="This will show on the alumni list. Add information such as graduate year, current company, and ways to contact you."
+                        helperText="This along with your name will show on the member list. Feel free to add any information such as graduate year, current company, and ways to contact you."
                         name="alumDesc"
                         variant="outlined"
                         value={this.state.alumDesc}
