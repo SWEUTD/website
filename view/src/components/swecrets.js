@@ -11,8 +11,14 @@ import {
   CircularProgress,
   Button,
   ButtonGroup,
+  Divider,
 } from "@material-ui/core";
 import axios from "axios";
+import DocIcon from "../assets/document-icon.png";
+import LinkIcon from "../assets/link.png";
+import CameraIcon from "../assets/camera.png";
+import SlideshowIcon from "../assets/slideshow.png";
+import ContactIcon from "../assets/contact.png";
 import { authMiddleWare } from "../util/auth";
 
 const styles = (theme) => ({
@@ -63,6 +69,26 @@ const styles = (theme) => ({
   },
   submitButton: {
     marginTop: "10px",
+  },
+  body: {
+    display: "flex",
+  },
+  linkBtns: {
+    borderRadius: "10px",
+    flexDirection: "row",
+    margin: "20px",
+  },
+  iconImg: {
+    width: "100px",
+    padding: "10px",
+  },
+  box: {
+    display: "inline-block",
+    margin: "20px",
+    padding: "20px",
+    border: "1px solid #eee",
+    borderRadius: "10px",
+    boxShadow: "0 2px 2px #eee",
   },
 });
 
@@ -125,6 +151,7 @@ class event extends Component {
       });
   };
 
+// currentSection should be string not object
   render() {
     const { classes } = this.props;
     const currentSection = this.state;
@@ -180,6 +207,7 @@ class event extends Component {
                 >
                     {sectionList.map((sectionName) => (
                     <Button
+                        size="large"
                         variant={
                         sectionName === currentSection
                             ? "contained"
@@ -198,6 +226,107 @@ class event extends Component {
                 </ButtonGroup>
               </div>
               <div className={classes.progress} />
+            </CardContent>
+          </Card>
+          <br />
+          <Card
+            className={classes.details}
+            className="movingItem"
+            variant="outlined"
+          >
+            <CardContent align="center">
+              <div>
+                  <br />
+                  <h3>Company Info</h3>
+                  <h5>
+                    Here you will find links to various resources with general information that may be useful when applying to different companies! 
+                    <b> If you would like to add to these resources, please fill out <a href="https://forms.gle/XYhwKi2UZahKaugR7">this form</a>.</b>
+                  </h5>
+                  <br />
+                  <div className={classes.body}>
+                    <Button
+                      variant={"outlined"}
+                      className={classes.linkBtns}
+                    >
+                      <img src={DocIcon} className={classes.iconImg}/>
+                      <p>Document Title</p>
+                    </Button>
+                    <Button
+                      variant={"outlined"}
+                      className={classes.linkBtns}
+                    >
+                      <img src={LinkIcon} className={classes.iconImg}/>
+                      <p>Link Title</p>
+                    </Button>
+                    <Button
+                      variant={"outlined"}
+                      className={classes.linkBtns}
+                    >
+                      <img src={CameraIcon} className={classes.iconImg}/>
+                      <p>Image / Video Title</p>
+                    </Button>
+                    <Button
+                      variant={"outlined"}
+                      className={classes.linkBtns}
+                    >
+                      <img src={SlideshowIcon} className={classes.iconImg}/>
+                      <p>Slideshow Title</p>
+                    </Button>
+                    
+                  </div>
+                </div>
+            </CardContent>
+          </Card>
+          <br />
+          <Card
+            className={classes.details}
+            className="movingItem"
+            variant="outlined"
+          >
+            <CardContent align="center">
+              <div>
+                  <br />
+                  <h3>Recruiters</h3>
+                  <h5>
+                    Here you will find the contact info for any recruiters that are in contact with SWEsters. Feel free to reach out to them! 
+                    <b> If you would like to add to these resources, please fill out <a href="https://forms.gle/XYhwKi2UZahKaugR7">this form</a>.</b>
+                  </h5>
+                  <br />
+                  <div className={classes.body}>
+                        <div className={classes.box}>
+                          <img src={ContactIcon} className={classes.iconImg}/>
+                          <p>Recruiter Name</p>
+                          <p>Company: abc</p>
+                          <p>Email: person@email.com</p>
+                          <p>Phone: 123-456-7890</p>
+                          <p>Other info:</p>
+                        </div>
+                        <div className={classes.box}>
+                          <img src={ContactIcon} className={classes.iconImg}/>
+                          <p>Recruiter Name</p>
+                          <p>Company: abc</p>
+                          <p>Email: person@email.com</p>
+                          <p>Phone: 123-456-7890</p>
+                          <p>Other info:</p>
+                        </div>
+                        <div className={classes.box}>
+                          <img src={ContactIcon} className={classes.iconImg}/>
+                          <p>Recruiter Name</p>
+                          <p>Company: abc</p>
+                          <p>Email: person@email.com</p>
+                          <p>Phone: 123-456-7890</p>
+                          <p>Other info:</p>
+                        </div>
+                        <div className={classes.box}>
+                          <img src={ContactIcon} className={classes.iconImg}/>
+                          <p>Recruiter Name</p>
+                          <p>Company: abc</p>
+                          <p>Email: person@email.com</p>
+                          <p>Phone: 123-456-7890</p>
+                          <p>Other info:</p>
+                        </div>
+                  </div>
+                </div>
             </CardContent>
           </Card>
         </main>
