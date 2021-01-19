@@ -81,7 +81,7 @@ class AlumniList extends Component {
         <main className={classes.content}>
           <div className={classes.toolbar} />
           {this.state.users.length == 0 ? (
-            <h2>No users are currently on the Alumni List.</h2>
+            <h2>No users are currently on the Member List.</h2>
           ) : (
             <List>
               {this.state.users.map((user) => (
@@ -105,5 +105,3 @@ class AlumniList extends Component {
 }
 
 export default withStyles(styles)(AlumniList);
-
-// {"users":[{"alumDesc":"hi"}]} NEED TO SHOW MORE INFO
