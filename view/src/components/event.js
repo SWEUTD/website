@@ -3,7 +3,15 @@
 // component for displaying user's event history and points status
 
 import React, { Component } from "react";
-import {Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@material-ui/core';
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Paper,
+} from "@material-ui/core";
 
 import withStyles from "@material-ui/core/styles/withStyles";
 import {
@@ -109,7 +117,7 @@ class event extends Component {
           netid: response.data.memberInfo.netid,
           events: response.data.memberInfo.events,
           points: response.data.memberInfo.points,
-          previousPoints: response.data.memberInfo.previousPoints || [],
+          previousPoints: response.data.memberInfo.previousPoints || {},
           uiLoading: false,
         });
       })
@@ -129,37 +137,50 @@ class event extends Component {
     const history = this.state.events
       .slice(0)
       .reverse()
-      .map ((item, key) => (
+      .map((item, key) => (
         <TableContainer component={Paper} align="center">
-      <Table className={classes.table} aria-label="simple table">
-        <TableBody>
-        <TableRow key={key}>
-              <TableCell component="th" width="60%" scope="row" align="center">
-                {item.eventName}
-              </TableCell>
-              <TableCell component="th" width="25%" scope="row" align="center">
-                {item.eventDate}
-              </TableCell>
-              <TableCell component="th" width="15%" scope="row" align="center">
-                {item.eventPoints} pt
-              </TableCell>
-        </TableRow>
-        </TableBody>
-        </Table>
+          <Table className={classes.table} aria-label="simple table">
+            <TableBody>
+              <TableRow key={key}>
+                <TableCell
+                  component="th"
+                  width="60%"
+                  scope="row"
+                  align="center"
+                >
+                  {item.eventName}
+                </TableCell>
+                <TableCell
+                  component="th"
+                  width="25%"
+                  scope="row"
+                  align="center"
+                >
+                  {item.eventDate}
+                </TableCell>
+                <TableCell
+                  component="th"
+                  width="15%"
+                  scope="row"
+                  align="center"
+                >
+                  {item.eventPoints} pt
+                </TableCell>
+              </TableRow>
+            </TableBody>
+          </Table>
         </TableContainer>
       ));
 
-    const previousPoints = this.state.previousPoints.map((item, key) => (
-      <div fullWidth>
-        <br />
-        <table width="100%">
-          <tr>
-            <td align="center">Summer 2020: {item.summer2020} points</td>
-          </tr>
-        </table>
-        <br />
-      </div>
-    ));
+    var summer2020Points;
+    if(this.state.previousPoints.summer2020 != undefined) {
+      summer2020Points = <td align="center">Summer 2020: {this.state.previousPoints.summer2020} points</td>   
+    }
+
+    var fall2020Points;
+    if(this.state.previousPoints.fall2020 != undefined) {
+      fall2020Points = <td align="center">Fall 2020: {this.state.previousPoints.fall2020} points</td>
+    }
 
     let rewardStatus;
     let nextLevel;
@@ -280,7 +301,16 @@ class event extends Component {
                   <div>
                     <h4 align="center">Previous Semesters</h4>
                     <Divider />
-                    {previousPoints[0]}
+                    <div fullWidth>
+                      <br />
+                      <table width="100%">
+                        <tr>
+                          {fall2020Points}
+                          {summer2020Points}
+                        </tr>
+                      </table>
+                      <br />
+                    </div>
                   </div>
                 </CardContent>
               </Card>
@@ -306,7 +336,7 @@ class event extends Component {
                 <CardContent height="100%" align="center">
                   <h1 align="center">Your Attendance History</h1>
                   <Divider />
-                  <br/>
+                  <br />
                   <Divider />
                   {history}
                 </CardContent>

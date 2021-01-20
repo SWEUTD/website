@@ -7,18 +7,36 @@ import classNames from "classnames";
 
 import withStyles from "@material-ui/core/styles/withStyles";
 import { Button, Divider, Grid, List, ListSubheader } from "@material-ui/core";
-import {Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@material-ui/core';
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Paper,
+} from "@material-ui/core";
 import NavBar from "../components/navbar";
 
-import Folsom_HS_Panel from "../assets/EventFlyers/Folsom_HS_Panel.png";
 import SWE_Match_Presentation from "../assets/EventFlyers/SWE_Match_Presentation.png"
+import Kickoff_Flyer from "../assets/EventFlyers/Kickoff_Flyer.png";
 
 const upcomingEvents = [
+  {
+    name: 'SWE Spring Kickoff',
+    date: '1/25/2020 - 7:00 PM',
+    description: "We hope y'all are as excited as we are for our spring semester kickoff on Monday January 25th at 7pm CST.  Come see what we have planned this semester and how you can get involved! Don't forget to make a member account on sweutd.com/portal. We hope to see you all there!",
+    link: ''
+  }
 ];
 
 const flyers = [
-	
+	{
+    image: Kickoff_Flyer,
+    link: ''
+  }
 ];
+
 
 const styles = (theme) => ({
   gridItem: {
@@ -31,22 +49,24 @@ const styles = (theme) => ({
     width: "100%",
   },
   table: {
-	minWidth: "50%",
-	maxWidth: "70%",
+    minWidth: "50%",
+    maxWidth: "70%",
   },
   imgResponsive: {
-	width: "200 px",
+    width: "200 px",
   },
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
-  }
+  },
 });
 
 function createData(event, flyer) {
-	return { event, flyer };
-  }
+  return { event, flyer };
+}
+
 
 const rows = [
+  createData(upcomingEvents[0], flyers[0].image)
   ];
 
 class events extends Component {
@@ -59,14 +79,13 @@ class events extends Component {
       this.setState({ headerReady: true });
     }, 0);
   }
-  
-  
+
   render() {
     const { headerReady } = this.state;
     const { classes } = this.props;
     return (
       <div className={classes.root}>
-            <NavBar />
+        <NavBar />
         <div className={classNames("header", { ready: headerReady })}>
           <p className="heading">Events</p>
         </div>
@@ -112,6 +131,7 @@ class events extends Component {
 							</div>
 					</Grid>
 					{/*
+
 					<TableContainer component={Paper} align="center">
       <Table className={classes.table} aria-label="simple table">
         <TableHead>
@@ -119,11 +139,11 @@ class events extends Component {
             <TableCell align="center" width="45%"><h2></h2></TableCell>
             <TableCell align="center" width="55%"><h2></h2></TableCell>
           </TableRow>
-		</TableHead>
+		    </TableHead>
         <TableBody>
           {rows.map((row) => (
             <TableRow key={row.event.name}>
-              <TableCell component="th" scope="row" align="center">
+      <TableCell component="th" scope="row" align="center">
 			  <br/>
 				<h4>{row.event.name}</h4>
 				<ListSubheader>{row.event.date}</ListSubheader>
@@ -137,16 +157,17 @@ class events extends Component {
 				</div>)
 				: null
 				}
-			  </TableCell>
+			</TableCell>
 			  <TableCell component="th" scope="row" align="center">
 			  {row.flyer != '' ?
-				(<img src={row.flyer} width="55%" />) : null }
-              </TableCell>
-            </TableRow>
+				(<img src={row.flyer} width="60%" />) : null }
+        </TableCell>
+        </TableRow>
           ))}
         </TableBody>
       </Table>
-			</TableContainer> 
+
+			</TableContainer> }
 				</div>
 			</div>
 		);
