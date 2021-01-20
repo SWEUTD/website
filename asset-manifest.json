@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.85e6bab8.chunk.css",
-    "main.js": "/static/js/main.14ed1213.chunk.js",
-    "main.js.map": "/static/js/main.14ed1213.chunk.js.map",
+    "main.js": "/static/js/main.922c370a.chunk.js",
+    "main.js.map": "/static/js/main.922c370a.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.94a6af97.js",
     "runtime-main.js.map": "/static/js/runtime-main.94a6af97.js.map",
-    "static/js/2.2f62aaee.chunk.js": "/static/js/2.2f62aaee.chunk.js",
-    "static/js/2.2f62aaee.chunk.js.map": "/static/js/2.2f62aaee.chunk.js.map",
+    "static/js/2.6eada9ff.chunk.js": "/static/js/2.6eada9ff.chunk.js",
+    "static/js/2.6eada9ff.chunk.js.map": "/static/js/2.6eada9ff.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.7201af3a14925b79121d4b53f6494d48.js": "/precache-manifest.7201af3a14925b79121d4b53f6494d48.js",
+    "precache-manifest.dc1444615d3a9e32f4f6c1185ebce730.js": "/precache-manifest.dc1444615d3a9e32f4f6c1185ebce730.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.85e6bab8.chunk.css.map": "/static/css/main.85e6bab8.chunk.css.map",
-    "static/js/2.2f62aaee.chunk.js.LICENSE.txt": "/static/js/2.2f62aaee.chunk.js.LICENSE.txt",
+    "static/js/2.6eada9ff.chunk.js.LICENSE.txt": "/static/js/2.6eada9ff.chunk.js.LICENSE.txt",
     "static/media/1.HEIC": "/static/media/1.ff820100.HEIC",
     "static/media/2.jpg": "/static/media/2.a6cb3cc9.jpg",
     "static/media/3.jpg": "/static/media/3.46504d3d.jpg",
@@ -30,13 +30,13 @@
     "static/media/DeeshaKumbham.jpg": "/static/media/DeeshaKumbham.8e885233.jpg",
     "static/media/Events.jpg": "/static/media/Events.a3fb2c22.jpg",
     "static/media/Events2.jpg": "/static/media/Events2.d6ea8178.jpg",
-    "static/media/Folsom_HS_Panel.png": "/static/media/Folsom_HS_Panel.876375d1.png",
     "static/media/GabrielleDuncan.jpg": "/static/media/GabrielleDuncan.5ff66106.jpg",
     "static/media/GillSansMTBook.ttf": "/static/media/GillSansMTBook.9a2b9a60.ttf",
     "static/media/HansikaSundaresan.jpg": "/static/media/HansikaSundaresan.d7d240f7.jpg",
     "static/media/JanroseSamson.jpg": "/static/media/JanroseSamson.5a5670ee.jpg",
     "static/media/JerryAlexander.jpg": "/static/media/JerryAlexander.7508d85b.jpg",
     "static/media/JeshnaGupta.jpg": "/static/media/JeshnaGupta.d88b7496.jpg",
+    "static/media/Kickoff_Flyer.png": "/static/media/Kickoff_Flyer.60b4dce3.png",
     "static/media/MaahaSakia.jpg": "/static/media/MaahaSakia.80bba231.jpg",
     "static/media/ManshaFatima.jpg": "/static/media/ManshaFatima.8db8eb13.jpg",
     "static/media/MatchLogo.png": "/static/media/MatchLogo.7072f632.png",
@@ -62,8 +62,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.94a6af97.js",
-    "static/js/2.2f62aaee.chunk.js",
+    "static/js/2.6eada9ff.chunk.js",
     "static/css/main.85e6bab8.chunk.css",
-    "static/js/main.14ed1213.chunk.js"
+    "static/js/main.922c370a.chunk.js"
   ]
 }
