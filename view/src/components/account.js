@@ -14,6 +14,8 @@ import {
   FormControl,
   Grid,
   MenuItem,
+  FormControlLabel,
+  Switch,
   InputLabel,
   Select,
   TextField,
@@ -81,6 +83,8 @@ class account extends Component {
       uiLoading: true,
       buttonLoading: false,
       imageError: "",
+      showAlum: false,
+      alumDesc: "",
     };
   }
 
@@ -102,6 +106,8 @@ class account extends Component {
           major: response.data.memberInfo.major,
           otherMajor: response.data.memberInfo.otherMajor,
           netid: response.data.memberInfo.netid,
+          showAlum: response.data.memberInfo.showAlum || false,
+          alumDesc: response.data.memberInfo.alumDesc || "",
           uiLoading: false,
         });
       })
@@ -117,7 +123,7 @@ class account extends Component {
   // function for handling when a field is modified
   handleChange = (event) => {
     this.setState({
-      [event.target.name]: event.target.value,
+      [event.target.name]: event.target.value || event.target.checked,
     });
   };
 
@@ -128,8 +134,7 @@ class account extends Component {
     authMiddleWare(this.props.history);
     const authToken = localStorage.getItem("AuthToken");
     axios.defaults.headers.common = { Authorization: `${authToken}` };
-    if (this.state.major !== "Other")
-      this.setState({ ...this.state, otherMajor: "" });
+    if (this.state.major !== "Other") this.state.otherMajor = "";
     const formRequest = {
       firstName: this.state.firstName,
       lastName: this.state.lastName,
@@ -137,6 +142,8 @@ class account extends Component {
       major: this.state.major,
       otherMajor: this.state.otherMajor,
       phoneNumber: this.state.phoneNumber,
+      showAlum: this.state.showAlum,
+      alumDesc: this.state.alumDesc,
     };
 
     axios
@@ -351,6 +358,35 @@ class account extends Component {
                       onChange={this.handleChange}
                     />
                   </Grid>
+                  <Grid item md={6} xs={12}>
+                    <FormControlLabel
+                      control={
+                        <Switch
+                          checked={this.state.showAlum}
+                          onChange={this.handleChange}
+                          name="showAlum"
+                          color="primary"
+                        />
+                      }
+                      label="Show on Member List"
+                    />
+                  </Grid>
+                  {this.state.showAlum && (
+                    <Grid item md={6} xs={12}>
+                      <TextField
+                        fullWidth
+                        multiline
+                        rows={3}
+                        label="Description"
+                        margin="dense"
+                        helperText="This along with your name will show on the member list. Feel free to add any information such as graduate year, current company, and ways to contact you."
+                        name="alumDesc"
+                        variant="outlined"
+                        value={this.state.alumDesc}
+                        onChange={this.handleChange}
+                      />
+                    </Grid>
+                  )}
                 </Grid>
               </CardContent>
               <CardActions />

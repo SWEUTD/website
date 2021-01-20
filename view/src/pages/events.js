@@ -7,11 +7,17 @@ import classNames from "classnames";
 
 import withStyles from "@material-ui/core/styles/withStyles";
 import { Button, Divider, Grid, List, ListSubheader } from "@material-ui/core";
-import {Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@material-ui/core';
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Paper,
+} from "@material-ui/core";
 import NavBar from "../components/navbar";
 
-import Folsom_HS_Panel from "../assets/EventFlyers/Folsom_HS_Panel.png";
-import SWE_Match_Presentation from "../assets/EventFlyers/SWE_Match_Presentation.png"
 import Kickoff_Flyer from "../assets/EventFlyers/Kickoff_Flyer.png";
 
 const upcomingEvents = [
@@ -30,6 +36,7 @@ const flyers = [
   }
 ];
 
+
 const styles = (theme) => ({
   gridItem: {
     display: "flex",
@@ -41,20 +48,20 @@ const styles = (theme) => ({
     width: "100%",
   },
   table: {
-	minWidth: "50%",
-	maxWidth: "70%",
+    minWidth: "50%",
+    maxWidth: "70%",
   },
   imgResponsive: {
-	width: "200 px",
+    width: "200 px",
   },
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
-  }
+  },
 });
 
 function createData(event, flyer) {
-	return { event, flyer };
-  }
+  return { event, flyer };
+}
 
 const rows = [
   createData(upcomingEvents[0], flyers[0].image)
@@ -70,14 +77,13 @@ class events extends Component {
       this.setState({ headerReady: true });
     }, 0);
   }
-  
-  
+
   render() {
     const { headerReady } = this.state;
     const { classes } = this.props;
     return (
       <div className={classes.root}>
-            <NavBar />
+        <NavBar />
         <div className={classNames("header", { ready: headerReady })}>
           <p className="heading">Events</p>
         </div>
@@ -117,6 +123,7 @@ class events extends Component {
               */}
 					</Grid>
 					{
+
 					<TableContainer component={Paper} align="center">
       <Table className={classes.table} aria-label="simple table">
         <TableHead>
@@ -156,6 +163,7 @@ class events extends Component {
 			</div>
 		);
 	}
+
 }
 
 export default withStyles(styles)(events);

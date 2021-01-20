@@ -16,7 +16,7 @@ import {
   Grid,
 } from "@material-ui/core";
 import NavBar from "../components/navbar";
-import Footer from '../components/footer'
+import Footer from "../components/footer";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
@@ -361,6 +361,8 @@ class officers extends Component {
               ))}
           </Grid>
         </Container>
+        <br />
+        <Footer />
       </div>
     );
   }
