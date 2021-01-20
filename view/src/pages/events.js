@@ -18,6 +18,7 @@ import {
 } from "@material-ui/core";
 import NavBar from "../components/navbar";
 
+import SWE_Match_Presentation from "../assets/EventFlyers/SWE_Match_Presentation.png"
 import Kickoff_Flyer from "../assets/EventFlyers/Kickoff_Flyer.png";
 
 const upcomingEvents = [
@@ -62,6 +63,7 @@ const styles = (theme) => ({
 function createData(event, flyer) {
   return { event, flyer };
 }
+
 
 const rows = [
   createData(upcomingEvents[0], flyers[0].image)
@@ -120,6 +122,7 @@ class events extends Component {
 							</Grid>
 							))}
 						</Grid> 
+
               */}
 					</Grid>
 					{
@@ -158,12 +161,12 @@ class events extends Component {
           ))}
         </TableBody>
       </Table>
+
 			</TableContainer> }
 				</div>
 			</div>
 		);
 	}
-
 }
 
 export default withStyles(styles)(events);
