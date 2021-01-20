@@ -18,14 +18,6 @@ import {
 } from "@material-ui/core";
 import NavBar from "../components/navbar";
 
-import Folsom_HS_Panel from "../assets/EventFlyers/Folsom_HS_Panel.png";
-<<<<<<< HEAD
-import SWE_Match_Presentation from "../assets/EventFlyers/SWE_Match_Presentation.png";
-
-const upcomingEvents = [];
-
-const flyers = [];
-=======
 import SWE_Match_Presentation from "../assets/EventFlyers/SWE_Match_Presentation.png"
 import Kickoff_Flyer from "../assets/EventFlyers/Kickoff_Flyer.png";
 
@@ -44,7 +36,7 @@ const flyers = [
     link: ''
   }
 ];
->>>>>>> events
+
 
 const styles = (theme) => ({
   gridItem: {
@@ -72,13 +64,10 @@ function createData(event, flyer) {
   return { event, flyer };
 }
 
-<<<<<<< HEAD
-const rows = [];
-=======
+
 const rows = [
   createData(upcomingEvents[0], flyers[0].image)
   ];
->>>>>>> events
 
 class events extends Component {
   constructor(props) {
@@ -133,18 +122,11 @@ class events extends Component {
 							</Grid>
 							))}
 						</Grid> 
-<<<<<<< HEAD
-							*/}
-            <div align="center">
-              <h1>Stay tuned for Upcoming Events for Spring 2021!</h1>
-            </div>
-          </Grid>
-          {/*
-=======
+
               */}
 					</Grid>
 					{
->>>>>>> events
+
 					<TableContainer component={Paper} align="center">
       <Table className={classes.table} aria-label="simple table">
         <TableHead>
@@ -179,19 +161,12 @@ class events extends Component {
           ))}
         </TableBody>
       </Table>
-<<<<<<< HEAD
-			</TableContainer> */}
-        </div>
-      </div>
-    );
-  }
-=======
+
 			</TableContainer> }
 				</div>
 			</div>
 		);
 	}
->>>>>>> events
 }
 
 export default withStyles(styles)(events);
