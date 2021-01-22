@@ -4,22 +4,48 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import {
   Card,
   CardContent,
-  CircularProgress,
   Button,
   ButtonGroup,
   Divider,
 } from "@material-ui/core";
 import ContactIcon from "../assets/contact.png";
-import { authMiddleWare } from "../util/auth";
 
 const recruiters = [
     {
-      name: "A Recruiter",
-      company: "ABC",
-      email: "person@email.com",
-      phone: "123-456-789",
-      other: "none"
-    }
+      name: "Susanna Biancheri",
+      company: "AT&T",
+      email: "sb2321@att.com",
+      phone: "214 486 8408",
+      other: "Tech Operations"
+    },
+    {
+      name: "Will Brown",
+      company: "AT&T",
+      email: "WB1912@att.com",
+      phone: "713.591.9388",
+      other: "UTD Recruiting Manager"
+    },
+    {
+      name: "Maegan Wade",
+      company: "Capital One",
+      email: "maegan.wade@capitalone.com",
+      phone: "Not Given",
+      other: "Recruiter"
+    },
+    {
+      name: "Marcela Izaguirre",
+      company: "Tetra Pak",
+      email: "Marcela.Izaguirre@Tetrapak.com",
+      phone: "52 55 3456 2283",
+      other: "University Relations Specialist"
+    },
+    {
+      name: "Jolene Kim Nguyen",
+      company: "Xilinx",
+      email: "jolenen@xilinx.com",
+      phone: "408-324-4906",
+      other: "Talent Acquisition Program Manager"
+    },
 ];
 
 const styles = (theme) => ({
@@ -48,36 +74,15 @@ const styles = (theme) => ({
       position: "absolute",
       top: "50%",
     },
-    uiProgess: {
-      position: "fixed",
-      zIndex: "1000",
-      height: "31px",
-      width: "31px",
-      left: "50%",
-      top: "35%",
-    },
     progess: {
       position: "absolute",
-    },
-    uploadButton: {
-      marginLeft: "8px",
-      margin: theme.spacing(1),
-    },
-    customError: {
-      color: "red",
-      fontSize: "0.8rem",
-      marginTop: 10,
     },
     submitButton: {
       marginTop: "10px",
     },
     body: {
       display: "flex",
-    },
-    linkBtns: {
-      borderRadius: "10px",
-      flexDirection: "row",
-      margin: "20px",
+      flexWrap: "wrap",
     },
     iconImg: {
       width: "100px",
@@ -90,6 +95,7 @@ const styles = (theme) => ({
       border: "1px solid #eee",
       borderRadius: "10px",
       boxShadow: "0 2px 2px #eee",
+      width: "25%",
     },
 });
 
@@ -112,17 +118,17 @@ class event extends Component {
                         <b> If you would like to add to these resources, please fill out <a href="https://forms.gle/XYhwKi2UZahKaugR7">this form</a>.</b>
                         </h5>
                         <br />
-                        <div className={classes.body}>
-                        {recruiters.map((person) => (
-                            <div className={classes.box}>
-                            <img src={ContactIcon} className={classes.iconImg}/>
-                            <p>Name: {person.name}</p>
-                            <p>Company: {person.company}</p>
-                            <p>Email: {person.email}</p>
-                            <p>Phone: {person.phone}</p>
-                            <p>Other info: {person.other}</p>
-                            </div>
-                        ))}
+                        <div className={classes.body} className="movingItem">
+                            {recruiters.map((person) => (
+                                <div className={classes.box} >
+                                    <img src={ContactIcon} className={classes.iconImg}/>
+                                    <p><b>{person.name}</b></p>
+                                    <p>{person.company}</p>
+                                    <p>Email: {person.email}</p>
+                                    <p>Phone: {person.phone}</p>
+                                    <p>{person.other}</p>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </CardContent>

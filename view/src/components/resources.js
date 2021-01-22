@@ -4,7 +4,6 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import {
   Card,
   CardContent,
-  CircularProgress,
   Button,
   ButtonGroup,
   Divider,
@@ -14,13 +13,12 @@ import DocIcon from "../assets/document-icon.png";
 import LinkIcon from "../assets/link.png";
 import CameraIcon from "../assets/camera.png";
 import SlideshowIcon from "../assets/slideshow.png";
-import { authMiddleWare } from "../util/auth";
 
 const resources = [
     {
-      title: "Document Title",
+      title: "Tamara's Interview Survival Guide",
       type: "document",
-      link: "#"
+      link: "https://docs.google.com/document/d/1hLltgCr-xsETgWqO6vRjWkhLxcUd0efknbfT0_dSMko/edit?usp=sharing"
     },
     {
       title: "Link Title",
@@ -65,48 +63,25 @@ const resources = [
       position: "absolute",
       top: "50%",
     },
-    uiProgess: {
-      position: "fixed",
-      zIndex: "1000",
-      height: "31px",
-      width: "31px",
-      left: "50%",
-      top: "35%",
-    },
     progess: {
       position: "absolute",
-    },
-    uploadButton: {
-      marginLeft: "8px",
-      margin: theme.spacing(1),
-    },
-    customError: {
-      color: "red",
-      fontSize: "0.8rem",
-      marginTop: 10,
     },
     submitButton: {
       marginTop: "10px",
     },
     body: {
       display: "flex",
+      flexWrap: "wrap",
     },
     linkBtns: {
       borderRadius: "10px",
       flexDirection: "row",
       margin: "20px",
+      maxWidth: "25%"
     },
     iconImg: {
       width: "100px",
       padding: "10px",
-    },
-    box: {
-      display: "inline-block",
-      margin: "20px",
-      padding: "20px",
-      border: "1px solid #eee",
-      borderRadius: "10px",
-      boxShadow: "0 2px 2px #eee",
     },
   });
 
@@ -124,9 +99,9 @@ class event extends Component {
                     <CardContent align="center">
                     <div>
                         <br />
-                        <h3>Company Info</h3>
+                        <h3>General Resources</h3>
                         <h5>
-                            Here you will find links to various resources with general information that may be useful when applying to different companies! 
+                            Here you will find links to various resources with general information that may be useful when applying to internships! 
                             <b> If you would like to add to these resources, please fill out <a href="https://forms.gle/XYhwKi2UZahKaugR7">this form</a>.</b>
                         </h5>
                         <br />
@@ -135,6 +110,10 @@ class event extends Component {
                             <Button
                                 variant={"outlined"}
                                 className={classes.linkBtns}
+                                onClick={() => {
+                                    const url = "https://docs.google.com/document/d/1hLltgCr-xsETgWqO6vRjWkhLxcUd0efknbfT0_dSMko/edit?usp=sharing";
+                                    window.open(url, "_blank");
+                                }}
                             >
                                 <img src={
                                 (() => {

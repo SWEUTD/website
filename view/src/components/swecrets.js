@@ -20,7 +20,7 @@ import {
 import axios from "axios";
 import { authMiddleWare } from "../util/auth";
 
-import Company from "../components/companyinfo";
+import Resources from "../components/resources";
 import Recruit from "../components/recruiters";
 
 const styles = (theme) => ({
@@ -160,7 +160,7 @@ class event extends Component {
     const sectionList = [
         "Referrals",
         "Interview Questions",
-        "Company Info",
+        "Resources",
         "Recruiters"
     ];
 
@@ -231,21 +231,15 @@ class event extends Component {
             </CardContent>
           </Card>
           <br />
-          <Card
-            className={classes.details}
-            className="movingItem"
-            variant="outlined"
-          >
-                {(() => {
-                  switch (this.state.currentSection) {
-                  case "Referrals": return null;
-                  case "Interview Questions": return null;
-                  case "Company Info": return <Company />;
-                  case "Recruiters": return <Recruit />;
-                  default: return null;
-                }
-                })()}
-          </Card>
+            {(() => {
+              switch (this.state.currentSection) {
+                case "Referrals": return null;
+                case "Interview Questions": return null;
+                case "Resources": return <Resources />;
+                case "Recruiters": return <Recruit />;
+                default: return null;
+              }
+            })()}
           <br />
         </main>
       );
