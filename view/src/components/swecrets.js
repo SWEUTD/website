@@ -3,6 +3,7 @@
 // component for displaying exclusive resources for SWEsters
 
 import React, { Component } from "react";
+import Collapsible from 'react-collapsible';
 
 import withStyles from "@material-ui/core/styles/withStyles";
 import {
@@ -86,8 +87,10 @@ class event extends Component {
       uiLoading: true,
       buttonLoading: false,
       imageError: "",
+      height: 0
     };
   }
+
 
   // makes sure user is logged in
   componentWillMount = () => {
@@ -200,6 +203,7 @@ class event extends Component {
               <div className={classes.progress} />
             </CardContent>
           </Card>
+  
         </main>
       );
     }
