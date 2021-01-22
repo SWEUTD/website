@@ -114,7 +114,7 @@ class event extends Component {
                         <br />
                         <h3>Recruiters</h3>
                         <h5>
-                        Here you will find the contact info for any recruiters that are in contact with SWEsters. Feel free to reach out to them! 
+                        Here you will find the contact info for any recruiters that are in contact with SWE. Feel free to reach out to them! 
                         <b> If you would like to add to these resources, please fill out <a href="https://forms.gle/XYhwKi2UZahKaugR7">this form</a>.</b>
                         </h5>
                         <br />
