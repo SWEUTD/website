@@ -139,3 +139,39 @@ li a:hover {
 .imageLink:hover {
   opacity: 0.5
 }
+
+.accordion {
+  background-color: rgb(185, 180, 202);
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  transition: 0.4s;
+}
+
+.myButton {
+	background-color:rgb(185, 180, 202);
+	border-radius:15px;
+	border:2px solid rgb(150, 140, 184);
+	display:inline-block;
+	cursor:pointer;
+	color:black;
+	font-family:Arial;
+	font-size:17px;
+	padding:24px 76px;
+  text-decoration:none;
+  width: 100%;
+}
+.myButton:hover {
+	background-color:rgb(205, 198, 226);
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+

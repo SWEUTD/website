@@ -7,6 +7,7 @@ import axios from "axios";
 
 import Account from "../components/account";
 import Event from "../components/event";
+import SWEcrets from "../components/swecrets";
 import Recordings from "../components/recordings";
 import Questions from "../components/q&a";
 import AlumniList from "../components/alumniList";
@@ -31,6 +32,7 @@ import NotesIcon from "@material-ui/icons/Notes";
 import PeopleIcon from "@material-ui/icons/People";
 import VideoLibrary from "@material-ui/icons/VideoLibrary";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
+import BusinessCenterIcon from '@material-ui/icons/BusinessCenter';
 
 import NavBar from "../components/navbar";
 import Footer from "../components/footer";
@@ -74,6 +76,8 @@ function Screen(props) {
     return <Account />;
   } else if (screen === "event") {
     return <Event />;
+  } else if (screen === "swecrets") {
+    return <SWEcrets />;
   } else if (screen === "recordings") {
     return <Recordings />;
   } else if (screen === "q&a") {
@@ -104,6 +108,9 @@ class portal extends Component {
   loadQandA = (event) => {
     this.setState({ render: "q&a" });
   };
+  loadSwecrets = (event) => {
+    this.setState({ render: "swecrets" });
+  }
 
   loadRecordings = (event) => {
     this.setState({ render: "recordings" });
@@ -222,6 +229,14 @@ class portal extends Component {
                   <PeopleIcon />
                 </ListItemIcon>
                 <ListItemText primary="Member Network" />
+              </ListItem>
+
+              <ListItem button key="SWEcrets" onClick={this.loadSwecrets}>
+                <ListItemIcon>
+                  {" "}
+                  <BusinessCenterIcon />{" "}
+                </ListItemIcon>
+                <ListItemText primary="SWEscrets" />
               </ListItem>
 
               <ListItem button key="Recordings" onClick={this.loadRecordings}>
