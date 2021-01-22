@@ -236,7 +236,7 @@ class portal extends Component {
                   {" "}
                   <BusinessCenterIcon />{" "}
                 </ListItemIcon>
-                <ListItemText primary="SWEscrets" />
+                <ListItemText primary="SWEcrets" />
               </ListItem>
 
               <ListItem button key="Recordings" onClick={this.loadRecordings}>
