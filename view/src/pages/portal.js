@@ -28,6 +28,7 @@ import AccountBoxIcon from "@material-ui/icons/Notes";
 import NotesIcon from "@material-ui/icons/Notes";
 import VideoLibrary from "@material-ui/icons/VideoLibrary";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
+import BusinessCenterIcon from '@material-ui/icons/BusinessCenter';
 
 import NavBar from '../components/navbar'
 import Footer from '../components/footer'
@@ -205,7 +206,7 @@ class portal extends Component {
               <ListItem button key="SWEcrets" onClick={this.loadSwecrets}>
                 <ListItemIcon>
                   {" "}
-                  <AccountBoxIcon />{" "}
+                  <BusinessCenterIcon />{" "}
                 </ListItemIcon>
                 <ListItemText primary="SWEscrets" />
               </ListItem>

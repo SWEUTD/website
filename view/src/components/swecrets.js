@@ -2,6 +2,10 @@
 
 // component for displaying exclusive resources for SWEsters
 
+// goals for improvement: 
+// allow users to upload resources directly from website instead of google forms
+// have document viewer so users can view document in same window, improve design of buttons
+
 import React, { Component } from "react";
 
 import withStyles from "@material-ui/core/styles/withStyles";
@@ -14,12 +18,10 @@ import {
   Divider,
 } from "@material-ui/core";
 import axios from "axios";
-import DocIcon from "../assets/document-icon.png";
-import LinkIcon from "../assets/link.png";
-import CameraIcon from "../assets/camera.png";
-import SlideshowIcon from "../assets/slideshow.png";
-import ContactIcon from "../assets/contact.png";
 import { authMiddleWare } from "../util/auth";
+
+import Company from "../components/companyinfo";
+import Recruit from "../components/recruiters";
 
 const styles = (theme) => ({
   content: {
@@ -93,6 +95,7 @@ const styles = (theme) => ({
 });
 
 class event extends Component {
+  
   constructor(props) {
     super(props);
 
@@ -151,10 +154,9 @@ class event extends Component {
       });
   };
 
-// currentSection should be string not object
   render() {
     const { classes } = this.props;
-    const currentSection = this.state;
+    const { currentSection } = this.state;
     const sectionList = [
         "Referrals",
         "Interview Questions",
@@ -212,7 +214,7 @@ class event extends Component {
                         sectionName === currentSection
                             ? "contained"
                             : "outlined"
-                        }
+                        } 
                         onClick={() =>
                         this.setState({
                             ...this.state,
@@ -234,101 +236,17 @@ class event extends Component {
             className="movingItem"
             variant="outlined"
           >
-            <CardContent align="center">
-              <div>
-                  <br />
-                  <h3>Company Info</h3>
-                  <h5>
-                    Here you will find links to various resources with general information that may be useful when applying to different companies! 
-                    <b> If you would like to add to these resources, please fill out <a href="https://forms.gle/XYhwKi2UZahKaugR7">this form</a>.</b>
-                  </h5>
-                  <br />
-                  <div className={classes.body}>
-                    <Button
-                      variant={"outlined"}
-                      className={classes.linkBtns}
-                    >
-                      <img src={DocIcon} className={classes.iconImg}/>
-                      <p>Document Title</p>
-                    </Button>
-                    <Button
-                      variant={"outlined"}
-                      className={classes.linkBtns}
-                    >
-                      <img src={LinkIcon} className={classes.iconImg}/>
-                      <p>Link Title</p>
-                    </Button>
-                    <Button
-                      variant={"outlined"}
-                      className={classes.linkBtns}
-                    >
-                      <img src={CameraIcon} className={classes.iconImg}/>
-                      <p>Image / Video Title</p>
-                    </Button>
-                    <Button
-                      variant={"outlined"}
-                      className={classes.linkBtns}
-                    >
-                      <img src={SlideshowIcon} className={classes.iconImg}/>
-                      <p>Slideshow Title</p>
-                    </Button>
-                    
-                  </div>
-                </div>
-            </CardContent>
+                {(() => {
+                  switch (this.state.currentSection) {
+                  case "Referrals": return null;
+                  case "Interview Questions": return null;
+                  case "Company Info": return <Company />;
+                  case "Recruiters": return <Recruit />;
+                  default: return null;
+                }
+                })()}
           </Card>
           <br />
-          <Card
-            className={classes.details}
-            className="movingItem"
-            variant="outlined"
-          >
-            <CardContent align="center">
-              <div>
-                  <br />
-                  <h3>Recruiters</h3>
-                  <h5>
-                    Here you will find the contact info for any recruiters that are in contact with SWEsters. Feel free to reach out to them! 
-                    <b> If you would like to add to these resources, please fill out <a href="https://forms.gle/XYhwKi2UZahKaugR7">this form</a>.</b>
-                  </h5>
-                  <br />
-                  <div className={classes.body}>
-                        <div className={classes.box}>
-                          <img src={ContactIcon} className={classes.iconImg}/>
-                          <p>Recruiter Name</p>
-                          <p>Company: abc</p>
-                          <p>Email: person@email.com</p>
-                          <p>Phone: 123-456-7890</p>
-                          <p>Other info:</p>
-                        </div>
-                        <div className={classes.box}>
-                          <img src={ContactIcon} className={classes.iconImg}/>
-                          <p>Recruiter Name</p>
-                          <p>Company: abc</p>
-                          <p>Email: person@email.com</p>
-                          <p>Phone: 123-456-7890</p>
-                          <p>Other info:</p>
-                        </div>
-                        <div className={classes.box}>
-                          <img src={ContactIcon} className={classes.iconImg}/>
-                          <p>Recruiter Name</p>
-                          <p>Company: abc</p>
-                          <p>Email: person@email.com</p>
-                          <p>Phone: 123-456-7890</p>
-                          <p>Other info:</p>
-                        </div>
-                        <div className={classes.box}>
-                          <img src={ContactIcon} className={classes.iconImg}/>
-                          <p>Recruiter Name</p>
-                          <p>Company: abc</p>
-                          <p>Email: person@email.com</p>
-                          <p>Phone: 123-456-7890</p>
-                          <p>Other info:</p>
-                        </div>
-                  </div>
-                </div>
-            </CardContent>
-          </Card>
         </main>
       );
     }
