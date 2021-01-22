@@ -53,7 +53,11 @@ class event extends Component {
             className="movingItem"
             variant="outlined"
           >
-            <CardContent>
+            <CardContent align="center">
+              <h3>Interview Questions</h3>
+              <h5>Click on one of the buttons to be taken to a list of interview questions asked by these companies compiled by SWEsters! These can help you prepare for upcoming interviews.</h5>
+              <br />
+              <br />
               <a href="https://docs.google.com/document/d/1_P6LQMYM5nhvLS9loqj5tLTTVhgseGEj258ptaPb3Bg/edit?usp=sharing" class="myButton" target="_blank">COLLINS AEROSPACE </a>
               <br></br>
               <br></br>

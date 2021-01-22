@@ -21,17 +21,17 @@ const resources = [
       link: "https://docs.google.com/document/d/1hLltgCr-xsETgWqO6vRjWkhLxcUd0efknbfT0_dSMko/edit?usp=sharing"
     },
     {
-      title: "Link Title",
+      title: "Link Example",
       type: "link",
-      link: "#"
+      link: "https://www.google.com/"
     },
     {
-      title: "Image / Video Title",
+      title: "Image / Video Example",
       type: "media",
       link: "#"
     },
     {
-      title: "Slideshow Title",
+      title: "Slideshow Example",
       type: "slideshow",
       link: "#"
     }
@@ -111,7 +111,7 @@ class event extends Component {
                                 variant={"outlined"}
                                 className={classes.linkBtns}
                                 onClick={() => {
-                                    const url = "https://docs.google.com/document/d/1hLltgCr-xsETgWqO6vRjWkhLxcUd0efknbfT0_dSMko/edit?usp=sharing";
+                                    const url = resource.link;
                                     window.open(url, "_blank");
                                 }}
                             >

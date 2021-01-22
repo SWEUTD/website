@@ -46,9 +46,9 @@ class event extends Component {
       return (
         <main>
         <Card className="movingItem">
-          <CardContent>
-              <p>Our fellow SWEsters and UTD Alumni are always looking to give back to this community. You can find their contact information below under various companies that they can provide a Referral for!</p>
-              <br></br>
+          <CardContent align="center">
+            <h3>Referrals</h3>
+              <h5>Our fellow SWEsters and UTD Alumni are always looking to give back to this community. You can find their contact information below under various companies that they can provide a Referral for!</h5>
               <p>Please reach out to them with your resume and the position that you are interested in!</p>
           </CardContent>
         </Card>
@@ -103,8 +103,8 @@ class event extends Component {
         <br></br>
         <Card>
           <CardContent>
-            <p>Interested in providing Referrals to fellow SWEsters? </p>
-            <a href="https://forms.gle/YVUUKhAapmzznKVB6" color="purple">Click here!</a>
+            <h5>Interested in providing Referrals to fellow SWEsters? 
+            <a href="https://forms.gle/YVUUKhAapmzznKVB6" color="purple"> Click here!</a></h5>
           </CardContent>
         </Card>
         </main>
