@@ -11,7 +11,14 @@ import {
 import ContactIcon from "../assets/contact.png";
 
 const recruiters = [
-    {
+  {
+    name: "Example Recruiter",
+    company: "ABC",
+    email: "person@email.com",
+    phone: "123 456 789",
+    other: "Role",
+  }
+    /*{ cannot share these recruiters yet
       name: "Susanna Biancheri",
       company: "AT&T",
       email: "sb2321@att.com",
@@ -45,7 +52,7 @@ const recruiters = [
       email: "jolenen@xilinx.com",
       phone: "408-324-4906",
       other: "Talent Acquisition Program Manager"
-    },
+    },*/
 ];
 
 const styles = (theme) => ({
@@ -115,7 +122,7 @@ class event extends Component {
                         <h3>Recruiters</h3>
                         <h5>
                         Here you will find the contact info for any recruiters that are in contact with SWE. Feel free to reach out to them! 
-                        <b> If you would like to add to these resources, please fill out <a href="https://forms.gle/XYhwKi2UZahKaugR7">this form</a>.</b>
+                        <b> If you would like to add to these resources, please fill out <a href="https://forms.gle/XYhwKi2UZahKaugR7">this form</a>. (Make sure you have their permission to share their contact info!)</b>
                         </h5>
                         <br />
                         <div className={classes.body} className="movingItem">

@@ -7,6 +7,7 @@
 // have document viewer so users can view document in same window, improve design of buttons
 
 import React, { Component } from "react";
+import Collapsible from 'react-collapsible';
 
 import withStyles from "@material-ui/core/styles/withStyles";
 import {
@@ -20,6 +21,8 @@ import {
 import axios from "axios";
 import { authMiddleWare } from "../util/auth";
 
+import Referrals from "../components/referrals";
+import Interview from "../components/interviewQs";
 import Resources from "../components/resources";
 import Recruit from "../components/recruiters";
 
@@ -115,8 +118,10 @@ class event extends Component {
       uiLoading: true,
       buttonLoading: false,
       imageError: "",
+      height: 0
     };
   }
+
 
   // makes sure user is logged in
   componentWillMount = () => {
@@ -139,7 +144,7 @@ class event extends Component {
           events: response.data.memberInfo.events,
           points: response.data.memberInfo.points,
           previousPoints: response.data.memberInfo.previousPoints || [],
-          currentSection: "Referrals",
+          currentSection: "Resources",
           uiLoading: false,
         });
       })
@@ -158,9 +163,9 @@ class event extends Component {
     const { classes } = this.props;
     const { currentSection } = this.state;
     const sectionList = [
+        "Resources",
         "Referrals",
         "Interview Questions",
-        "Resources",
         "Recruiters"
     ];
 
@@ -233,8 +238,8 @@ class event extends Component {
           <br />
             {(() => {
               switch (this.state.currentSection) {
-                case "Referrals": return null;
-                case "Interview Questions": return null;
+                case "Referrals": return <Referrals />;
+                case "Interview Questions": return <Interview />;
                 case "Resources": return <Resources />;
                 case "Recruiters": return <Recruit />;
                 default: return null;
