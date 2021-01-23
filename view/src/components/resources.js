@@ -13,6 +13,7 @@ import DocIcon from "../assets/document-icon.png";
 import LinkIcon from "../assets/link.png";
 import CameraIcon from "../assets/camera.png";
 import SlideshowIcon from "../assets/slideshow.png";
+import SpreadsheetIcon from "../assets/spreadsheet.png";
 
 const resources = [
     {
@@ -21,20 +22,15 @@ const resources = [
       link: "https://docs.google.com/document/d/1hLltgCr-xsETgWqO6vRjWkhLxcUd0efknbfT0_dSMko/edit?usp=sharing"
     },
     {
-      title: "Link Example",
+      title: "Find Roommates for Jobs (National SWE)",
+      type: "sheet",
+      link: "https://docs.google.com/spreadsheets/d/1SXs5BMQmw8yy62LbzvTbvN4vohuTGT79_zvXJ0fb4Xc/edit?usp=sharing"
+    },
+    {
+      title: "National SWE Website",
       type: "link",
-      link: "https://www.google.com/"
+      link: "https://swe.org/"
     },
-    {
-      title: "Image / Video Example",
-      type: "media",
-      link: "#"
-    },
-    {
-      title: "Slideshow Example",
-      type: "slideshow",
-      link: "#"
-    }
 ];
 
   const styles = (theme) => ({
@@ -120,6 +116,7 @@ class event extends Component {
                                     switch (resource.type) {
                                     case "document": return DocIcon;
                                     case "link": return LinkIcon;
+                                    case "sheet": return SpreadsheetIcon;
                                     case "media": return CameraIcon;
                                     case "slideshow": return SlideshowIcon;
                                     }
