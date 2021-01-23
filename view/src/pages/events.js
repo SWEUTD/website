@@ -26,7 +26,7 @@ const upcomingEvents = [
     name: 'SWE Spring Kickoff',
     date: '1/25/2020 - 7:00 PM',
     description: "We hope y'all are as excited as we are for our spring semester kickoff on Monday January 25th at 7pm CST.  Come see what we have planned this semester and how you can get involved! Don't forget to make a member account on sweutd.com/portal. We hope to see you all there!",
-    link: ''
+    link: 'https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffacebook.us19.list-manage.com%2Ftrack%2Fclick%3Fu%3Dada9150cb4cf2450b2870f9b7%26id%3Db886900443%26e%3D09a746bd56&data=04%7C01%7CAarushi.Pandey%40UTDallas.edu%7Cce3b6883628546b2b39a08d8bbf5ea7f%7C8d281d1d9c4d4bf7b16e032d15de9f6c%7C0%7C0%7C637466012179957464%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=kMsHLmYBoC%2B%2Bs3UJ3UfEQ2h3toBoZNKmuzaHoE0Deb8%3D&reserved=0'
   }
 ];
 
@@ -122,20 +122,17 @@ class events extends Component {
 							</Grid>
 							))}
 						</Grid> 
-							*/}
-
-						<Grid item md={3} xs={12} className={classes.gridItem}>
-
-							<div align="center">
-								<h1>Stay tuned for Upcoming Events for Spring 2021!</h1>
-							</div>
-					</Grid>
-					{/*
+              */}
+					<div align="center">
+              <h1>Upcoming Events</h1>
+            </div>
+          </Grid>
+					
 
 					<TableContainer component={Paper} align="center">
       <Table className={classes.table} aria-label="simple table">
         <TableHead>
-          <TableRow>
+        <TableRow>
             <TableCell align="center" width="45%"><h2></h2></TableCell>
             <TableCell align="center" width="55%"><h2></h2></TableCell>
           </TableRow>
@@ -167,46 +164,11 @@ class events extends Component {
         </TableBody>
       </Table>
 
-			</TableContainer> }
+			</TableContainer> 
 				</div>
 			</div>
 		);
-	}*/}
-            <Grid item md={3} xs={12} className={classes.gridItem}>
-              <div align="center">
-                <h1>Upcoming Events</h1>
-                <br />
-                {upcomingEvents.map((event) => (
-                  <List alignItems="center">
-                    <h4>{event.name}</h4>
-                    <ListSubheader>{event.date}</ListSubheader>
-                    <h5>{event.description}</h5>
-                    <br />
-                    {event.link != "" && event.link != null ? (
-                      <div>
-                        <Button
-                          href={event.link}
-                          align="center"
-                          variant="contained"
-                          color="primary"
-                        >
-                          Join Meeting
-                        </Button>
-                        <br />
-                        <br />
-                      </div>
-                    ) : null}
-                    <Divider />
-                  </List>
-                ))}
-              </div>
-            </Grid>
-          </Grid>
-          <Footer />
-        </div>
-      </div>
-    );
-  }
+	}
 }
 
 export default withStyles(styles)(events);

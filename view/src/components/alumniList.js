@@ -80,6 +80,27 @@ class AlumniList extends Component {
       return (
         <main className={classes.content}>
           <div className={classes.toolbar} />
+          <Card
+            className={classes.details}
+            className="movingItem"
+            variant="outlined"
+          >
+            <CardContent>
+              <div className={classes.details}>
+                <div>
+                  <br />
+                  <h1>Member List</h1>
+                  <h4>
+                    Go to your profile and toggle on "Show on Member List" and
+                    add a description to be shown on this list! It is place for
+                    you to network and reach out to other SWEsters!
+                  </h4>
+                </div>
+              </div>
+              <div className={classes.progress} />
+            </CardContent>
+          </Card>
+          <br />
           {this.state.users.length == 0 ? (
             <h2>No users are currently on the Member List.</h2>
           ) : (
@@ -88,9 +109,9 @@ class AlumniList extends Component {
                 <ListItem>
                   <Card className="movingItem" variant="outlined">
                     <CardContent>
-                      <h1>
+                      <h3>
                         {user.firstName} {user.lastName}
-                      </h1>
+                      </h3>
                       <p>{user.alumDesc}</p>
                     </CardContent>
                   </Card>
