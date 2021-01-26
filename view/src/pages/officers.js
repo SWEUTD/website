@@ -34,6 +34,7 @@ import CaitlinTibbetts from "../assets/OfficerPhotos/CaitlinTibbetts.jpg";
 import DeeshaKumbham from "../assets/OfficerPhotos/DeeshaKumbham.jpg";
 import GabrielleDuncan from "../assets/OfficerPhotos/GabrielleDuncan.jpg";
 import HansikaSundaresan from "../assets/OfficerPhotos/HansikaSundaresan.jpg";
+import IfritMaruf from "../assets/OfficerPhotos/IfritMaruf.jpg";
 import IshaniChowdhury from "../assets/OfficerPhotos/IshaniChowdhury.JPG";
 import JeshnaGupta from "../assets/OfficerPhotos/JeshnaGupta.jpg";
 import LaineyRogers from "../assets/OfficerPhotos/LaineyRogers.jpeg";
@@ -204,7 +205,7 @@ const officerList = [
   },
   {
     name: "Ifrit Maruf",
-    image: SWElogo,
+    image: IfritMaruf,
     position: "Public Relations Committee Member",
     committee: "Public Relations",
     linkedin: "https://www.linkedin.com/in/ifrit-maruf/",
