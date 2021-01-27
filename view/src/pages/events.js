@@ -23,16 +23,16 @@ import Kickoff_Flyer from "../assets/EventFlyers/Kickoff_Flyer.png";
 
 const upcomingEvents = [
   {
-    name: 'SWE Spring Kickoff',
-    date: '1/25/2020 - 7:00 PM',
-    description: "We hope y'all are as excited as we are for our spring semester kickoff on Monday January 25th at 7pm CST.  Come see what we have planned this semester and how you can get involved! Don't forget to make a member account on sweutd.com/portal. We hope to see you all there!",
-    link: 'https://bit.ly/SWEKickoffS21'
+    name: 'Xilinx - Resume + Pitching Yourself',
+    date: '2/3/2021 - 4:00 PM',
+    description: "",
+    link: ''
   }
 ];
 
 const flyers = [
 	{
-    image: Kickoff_Flyer,
+    image: '',
     link: ''
   }
 ];
