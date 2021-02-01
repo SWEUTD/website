@@ -22,7 +22,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 // Officer photos
-import SWElogo from "../assets/OfficerPhotos/SWElogo.png";
+//import SWElogo from "../assets/OfficerPhotos/SWElogo.png";
 import AarushiPandey from "../assets/OfficerPhotos/AarushiPandey.jpg";
 import AayushiChoudhary from "../assets/OfficerPhotos/AayushiChoudhary.png";
 import AfridaTasnim from "../assets/OfficerPhotos/AfridaTasnim.jpg";
@@ -39,6 +39,7 @@ import IshaniChowdhury from "../assets/OfficerPhotos/IshaniChowdhury.JPG";
 import JeshnaGupta from "../assets/OfficerPhotos/JeshnaGupta.jpg";
 import LaineyRogers from "../assets/OfficerPhotos/LaineyRogers.jpeg";
 import MaahaSakia from "../assets/OfficerPhotos/MaahaSakia.jpg";
+import MadisonKing from "../assets/OfficerPhotos/MadisonKing.jpg";
 import ManshaFatima from "../assets/OfficerPhotos/ManshaFatima.jpg";
 import MedhaAiyah from "../assets/OfficerPhotos/MedhaAiyah.jpg";
 import MrunmayiSathaye from "../assets/OfficerPhotos/MrunmayiSathaye.jpg";
@@ -150,7 +151,7 @@ const officerList = [
   },
   {
     name: "Madison King",
-    image: SWElogo,
+    image: MadisonKing,
     position: "Membership Chair",
     committee: "Board",
     linkedin: "https://www.linkedin.com/in/mbaileyking/",
