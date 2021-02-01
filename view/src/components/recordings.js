@@ -11,6 +11,10 @@ import { authMiddleWare } from "../util/auth";
 
 const videos = [
   {
+    link: "https://www.youtube.com/embed/v0I80ns293Q",
+    title: "SWE Kickoff - 1/25/2021",
+  },
+  {
     link: "https://www.youtube.com/embed/uWRT_R3QOfA",
     title: "IBM TST - Day in The Life - 11/16/2020",
   },

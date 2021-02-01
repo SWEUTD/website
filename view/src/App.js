@@ -64,7 +64,9 @@ function App() {
           <Route exact path="/join" component={join} />
           <Route exact path="/contact" component={contact} />
           <Route exact path="/calendar" component={calendar} />
-          <PropsRoute exact path="/xilinx" eventHeading="Sign in to the Xilinx - Resume + Pitching Yourself event" eventPoints={1} eventName = "Xilinx - Resume + Pitching Yourself" eventDate = "3/2/2021" secretWord = "review" component={meetingform}/>
+          <PropsRoute exact path="/xilinx" eventHeading="Sign in to the Xilinx - Resume + Pitching Yourself event" eventPoints={1} eventName = "Xilinx - Resume + Pitching Yourself" eventDate = "2/3/2021" secretWord = "review" component={meetingform}/>
+          <PropsRoute exact path="/honeywell" eventHeading="Sign in to Honeywell - Finding your Niche + Exploring Careers event" eventPoints={1} eventName = "Honeywell - Finding your Niche + Exploring Careers" eventDate = "2/11/2021" secretWord = "direction" component={meetingform}/>
+          <PropsRoute exact path="/digitaldivas" eventHeading="Sign in to the 8th Annual Digital Divas CS event" eventPoints={1} eventName = "8th Annual Digital Divas CS Event" eventDate = "2/13/2021" secretWord = "volunteer" component={meetingform}/>
         </Switch>
       </BrowserRouter>
     </MuiThemeProvider>
