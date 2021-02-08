@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.91039174.chunk.css",
-    "main.js": "/static/js/main.95544155.chunk.js",
-    "main.js.map": "/static/js/main.95544155.chunk.js.map",
+    "main.js": "/static/js/main.20a29d9f.chunk.js",
+    "main.js.map": "/static/js/main.20a29d9f.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.94a6af97.js",
     "runtime-main.js.map": "/static/js/runtime-main.94a6af97.js.map",
     "static/js/2.972ae20d.chunk.js": "/static/js/2.972ae20d.chunk.js",
     "static/js/2.972ae20d.chunk.js.map": "/static/js/2.972ae20d.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.c0f7441e6dc2031091ce31a8fc074ad2.js": "/precache-manifest.c0f7441e6dc2031091ce31a8fc074ad2.js",
+    "precache-manifest.a70bd8cd0f506a3bafcc92d03949cf4b.js": "/precache-manifest.a70bd8cd0f506a3bafcc92d03949cf4b.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.91039174.chunk.css.map": "/static/css/main.91039174.chunk.css.map",
     "static/js/2.972ae20d.chunk.js.LICENSE.txt": "/static/js/2.972ae20d.chunk.js.LICENSE.txt",
@@ -33,6 +33,7 @@
     "static/media/GabrielleDuncan.jpg": "/static/media/GabrielleDuncan.5ff66106.jpg",
     "static/media/GillSansMTBook.ttf": "/static/media/GillSansMTBook.9a2b9a60.ttf",
     "static/media/HansikaSundaresan.jpg": "/static/media/HansikaSundaresan.d7d240f7.jpg",
+    "static/media/Honeywell.png": "/static/media/Honeywell.a2dfcf3f.png",
     "static/media/IfritMaruf.jpg": "/static/media/IfritMaruf.cb711e36.jpg",
     "static/media/IshaniChowdhury.JPG": "/static/media/IshaniChowdhury.c25c0338.JPG",
     "static/media/JerryAlexander.jpg": "/static/media/JerryAlexander.7508d85b.jpg",
@@ -61,7 +62,6 @@
     "static/media/WE.jpg": "/static/media/WE.7f0776b4.jpg",
     "static/media/WhySWE.mp4": "/static/media/WhySWE.97a2f40e.mp4",
     "static/media/XILINX.png": "/static/media/XILINX.3390e2fe.png",
-    "static/media/Xilinx_Resume.jpg": "/static/media/Xilinx_Resume.af753d35.jpg",
     "static/media/ZainebAhmad.png": "/static/media/ZainebAhmad.db7d88d0.png",
     "static/media/contact.png": "/static/media/contact.b1d1fd77.png",
     "static/media/logo.png": "/static/media/logo.9e78e613.png",
@@ -71,6 +71,6 @@
     "static/js/runtime-main.94a6af97.js",
     "static/js/2.972ae20d.chunk.js",
     "static/css/main.91039174.chunk.css",
-    "static/js/main.95544155.chunk.js"
+    "static/js/main.20a29d9f.chunk.js"
   ]
 }
