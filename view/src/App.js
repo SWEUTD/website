@@ -17,6 +17,9 @@ import join from "./pages/join";
 import calendar from "./pages/calendar";
 import meetingform from "./pages/meetingform";
 
+import Slider from './components/slider';
+import { Col } from 'shards-react';
+
 const theme = createMuiTheme({
   palette: {
     primary: {
@@ -68,6 +71,13 @@ function App() {
           <PropsRoute exact path="/digitaldivas" eventHeading="Sign in to the 8th Annual Digital Divas CS event" eventPoints={1} eventName = "8th Annual Digital Divas CS Event" eventDate = "2/13/2021" secretWord = "volunteer" component={meetingform}/>
           <PropsRoute exact path="/galentines" eventHeading="Sign in to the Galentine's Day Social" eventPoints={1} eventName = "Galentine's Day Social" eventDate = "2/15/2021" secretWord = "love" component={meetingform}/>
         </Switch>
+        <React.Fragment>
+      <Col xs="12" sm="4" className="text-sm-left text-center text-md-left mb-sm-0">
+        <span className="text-uppercase page-subtitle">Components</span>
+        <h3 className="page-title">Posts</h3>
+      </Col>
+      <Slider />
+    </React.Fragment>
       </BrowserRouter>
     </MuiThemeProvider>
   );
