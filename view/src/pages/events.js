@@ -18,21 +18,42 @@ import {
 } from "@material-ui/core";
 import NavBar from "../components/navbar";
 
-import SWE_Match_Presentation from "../assets/EventFlyers/SWE_Match_Presentation.png"
-import Kickoff_Flyer from "../assets/EventFlyers/Kickoff_Flyer.png";
+import Honeywell from "../assets/EventFlyers/Honeywell.png"
+import DigitalDivas from "../assets/EventFlyers/DigitalDivas.jpg"
+import Galentine_Social from "../assets/EventFlyers/Galentine_Social.png"
 
 const upcomingEvents = [
   {
-    name: 'Xilinx - Resume + Pitching Yourself',
-    date: '2/3/2021 - 4:00 PM',
-    description: "",
+    name: 'Honeywell - Finding your Niche + Exploring Careers',
+    date: '2/11/2021 - 5:00 PM',
+    description: "Having trouble finding your niche and choosing a career path? Come join us for an exciting event with Honeywell, where you can learn more about the company and meet with two female engineers: Judith (Director of Quality Engineering) and Amanda (Director of Offering Management). You don't want to miss this event!",
+    link: 'https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffacebook.us19.list-manage.com%2Ftrack%2Fclick%3Fu%3Dada9150cb4cf2450b2870f9b7%26id%3D0277c6b43d%26e%3D09a746bd56&data=04%7C01%7CAarushi.Pandey%40UTDallas.edu%7Cb2442e418575475212eb08d8c6df7555%7C8d281d1d9c4d4bf7b16e032d15de9f6c%7C0%7C0%7C637478010356676449%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=aOo7VGelk%2FqOzWKla9Ut522V8uhBIMxExez7YyYbSok%3D&reserved=0'
+  },
+  {
+    name: '8th Annual Digital Divas CS Event',
+    date: '2/13/2021 - 10:50 AM',
+    description: "This 2-week virtual program teaches girls—trans and cis—and non-binary students the computer science skills they need to make an impact in their community while preparing for a career in tech. Participants will get exposure to tech jobs, meet women in tech careers, and join a supportive sisterhood of girls in tech: From the perspective for a college freshman, junior, and senior, SWE UTD speakers will provide advice and insider information regarding college and scholarship applications, extra curricular activities, leadership and volunteering, online school, and job hunting/internships.",
     link: ''
+  },
+  {
+    name: "Galentine's Day Social",
+    date: '2/15/2021 - 7:00 PM',
+    description: "Come join us for an exciting social in collaboration with our ECS student orgs including NSBE and IEEE to celebrate the beginning of the semester and love! Wear something pink/red/purple to show your support for women in tech. We have an icebreaker and some fun activities planned - you definitely don't want to miss out!",
+    link: 'https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffacebook.us19.list-manage.com%2Ftrack%2Fclick%3Fu%3Dada9150cb4cf2450b2870f9b7%26id%3D7f6835c458%26e%3D09a746bd56&data=04%7C01%7CAarushi.Pandey%40UTDallas.edu%7Caa18a222947f47338b9208d8cc558308%7C8d281d1d9c4d4bf7b16e032d15de9f6c%7C0%7C0%7C637484014947542838%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=VbbIFGoeY2bKSxvB%2FRs7h%2BBvXMOE2wSDcqRgZ5T1des%3D&reserved=0'
   }
 ];
 
 const flyers = [
-	{
-    image: '',
+  {
+    image: Honeywell,
+    link: ''
+  },
+  {
+    image: DigitalDivas,
+    link: ''
+  },
+  {
+    image: Galentine_Social,
     link: ''
   }
 ];
@@ -66,7 +87,9 @@ function createData(event, flyer) {
 
 
 const rows = [
-  createData(upcomingEvents[0], flyers[0].image)
+  createData(upcomingEvents[0], flyers[0].image),
+  createData(upcomingEvents[1], flyers[1].image),
+  createData(upcomingEvents[2], flyers[2].image)
   ];
 
 class events extends Component {
