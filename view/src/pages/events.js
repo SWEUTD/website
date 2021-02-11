@@ -19,6 +19,8 @@ import {
 import NavBar from "../components/navbar";
 
 import Honeywell from "../assets/EventFlyers/Honeywell.png"
+import DigitalDivas from "../assets/EventFlyers/DigitalDivas.jpg"
+import Galentine_Social from "../assets/EventFlyers/Galentine_Social.png"
 
 const upcomingEvents = [
   {
@@ -47,11 +49,11 @@ const flyers = [
     link: ''
   },
   {
-    image: '',
+    image: DigitalDivas,
     link: ''
   },
   {
-    image: '',
+    image: Galentine_Social,
     link: ''
   }
 ];
