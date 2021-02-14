@@ -22,6 +22,7 @@ const styles = makeStyles((muiBaseTheme) => ({
   grid: {
     marginTop: "20px",
     minHeight: "391px",
+    marginBottom: "20px",
   },
   card: {
     minWidth: 0,
@@ -35,6 +36,7 @@ const styles = makeStyles((muiBaseTheme) => ({
     "&:hover": {
       boxShadow: "0 16px 70px -12.125px rgba(0,0,0,0.3)",
     },
+    color: "#343a40",
   },
   media: {
     minHeight: "10rem",
@@ -80,6 +82,7 @@ const StyledBadge = withStyles((theme) => ({
     color: "#44b700",
     boxShadow: `0 0 0 2px ${theme.palette.background.paper}`,
     bottom: -131,
+
 
     "&::after": {
       position: "absolute",
@@ -149,6 +152,7 @@ export default function MediumCard(props) {
                 display: "inline-block",
                 alignItems: "center",
                 marginLeft: "1.5625rem",
+                // color: "#343a40",
               }}
             >
               <Avatar
@@ -171,6 +175,7 @@ export default function MediumCard(props) {
                 display: "inline-block",
                 alignItems: "center",
                 marginLeft: "1.5625rem",
+                // color: "#343a40",
               }}
               varient="rounded"
               href={props.profilelink}
@@ -178,15 +183,16 @@ export default function MediumCard(props) {
             />
           )}
         </CardMedia>
-        <CardContent
+        <CardContent 
           className={classes.content}
           style={{
             paddingTop: "2.1875rem",
             minHeight: "120px",
             paddingBottom: "0",
+            // color: "#343a40",
           }}
         >
-          <Typography className={classes.heading} variant={"h5"} gutterBottom>
+          <Typography className={classes.heading} variant={"h5"} gutterBottom /*style={{color: "#343a40"}}*/>
             <Link
               href={props.link}
               target="_blank"

@@ -70,7 +70,6 @@ function App() {
           <PropsRoute exact path="/digitaldivas" eventHeading="Sign in to the 8th Annual Digital Divas CS event" eventPoints={1} eventName = "8th Annual Digital Divas CS Event" eventDate = "2/13/2021" secretWord = "volunteer" component={meetingform}/>
           <PropsRoute exact path="/galentines" eventHeading="Sign in to the Galentine's Day Social" eventPoints={1} eventName = "Galentine's Day Social" eventDate = "2/15/2021" secretWord = "love" component={meetingform}/>
         </Switch>
-        <Slider />
       </BrowserRouter>
     </MuiThemeProvider>
   );

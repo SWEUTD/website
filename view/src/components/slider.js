@@ -12,6 +12,9 @@ class Slider extends React.Component {
   mediumURL =
     "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@Sabesan96";
 
+    // , "Access-Control-Allow-Headers":"*"
+    // "Access-Control-Allow-Origin": "*" , 
+    //, { headers: {"Access-Control-Allow-Methods": "GET, POST, PUT, DELETE"}, }
   async componentDidMount() {
     await axios
       .get(this.mediumURL)
@@ -40,7 +43,7 @@ class Slider extends React.Component {
     const { itemRows } = this.state;
 
     return (
-      <Grid container spacing={1}>
+      <Grid container spacing={1} style={{backgroundColor: "#5A5377"}}>
         {itemRows.map((row, id) =>
           row.map((item, key) => <PostCard {...item} key={key} />)
         )}
