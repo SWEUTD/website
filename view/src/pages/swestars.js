@@ -17,7 +17,7 @@ import {
 } from "@material-ui/core";
 import NavBar from "../components/navbar";
 import Footer from "../components/footer";
-import database from "../components/firebase";
+import { database } from "../components/firebase";
 
 const styles = (theme) => ({
   gridItem: {
