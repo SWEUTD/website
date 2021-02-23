@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.91039174.chunk.css",
-    "main.js": "/static/js/main.8af7a2ce.chunk.js",
-    "main.js.map": "/static/js/main.8af7a2ce.chunk.js.map",
+    "main.js": "/static/js/main.fd322c07.chunk.js",
+    "main.js.map": "/static/js/main.fd322c07.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.94a6af97.js",
     "runtime-main.js.map": "/static/js/runtime-main.94a6af97.js.map",
-    "static/js/2.52526c1c.chunk.js": "/static/js/2.52526c1c.chunk.js",
-    "static/js/2.52526c1c.chunk.js.map": "/static/js/2.52526c1c.chunk.js.map",
+    "static/js/2.972ae20d.chunk.js": "/static/js/2.972ae20d.chunk.js",
+    "static/js/2.972ae20d.chunk.js.map": "/static/js/2.972ae20d.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.ae96f19c591e2afdc2c60e25326bd213.js": "/precache-manifest.ae96f19c591e2afdc2c60e25326bd213.js",
+    "precache-manifest.a446589b1aab713a5ad13c31bdf85545.js": "/precache-manifest.a446589b1aab713a5ad13c31bdf85545.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.91039174.chunk.css.map": "/static/css/main.91039174.chunk.css.map",
-    "static/js/2.52526c1c.chunk.js.LICENSE.txt": "/static/js/2.52526c1c.chunk.js.LICENSE.txt",
+    "static/js/2.972ae20d.chunk.js.LICENSE.txt": "/static/js/2.972ae20d.chunk.js.LICENSE.txt",
     "static/media/1.HEIC": "/static/media/1.ff820100.HEIC",
     "static/media/2.jpg": "/static/media/2.a6cb3cc9.jpg",
     "static/media/3.jpg": "/static/media/3.46504d3d.jpg",
@@ -28,6 +28,7 @@
     "static/media/CadyBaltz.jpg": "/static/media/CadyBaltz.c2cef017.jpg",
     "static/media/CaitlinTibbetts.jpg": "/static/media/CaitlinTibbetts.ddb67fde.jpg",
     "static/media/DeeshaKumbham.jpg": "/static/media/DeeshaKumbham.8e885233.jpg",
+    "static/media/Discord_Study_Social.png": "/static/media/Discord_Study_Social.91458749.png",
     "static/media/Events.jpg": "/static/media/Events.a3fb2c22.jpg",
     "static/media/Events2.jpg": "/static/media/Events2.d6ea8178.jpg",
     "static/media/GabrielleDuncan.jpg": "/static/media/GabrielleDuncan.5ff66106.jpg",
@@ -68,8 +69,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.94a6af97.js",
-    "static/js/2.52526c1c.chunk.js",
+    "static/js/2.972ae20d.chunk.js",
     "static/css/main.91039174.chunk.css",
-    "static/js/main.8af7a2ce.chunk.js"
+    "static/js/main.fd322c07.chunk.js"
   ]
 }
