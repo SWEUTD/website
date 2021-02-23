@@ -18,22 +18,42 @@ import {
 } from "@material-ui/core";
 import NavBar from "../components/navbar";
 
-// import Honeywell from "../assets/EventFlyers/Honeywell.png"
+import Discord_Study_Social from "../assets/EventFlyers/Discord_Study_Social.png"
 
 const upcomingEvents = [
   {
     name: "GEAR Trivia Night",
-    date: '2/26/2021',
-    description: "",
+    date: '2/26/2021 - 7:00 PM CST',
+    description: "SWE is partnering with GEAR (Gifted Education Alliance of Richardson) to host a trivia night for students from Richardson ISD! A panel of our very own SWEsters will be advising the students and testing their knowledge with a fun Kahoot. If you are interested in volunteering with SWE, stay tuned for more opportunities like this in the near future!",
     link: ''
-  }
+  },
+  {
+    name: "Discord Study Social",
+    date: '2/28/2021 - 6:00 PM CST',
+    description: "",
+    link: 'https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffacebook.us19.list-manage.com%2Ftrack%2Fclick%3Fu%3Dada9150cb4cf2450b2870f9b7%26id%3D10695cbd20%26e%3D09a746bd56&data=04%7C01%7CAarushi.Pandey%40UTDallas.edu%7C0b170c85fac14a2621fa08d8d761f089%7C8d281d1d9c4d4bf7b16e032d15de9f6c%7C0%7C0%7C637496162949707900%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=CqleXAMCDpiBtxyngUz1bpR1Jb6tULa6gNLl%2FYA350g%3D&reserved=0'
+  },
+  {
+    name: "AT&T Panel: Create Your Own Path to Success",
+    date: '3/2/2021 - 6:30 PM CST',
+    description: "Come join us for an exciting event with our sponsor, AT&T, for a female-focused panel about growing your inner G.I.R.L. and finding your path to success. Hope to see y'all there! ",
+    link: 'https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffacebook.us19.list-manage.com%2Ftrack%2Fclick%3Fu%3Dada9150cb4cf2450b2870f9b7%26id%3D73ba1de828%26e%3D09a746bd56&data=04%7C01%7CAarushi.Pandey%40UTDallas.edu%7C0b170c85fac14a2621fa08d8d761f089%7C8d281d1d9c4d4bf7b16e032d15de9f6c%7C0%7C0%7C637496162949717894%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=CMdwlffRhalmF1GT51EARQCamw1VfxeXLiitHFwF748%3D&reserved=0'
+  },
 ];
 
 const flyers = [
   {
     image: '',
     link: ''
-  }
+  },
+  {
+    image: Discord_Study_Social,
+    link: ''
+  },
+  {
+    image: '',
+    link: ''
+  },
 ];
 
 
@@ -66,6 +86,8 @@ function createData(event, flyer) {
 
 const rows = [
   createData(upcomingEvents[0], flyers[0].image),
+  createData(upcomingEvents[1], flyers[1].image),
+  createData(upcomingEvents[2], flyers[2].image),
   ];
 
 class events extends Component {
