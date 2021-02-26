@@ -10,7 +10,7 @@ class Slider extends React.Component {
     this.state = { itemRows: [], avatar: "", profileLink: "" };
   }
   mediumURL =
-    "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@Sabesan96";
+    "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@sweutd";
 
     // , "Access-Control-Allow-Headers":"*"
     // "Access-Control-Allow-Origin": "*" , 
@@ -41,9 +41,15 @@ class Slider extends React.Component {
   }
   render() {
     const { itemRows } = this.state;
+    const containerStyle = {
+      backgroundColor: "#5A5377",
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center'
+    };
 
     return (
-      <Grid container spacing={1} style={{backgroundColor: "#5A5377"}}>
+      <Grid container spacing={1} style={containerStyle} >
         {itemRows.map((row, id) =>
           row.map((item, key) => <PostCard {...item} key={key} />)
         )}
