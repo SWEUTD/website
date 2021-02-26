@@ -26,7 +26,7 @@ class navbar extends Component {
     const { classes } = this.props;
     return (
       <div>
-        <AppBar position="fixed" className={classes.appBar}>
+        <AppBar position="fixed" className={classes.appBar} style={{zIndex : 12345678}}>
           <Navbar bg="dark" variant="dark" expand="lg">
             <Navbar.Brand href="/">
               <img

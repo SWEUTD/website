@@ -1,4 +1,6 @@
 import React from "react";
+import Slider from "./components/slider";
+
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import { ThemeProvider as MuiThemeProvider } from "@material-ui/core/styles";

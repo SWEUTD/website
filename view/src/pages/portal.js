@@ -11,6 +11,7 @@ import SWEcrets from "../components/swecrets";
 import Recordings from "../components/recordings";
 import Questions from "../components/q&a";
 import AlumniList from "../components/alumniList";
+// import Slider from "../components/slider";
 
 import {
   CircularProgress,
@@ -84,7 +85,9 @@ function Screen(props) {
     return <Questions />;
   } else if (screen === "alumni") {
     return <AlumniList />;
-  }
+  } /*else if (screen === "slider") {
+    return <Slider />;
+  }*/
   return <Event />;
 }
 
@@ -115,7 +118,11 @@ class portal extends Component {
   loadRecordings = (event) => {
     this.setState({ render: "recordings" });
   };
-
+/*
+  loadSlider = (event) => {
+    this.setState({ render: "slider" });
+  };
+*/
   logoutHandler = (event) => {
     localStorage.removeItem("AuthToken");
     this.props.history.push("/login");
