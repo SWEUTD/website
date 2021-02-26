@@ -66,9 +66,9 @@ function App() {
           <Route exact path="/join" component={join} />
           <Route exact path="/contact" component={contact} />
           <Route exact path="/calendar" component={calendar} />
-          <PropsRoute exact path="/honeywell" eventHeading="Sign in to Honeywell - Finding your Niche + Exploring Careers event" eventPoints={1} eventName = "Honeywell - Finding your Niche + Exploring Careers" eventDate = "2/11/2021" secretWord = "direction" component={meetingform}/>
-          <PropsRoute exact path="/digitaldivas" eventHeading="Sign in to the 8th Annual Digital Divas CS event" eventPoints={1} eventName = "8th Annual Digital Divas CS Event" eventDate = "2/13/2021" secretWord = "volunteer" component={meetingform}/>
-          <PropsRoute exact path="/galentines" eventHeading="Sign in to the Galentine's Day Social" eventPoints={1} eventName = "Galentine's Day Social" eventDate = "2/15/2021" secretWord = "love" component={meetingform}/>
+          <PropsRoute exact path="/discord" eventHeading="Sign in to Discord Study Social" eventPoints={1} eventName = "Discord Study Social" eventDate = "2/24/2021" secretWord = "midterms" component={meetingform}/>
+          <PropsRoute exact path="/gear" eventHeading="Sign in to GEAR Trivia Night" eventPoints={1} eventName = "GEAR Trivia Night" eventDate = "2/26/2021" secretWord = "questions" component={meetingform}/>
+          <PropsRoute exact path="/at&t" eventHeading="Sign in to AT&T Panel: Create Your Own Path to Success Event" eventPoints={1} eventName = "AT&T Panel: Create Your Own Path to Success" eventDate = "3/2/2021" secretWord = "girl" component={meetingform}/>
         </Switch>
       </BrowserRouter>
     </MuiThemeProvider>
