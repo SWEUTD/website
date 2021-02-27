@@ -47,13 +47,26 @@ class Slider extends React.Component {
       alignItems: 'center',
       justifyContent: 'center'
     };
+    const headerStyle = {
+      backgroundColor: "#5A5377",
+      color: "#f5f5f5",
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      paddingTop: '15px',
+    };
 
     return (
+      <div>
+        <div style={headerStyle}>
+          <h1>SWE UTD Articles</h1> <br/>
+        </div>
       <Grid container spacing={1} style={containerStyle} >
         {itemRows.map((row, id) =>
           row.map((item, key) => <PostCard {...item} key={key} />)
         )}
       </Grid>
+      </div>
     );
   }
 }
