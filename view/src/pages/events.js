@@ -23,28 +23,28 @@ import AT_and_T from "../assets/EventFlyers/AT&T.png"
 
 const upcomingEvents = [
   {
-    name: "Discord Study Social",
-    date: '2/24/2021 - 6:00 PM CST',
-    description: "",
-    link: 'https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffacebook.us19.list-manage.com%2Ftrack%2Fclick%3Fu%3Dada9150cb4cf2450b2870f9b7%26id%3D10695cbd20%26e%3D09a746bd56&data=04%7C01%7CAarushi.Pandey%40UTDallas.edu%7C0b170c85fac14a2621fa08d8d761f089%7C8d281d1d9c4d4bf7b16e032d15de9f6c%7C0%7C0%7C637496162949707900%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=CqleXAMCDpiBtxyngUz1bpR1Jb6tULa6gNLl%2FYA350g%3D&reserved=0'
-  },
-  {
-    name: "GEAR Trivia Night",
-    date: '2/26/2021 - 7:00 PM CST',
-    description: "SWE is partnering with GEAR (Gifted Education Alliance of Richardson) to host a trivia night for students from Richardson ISD! A panel of our very own SWEsters will be advising the students and testing their knowledge with a fun Kahoot. If you are interested in volunteering with SWE, stay tuned for more opportunities like this in the near future!",
-    link: ''
-  },
-  {
     name: "AT&T Panel: Create Your Own Path to Success",
     date: '3/2/2021 - 6:30 PM CST',
     description: "Come join us for an exciting event with our sponsor, AT&T, for a female-focused panel about growing your inner G.I.R.L. and finding your path to success. Hope to see y'all there! ",
     link: 'https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffacebook.us19.list-manage.com%2Ftrack%2Fclick%3Fu%3Dada9150cb4cf2450b2870f9b7%26id%3D73ba1de828%26e%3D09a746bd56&data=04%7C01%7CAarushi.Pandey%40UTDallas.edu%7C0b170c85fac14a2621fa08d8d761f089%7C8d281d1d9c4d4bf7b16e032d15de9f6c%7C0%7C0%7C637496162949717894%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=CMdwlffRhalmF1GT51EARQCamw1VfxeXLiitHFwF748%3D&reserved=0'
   },
+  {
+    name: "Navigating a Virtual Career Fair Panel",
+    date: '3/10/2021 - 6:00 PM CST',
+    description: "Need some tips on navigating a virtual career fair? Come get advice from our SWE Panelists on internship experiences, networking, and navigating the upcoming virtual career fair! You don't want to miss this event!",
+    link: 'https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffacebook.us19.list-manage.com%2Ftrack%2Fclick%3Fu%3Dada9150cb4cf2450b2870f9b7%26id%3D936c50b499%26e%3D09a746bd56&data=04%7C01%7CAarushi.Pandey%40UTDallas.edu%7Cd8ff6a9a48ae4868868208d8dcd846d8%7C8d281d1d9c4d4bf7b16e032d15de9f6c%7C0%7C0%7C637502168750943673%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=UUt0OL%2BOB9ggysm1e0h8P9mQ4dL%2Bl98of1%2FvSUkD1eM%3D&reserved=0'
+  },
+  {
+    name: "Pi Day Social",
+    date: '3/12/2021 - 6:00 PM CST',
+    description: "Come join us for an exciting social to celebrate Pi day with your fellow SWEsters! We have an icebreaker and some fun activities planned - you definitely don't want to miss out!",
+    link: 'https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffacebook.us19.list-manage.com%2Ftrack%2Fclick%3Fu%3Dada9150cb4cf2450b2870f9b7%26id%3D422764decf%26e%3D09a746bd56&data=04%7C01%7CAarushi.Pandey%40UTDallas.edu%7Cd8ff6a9a48ae4868868208d8dcd846d8%7C8d281d1d9c4d4bf7b16e032d15de9f6c%7C0%7C0%7C637502168750943673%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=IXqAVHDK0EmSRs2BG1AKqOuRnz9a94T%2BA3ACI0XHWoE%3D&reserved=0'
+  },
 ];
 
 const flyers = [
   {
-    image: Discord_Study_Social,
+    image: AT_and_T,
     link: ''
   },
   {
@@ -52,9 +52,9 @@ const flyers = [
     link: ''
   },
   {
-    image: AT_and_T,
+    image: '',
     link: ''
-  },
+  }
 ];
 
 
