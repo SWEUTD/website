@@ -1,4 +1,6 @@
 import React from "react";
+import Slider from "./components/slider";
+
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import { ThemeProvider as MuiThemeProvider } from "@material-ui/core/styles";
@@ -64,9 +66,9 @@ function App() {
           <Route exact path="/join" component={join} />
           <Route exact path="/contact" component={contact} />
           <Route exact path="/calendar" component={calendar} />
-          <PropsRoute exact path="/honeywell" eventHeading="Sign in to Honeywell - Finding your Niche + Exploring Careers event" eventPoints={1} eventName = "Honeywell - Finding your Niche + Exploring Careers" eventDate = "2/11/2021" secretWord = "direction" component={meetingform}/>
-          <PropsRoute exact path="/digitaldivas" eventHeading="Sign in to the 8th Annual Digital Divas CS event" eventPoints={1} eventName = "8th Annual Digital Divas CS Event" eventDate = "2/13/2021" secretWord = "volunteer" component={meetingform}/>
-          <PropsRoute exact path="/galentines" eventHeading="Sign in to the Galentine's Day Social" eventPoints={1} eventName = "Galentine's Day Social" eventDate = "2/15/2021" secretWord = "love" component={meetingform}/>
+          <PropsRoute exact path="/at&t" eventHeading="Sign in to AT&T Panel: Create Your Own Path to Success Event" eventPoints={1} eventName = "AT&T Panel: Create Your Own Path to Success" eventDate = "3/2/2021" secretWord = "girl" component={meetingform}/>
+          <PropsRoute exact path="/career" eventHeading="Sign in to Navigating a Virtual Career Fair Panel Event" eventPoints={1} eventName = "Navigating a Virtual Career Fair Panel" eventDate = "3/10/2021" secretWord = "meet" component={meetingform}/>
+          <PropsRoute exact path="/pi" eventHeading="Sign in to Pi Day Social" eventPoints={1} eventName = "Pi Day Social" eventDate = "3/12/2021" secretWord = "sweet" component={meetingform}/>
         </Switch>
       </BrowserRouter>
     </MuiThemeProvider>

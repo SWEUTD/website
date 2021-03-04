@@ -7,6 +7,7 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import Slideshow from "../components/slideshow.js";
 import NavBar from "../components/navbar";
 import Footer from "../components/footer";
+import Slider from "../components/slider";
 
 const styles = (theme) => ({});
 
@@ -17,6 +18,7 @@ class home extends Component {
       <div className={classes.root}>
         <NavBar />
         <Slideshow />
+        <Slider />
         <Footer />
       </div>
     );
