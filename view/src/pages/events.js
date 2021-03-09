@@ -18,16 +18,10 @@ import {
 } from "@material-ui/core";
 import NavBar from "../components/navbar";
 
-import Discord_Study_Social from "../assets/EventFlyers/Discord_Study_Social.png"
-import AT_and_T from "../assets/EventFlyers/AT&T.png"
+import Career_Fair_1 from "../assets/EventFlyers/Career_Fair_1.png"
+import Career_Fair_2 from "../assets/EventFlyers/Career_Fair_2.png"
 
 const upcomingEvents = [
-  {
-    name: "AT&T Panel: Create Your Own Path to Success",
-    date: '3/2/2021 - 6:30 PM CST',
-    description: "Come join us for an exciting event with our sponsor, AT&T, for a female-focused panel about growing your inner G.I.R.L. and finding your path to success. Hope to see y'all there! ",
-    link: 'https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffacebook.us19.list-manage.com%2Ftrack%2Fclick%3Fu%3Dada9150cb4cf2450b2870f9b7%26id%3D73ba1de828%26e%3D09a746bd56&data=04%7C01%7CAarushi.Pandey%40UTDallas.edu%7C0b170c85fac14a2621fa08d8d761f089%7C8d281d1d9c4d4bf7b16e032d15de9f6c%7C0%7C0%7C637496162949717894%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=CMdwlffRhalmF1GT51EARQCamw1VfxeXLiitHFwF748%3D&reserved=0'
-  },
   {
     name: "Navigating a Virtual Career Fair Panel",
     date: '3/10/2021 - 6:00 PM CST',
@@ -36,7 +30,7 @@ const upcomingEvents = [
   },
   {
     name: "Pi Day Social",
-    date: '3/12/2021 - 6:00 PM CST',
+    date: '3/14/2021 - 5:00 PM CST',
     description: "Come join us for an exciting social to celebrate Pi day with your fellow SWEsters! We have an icebreaker and some fun activities planned - you definitely don't want to miss out!",
     link: 'https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffacebook.us19.list-manage.com%2Ftrack%2Fclick%3Fu%3Dada9150cb4cf2450b2870f9b7%26id%3D422764decf%26e%3D09a746bd56&data=04%7C01%7CAarushi.Pandey%40UTDallas.edu%7Cd8ff6a9a48ae4868868208d8dcd846d8%7C8d281d1d9c4d4bf7b16e032d15de9f6c%7C0%7C0%7C637502168750943673%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=IXqAVHDK0EmSRs2BG1AKqOuRnz9a94T%2BA3ACI0XHWoE%3D&reserved=0'
   },
@@ -44,11 +38,7 @@ const upcomingEvents = [
 
 const flyers = [
   {
-    image: AT_and_T,
-    link: ''
-  },
-  {
-    image: '',
+    image: Career_Fair_1, Career_Fair_2,
     link: ''
   },
   {
@@ -88,7 +78,6 @@ function createData(event, flyer) {
 const rows = [
   createData(upcomingEvents[0], flyers[0].image),
   createData(upcomingEvents[1], flyers[1].image),
-  createData(upcomingEvents[2], flyers[2].image),
   ];
 
 class events extends Component {
