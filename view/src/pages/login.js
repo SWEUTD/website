@@ -78,6 +78,7 @@ class login extends Component {
       resume: null,
       errors: [],
       signupLoading: false,
+      // add new field here - isAdmin
     };
   }
 
@@ -110,6 +111,7 @@ class login extends Component {
       email: this.state.email.toLowerCase(),
       password: this.state.password,
     };
+    // add if statement - if email is sweutd@gmail.com, isAdmin = true
     axios
       .post(
         "https://us-central1-swe-utd-portal.cloudfunctions.net/api/login",
@@ -121,6 +123,7 @@ class login extends Component {
           loginLoading: false,
         });
         this.props.history.push("/portal");
+        // maybe if statement here - if admin then push to a new portal - filled with applications or something, could be a new tab in the portal or be just one page or something
       })
       .catch((error) => {
         this.setState({
@@ -145,6 +148,7 @@ class login extends Component {
       email: this.state.email.toLowerCase(),
       password: this.state.password,
       confirmPassword: this.state.confirmPassword,
+      // here put isAdmin = false if havent already
     };
     axios
       .post(
@@ -157,6 +161,7 @@ class login extends Component {
           signupLoading: false,
         });
         this.props.history.push("/portal");
+        // if SWE account not made copy code here
         if (this.state.resume != null) {
           this.handleResumeUpload();
         }

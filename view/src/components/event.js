@@ -340,8 +340,22 @@ class event extends Component {
                   <Divider />
                   {history}
                 </CardContent>
+
+
+
               </Card>
             </Grid>
+          </Grid>
+          <Grid>
+
+          <CardContent height="100%" align="center">
+                  <h1 align="center">test test admin test</h1>
+                  <Divider />
+                  <br />
+                  <Divider />
+                  {history}
+                </CardContent>
+
           </Grid>
         </div>
       );

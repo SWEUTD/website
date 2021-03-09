@@ -11,6 +11,9 @@ import SWEcrets from "../components/swecrets";
 import Recordings from "../components/recordings";
 import Questions from "../components/q&a";
 import AlumniList from "../components/alumniList";
+// add new page here for admin portal
+
+
 // import Slider from "../components/slider";
 
 import {
@@ -88,6 +91,8 @@ function Screen(props) {
   } /*else if (screen === "slider") {
     return <Slider />;
   }*/
+
+  // add new page here for admin portal
   return <Event />;
 }
 
@@ -123,6 +128,9 @@ class portal extends Component {
     this.setState({ render: "slider" });
   };
 */
+
+// add new page here for admin portal
+
   logoutHandler = (event) => {
     localStorage.removeItem("AuthToken");
     this.props.history.push("/login");
@@ -157,6 +165,7 @@ class portal extends Component {
           otherMajor: response.data.memberInfo.otherMajor,
           netid: response.data.memberInfo.netid,
           uiLoading: false,
+          // add isAdmin feature here
         });
       })
       .catch((error) => {
