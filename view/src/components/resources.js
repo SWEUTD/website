@@ -31,6 +31,11 @@ const resources = [
       type: "link",
       link: "https://swe.org/"
     },
+    {
+      title: "Technical Interview Tips",
+      type: "link",
+      link: "https://sebastianmoreno.me/leetcode/2021/02/26/Good-Coding-Interview-Techniques/"
+    }
 ];
 
   const styles = (theme) => ({
