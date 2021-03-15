@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.91039174.chunk.css",
-    "main.js": "/static/js/main.a3ecf73f.chunk.js",
-    "main.js.map": "/static/js/main.a3ecf73f.chunk.js.map",
+    "main.js": "/static/js/main.ca1a95e8.chunk.js",
+    "main.js.map": "/static/js/main.ca1a95e8.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.94a6af97.js",
     "runtime-main.js.map": "/static/js/runtime-main.94a6af97.js.map",
-    "static/js/2.0419f0bc.chunk.js": "/static/js/2.0419f0bc.chunk.js",
-    "static/js/2.0419f0bc.chunk.js.map": "/static/js/2.0419f0bc.chunk.js.map",
+    "static/js/2.f90db45b.chunk.js": "/static/js/2.f90db45b.chunk.js",
+    "static/js/2.f90db45b.chunk.js.map": "/static/js/2.f90db45b.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.be5554e57e8e019aecdd30dc34856b3e.js": "/precache-manifest.be5554e57e8e019aecdd30dc34856b3e.js",
+    "precache-manifest.62d6bc0b9d5bddabd64f7c359adbc6cb.js": "/precache-manifest.62d6bc0b9d5bddabd64f7c359adbc6cb.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.91039174.chunk.css.map": "/static/css/main.91039174.chunk.css.map",
-    "static/js/2.0419f0bc.chunk.js.LICENSE.txt": "/static/js/2.0419f0bc.chunk.js.LICENSE.txt",
+    "static/js/2.f90db45b.chunk.js.LICENSE.txt": "/static/js/2.f90db45b.chunk.js.LICENSE.txt",
     "static/media/1.HEIC": "/static/media/1.ff820100.HEIC",
     "static/media/2.jpg": "/static/media/2.a6cb3cc9.jpg",
     "static/media/3.jpg": "/static/media/3.46504d3d.jpg",
@@ -27,11 +27,10 @@
     "static/media/CBRE.png": "/static/media/CBRE.6ff29e49.png",
     "static/media/CadyBaltz.jpg": "/static/media/CadyBaltz.c2cef017.jpg",
     "static/media/CaitlinTibbetts.jpg": "/static/media/CaitlinTibbetts.ddb67fde.jpg",
-    "static/media/Career_Fair_1.png": "/static/media/Career_Fair_1.403c7413.png",
-    "static/media/Career_Fair_2.png": "/static/media/Career_Fair_2.bcd6d4fa.png",
     "static/media/DeeshaKumbham.jpg": "/static/media/DeeshaKumbham.8e885233.jpg",
     "static/media/Events.jpg": "/static/media/Events.a3fb2c22.jpg",
     "static/media/Events2.jpg": "/static/media/Events2.d6ea8178.jpg",
+    "static/media/Frisco_HS_Panel.png": "/static/media/Frisco_HS_Panel.028c5f17.png",
     "static/media/GabrielleDuncan.jpg": "/static/media/GabrielleDuncan.5ff66106.jpg",
     "static/media/GillSansMTBook.ttf": "/static/media/GillSansMTBook.9a2b9a60.ttf",
     "static/media/HansikaSundaresan.jpg": "/static/media/HansikaSundaresan.d7d240f7.jpg",
@@ -70,8 +69,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.94a6af97.js",
-    "static/js/2.0419f0bc.chunk.js",
+    "static/js/2.f90db45b.chunk.js",
     "static/css/main.91039174.chunk.css",
-    "static/js/main.a3ecf73f.chunk.js"
+    "static/js/main.ca1a95e8.chunk.js"
   ]
 }
