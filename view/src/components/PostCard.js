@@ -39,7 +39,7 @@ const styles = makeStyles((muiBaseTheme) => ({
     color: "#343a40",
   },
   media: {
-    minHeight: "10rem",
+    minHeight: "25rem",
     position: "relative",
   },
   content: {
@@ -152,6 +152,7 @@ export default function MediumCard(props) {
                 display: "inline-block",
                 alignItems: "center",
                 marginLeft: "1.5625rem",
+                marginTop: "15rem",
                 // color: "#343a40",
               }}
             >
