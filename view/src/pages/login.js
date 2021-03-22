@@ -108,7 +108,8 @@ class login extends Component {
       .sendPasswordResetEmail(this.state.email.toLowerCase())
       .then(() => {
         this.setState({
-          message: "Check your email for a reset password link.",
+          message:
+            "Check your email for a reset password link. You might need to check spam/junk.",
         });
       })
       .catch((err) =>
