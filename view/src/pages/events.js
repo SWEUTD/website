@@ -39,6 +39,12 @@ const upcomingEvents = [
     description: "Join us for a special event with Intel to learn about goal planning and preparing for next recruiting season, standing out at your internship, and summer to do’s to grow your skills! Don't miss this great opportunity to meet Intel representatives including Lisa Depew!",
     link: 'https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffacebook.us19.list-manage.com%2Ftrack%2Fclick%3Fu%3Dada9150cb4cf2450b2870f9b7%26id%3Dbe91c2b9c1%26e%3D09a746bd56&data=04%7C01%7CAarushi.Pandey%40UTDallas.edu%7Cc6543fde065b42e298fa08d8e7d5057a%7C8d281d1d9c4d4bf7b16e032d15de9f6c%7C0%7C0%7C637514249399689085%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=CUrnL%2FgAy9Fw0GOwNpffmcLcM10zfuze2vklC2Q%2FMGI%3D&reserved=0'
   },
+  {
+    name: "WITB x WWC Women's Day Panel",
+    date: '3/29/2021 - 6:00 PM CST',
+    description: "Join us for an exciting panel with notable researchers, industry professionals, & businesswomen in STEM. More details coming soon!",
+    link: ''
+  },
 ];
 
 const flyers = [
@@ -48,6 +54,10 @@ const flyers = [
   },
   {
     image: Frisco_HS_Panel,
+    link: ''
+  },
+  {
+    image: '',
     link: ''
   },
   {
@@ -88,6 +98,7 @@ const rows = [
   createData(upcomingEvents[0], flyers[0].image),
   createData(upcomingEvents[1], flyers[1].image),
   createData(upcomingEvents[2], flyers[2].image),
+  createData(upcomingEvents[3], flyers[3].image),
   ];
 
 class events extends Component {
