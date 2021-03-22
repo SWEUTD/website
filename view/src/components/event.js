@@ -348,14 +348,30 @@ class event extends Component {
           </Grid>
           <Grid>
 
+        <Grid/>
+        { netid == 'swe123456'? 
+        <Grid 
+        container
+        spacing={2}
+        height="100%"
+        width="100%"
+        alignItems="stretch"
+        justify="space-evenly">
+        <Card
+        height="100%"
+        className="movingItem"
+        variant="outlined"
+        style={{ padding: "10px" }, {margin: "10px"}}
+      >
           <CardContent height="100%" align="center">
-                  <h1 align="center">test test admin test</h1>
+                  <h1 align="center">Member list</h1>
                   <Divider />
                   <br />
                   <Divider />
                   {history}
                 </CardContent>
-
+                </Card>
+          </Grid> : null}
           </Grid>
         </div>
       );
