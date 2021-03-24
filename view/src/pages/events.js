@@ -19,6 +19,8 @@ import {
 import NavBar from "../components/navbar";
 
 import Frisco_HS_Panel from "../assets/EventFlyers/Frisco_HS_Panel.png"
+import Tetrapak from "../assets/EventFlyers/Tetrapak.png"
+import Intel_Coffee_Chat from "../assets/EventFlyers/Intel_Coffee_Chat.png"
 
 const upcomingEvents = [
   {
@@ -49,7 +51,7 @@ const upcomingEvents = [
 
 const flyers = [
   {
-    image: '',
+    image: Tetrapak,
     link: ''
   },
   {
@@ -57,7 +59,7 @@ const flyers = [
     link: ''
   },
   {
-    image: '',
+    image: Intel_Coffee_Chat,
     link: ''
   },
   {
