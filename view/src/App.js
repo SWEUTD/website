@@ -66,9 +66,10 @@ function App() {
           <Route exact path="/join" component={join} />
           <Route exact path="/contact" component={contact} />
           <Route exact path="/calendar" component={calendar} />
-          <PropsRoute exact path="/at&t" eventHeading="Sign in to AT&T Panel: Create Your Own Path to Success Event" eventPoints={1} eventName = "AT&T Panel: Create Your Own Path to Success" eventDate = "3/2/2021" secretWord = "girl" component={meetingform}/>
-          <PropsRoute exact path="/career" eventHeading="Sign in to Navigating a Virtual Career Fair Panel Event" eventPoints={1} eventName = "Navigating a Virtual Career Fair Panel" eventDate = "3/10/2021" secretWord = "meet" component={meetingform}/>
-          <PropsRoute exact path="/pi" eventHeading="Sign in to Pi Day Social" eventPoints={1} eventName = "Pi Day Social" eventDate = "3/12/2021" secretWord = "sweet" component={meetingform}/>
+          <PropsRoute exact path="/tetrapak" eventHeading="Sign in to 'Get to Know TetraPak!' Event" eventPoints={1} eventName = "Get to Know TetraPak!" eventDate = "3/24/2021" secretWord = "learn" component={meetingform}/>
+          <PropsRoute exact path="/panel" eventHeading="Sign in to 'High School Panel with CTE SWE Next' Event" eventPoints={1} eventName = "High School Panel with CTE SWE Next" eventDate = "3/25/2021" secretWord = "advice" component={meetingform}/>
+          <PropsRoute exact path="/intel" eventHeading="Sign in to 'Fulfilling Your Potential with Intel' Event" eventPoints={1} eventName = "Fulfilling Your Potential with Intel" eventDate = "3/26/2021" secretWord = "prep" component={meetingform}/>
+          <PropsRoute exact path="/women" eventHeading="Sign in to the WITB x WWC Women's Day Panel" eventPoints={1} eventName = "WITB x WWC Women's Day Panel" eventDate = "3/29/2021" secretWord = "equality" component={meetingform}/>        
         </Switch>
       </BrowserRouter>
     </MuiThemeProvider>
