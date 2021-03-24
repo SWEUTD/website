@@ -51,6 +51,7 @@ class AlumniList extends Component {
         "https://us-central1-swe-utd-portal.cloudfunctions.net/api/alumniList"
       )
       .then((response) => {
+        // console.log(response.data.user);
         this.setState({
           users: response.data.users,
           uiLoading: false,
