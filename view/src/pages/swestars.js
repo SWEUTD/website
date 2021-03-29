@@ -17,7 +17,7 @@ import {
 } from "@material-ui/core";
 import NavBar from "../components/navbar";
 import Footer from "../components/footer";
-import database from "../components/firebase";
+import { database } from "../components/firebase";
 
 const styles = (theme) => ({
   gridItem: {
@@ -41,29 +41,59 @@ class swestars extends Component {
     setTimeout(() => {
       this.setState({ headerReady: true });
     }, 0);
-    this.getStars();
+    this.getStars_Spring();
+    this.getStars_Fall()
   }
-  getStars = () => {
+  getStars_Spring = () => {
     database
       .collection("members")
       .where("points", ">", 0)
       .get()
       .then((querySnapshot) => {
-        let goldMem = [],
-          silverMem = [],
-          bronzeMem = [];
+        let goldMem_Spring = [],
+          silverMem_Spring = [],
+          bronzeMem_Spring = [];
         querySnapshot.forEach((doc) => {
           const name = `${doc.data().firstName} ${doc.data().lastName}`;
           if (doc.data().points > 9) {
-            goldMem.push(name);
+            goldMem_Spring.push(name);
           } else if (doc.data().points > 7) {
-            silverMem.push(name);
+            silverMem_Spring.push(name);
           } else if (doc.data().points > 5) {
-            bronzeMem.push(name);
+            bronzeMem_Spring.push(name);
           }
         });
         this.setState({
-          tierMembers: { gold: goldMem, silver: silverMem, bronze: bronzeMem },
+          tierMembers_Spring: { goldS: goldMem_Spring, silverS: silverMem_Spring, bronzeS: bronzeMem_Spring },
+        });
+      })
+      .catch(function (error) {
+        console.log("Error getting documents: ", error);
+      });
+  };
+
+  getStars_Fall = () => {
+    database
+      .collection("members")
+      .where("previousPoints.fall2020", ">", 0)
+      .get()
+      .then((querySnapshot) => {
+        let goldMem_Fall = [],
+          silverMem_Fall = [],
+          bronzeMem_Fall = [];
+        querySnapshot.forEach((doc) => {
+          const name = `${doc.data().firstName} ${doc.data().lastName}`;
+          
+          if (doc.data().previousPoints.fall2020 > 9){
+            goldMem_Fall.push(name);
+          } else if (doc.data().previousPoints.fall2020 > 7) {
+            silverMem_Fall.push(name);
+          } else if (doc.data().previousPoints.fall2020 > 5) {
+            bronzeMem_Fall.push(name);
+          }
+        });
+        this.setState({
+          tierMembers_Fall: { goldF: goldMem_Fall, silverF: silverMem_Fall, bronzeF: bronzeMem_Fall },
         });
       })
       .catch(function (error) {
@@ -72,7 +102,7 @@ class swestars extends Component {
   };
 
   render() {
-    const { headerReady, tierMembers } = this.state;
+    const { headerReady, tierMembers_Spring, tierMembers_Fall } = this.state;
     const { classes } = this.props;
     return (
       <div className={classes.root}>
@@ -115,20 +145,30 @@ class swestars extends Component {
                   <br />
                   <List alignItems="center">
                     <ListSubheader align="center">
-                      <h4>Fall 2020:</h4>
+                      <h4>Spring 2021:</h4>
                     </ListSubheader>{" "}
                     <br></br>
-                    {tierMembers &&
-                      tierMembers.gold.map((val) => (
+                    {tierMembers_Spring &&
+                      tierMembers_Spring.goldS.map((val) => (
                         <ListItemText align="center">
                           <h4>{val}</h4>
                         </ListItemText>
                       ))}
                     <br></br>
                     <ListSubheader align="center">
-                      <h4>Summer 2020:</h4>
+                      <h4>Fall 2020:</h4>
                     </ListSubheader>
                     <br></br>
+                    {tierMembers_Fall &&
+                      tierMembers_Fall.goldF.map((val) => (
+                        <ListItemText align="center">
+                          <h4>{val}</h4>
+                        </ListItemText>
+                      ))}
+                      <br></br>
+                      <ListSubheader align="center">
+                      <h4>Summer 2020:</h4>
+                    </ListSubheader>
                     <ListItemText align="center">
                       <h4>Lisa Chen</h4>
                     </ListItemText>
@@ -150,26 +190,38 @@ class swestars extends Component {
                   <br />
                   <List alignItems="center">
                     <ListSubheader align="center">
-                      <h4>Fall 2020:</h4>
+                      <h4>Spring 2021:</h4>
                     </ListSubheader>
                     <br></br>
-                    {tierMembers &&
-                      tierMembers.silver.map((val) => (
+                    {tierMembers_Spring &&
+                      tierMembers_Spring.silverS.map((val) => (
                         <ListItemText align="center">
                           <h4>{val}</h4>
                         </ListItemText>
                       ))}
                     <br></br>
                     <ListSubheader align="center">
-                      <h4>Summer 2020:</h4>
+                      <h4>Fall 2020:</h4>
                     </ListSubheader>
                     <br></br>
-                    <ListItemText align="center">
-                      <h4>Lan Bui</h4>
-                    </ListItemText>
-                    <ListItemText align="center">
-                      <h4>Aishani De Sirkar</h4>
-                    </ListItemText>
+                    {tierMembers_Fall &&
+                      tierMembers_Fall.silverF.map((val) => (
+                        <ListItemText align="center">
+                          <h4>{val}</h4>
+                        </ListItemText>
+                      ))}
+
+                      <br></br>
+                      <ListSubheader align="center">
+                        <h4>Summer 2020:</h4>
+                      </ListSubheader>
+                      <br></br>
+                      <ListItemText align="center">
+                        <h4>Lan Bui</h4>
+                      </ListItemText>
+                      <ListItemText align="center">
+                        <h4>Aishani De Sirkar</h4>
+                      </ListItemText>
                   </List>
                 </div>
               </Grid>
@@ -187,26 +239,38 @@ class swestars extends Component {
                   <br />
                   <List alignItems="center">
                     <ListSubheader align="center">
-                      <h4>Fall 2020:</h4>
+                      <h4>Spring 2021:</h4>
                     </ListSubheader>
                     <br></br>
-                    {tierMembers &&
-                      tierMembers.bronze.map((val) => (
+                    {tierMembers_Spring &&
+                      tierMembers_Spring.bronzeS.map((val) => (
                         <ListItemText align="center">
                           <h4>{val}</h4>
                         </ListItemText>
                       ))}
                     <br></br>
                     <ListSubheader align="center">
-                      <h4>Summer 2020:</h4>
+                      <h4>Fall 2020:</h4>
                     </ListSubheader>
                     <br></br>
-                    <ListItemText align="center">
-                      <h4>Jyostna Thanjavur</h4>
-                    </ListItemText>
-                    <ListItemText align="center">
-                      <h4>Kendra Huang</h4>
-                    </ListItemText>
+                    {tierMembers_Fall &&
+                      tierMembers_Fall.bronzeF.map((val) => (
+                        <ListItemText align="center">
+                          <h4>{val}</h4>
+                        </ListItemText>
+                      ))}
+
+                      <br></br>
+                      <ListSubheader align="center">
+                        <h4>Summer 2020:</h4>
+                      </ListSubheader>
+                      <br></br>
+                      <ListItemText align="center">
+                        <h4>Jyostna Thanjavur</h4>
+                      </ListItemText>
+                      <ListItemText align="center">
+                        <h4>Kendra Huang</h4>
+                      </ListItemText>
                   </List>
                 </div>
               </Grid>
