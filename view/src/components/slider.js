@@ -24,11 +24,9 @@ class Slider extends React.Component {
         const avatar = data.feed.image;
         const profileLink = data.feed.link;
         const res = data.items; //This is an array with the content. No feed, no info about author etc..
-        const posts = res.filter((item) => item.categories.length > 0);
-
         this.setState({ avatar: avatar, profileLink: profileLink });
         const itemRows = [];
-        posts.forEach((item, i) => {
+        res.forEach((item, i) => {
           item["avatar"] = this.state.avatar; // push avatar inside the json
           item["profilelink"] = this.state.profileLink; // push profile link inside the JSON
           const row = Math.floor(i / 3);
