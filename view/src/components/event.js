@@ -145,7 +145,7 @@ class event extends Component {
       // if (this.state.netid == 'swe123456') {
         axios
         .get(
-          "https://us-central1-swe-utd-portal.cloudfunctions.net/api/alumniList"
+          "https://us-central1-swe-utd-portal.cloudfunctions.net/api/memberList"
         )
         .then((response) => {
           console.log("users:" + response.data.users.length);

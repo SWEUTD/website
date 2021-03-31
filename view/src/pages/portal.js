@@ -92,7 +92,6 @@ function Screen(props) {
     return <Slider />;
   }*/
 
-  // add new page here for admin portal
   return <Event />;
 }
 
