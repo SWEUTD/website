@@ -26,6 +26,23 @@ import {
 import axios from "axios";
 import { authMiddleWare } from "../util/auth";
 
+import { makeStyles } from '@material-ui/core/styles';
+// import Accordion from '@material-ui/core/Accordion';
+// import AccordionSummary from '@material-ui/core/AccordionSummary';
+// import AccordionDetails from '@material-ui/core/AccordionDetails';
+// import Typography from '@material-ui/core/Typography';
+// import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+
+/*const useStyles = makeStyles((theme) => ({
+  root: {
+    width: '100%',
+  },
+  heading: {
+    fontSize: theme.typography.pxToRem(15),
+    fontWeight: theme.typography.fontWeightRegular,
+  },
+}));*/
+
 const styles = (theme) => ({
   content: {
     flexGrow: 1,
@@ -108,7 +125,7 @@ class event extends Component {
     axios
       .get("https://us-central1-swe-utd-portal.cloudfunctions.net/api/member")
       .then((response) => {
-        console.log(response.data);
+        // console.log(response.data);
         // console.log(response.data.memberInfo.netid);
         this.setState({
           firstName: response.data.memberInfo.firstName,
@@ -122,8 +139,6 @@ class event extends Component {
           events: response.data.memberInfo.events,
           points: response.data.memberInfo.points,
           previousPoints: response.data.memberInfo.previousPoints || {},
-          uiLoading: false,
-          users: null,
         });
       })
       .catch((error) => {
@@ -145,21 +160,25 @@ class event extends Component {
       // if (this.state.netid == 'swe123456') {
         axios
         .get(
-          "https://us-central1-swe-utd-portal.cloudfunctions.net/api/memberList"
-        )
+          "http://localhost:5000/swe-utd-portal/us-central1/api/memberList"
+        ) // remember to uncomment text in index.js before deploying to firebase!!!!!!!!!
         .then((response) => {
           console.log("users:" + response.data.users.length);
+          console.log(response.data.users)
           this.setState({
             users: response.data.users,
+            uiLoading: false,
           });
         })
         .catch((error) => {
-          if (error.response.status === 403) {
+          console.log("error happened");
+          // console.log(error);
+          if (error.status === 403) {
             this.props.history.push("/login");
           }
           console.log(error);
           this.setState({ errorMsg: "Error in retrieving the data" });
-        });
+        }); 
       // }
 
       console.log('after if');
@@ -450,9 +469,11 @@ class event extends Component {
                   scope="row"
                   align="left"
                 >
-                  {item.events.map((event) => (
-                    <p>{event.eventName}</p>
-                  ))}
+                  { item.events == null ?
+                  (null) : (
+                    item.events.map((event) => (
+                      <p>{event.eventName}</p>
+                  )))}
                 </TableCell>
 
               </TableRow>
