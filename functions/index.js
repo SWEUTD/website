@@ -15,6 +15,7 @@ const {
   updateMemberDetails,
   addEventMember,
   getAlumniList,
+  getMemberList,
 } = require("./APIs/members");
 
 // Connects API routes to functions in the member.js file
@@ -24,6 +25,7 @@ app.post("/member", auth, updateMemberDetails);
 app.post("/newEvent", addEventMember);
 app.get("/member", auth, getMemberDetail);
 app.get("/alumniList", getAlumniList);
+app.get("/memberList", getMemberList); // remember to uncomment this out before deploying to firebase!!!!!!!!!
 
 exports.api = functions.https.onRequest(app);
 
@@ -31,7 +33,7 @@ exports.api = functions.https.onRequest(app);
 
 // created with help from the article: https://medium.com/better-programming/a-simple-and-easy-contact-form-step-by-step-tutorial-react-js-1532bc025980
 
-const nodemailer = require("nodemailer");
+/*const nodemailer = require("nodemailer");
 const gmailEmail = functions.config().gmail.email; // must be set in terminal
 const gmailPassword = functions.config().gmail.password; // must be set in terminal
 
@@ -140,3 +142,4 @@ exports.upload =
       return;
     }
   }));
+*/
