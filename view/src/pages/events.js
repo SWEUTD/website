@@ -18,15 +18,9 @@ import {
 } from "@material-ui/core";
 import NavBar from "../components/navbar";
 
-import Capital_One_Brand from "../assets/EventFlyers/Capital_One_Brand.jpg"
+import Cady_Leetcode from "../assets/EventFlyers/Cady_Leetcode.PNG"
 
 const upcomingEvents = [
-  {
-    name: "Building Your Personal Brand with Capital One",
-    date: '4/6/2021 - 6:00 PM to 7:00 PM CT',
-    description: "Come learn about how you can create your own personal brand with Capital One! Get advice about discovering strengths and weaknesses, mastering LinkedIn, finding potential employers, networking, and more! There will also be a raffle for a chance to win a GrubHub gift card.",
-    link: 'https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffacebook.us19.list-manage.com%2Ftrack%2Fclick%3Fu%3Dada9150cb4cf2450b2870f9b7%26id%3D7d74d7c98c%26e%3D09a746bd56&data=04%7C01%7CAarushi.Pandey%40UTDallas.edu%7C8243a7b080f641eb39f208d8f2d841e2%7C8d281d1d9c4d4bf7b16e032d15de9f6c%7C0%7C0%7C637526357933158741%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=Uer6pWWHWS5cenmp4rBWn%2FGRYe0lky1rtM7cEX%2Fw84c%3D&reserved=0'
-  },
   {
     name: "Approaching LeetCode",
     date: '4/8/2021 - 7:00 PM to 8:00 PM CT',
@@ -49,11 +43,7 @@ const upcomingEvents = [
 
 const flyers = [
   {
-    image: Capital_One_Brand,
-    link: ''
-  },
-  {
-    image: '',
+    image: Cady_Leetcode,
     link: ''
   },
   {
@@ -98,7 +88,6 @@ const rows = [
   createData(upcomingEvents[0], flyers[0].image),
   createData(upcomingEvents[1], flyers[1].image),
   createData(upcomingEvents[2], flyers[2].image),
-  createData(upcomingEvents[3], flyers[3].image),
   ];
 
 class events extends Component {
