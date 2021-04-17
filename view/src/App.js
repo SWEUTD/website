@@ -65,11 +65,11 @@ function App() {
           <Route exact path="/weconference" component={weconference} />
           <Route exact path="/join" component={join} />
           <Route exact path="/contact" component={contact} />
-          <Route exact path="/calendar" component={calendar} />
-          <PropsRoute exact path="/tetrapak" eventHeading="Sign in to 'Get to Know TetraPak!' Event" eventPoints={1} eventName = "Get to Know TetraPak!" eventDate = "3/24/2021" secretWord = "learn" component={meetingform}/>
-          <PropsRoute exact path="/panel" eventHeading="Sign in to 'High School Panel with CTE SWE Next' Event" eventPoints={1} eventName = "High School Panel with CTE SWE Next" eventDate = "3/25/2021" secretWord = "advice" component={meetingform}/>
-          <PropsRoute exact path="/intel" eventHeading="Sign in to 'Fulfilling Your Potential with Intel' Event" eventPoints={1} eventName = "Fulfilling Your Potential with Intel" eventDate = "3/26/2021" secretWord = "prep" component={meetingform}/>
-          <PropsRoute exact path="/women" eventHeading="Sign in to the WITB x WWC Women's Day Panel" eventPoints={1} eventName = "WITB x WWC Women's Day Panel" eventDate = "3/29/2021" secretWord = "equality" component={meetingform}/>        
+          <Route exact path="/calendar" component={calendar} />    
+          <PropsRoute exact path="/seniorspanel" eventHeading="Sign in to 'Seniors Panel - If I were a Freshman' Event" eventPoints={1} eventName = "Seniors Panel - If I were a Freshman" eventDate = "4/13/2021" secretWord = "reflection" component={meetingform}/>
+          <PropsRoute exact path="/wwcjp" eventHeading="Sign in to 'WWC X JP Morgan - Imposter Syndrome and Preparing for a Virtual Internship' Event" eventPoints={1} eventName = "WWC X JP Morgan - Imposter Syndrome and Preparing for a Virtual Internship" eventDate = "4/15/2021" secretWord = "advice" component={meetingform}/>
+          <PropsRoute exact path="/bridgeland" eventHeading="Sign in to 'Bridgeland High School Panel' Event" eventPoints={1} eventName = "Bridgeland High School Panel" eventDate = "4/20/2021" secretWord = "SWE" component={meetingform}/>
+          <PropsRoute exact path="/lennox" eventHeading="Sign in to 'Optimize your Summer with Lennox' Event" eventPoints={1} eventName = "Optimize your Summer with Lennox" eventDate = "4/21/2021" secretWord = "improvement" component={meetingform}/>
         </Switch>
       </BrowserRouter>
     </MuiThemeProvider>
