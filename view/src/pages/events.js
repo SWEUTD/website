@@ -16,67 +16,9 @@ import {
   TableRow,
   Paper,
 } from "@material-ui/core";
+import Events from "../components/events"
 import NavBar from "../components/navbar";
-
-import Frisco_HS_Panel from "../assets/EventFlyers/Frisco_HS_Panel.png"
-import Tetrapak from "../assets/EventFlyers/Tetrapak.png"
-import Intel_Coffee_Chat from "../assets/EventFlyers/Intel_Coffee_Chat.png"
-
-const upcomingEvents = [
-  {
-    name: "Building Your Personal Brand with Capital One",
-    date: '4/6/2021 - 6:00 PM CST',
-    description: "Come learn about how you can create your own personal brand with Capital One! Get advice about discovering strengths and weaknesses, mastering LinkedIn, finding potential employers, networking, and more! There will also be a raffle for a chance to win a GrubHub gift card.",
-    link: 'https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffacebook.us19.list-manage.com%2Ftrack%2Fclick%3Fu%3Dada9150cb4cf2450b2870f9b7%26id%3D7d74d7c98c%26e%3D09a746bd56&data=04%7C01%7CAarushi.Pandey%40UTDallas.edu%7C8243a7b080f641eb39f208d8f2d841e2%7C8d281d1d9c4d4bf7b16e032d15de9f6c%7C0%7C0%7C637526357933158741%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=Uer6pWWHWS5cenmp4rBWn%2FGRYe0lky1rtM7cEX%2Fw84c%3D&reserved=0'
-  },
-  {
-    name: "WITB x WWC Women's Day Panel",
-    date: 'TBD - 6:00 PM CST',
-    description: "Join us for an exciting panel with notable researchers, industry professionals, & businesswomen in STEM. More details coming soon!",
-    link: ''
-  },
-  {
-    name: "Approaching LeetCode",
-    date: 'TBA',
-    description: "Join us for a technical workshop led by our VP of Internal Affairs, Cady Baltz, to learn about the steps on how to approach leetcode and making a plan to prep for technical interviews. We're very proud of her for landing two internship opportunities at Facebook and Apple. You definitely don't want to miss this!",
-    link: ''
-  },
-  {
-    name: "Seniors Panel - If I were a Freshman",
-    date: 'TBA',
-    description: "Join us for an exciting panel with upcoming graduates to talk about their advice for collegiates and reflecting on what they would have done differently. More details coming soon!",
-    link: ''
-  },
-  {
-    name: "Bridgeland High School Panel",
-    date: 'TBA',
-    description: "High school panel where current SWE members talk about what it's like to be a member of SWE in college, several broad engineering fields/topics, and any personal experiences in these fields. If you're interested in volunteering as a panelist for our high-school panel events, please watch for future announcements on our Discord!",
-    link: ''
-  },
-];
-
-const flyers = [
-  {
-    image: '',
-    link: ''
-  },
-  {
-    image: '',
-    link: ''
-  },
-  {
-    image: '',
-    link: ''
-  },
-  {
-    image: '',
-    link: ''
-  },
-  {
-    image: '',
-    link: ''
-  },
-];
+import Footer from "../components/footer";
 
 
 const styles = (theme) => ({
@@ -101,19 +43,6 @@ const styles = (theme) => ({
   },
 });
 
-function createData(event, flyer) {
-  return { event, flyer };
-}
-
-
-const rows = [
-  createData(upcomingEvents[0], flyers[0].image),
-  createData(upcomingEvents[1], flyers[1].image),
-  createData(upcomingEvents[2], flyers[2].image),
-  createData(upcomingEvents[3], flyers[3].image),
-  createData(upcomingEvents[4], flyers[4].image),
-  ];
-
 class events extends Component {
   constructor(props) {
     super(props);
@@ -134,87 +63,11 @@ class events extends Component {
         <div className={classNames("header", { ready: headerReady })}>
           <p className="heading">Events</p>
         </div>
-        <div className="fullscreen">
-          <Grid
-            container
-            spacing={2}
-            height="100%"
-            width="100%"
-            alignItems="stretch"
-            justify="space-evenly"
-            className={classes.gridItem}
-            style={{ "padding-top": "40px" }}
-          >
-            {/*
-					 <Grid container
-						item md={8} xs={12}
-							spacing={2}
-							height="100%"
-							width="100%"
-							alignItems="stretch"
-							justify="space-evenly"
-							className={classes.gridItem}
-							style={{padding:'40px'}}
-						>
-							{flyers.map((flyer) => (
-							<Grid item md={4} xs={12} className={classes.gridItem}>
-								<div>
-									<br/>
-									<a href={flyer.link}>
-										<img className="movingItem"  src={flyer.image} verticalAlign="center" width = "100%"/>
-									</a>
-								</div>
-							</Grid>
-							))}
-						</Grid> 
-
-              */}
-					<div align="center">
-              <h1>Upcoming Events</h1>
-            </div>
-          </Grid>
-					
-
-					<TableContainer component={Paper} align="center">
-      <Table className={classes.table} aria-label="simple table">
-        <TableHead>
-          <TableRow>
-            <TableCell align="center" width="45%"><h2></h2></TableCell>
-            <TableCell align="center" width="55%"><h2></h2></TableCell>
-          </TableRow>
-		    </TableHead>
-        <TableBody>
-          {rows.map((row) => (
-            <TableRow key={row.event.name}>
-      <TableCell component="th" scope="row" align="center">
-			  <br/>
-				<h4>{row.event.name}</h4>
-				<ListSubheader>{row.event.date}</ListSubheader>
-				{row.event.description != '' ?
-				(<div><h5 align="left">{row.event.description}</h5><br /> </div>) : null }
-				{row.event.link != '' && row.event.link != null
-				? (<div>
-				<Button href={row.event.link} align="center" variant="contained" color="primary" position="relative" zIndex="-3000">Join Meeting</Button>
-				<br/>
-				<br/>
-				</div>)
-				: null
-				}
-			</TableCell>
-			  <TableCell component="th" scope="row" align="center">
-			  {row.flyer != '' ?
-				(<img src={row.flyer} width="60%" />) : null }
-        </TableCell>
-        </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-
-			</TableContainer> 
-				</div>
-			</div>
-		);
-	}
+        <Events />
+        <Footer />
+      </div>
+    );
+  }
 }
 
 export default withStyles(styles)(events);
