@@ -151,7 +151,7 @@ class portal extends Component {
     const authToken = localStorage.getItem("AuthToken");
     axios.defaults.headers.common = { Authorization: `${authToken}` };
     axios
-      .get("https://us-central1-swe-utd-portal.cloudfunctions.net/api/member")
+      .get("http://localhost:5000/swe-utd-portal/us-central1/api/member")
       .then((response) => {
         console.log(response.data);
         this.setState({
