@@ -27,6 +27,9 @@ import axios from "axios";
 import { authMiddleWare } from "../util/auth";
 
 import { makeStyles } from '@material-ui/core/styles';
+
+import searchPage from "../components/searchPage";
+import SearchPage from "../components/searchPage";
 // import Accordion from '@material-ui/core/Accordion';
 // import AccordionSummary from '@material-ui/core/AccordionSummary';
 // import AccordionDetails from '@material-ui/core/AccordionDetails';
@@ -417,6 +420,7 @@ class event extends Component {
           <CardContent height="100%" align="center">
                   
                   <h1 align="center">Member List</h1><Divider />
+                  <SearchPage/>
                   <br />
                   {this.state.users == null ? (
             <h4>No users are currently on the Member List.</h4>
