@@ -23,7 +23,7 @@ const SearchPage = (props) => {
   const updateInput = async (input) => {
       //console.log("country list default:"+ countryListDefault);
       const filtered = countryListDefault.filter(item => {
-          // console.log(item.firstName.toLowerCase().includes(input.toLowerCase()));
+          console.log(input);
         return item.firstName.toLowerCase().includes(input.toLowerCase())
        })
      setInput(input);

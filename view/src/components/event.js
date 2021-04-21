@@ -425,7 +425,7 @@ class event extends Component {
                   {this.state.users == null ? (
             <h4>No users are currently on the Member List.</h4>
           ) : (
-            this.state.users
+            /* this.state.users
       .slice(0)
       .sort((a, b) => a.points > b.points ? -1 : 1)
       .map((item, key) => (
@@ -484,7 +484,8 @@ class event extends Component {
             </TableBody>
           </Table>
         </TableContainer>
-      ))
+      ))*/
+      <h1>test</h1>
           )}
                 </CardContent>
                 </Card>
