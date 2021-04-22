@@ -66,8 +66,6 @@ function App() {
           <Route exact path="/join" component={join} />
           <Route exact path="/contact" component={contact} />
           <Route exact path="/calendar" component={calendar} />    
-          <PropsRoute exact path="/bridgeland" eventHeading="Sign in to 'Bridgeland High School Panel' Event" eventPoints={1} eventName = "Bridgeland High School Panel" eventDate = "4/20/2021" secretWord = "SWE" component={meetingform}/>
-          <PropsRoute exact path="/lennox" eventHeading="Sign in to 'Optimize your Summer with Lennox' Event" eventPoints={1} eventName = "Optimize your Summer with Lennox" eventDate = "4/21/2021" secretWord = "improvement" component={meetingform}/>
           <PropsRoute exact path="/banquet" eventHeading="Sign in to 'SWE UTDallas Banquet' Event" eventPoints={1} eventName = "SWE UTDallas Banquet" eventDate = "4/23/2021" secretWord = "first" component={meetingform}/>
           <PropsRoute exact path="/social" eventHeading="Sign in to 'TAMU x UTD SWE End-of-the-Year Social' Event" eventPoints={1} eventName = "TAMU x UTD SWE End-of-the-Year Social" eventDate = "4/28/2021" secretWord = "meet" component={meetingform}/>
         </Switch>
