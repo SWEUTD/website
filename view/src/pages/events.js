@@ -23,18 +23,6 @@ import SWE_Banquet from "../assets/EventFlyers/SWE_Banquet.PNG"
 
 const upcomingEvents = [
   {
-    name: "Bridgeland High School Panel",
-    date: '4/20/2021',
-    description: "High school panel where current SWE members talk about what it's like to be a member of SWE in college, several broad engineering fields/topics, and any personal experiences in these fields. Look out for announcements regarding future volunteering opportunities on our Discord!",
-    link: ''
-  },
-  {
-    name: "Optimize your Summer with Lennox",
-    date: '4/21/2021 - 7:00 PM to 8:00 PM CT',
-    description: "Join us for an exciting event with Lennox on goal planning and preparing for next recruiting season, standing out at your internship, and summer to do’s to grow your skills!",
-    link: 'https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffacebook.us19.list-manage.com%2Ftrack%2Fclick%3Fu%3Dada9150cb4cf2450b2870f9b7%26id%3D8238ad71a3%26e%3D09a746bd56&data=04%7C01%7CAarushi.Pandey%40UTDallas.edu%7C2c4651082f0a457cc80208d8fdd956c1%7C8d281d1d9c4d4bf7b16e032d15de9f6c%7C0%7C0%7C637538457203430575%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=mcwEJwsSXKI3piwVp4V08x8jTkfEM1x3maAc0f98Fy4%3D&reserved=0'
-  },
-  {
     name: "SWE UTDallas Banquet",
     date: '4/23/2021 - 5:00 PM CT',
     description: 'Message from our President: "Join us THIS FRIDAY at 5 PM CT for our very first banquet ever! I am so proud of what this SWE section has accomplished this past school year despite it all being virtual. In total, 304 different UTD students have attended our events this year, and that is incredible! We have 3 esteemed guest speakers coming to our banquet: Ruthe Farmer (former Senior Policy Advisor for Tech Inclusion for the Executive Office of the President under the Obama administration), Rachel Morford (SWE President-Elect), and UTD President Benson. Our 2021-22 officer team will be revealed as well - I cannot wait for you to meet these amazing ladies! You definitely do not want to miss this celebration!"',
@@ -49,14 +37,6 @@ const upcomingEvents = [
 ];
 
 const flyers = [
-  {
-    image: '',
-    link: ''
-  },
-  {
-    image: Lennox,
-    link: ''
-  },
   {
     image: SWE_Banquet,
     link: ''
@@ -98,8 +78,6 @@ function createData(event, flyer) {
 const rows = [
   createData(upcomingEvents[0], flyers[0].image),
   createData(upcomingEvents[1], flyers[1].image),
-  createData(upcomingEvents[2], flyers[2].image),
-  createData(upcomingEvents[3], flyers[3].image),
   ];
 
 class events extends Component {
