@@ -18,16 +18,9 @@ import {
 } from "@material-ui/core";
 import NavBar from "../components/navbar";
 
-import Lennox from "../assets/EventFlyers/Lennox.png"
-import SWE_Banquet from "../assets/EventFlyers/SWE_Banquet.PNG"
+import TAMU_Social from "../assets/EventFlyers/TAMU_Social.png"
 
 const upcomingEvents = [
-  {
-    name: "SWE UTDallas Banquet",
-    date: '4/23/2021 - 5:00 PM CT',
-    description: 'Message from our President: "Join us THIS FRIDAY at 5 PM CT for our very first banquet ever! I am so proud of what this SWE section has accomplished this past school year despite it all being virtual. In total, 304 different UTD students have attended our events this year, and that is incredible! We have 3 esteemed guest speakers coming to our banquet: Ruthe Farmer (former Senior Policy Advisor for Tech Inclusion for the Executive Office of the President under the Obama administration), Rachel Morford (SWE President-Elect), and UTD President Benson. Our 2021-22 officer team will be revealed as well - I cannot wait for you to meet these amazing ladies! You definitely do not want to miss this celebration!"',
-    link: 'http://bit.ly/SWEBanquetS21'
-  },
   {
     name: "TAMU x UTD SWE End-of-the-Year Social",
     date: '4/28/2021 - 7:30 PM to 8:30 PM CT',
@@ -38,11 +31,7 @@ const upcomingEvents = [
 
 const flyers = [
   {
-    image: SWE_Banquet,
-    link: ''
-  },
-  {
-    image: '',
+    image: TAMU_Social,
     link: ''
   },
 ];
@@ -77,7 +66,6 @@ function createData(event, flyer) {
 
 const rows = [
   createData(upcomingEvents[0], flyers[0].image),
-  createData(upcomingEvents[1], flyers[1].image),
   ];
 
 class events extends Component {
