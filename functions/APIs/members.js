@@ -224,6 +224,14 @@ exports.addEventMember = (request, response) => {
       // adds to an existing member if that netid already exists in the database
       if (doc.exists) {
         let eventsList = doc.data().events;
+        if (
+          eventsList.some((event) => event.eventName === eventToAdd.eventName)
+        ) {
+          // already exists, so don't add it again
+          return response.status(409).json({
+            general: "You have already added this event to your account.",
+          });
+        }
         eventsList.push(eventToAdd);
         let newPointTotal =
           parseInt(doc.data().points) + parseInt(eventToAdd.eventPoints);
