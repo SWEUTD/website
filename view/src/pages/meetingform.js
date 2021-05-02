@@ -103,7 +103,7 @@ class meetingform extends Component {
             memberData
           ),
           axios.post(
-            "http://localhost:5000/swe-utd-portal/us-central1/api/newEvent",
+            "https://us-central1-swe-utd-portal.cloudfunctions.net/api/newEvent",
             memberData
           ),
         ])
@@ -115,7 +115,6 @@ class meetingform extends Component {
           this.props.history.push("/portal");
         })
         .catch((error) => {
-          console.log(error);
           this.setState({
             errors: error.response.data,
             loginLoading: false,
