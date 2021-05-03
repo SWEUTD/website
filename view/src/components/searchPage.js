@@ -11,6 +11,11 @@ const SearchPage = (props) => {
     return await fetch('http://localhost:5000/swe-utd-portal/us-central1/api/memberList')
       .then(response => response.json())
       .then(data => {
+         //data.users.filter(member => (member.isMember == true));
+         //console.log(data.users);
+         let memberList = data.users
+         memberList.filter(item => (item.isMember == false));
+         console.log(memberList)
          setCountryList(data.users) 
          setCountryListDefault(data.users)
          //console.log("Data in search page:" + data.users.length);
@@ -23,8 +28,10 @@ const SearchPage = (props) => {
   const updateInput = async (input) => {
       //console.log("country list default:"+ countryListDefault);
       const filtered = countryListDefault.filter(item => {
+        //if (item.isMember == true) {
           console.log(input);
         return item.firstName.toLowerCase().includes(input.toLowerCase())
+        //} else return null;
        })
      setInput(input);
      setCountryList(filtered);

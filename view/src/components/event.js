@@ -166,8 +166,8 @@ class event extends Component {
           "http://localhost:5000/swe-utd-portal/us-central1/api/memberList"
         ) // remember to uncomment text in index.js before deploying to firebase!!!!!!!!!
         .then((response) => {
-          console.log("users:" + response.data.users.length);
-          console.log(response.data.users)
+          //console.log("users:" + response.data.users.length);
+          //console.log(response.data.users)
           this.setState({
             users: response.data.users,
             uiLoading: false,
@@ -485,7 +485,7 @@ class event extends Component {
           </Table>
         </TableContainer>
       ))*/
-      <h1>test</h1>
+      <p></p>
           )}
                 </CardContent>
                 </Card>

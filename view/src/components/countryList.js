@@ -24,7 +24,7 @@ const CountryList = ({countryList=[]}) => {
     { countryList.map((data,index) => {
              if (data) {
               return (
-                <div key={data.firstName}>
+                <div>
                   <h1>{data.firstName}</h1>
           </div>	
              )	
