@@ -18,20 +18,20 @@ import {
 } from "@material-ui/core";
 import NavBar from "../components/navbar";
 
-import TAMU_Social from "../assets/EventFlyers/TAMU_Social.png"
+import SWE_Match_Presentation from "../assets/EventFlyers/SWE_Match_Presentation.png"
 
 const upcomingEvents = [
   {
-    name: "TAMU x UTD SWE End-of-the-Year Social",
-    date: '4/28/2021 - 7:30 PM to 8:30 PM CT',
-    description: "Come join us for a fun collaboration with TAMU SWE for the last social of the semester! This is a great opportunity to meet and network with some of our SWEsters from TAMU. We have a virtual escape room planned - you definitely don't want to miss out! RSVP at https://forms.gle/44kgNECXd5kuEAqRA to get the meeting link!",
-    link: ''
+    name: "SWE Match Presentation Night",
+    date: '5/7/2021 - 7:00 PM to 8:00 PM CT',
+    description: "The SWE Match participants have been working so hard their designs this year, and now's the time to see it all come together! If you're interested in participating in our SWE Match program next year, you definitely don't want to miss this event! Come join us celebrate this year's participants - they are so excited to show you their cool projects! Trailer: https://www.youtube.com/watch?v=2thy23sXOaA",
+    link: 'https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffacebook.us19.list-manage.com%2Ftrack%2Fclick%3Fu%3Dada9150cb4cf2450b2870f9b7%26id%3D10c1c4ff85%26e%3D09a746bd56&data=04%7C01%7CAarushi.Pandey%40UTDallas.edu%7C70619c71acf6491dbaf408d90e71769d%7C8d281d1d9c4d4bf7b16e032d15de9f6c%7C0%7C0%7C637556702766241177%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=ZZot2OonLP%2BjV0vpcX55ZpfNvwsEMiErrgSyGiTKn%2BI%3D&reserved=0'
   },
 ];
 
 const flyers = [
   {
-    image: TAMU_Social,
+    image: SWE_Match_Presentation,
     link: ''
   },
 ];
