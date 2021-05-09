@@ -53,7 +53,7 @@ const SearchPage = (props) => {
        placeholder={"Search member or event"}
        onChange={(e) => updateInput(e.target.value)}
       />
-      
+      <hr/>
       <CountryList countryList={countryList}/>
     </>
    );

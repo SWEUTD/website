@@ -11,7 +11,6 @@ import SWEcrets from "../components/swecrets";
 import Recordings from "../components/recordings";
 import Questions from "../components/q&a";
 import AlumniList from "../components/alumniList";
-// add new page here for admin portal
 
 
 // import Slider from "../components/slider";
