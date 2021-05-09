@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 // import SearchBar from './searchBar';
-import CountryList from './countryList';
+import CountryList from './memberList';
 
 const SearchPage = (props) => {
   const [input, setInput] = useState('');
@@ -13,11 +13,12 @@ const SearchPage = (props) => {
       .then(data => {
          //data.users.filter(member => (member.isMember == true));
          //console.log(data.users);
-         let memberList = data.users
-         memberList.filter(item => (item.isMember == false));
-         console.log(memberList)
-         setCountryList(data.users) 
-         setCountryListDefault(data.users)
+         //let memberList = data.users
+         //data.users.filter(item => (item.isMember == false));
+         //console.log(data.users.filter(item => (item.events != null && item.events.length >= 1)))
+         let memberList = data.users.filter(item => (item.events != null && item.events.length >= 1)).sort((a, b) => a.points > b.points ? -1 : 1);
+         setCountryList(memberList) 
+         setCountryListDefault(memberList)
          //console.log("Data in search page:" + data.users.length);
          //console.log("Data in search page:" + data.users[0].firstName);
          //console.log("Data in search page:" + data.users[1]);
@@ -30,7 +31,9 @@ const SearchPage = (props) => {
       const filtered = countryListDefault.filter(item => {
         //if (item.isMember == true) {
           console.log(input);
-        return item.firstName.toLowerCase().includes(input.toLowerCase())
+        return item.firstName.toLowerCase().includes(input.toLowerCase()) || item.events.some(function(item) {
+          return item.eventName.toLowerCase().includes(input.toLowerCase())
+        });
         //} else return null;
        })
      setInput(input);
@@ -47,7 +50,7 @@ const SearchPage = (props) => {
        style={BarStyling}
        key="random1"
        value={input}
-       placeholder={"search member"}
+       placeholder={"Search member or event"}
        onChange={(e) => updateInput(e.target.value)}
       />
       

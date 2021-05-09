@@ -25,7 +25,8 @@ const CountryList = ({countryList=[]}) => {
              if (data) {
               return (
                 <div>
-                  <h1>{data.firstName}</h1>
+                  <p>{data.firstName} {data.lastName}</p>
+                
           </div>	
              )	
            }
