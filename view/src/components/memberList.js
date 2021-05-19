@@ -53,6 +53,61 @@ const useRowStyles = makeStyles({
   },
 });
 
+function Row(props) {
+  //const { row } = props;
+  const [open, setOpen] = React.useState(false);
+  return (
+    <React.Fragment>
+                <TableRow>
+                <TableCell>
+                  <IconButton aria-label="expand row" size="small" onClick={() => setOpen(!open)}>
+                    {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
+                  </IconButton>
+                </TableCell>
+                <TableCell
+                  component="tr"
+                  width="25%"
+                  scope="row"
+                  align="left"
+                >
+                  <b>{props.data.firstName} {props.data.lastName}</b>
+                  </TableCell>
+                  
+                  <TableCell
+                  component="tr"
+                  width="15%"
+                  scope="row"
+                  align="left"
+                >
+                  {props.data.points} pt
+                </TableCell>
+
+                <TableCell
+                  component="tr"
+                  width="20%"
+                  scope="row"
+                  align="left"
+                >
+                  {props.data.email}
+                </TableCell>
+
+                
+
+                <TableCell /*component="tr" scope="row" align="left"*/ width="40%" /*style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}*/>
+          <Collapse in={open} timeout="auto" unmountOnExit>
+                { props.data.events == null ?
+                  (null) : ( 
+                    props.data.events.map((event) => (
+                      <p>{event.eventName}</p>
+                  )))}
+          </Collapse>
+        </TableCell>
+
+              </TableRow>
+              </React.Fragment>
+  )
+}
+
 const CountryList = ({countryList=[]}) => {
   const [open, setOpen] = React.useState([]);
   //const classes = useRowStyles();
@@ -63,65 +118,10 @@ const CountryList = ({countryList=[]}) => {
             <TableBody>
     { countryList.map((data,index) => {
              if (data) {
-               // data.open = false;
+               //data.open = false;
               return (
                 //<div>
-                <React.Fragment>
-                <TableRow>
-                <TableCell>
-                  <IconButton aria-label="expand row" size="small" onClick={() => setOpen(!open)}>
-                    {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
-                  </IconButton>
-                </TableCell>
-                <TableCell
-                  component="tr"
-                  width="30%"
-                  scope="row"
-                  align="left"
-                >
-                  <b>{data.firstName} {data.lastName}</b>
-                  </TableCell>
-                  
-                  <TableCell
-                  component="tr"
-                  width="10%"
-                  scope="row"
-                  align="left"
-                >
-                  {data.points} pt
-                </TableCell>
-
-                <TableCell
-                  component="tr"
-                  width="20%"
-                  scope="row"
-                  align="left"
-                >
-                  {data.email}
-                </TableCell>
-
-                </TableRow>
-
-                <TableRow>
-
-                <TableCell /*component="tr" scope="row" align="left"*/ style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
-          <Collapse in={open} timeout="auto" unmountOnExit>
-            <Box margin={1}>
-              <Table size="small" aria-label="purchases">
-                <TableBody align="right">
-                { data.events == null ?
-                  (null) : ( 
-                    data.events.map((event) => (
-                      <p>{event.eventName}</p>
-                  )))}
-                </TableBody>
-              </Table>
-            </Box>
-          </Collapse>
-        </TableCell>
-
-              </TableRow>
-              </React.Fragment>
+                <Row data={data} />
                 	
              )	
            }
