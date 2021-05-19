@@ -1,4 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { makeStyles } from '@material-ui/core/styles';
+
 import {
   Table,
   TableBody,
@@ -9,6 +12,10 @@ import {
   Paper,
   List,
   ListItem,
+  Box,
+  Collapse,
+  IconButton,
+  Typography,
 } from "@material-ui/core";
 
 import {
@@ -19,7 +26,10 @@ import {
   Grid,
 } from "@material-ui/core";
 
-const styles = {
+import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
+import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
+
+/*const styles = {
   scrollable: {
     width: "100%",
     height: "100px",
@@ -33,19 +43,36 @@ const styles = {
   "tr td": {
      height: "auto !important",
   }
-}
+}*/
+
+const useRowStyles = makeStyles({
+  root: {
+    '& > *': {
+      borderBottom: 'unset',
+    },
+  },
+});
 
 const CountryList = ({countryList=[]}) => {
+  const [open, setOpen] = React.useState([]);
+  //const classes = useRowStyles();
   return (
     <>
     <TableContainer component={Paper} align="center">
-          <Table aria-label="simple table">
+          <Table aria-label="collapsible table">
             <TableBody>
     { countryList.map((data,index) => {
              if (data) {
+               // data.open = false;
               return (
                 //<div>
+                <React.Fragment>
                 <TableRow>
+                <TableCell>
+                  <IconButton aria-label="expand row" size="small" onClick={() => setOpen(!open)}>
+                    {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
+                  </IconButton>
+                </TableCell>
                 <TableCell
                   component="tr"
                   width="30%"
@@ -73,31 +100,34 @@ const CountryList = ({countryList=[]}) => {
                   {data.email}
                 </TableCell>
 
-                <TableCell
-                  component="tr"
-                  width="40%"
-                  //max-height="100px"
-                  scope="row"
-                  align="left"
-                  //height="auto !important"
-                  //class={styles.scrollable}
-                  //style={{height: 10}}
-                  //style={{margin: "-100px"}}
-                >
-                  { data.events == null ?
+                </TableRow>
+
+                <TableRow>
+
+                <TableCell /*component="tr" scope="row" align="left"*/ style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
+          <Collapse in={open} timeout="auto" unmountOnExit>
+            <Box margin={1}>
+              <Table size="small" aria-label="purchases">
+                <TableBody align="right">
+                { data.events == null ?
                   (null) : ( 
                     data.events.map((event) => (
                       <p>{event.eventName}</p>
                   )))}
-                </TableCell>
+                </TableBody>
+              </Table>
+            </Box>
+          </Collapse>
+        </TableCell>
 
               </TableRow>
-                
-          //</div>	
+              </React.Fragment>
+                	
              )	
            }
            return null
         }) }
+        
         </TableBody>
         </Table>
         </TableContainer>
