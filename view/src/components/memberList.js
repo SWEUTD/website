@@ -66,7 +66,7 @@ function Row(props) {
                 </TableCell>
                 <TableCell
                   component="tr"
-                  width="25%"
+                  width="20%"
                   scope="row"
                   align="left"
                 >
@@ -75,7 +75,7 @@ function Row(props) {
                   
                   <TableCell
                   component="tr"
-                  width="15%"
+                  width="10%"
                   scope="row"
                   align="left"
                 >
@@ -84,7 +84,16 @@ function Row(props) {
 
                 <TableCell
                   component="tr"
-                  width="20%"
+                  width="10%"
+                  scope="row"
+                  align="left"
+                >
+                  {props.data.events.length} pt
+                </TableCell>
+
+                <TableCell
+                  component="tr"
+                  width="15%"
                   scope="row"
                   align="left"
                 >
@@ -93,7 +102,7 @@ function Row(props) {
 
                 
 
-                <TableCell /*component="tr" scope="row" align="left"*/ width="40%" /*style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}*/>
+                <TableCell /*component="tr" scope="row" align="left"*/ width="45%" /*style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}*/>
           <Collapse in={open} timeout="auto" unmountOnExit>
                 { props.data.events == null ?
                   (null) : ( 
