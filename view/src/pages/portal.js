@@ -35,7 +35,7 @@ import NotesIcon from "@material-ui/icons/Notes";
 import PeopleIcon from "@material-ui/icons/People";
 import VideoLibrary from "@material-ui/icons/VideoLibrary";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
-import BusinessCenterIcon from '@material-ui/icons/BusinessCenter';
+import BusinessCenterIcon from "@material-ui/icons/BusinessCenter";
 
 import NavBar from "../components/navbar";
 import Footer from "../components/footer";
@@ -116,12 +116,12 @@ class portal extends Component {
   };
   loadSwecrets = (event) => {
     this.setState({ render: "swecrets" });
-  }
+  };
 
   loadRecordings = (event) => {
     this.setState({ render: "recordings" });
   };
-/*
+  /*
   loadSlider = (event) => {
     this.setState({ render: "slider" });
   };

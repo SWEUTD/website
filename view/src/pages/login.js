@@ -22,6 +22,7 @@ import {
 
 import NavBar from "../components/navbar";
 import Footer from "../components/footer";
+import { auth } from "../components/firebase";
 
 import axios from "axios";
 
@@ -79,6 +80,11 @@ class login extends Component {
       errors: [],
       signupLoading: false,
     };
+
+    this.state = {
+      email: "",
+      message: null,
+    };
   }
 
   componentWillReceiveProps(nextProps) {
@@ -95,6 +101,22 @@ class login extends Component {
     this.setState({
       [event.target.name]: event.target.value,
     });
+  };
+
+  handleReset = () => {
+    auth
+      .sendPasswordResetEmail(this.state.email.toLowerCase())
+      .then(() => {
+        this.setState({
+          message:
+            "Check your email for a reset password link. You might need to check spam/junk.",
+        });
+      })
+      .catch((err) =>
+        this.setState({
+          message: err.message,
+        })
+      );
   };
 
   handleFileChange = (event) => {
@@ -240,8 +262,8 @@ class login extends Component {
                       name="email"
                       autoComplete="email"
                       autoFocus
-                      helperText={errors.email}
-                      error={errors.email ? true : false}
+                      //helperText={errors.email}
+                      //error={errors.email ? true : false}
                       onChange={this.handleChange}
                     />
                     <TextField
@@ -254,8 +276,8 @@ class login extends Component {
                       type="password"
                       id="password"
                       autoComplete="current-password"
-                      helperText={errors.password}
-                      error={errors.password ? true : false}
+                      //helperText={errors.password}
+                      //error={errors.password ? true : false}
                       onChange={this.handleChange}
                     />
                     <Button
@@ -279,7 +301,7 @@ class login extends Component {
                         />
                       )}
                     </Button>
-                    {errors.general && (
+                    {errors && errors.general && (
                       <Typography
                         variant="body2"
                         className={classes.customError}
@@ -288,6 +310,48 @@ class login extends Component {
                       </Typography>
                     )}
                   </Grid>
+                </form>
+                <Typography
+                  component="h1"
+                  variant="h5"
+                  style={{ marginTop: "20px" }}
+                >
+                  Forgot Password?
+                </Typography>
+                <form className={classes.form} noValidate>
+                  <br />
+                  <Grid container spacing={2}>
+                    <TextField
+                      variant="outlined"
+                      margin="normal"
+                      required
+                      fullWidth
+                      id="email"
+                      label="Email Address"
+                      name="email"
+                      autoComplete="email"
+                      autoFocus
+                      //helperText={errors.email}
+                      //error={errors.email ? true : false}
+                      onChange={this.handleChange}
+                    />
+                    <Button
+                      type="button"
+                      fullWidth
+                      variant="contained"
+                      color="primary"
+                      className={classes.login}
+                      onClick={this.handleReset}
+                      disabled={loginLoading || !this.state.email}
+                    >
+                      Reset Password
+                    </Button>
+                  </Grid>
+                  {this.state.message && (
+                    <Typography variant="body2">
+                      {this.state.message}
+                    </Typography>
+                  )}
                 </form>
               </div>
             </Grid>
@@ -308,8 +372,8 @@ class login extends Component {
                         label="First Name"
                         name="firstName"
                         autoComplete="firstName"
-                        helperText={errors.firstName}
-                        error={errors.firstName ? true : false}
+                        //helperText={errors.firstName}
+                        //error={errors.firstName ? true : false}
                         onChange={this.handleChange}
                       />
                     </Grid>
@@ -322,8 +386,8 @@ class login extends Component {
                         label="Last Name"
                         name="lastName"
                         autoComplete="lastName"
-                        helperText={errors.lastName}
-                        error={errors.lastName ? true : false}
+                        //helperText={errors.lastName}
+                        //error={errors.lastName ? true : false}
                         onChange={this.handleChange}
                       />
                     </Grid>
@@ -336,8 +400,8 @@ class login extends Component {
                         label="Phone Number"
                         name="phoneNumber"
                         autoComplete="phoneNumber"
-                        helperText={errors.phoneNumber}
-                        error={errors.phoneNumber ? true : false}
+                        //helperText={errors.phoneNumber}
+                        //error={errors.phoneNumber ? true : false}
                         onChange={this.handleChange}
                       />
                     </Grid>
@@ -349,8 +413,8 @@ class login extends Component {
                           label="Classification"
                           name="classification"
                           autoComplete="classification"
-                          helperText={errors.classification}
-                          error={errors.classification ? true : false}
+                          //helperText={errors.classification}
+                          //error={errors.classification ? true : false}
                           onChange={this.handleChange}
                         >
                           <MenuItem selected value="Freshman">
@@ -374,8 +438,8 @@ class login extends Component {
                         label="NetID"
                         name="netid"
                         autoComplete="netid"
-                        helperText={errors.netid}
-                        error={errors.netid ? true : false}
+                        //helperText={errors.netid}
+                        //error={errors.netid ? true : false}
                         onChange={this.handleChange}
                       />
                     </Grid>
@@ -387,8 +451,8 @@ class login extends Component {
                           label="Major"
                           name="major"
                           autoComplete="major"
-                          helperText={errors.major}
-                          error={errors.major ? true : false}
+                          //helperText={errors.major}
+                          //error={errors.major ? true : false}
                           onChange={this.handleChange}
                         >
                           <MenuItem selected value="Biomedical Engineering">
@@ -421,8 +485,8 @@ class login extends Component {
                         label="Other Major"
                         name="otherMajor"
                         autoComplete="otherMajor"
-                        helperText={errors.otherMajor}
-                        error={errors.otherMajor ? true : false}
+                        //helperText={errors.otherMajor}
+                        //error={errors.otherMajor ? true : false}
                         onChange={this.handleChange}
                       />
                     </Grid>
@@ -436,8 +500,8 @@ class login extends Component {
                         label="Email Address"
                         name="email"
                         autoComplete="email"
-                        helperText={errors.email}
-                        error={errors.email ? true : false}
+                        //helperText={errors.email}
+                        //error={errors.email ? true : false}
                         onChange={this.handleChange}
                       />
                     </Grid>
