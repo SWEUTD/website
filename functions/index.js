@@ -33,7 +33,7 @@ exports.api = functions.https.onRequest(app);
 
 // created with help from the article: https://medium.com/better-programming/a-simple-and-easy-contact-form-step-by-step-tutorial-react-js-1532bc025980
 
-/*const nodemailer = require("nodemailer");
+const nodemailer = require("nodemailer");
 const gmailEmail = functions.config().gmail.email; // must be set in terminal
 const gmailPassword = functions.config().gmail.password; // must be set in terminal
 
@@ -142,4 +142,3 @@ exports.upload =
       return;
     }
   }));
-*/
