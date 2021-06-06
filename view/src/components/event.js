@@ -28,23 +28,7 @@ import { authMiddleWare } from "../util/auth";
 
 import { makeStyles } from '@material-ui/core/styles';
 
-import searchPage from "../components/searchPage";
 import SearchPage from "../components/searchPage";
-// import Accordion from '@material-ui/core/Accordion';
-// import AccordionSummary from '@material-ui/core/AccordionSummary';
-// import AccordionDetails from '@material-ui/core/AccordionDetails';
-// import Typography from '@material-ui/core/Typography';
-// import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-
-/*const useStyles = makeStyles((theme) => ({
-  root: {
-    width: '100%',
-  },
-  heading: {
-    fontSize: theme.typography.pxToRem(15),
-    fontWeight: theme.typography.fontWeightRegular,
-  },
-}));*/
 
 const styles = (theme) => ({
   content: {
@@ -126,10 +110,8 @@ class event extends Component {
     const authToken = localStorage.getItem("AuthToken");
     axios.defaults.headers.common = { Authorization: `${authToken}` };
     axios
-      .get("http://localhost:5000/swe-utd-portal/us-central1/api/member")
+      .get("https://us-central1-swe-utd-portal.cloudfunctions.net/api/member")
       .then((response) => {
-        // console.log(response.data);
-        // console.log(response.data.memberInfo.netid);
         this.setState({
           firstName: response.data.memberInfo.firstName,
           lastName: response.data.memberInfo.lastName,
@@ -153,21 +135,11 @@ class event extends Component {
         console.log(error);
         this.setState({ errorMsg: "Error in retrieving the data" });
       });
-
-      // console.log(this.state.firstName);
-      // console.log(this.state.netid);
-      
-      // console.log('before if');
-
-      // console.log(this.state.netid);
-      // if (this.state.netid == 'swe123456') {
         axios
         .get(
-          "http://localhost:5000/swe-utd-portal/us-central1/api/memberList"
-        ) // remember to uncomment text in index.js before deploying to firebase!!!!!!!!!
+          "https://us-central1-swe-utd-portal.cloudfunctions.net/api/memberList"
+        )
         .then((response) => {
-          //console.log("users:" + response.data.users.length);
-          //console.log(response.data.users)
           this.setState({
             users: response.data.users,
             uiLoading: false,
@@ -182,9 +154,6 @@ class event extends Component {
           console.log(error);
           this.setState({ errorMsg: "Error in retrieving the data" });
         }); 
-      // }
-
-      console.log('after if');
   };
 
   render() {

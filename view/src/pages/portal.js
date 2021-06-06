@@ -127,8 +127,6 @@ class portal extends Component {
   };
 */
 
-// add new page here for admin portal
-
   logoutHandler = (event) => {
     localStorage.removeItem("AuthToken");
     this.props.history.push("/login");
@@ -150,9 +148,9 @@ class portal extends Component {
     const authToken = localStorage.getItem("AuthToken");
     axios.defaults.headers.common = { Authorization: `${authToken}` };
     axios
-      .get("http://localhost:5000/swe-utd-portal/us-central1/api/member")
+      .get("https://us-central1-swe-utd-portal.cloudfunctions.net/api/member")
       .then((response) => {
-        console.log(response.data);
+        // console.log(response.data);
         this.setState({
           firstName: response.data.memberInfo.firstName,
           lastName: response.data.memberInfo.lastName,
@@ -163,7 +161,6 @@ class portal extends Component {
           otherMajor: response.data.memberInfo.otherMajor,
           netid: response.data.memberInfo.netid,
           uiLoading: false,
-          // add isAdmin feature here
         });
       })
       .catch((error) => {

@@ -29,22 +29,6 @@ import {
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 
-/*const styles = {
-  scrollable: {
-    width: "100%",
-    height: "100px",
-    margin: "0",
-    padding: "0",
-    overflow: "scroll",
-  },
-  tr: {
-    height: "10px !important",
-  },
-  "tr td": {
-     height: "auto !important",
-  }
-}*/
-
 const useRowStyles = makeStyles({
   root: {
     '& > *': {
@@ -54,7 +38,6 @@ const useRowStyles = makeStyles({
 });
 
 function Row(props) {
-  //const { row } = props;
   const [open, setOpen] = React.useState(false);
   return (
     <React.Fragment>
@@ -117,21 +100,17 @@ function Row(props) {
   )
 }
 
-const CountryList = ({countryList=[]}) => {
-  const [open, setOpen] = React.useState([]);
-  //const classes = useRowStyles();
+const MemberList = ({memberList=[]}) => {
+  // const [open, setOpen] = React.useState([]);
   return (
     <>
     <TableContainer component={Paper} align="center">
           <Table aria-label="collapsible table">
             <TableBody>
-    { countryList.map((data,index) => {
+    { memberList.map((data,index) => {
              if (data) {
-               //data.open = false;
               return (
-                //<div>
                 <Row data={data} />
-                	
              )	
            }
            return null
@@ -144,4 +123,4 @@ const CountryList = ({countryList=[]}) => {
   );
 }
 
-export default CountryList
+export default MemberList
