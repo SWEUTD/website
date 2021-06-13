@@ -42,7 +42,7 @@ class swestars extends Component {
       this.setState({ headerReady: true });
     }, 0);
     this.getStars_Spring();
-    this.getStars_Fall()
+    this.getStars_Fall();
   }
   getStars_Spring = () => {
     database
@@ -55,16 +55,20 @@ class swestars extends Component {
           bronzeMem_Spring = [];
         querySnapshot.forEach((doc) => {
           const name = `${doc.data().firstName} ${doc.data().lastName}`;
-          if (doc.data().points > 9) {
+          if (doc.data().points > 5) {
             goldMem_Spring.push(name);
-          } else if (doc.data().points > 7) {
+          } else if (doc.data().points > 4) {
             silverMem_Spring.push(name);
-          } else if (doc.data().points > 5) {
+          } else if (doc.data().points > 3) {
             bronzeMem_Spring.push(name);
           }
         });
         this.setState({
-          tierMembers_Spring: { goldS: goldMem_Spring, silverS: silverMem_Spring, bronzeS: bronzeMem_Spring },
+          tierMembers_Spring: {
+            goldS: goldMem_Spring,
+            silverS: silverMem_Spring,
+            bronzeS: bronzeMem_Spring,
+          },
         });
       })
       .catch(function (error) {
@@ -83,8 +87,8 @@ class swestars extends Component {
           bronzeMem_Fall = [];
         querySnapshot.forEach((doc) => {
           const name = `${doc.data().firstName} ${doc.data().lastName}`;
-          
-          if (doc.data().previousPoints.fall2020 > 9){
+
+          if (doc.data().previousPoints.fall2020 > 9) {
             goldMem_Fall.push(name);
           } else if (doc.data().previousPoints.fall2020 > 7) {
             silverMem_Fall.push(name);
@@ -93,7 +97,11 @@ class swestars extends Component {
           }
         });
         this.setState({
-          tierMembers_Fall: { goldF: goldMem_Fall, silverF: silverMem_Fall, bronzeF: bronzeMem_Fall },
+          tierMembers_Fall: {
+            goldF: goldMem_Fall,
+            silverF: silverMem_Fall,
+            bronzeF: bronzeMem_Fall,
+          },
         });
       })
       .catch(function (error) {
@@ -165,8 +173,8 @@ class swestars extends Component {
                           <h4>{val}</h4>
                         </ListItemText>
                       ))}
-                      <br></br>
-                      <ListSubheader align="center">
+                    <br></br>
+                    <ListSubheader align="center">
                       <h4>Summer 2020:</h4>
                     </ListSubheader>
                     <ListItemText align="center">
@@ -211,17 +219,17 @@ class swestars extends Component {
                         </ListItemText>
                       ))}
 
-                      <br></br>
-                      <ListSubheader align="center">
-                        <h4>Summer 2020:</h4>
-                      </ListSubheader>
-                      <br></br>
-                      <ListItemText align="center">
-                        <h4>Lan Bui</h4>
-                      </ListItemText>
-                      <ListItemText align="center">
-                        <h4>Aishani De Sirkar</h4>
-                      </ListItemText>
+                    <br></br>
+                    <ListSubheader align="center">
+                      <h4>Summer 2020:</h4>
+                    </ListSubheader>
+                    <br></br>
+                    <ListItemText align="center">
+                      <h4>Lan Bui</h4>
+                    </ListItemText>
+                    <ListItemText align="center">
+                      <h4>Aishani De Sirkar</h4>
+                    </ListItemText>
                   </List>
                 </div>
               </Grid>
@@ -260,17 +268,17 @@ class swestars extends Component {
                         </ListItemText>
                       ))}
 
-                      <br></br>
-                      <ListSubheader align="center">
-                        <h4>Summer 2020:</h4>
-                      </ListSubheader>
-                      <br></br>
-                      <ListItemText align="center">
-                        <h4>Jyostna Thanjavur</h4>
-                      </ListItemText>
-                      <ListItemText align="center">
-                        <h4>Kendra Huang</h4>
-                      </ListItemText>
+                    <br></br>
+                    <ListSubheader align="center">
+                      <h4>Summer 2020:</h4>
+                    </ListSubheader>
+                    <br></br>
+                    <ListItemText align="center">
+                      <h4>Jyostna Thanjavur</h4>
+                    </ListItemText>
+                    <ListItemText align="center">
+                      <h4>Kendra Huang</h4>
+                    </ListItemText>
                   </List>
                 </div>
               </Grid>
