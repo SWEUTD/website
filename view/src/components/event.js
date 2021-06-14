@@ -24,6 +24,8 @@ import {
 import axios from "axios";
 import { authMiddleWare } from "../util/auth";
 
+import EventLinkCreater from "./eventLink";
+
 const styles = (theme) => ({
   content: {
     flexGrow: 1,
@@ -339,6 +341,18 @@ class event extends Component {
                   <br />
                   <Divider />
                   {history}
+                </CardContent>
+              </Card>
+            </Grid>
+            <Grid className={classes.gridItem} item md={6} xs={12}>
+              <Card
+                height="100%"
+                className="movingItem"
+                variant="outlined"
+                style={{ padding: "10px" }}
+              >
+                <CardContent height="100%" align="center">
+                  <EventLinkCreater/>
                 </CardContent>
               </Card>
             </Grid>
