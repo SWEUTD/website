@@ -25,7 +25,7 @@ app.post("/member", auth, updateMemberDetails);
 app.post("/newEvent", addEventMember);
 app.get("/member", auth, getMemberDetail);
 app.get("/alumniList", getAlumniList);
-app.get("/memberList", getMemberList); // remember to uncomment this out before deploying to firebase!!!!!!!!!
+app.get("/memberList", getMemberList); 
 
 exports.api = functions.https.onRequest(app);
 
