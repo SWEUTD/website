@@ -189,11 +189,9 @@ exports.getAlumniList = async (request, response) => {
 // get a list of users for the member list in admin portal
 exports.getMemberList = async (request, response) => {
   db.collection("members")
-    // .where("showAlum", "==", true)
     .get()
     .then((snapshot) => {
       if (snapshot.empty) {
-        // console.log("in members.js");
         console.log("empty list");
         return response.status(200).json({ users: [] });
       }
