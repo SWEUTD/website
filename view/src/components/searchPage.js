@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import axios from "axios";
+import { authMiddleWare } from "../util/auth";
+
 import MemberList from './memberList';
 
 const SearchPage = (props) => {
