@@ -186,6 +186,31 @@ exports.getAlumniList = async (request, response) => {
     });
 };
 
+// get a list of users for the member list in admin portal
+exports.getMemberList = async (request, response) => {
+  db.collection("members")
+    // .where("showAlum", "==", true)
+    .get()
+    .then((snapshot) => {
+      if (snapshot.empty) {
+        // console.log("in members.js");
+        console.log("empty list");
+        return response.status(200).json({ users: [] });
+      }
+      console.log("non empty list");
+      console.log(snapshot.docs);
+      return response
+        .status(200)
+        .json({ users: snapshot.docs.map((doc) => doc.data()) });
+    })
+    .catch((error) => {
+      console.error(error);
+      return response.status(500).json({
+        message: "Cannot provide the list.",
+      });
+    });
+};
+
 // Add new event to a member
 exports.addEventMember = (request, response) => {
   // each event has a points value, name, and date

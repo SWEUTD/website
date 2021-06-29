@@ -15,6 +15,7 @@ const {
   updateMemberDetails,
   addEventMember,
   getAlumniList,
+  getMemberList,
 } = require("./APIs/members");
 
 // Connects API routes to functions in the member.js file
@@ -24,6 +25,7 @@ app.post("/member", auth, updateMemberDetails);
 app.post("/newEvent", addEventMember);
 app.get("/member", auth, getMemberDetail);
 app.get("/alumniList", getAlumniList);
+app.get("/memberList", getMemberList); // remember to uncomment this out before deploying to firebase!!!!!!!!!
 
 exports.api = functions.https.onRequest(app);
 

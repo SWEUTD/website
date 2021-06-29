@@ -11,6 +11,8 @@ import SWEcrets from "../components/swecrets";
 import Recordings from "../components/recordings";
 import Questions from "../components/q&a";
 import AlumniList from "../components/alumniList";
+
+
 // import Slider from "../components/slider";
 
 import {
@@ -88,6 +90,7 @@ function Screen(props) {
   } /*else if (screen === "slider") {
     return <Slider />;
   }*/
+
   return <Event />;
 }
 
@@ -123,6 +126,7 @@ class portal extends Component {
     this.setState({ render: "slider" });
   };
 */
+
   logoutHandler = (event) => {
     localStorage.removeItem("AuthToken");
     this.props.history.push("/login");
@@ -146,7 +150,7 @@ class portal extends Component {
     axios
       .get("https://us-central1-swe-utd-portal.cloudfunctions.net/api/member")
       .then((response) => {
-        console.log(response.data);
+        // console.log(response.data);
         this.setState({
           firstName: response.data.memberInfo.firstName,
           lastName: response.data.memberInfo.lastName,

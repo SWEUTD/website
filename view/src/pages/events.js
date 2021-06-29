@@ -109,7 +109,6 @@ class events extends Component {
 							</Grid>
 							))}
 						</Grid> 
-
               */}
 					<div align="center">
               <h1>Upcoming Events</h1>
@@ -121,7 +120,7 @@ class events extends Component {
 					<TableContainer component={Paper} align="center">
       <Table className={classes.table} aria-label="simple table">
         <TableHead>
-          <TableRow>
+        <TableRow>
             <TableCell align="center" width="45%"><h2></h2></TableCell>
             <TableCell align="center" width="55%"><h2></h2></TableCell>
           </TableRow>
