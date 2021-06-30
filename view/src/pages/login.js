@@ -179,6 +179,7 @@ class login extends Component {
           signupLoading: false,
         });
         this.props.history.push("/portal");
+        // if SWE account not made copy code here
         if (this.state.resume != null) {
           this.handleResumeUpload();
         }

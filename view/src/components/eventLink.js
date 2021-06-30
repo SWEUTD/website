@@ -34,6 +34,9 @@ import CloudUploadIcon from "@material-ui/icons/CloudUpload";
 import axios from "axios";
 import { authMiddleWare } from "../util/auth";
 
+import { BrowserRouter, Route } from "react-router-dom";
+import meetingform from "../pages/meetingform";
+
 class EventLinkCreater extends Component {
     constructor(props) {
         super(props);
@@ -46,11 +49,36 @@ class EventLinkCreater extends Component {
             eventSecretWord: ""
         }
     }
+  
+    /*PropsRoute = ({ component, ...rest }) => {
+      return (
+        <Route
+          {...rest}
+          render={(routeProps) => {
+            return renderMergedProps(component, routeProps, rest);
+          }}
+        />
+      );
+    };*/
 
     // function for handling when a field is modified
   handleChange = (event) => {
     this.setState({
-      [event.target.name]: event.target.value || event.target.checked,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  handleSubmit = (event) => {
+    // <PropsRoute exact path="/path" eventHeading="Sign in to the ____ event" eventPoints={1} eventName = "Event Name" eventDate = "1/1/2020" secretWord = "secret" component={meetingform}/>
+    // make a router component somehow and pass all the details
+    
+    this.setState({
+      eventName: "",
+            eventPath: "/",
+            eventHeading: "",
+            eventPoints: 0,
+            eventDate: "",
+            eventSecretWord: ""
     });
   };
 
@@ -134,6 +162,7 @@ class EventLinkCreater extends Component {
                     fullWidth
                     variant="contained"
                     color="primary"
+                    onClick={this.handleSubmit}
                     //className={classes.signup}
                     //onClick={this.handleSignup}
                     /*disabled={
