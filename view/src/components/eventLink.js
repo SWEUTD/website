@@ -7,6 +7,8 @@ import {
   TableHead,
   TableRow,
   Paper,
+  List,
+  ListItem
 } from "@material-ui/core";
 
 import withStyles from "@material-ui/core/styles/withStyles";
@@ -46,7 +48,8 @@ class EventLinkCreater extends Component {
             eventHeading: "",
             eventPoints: 0,
             eventDate: "",
-            eventSecretWord: ""
+            eventSecretWord: "",
+            eventArray: []
         }
     }
   
@@ -68,9 +71,18 @@ class EventLinkCreater extends Component {
     });
   };
 
-  handleSubmit = (event) => {
+  onClick = (event) => {
     // <PropsRoute exact path="/path" eventHeading="Sign in to the ____ event" eventPoints={1} eventName = "Event Name" eventDate = "1/1/2020" secretWord = "secret" component={meetingform}/>
     // make a router component somehow and pass all the details
+
+    //let newEvent = {};
+    //newEvent.push(this.state.eventName, this.state.eventPath, this.state.eventPoints, this.state.eventDate, this.state.eventSecretWord);
+
+    let newEvent = { eventName: this.state.eventName, eventPath: this.state.eventPath, eventHeading: this.state.eventHeading, eventPoints: this.state.eventPoints, eventDate: this.state.eventDate, eventSecretWord: this.state.eventSecretWord}
+    this.state.eventArray.push(newEvent);
+
+    console.log("hello");
+    console.log(this.state.eventArray);
     
     this.setState({
       eventName: "",
@@ -158,11 +170,10 @@ class EventLinkCreater extends Component {
                     />
                   </Grid>
                   <Button
-                    type="signup"
                     fullWidth
                     variant="contained"
                     color="primary"
-                    onClick={this.handleSubmit}
+                    onClick={this.onClick}
                     //className={classes.signup}
                     //onClick={this.handleSignup}
                     /*disabled={
@@ -187,6 +198,28 @@ class EventLinkCreater extends Component {
               </CardContent>
               <CardActions />
             </form>
+
+            {this.state.eventArray == null ? (null) : 
+            (
+              <List>
+              {this.state.eventArray.map((event) => (
+                <ListItem>
+                <Card className="movingItem" variant="outlined">
+                  <CardContent>
+                    <h3>
+                      Event name : {event.eventName}
+                    </h3>
+                    <p>Url: https://sweutd.com{event.eventPath}</p>
+                    <p>Heading: {event.eventHeading}</p>
+                    <p>Points: {event.eventPoints}</p>
+                    <p>Date: {event.eventDate}</p>
+                    <p>Secret word: {event.eventSecretWord}</p>
+                  </CardContent>
+                </Card>
+              </ListItem>
+              )
+            )}
+            </List>)}
         </>
         );
     }
