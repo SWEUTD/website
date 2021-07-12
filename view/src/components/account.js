@@ -368,7 +368,7 @@ class account extends Component {
                   </Grid>
                   <Grid item xs={12} sm={6}>
                     <FormControl fullWidth variant="outlined" margin="dense">
-                      <InputLabel>Race</InputLabel>
+                      <InputLabel>Race/Ethnicity</InputLabel>
                       <Select
                         label="Race"
                         name="race"
@@ -403,7 +403,7 @@ class account extends Component {
                           color="primary"
                         />
                       }
-                      label="Do you identify as LGBT+"
+                      label="I identify as LGBT+"
                     />
                   </Grid>
                   <Grid item md={3} xs={12}>
@@ -416,7 +416,7 @@ class account extends Component {
                           color="primary"
                         />
                       }
-                      label="Do you have a disability"
+                      label="I have a disability"
                     />
                   </Grid>
                   <Grid item md={3} xs={12}>
