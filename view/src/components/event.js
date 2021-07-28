@@ -11,6 +11,8 @@ import {
   TableHead,
   TableRow,
   Paper,
+  List,
+  ListItem,
 } from "@material-ui/core";
 
 import withStyles from "@material-ui/core/styles/withStyles";
@@ -23,6 +25,10 @@ import {
 } from "@material-ui/core";
 import axios from "axios";
 import { authMiddleWare } from "../util/auth";
+
+import { makeStyles } from '@material-ui/core/styles';
+
+import SearchPage from "../components/searchPage";
 
 const styles = (theme) => ({
   content: {
@@ -94,18 +100,18 @@ class event extends Component {
       uiLoading: true,
       buttonLoading: false,
       imageError: "",
+      users: null,
     };
   }
 
   // makes sure user is logged in
-  componentWillMount = () => {
+  componentDidMount = () => {
     authMiddleWare(this.props.history);
     const authToken = localStorage.getItem("AuthToken");
     axios.defaults.headers.common = { Authorization: `${authToken}` };
     axios
       .get("https://us-central1-swe-utd-portal.cloudfunctions.net/api/member")
       .then((response) => {
-        console.log(response.data);
         this.setState({
           firstName: response.data.memberInfo.firstName,
           lastName: response.data.memberInfo.lastName,
@@ -118,7 +124,6 @@ class event extends Component {
           events: response.data.memberInfo.events,
           points: response.data.memberInfo.points,
           previousPoints: response.data.memberInfo.previousPoints || {},
-          uiLoading: false,
         });
       })
       .catch((error) => {
@@ -130,6 +135,25 @@ class event extends Component {
         console.log(error);
         this.setState({ errorMsg: "Error in retrieving the data" });
       });
+        axios
+        .get(
+          "https://us-central1-swe-utd-portal.cloudfunctions.net/api/memberList"
+        )
+        .then((response) => {
+          this.setState({
+            users: response.data.users,
+            uiLoading: false,
+          });
+        })
+        .catch((error) => {
+          console.log("error happened");
+          // console.log(error);
+          if (error.status === 403) {
+            this.props.history.push("/login");
+          }
+          console.log(error);
+          this.setState({ errorMsg: "Error in retrieving the data" });
+        }); 
   };
 
   render() {
@@ -342,6 +366,100 @@ class event extends Component {
                 </CardContent>
               </Card>
             </Grid>
+          </Grid>
+          <Grid>
+        <br/>
+
+        <Grid/>
+        { this.state.netid == 'swe123456'? 
+        (<Grid 
+        container
+        spacing={2}
+        height="100%"
+        width="100%"
+        alignItems="stretch"
+        justify="space-evenly">
+          <Grid item xs={12}>
+        <Card
+        height="100%"
+        className="movingItem"
+        variant="outlined"
+        style={{ padding: "10px" }}
+      >
+          <CardContent height="100%" align="center">
+                  
+                  <h1 align="center">Member List</h1><Divider />
+                  <SearchPage/>
+                  <br />
+                  {/*this.state.users == null ? (
+            <h4>No users are currently on the Member List.</h4>
+          ) : (
+             this.state.users
+      .slice(0)
+      .sort((a, b) => a.points > b.points ? -1 : 1)
+      .map((item, key) => (
+        <TableContainer component={Paper} align="center">
+          <Table className={classes.table} aria-label="simple table">
+            <TableBody>
+              <TableRow key={key}>
+                <TableCell
+                  component="th"
+                  width="15%"
+                  scope="row"
+                  align="left"
+                >
+                  {item.firstName}
+                </TableCell>
+                <TableCell
+                  component="th"
+                  width="15%"
+                  scope="row"
+                  align="left"
+                >
+                  {item.lastName}
+                </TableCell>
+                <TableCell
+                  component="th"
+                  width="10%"
+                  scope="row"
+                  align="left"
+                >
+                  {item.points} pt
+                </TableCell>
+
+                <TableCell
+                  component="th"
+                  width="20%"
+                  scope="row"
+                  align="left"
+                >
+                  {item.email}
+                </TableCell>
+
+                <TableCell
+                  component="th"
+                  width="40%"
+                  scope="row"
+                  align="left"
+                >
+                  { item.events == null ?
+                  (null) : (
+                    item.events.map((event) => (
+                      <p>{event.eventName}</p>
+                  )))}
+                </TableCell>
+
+              </TableRow>
+            </TableBody>
+          </Table>
+        </TableContainer>
+      ))
+      <p></p>
+                    )*/}
+                </CardContent>
+                </Card>
+                </Grid>
+          </Grid>) : null}
           </Grid>
         </div>
       );
