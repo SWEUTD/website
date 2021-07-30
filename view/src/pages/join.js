@@ -111,15 +111,18 @@ class join extends Component {
                 </Grid>
                 <Grid item sm={6} xs={12} className={classes.gridItem}>
                   <Card
-                    style={{
+                    /*style={{
                       verticalAlign: "top",
                       height: "100%",
                       width: "100%",
+                    }}*/
+                    style={{
+                      padding: "0px",
                     }}
                     className="movingItem"
                     variant="outlined"
                   >
-                    <CardContent>
+                    <CardContent style={{padding: "0px",}}>
                       <img src={SWEUTDMembershipCost} width="100%" />
                     </CardContent>
                   </Card>

@@ -23,7 +23,7 @@ import ProfessionalExcellence from "../assets/ProfessionalExcellence.png";
 import Trust from "../assets/Trust.png";
 
 // video
-import WhySWE from "../assets/WhySWE.mp4";
+import AboutSWE from "../assets/AboutSWE.mp4";
 import ReactPlayer from "react-player";
 
 const styles = (theme) => ({
@@ -83,7 +83,7 @@ class about extends Component {
             item
             xs={12}
           >
-            <ReactPlayer url={WhySWE} playing={false} controls={true} />
+            <ReactPlayer url={AboutSWE} playing={false} controls={true} />
           </Grid>
           <Grid
             className={classes.gridItem}
