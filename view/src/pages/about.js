@@ -16,9 +16,14 @@ import SponsorA from "../assets/AT&T.png";
 import SponsorB from "../assets/CBRE.png";
 import SponsorC from "../assets/XILINX.png";
 import Award from "../assets/SilverAward.png";
+import Integrity from "../assets/Integrity.png";
+import InclusiveEnvironment from "../assets/InclusiveEnvironment.png";
+import MutualSupport from "../assets/MutualSupport.png";
+import ProfessionalExcellence from "../assets/ProfessionalExcellence.png";
+import Trust from "../assets/Trust.png";
 
 // video
-import WhySWE from "../assets/WhySWE.mp4";
+import AboutSWE from "../assets/AboutSWE.mp4";
 import ReactPlayer from "react-player";
 
 const styles = (theme) => ({
@@ -78,7 +83,7 @@ class about extends Component {
             item
             xs={12}
           >
-            <ReactPlayer url={WhySWE} playing={false} controls={true} />
+            <ReactPlayer url={AboutSWE} playing={false} controls={true} />
           </Grid>
           <Grid
             className={classes.gridItem}
@@ -136,7 +141,10 @@ class about extends Component {
             <div align="center">
               <h1>Awards</h1>
               <br />
-              <h3>SWE Mission Award 2020 - Silver</h3>
+              <h3><b>Outstanding Jonsson School Student Organization Award</b></h3>
+              <br />
+
+              <h3><b>SWE Mission Award 2020 - Silver</b></h3>
               <h4>
                 The SWE Mission Awards recognize SWE groups that embody SWE core
                 values and demonstrate continuous improvement and growth as they
@@ -148,41 +156,43 @@ class about extends Component {
                 <img src={Award} width="22%" align="center" />
                 <br />
                 <Grid container direction="row" style={{ padding: "50px" }}>
-                  <Grid item xs={4}>
-                    <ul align="left">
-                      <h4>SWE Core Values:</h4>
-                      <li className={classes.listItem}>Integrity</li>
-                      <li className={classes.listItem}>
-                        Inclusive Environment
-                      </li>
-                      <li className={classes.listItem}>Mutual Support</li>
-                      <li className={classes.listItem}>
-                        Professional Excellence
-                      </li>
-                      <li className={classes.listItem}>Trust</li>
+                  <Grid item xs={6} style={{padding: "0 40px 0 0"}}/*, {display: "flex"}, {"flex-direction":"row"}}*/>
+                    <ul align="center">
+                      <h4><b>SWE Core Values:</b></h4>
+                      <Grid container direction="row" /*style={{ padding: "50px" }}*/>
+                        <Grid item xs={6}>
+                          <img src={Integrity} width="90%" />
+                          <img src={InclusiveEnvironment} width="90%" />
+                          <img src={MutualSupport} width="90%" />
+                        </Grid>
+                        <Grid item xs={6}>
+                          <img src={ProfessionalExcellence} width="90%" />
+                          <img src={Trust} width="90%" />
+                        </Grid>
+                      </Grid>
                     </ul>
                   </Grid>
-                  <Grid item xs={8}>
+                  <Grid item xs={6}>
                     <div width="50%">
-                      <h4>SWE Strategic Goals:</h4>
-                      <h5>Professional Excellence</h5>
+                      <h4><b>SWE Strategic Goals:</b></h4>
+                      <h5><u>Professional Excellence</u></h5>
                       <h5>
                         Goal 1: SWE will be the premier resource for females in
                         engineering and technology seeking growth and
                         advancement at all stages of their careers.
                       </h5>
-                      <h5>Globalization</h5>
+                      <h5><u>Globalization</u></h5>
                       <h5>
                         Goal 2: SWE will be recognized as a global, inclusive
                         organization, empowering females in engineering and
                         technology regardless of geography or career stage.
                       </h5>
-                      <h5>Advocacy</h5>
+                      <h5><u>Advocacy</u></h5>
                       <h5>
                         Goal 3: SWE will be the preeminent advocate for females
                         throughout the engineering and technology pipeline
                       </h5>
-                      <h5>Diversity &amp; Inclusion</h5>
+                      <h5><u>Diversity &amp; Inclusion</u></h5>
                       <h5>
                         Goal 4: SWE will champion diversity in the engineering
                         and technology professions and will promote an inclusive
@@ -196,8 +206,6 @@ class about extends Component {
                 <img src={Award} width="50%" align="center" />
                 <br />
               </MediaQuery>
-              <br />
-              <h3>Outstanding Jonsson School Student Organization Award</h3>
               <br />
             </div>
           </Grid>

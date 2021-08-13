@@ -19,6 +19,11 @@ import {
 import NavBar from "../components/navbar";
 import Footer from "../components/footer";
 
+import SWEUTDMembershipBenefit from "../assets/SWEUTDMembershipBenefit.png";
+import SWEUTDMembershipCost from "../assets/SWEUTDMembershipCost.png";
+import SWEMembershipBenefit from "../assets/SWEMembershipBenefit.png";
+import SWEMembershipCost from "../assets/SWEMembershipCost.png";
+
 const styles = (theme) => ({
   root: {
     flexGrow: 1,
@@ -100,37 +105,25 @@ class join extends Component {
                     variant="outlined"
                   >
                     <CardContent>
-                      <h5 align="left">Membership Benefits:</h5>
-                      <List dense="true" align="center">
-                        <ListItem>• Company Tours</ListItem>
-                        <ListItem>• Outreach</ListItem>
-                        <ListItem>• Socials/Gatherings</ListItem>
-                        <ListItem>• SWE Conference</ListItem>
-                        <ListItem>• Networking</ListItem>
-                        <ListItem>• Workshops</ListItem>
-                        <ListItem>• Tech Talks</ListItem>
-                        <ListItem>
-                          • Meeting some awesome women in STEM!
-                        </ListItem>
-                      </List>
+                      <img src={SWEUTDMembershipBenefit} width="100%" />
                     </CardContent>
                   </Card>
                 </Grid>
                 <Grid item sm={6} xs={12} className={classes.gridItem}>
                   <Card
-                    style={{
+                    /*style={{
                       verticalAlign: "top",
                       height: "100%",
                       width: "100%",
+                    }}*/
+                    style={{
+                      padding: "0px",
                     }}
                     className="movingItem"
                     variant="outlined"
                   >
-                    <CardContent>
-                      <h5 align="left">Membership Costs:</h5>
-                      <List dense="true" align="center">
-                        <ListItem>• None!</ListItem>
-                      </List>
+                    <CardContent style={{padding: "0px",}}>
+                      <img src={SWEUTDMembershipCost} width="100%" />
                     </CardContent>
                   </Card>
                 </Grid>
@@ -163,7 +156,6 @@ class join extends Component {
                         Click <a href="https://swe.org/join">here</a> to become
                         a registered member of the Society of Women Engineers
                       </h5>
-                      <br />
                     </CardContent>
                   </Card>
                 </Grid>
@@ -174,22 +166,7 @@ class join extends Component {
                     variant="outlined"
                   >
                     <CardContent align="center">
-                      <h5 align="left">Membership Benefits:</h5>
-                      <List dense="true" align="center">
-                        <ListItem>• Eligibility for scholarships</ListItem>
-                        <ListItem>• Access to the SWE Career Center</ListItem>
-                        <ListItem>
-                          • Networking opportunities with practicing women
-                          engineers and other collegiates
-                        </ListItem>
-                        <ListItem>
-                          • SWE Annual and Regional Conferences
-                        </ListItem>
-                        <ListItem>
-                          • Annual subscription to the award-winning SWE
-                          Magazine
-                        </ListItem>
-                      </List>
+                      <img src={SWEMembershipBenefit} width="100%" />
                     </CardContent>
                   </Card>
                 </Grid>
@@ -200,14 +177,7 @@ class join extends Component {
                     variant="outlined"
                   >
                     <CardContent align="center">
-                      <h5 align="left">Membership Costs:</h5>
-                      <List dense="true" align="center">
-                        <ListItem>• $20 for yearlong membership</ListItem>
-                        <ListItem>
-                          • $50 for five-year membership with the the Collegiate
-                          to Career option
-                        </ListItem>
-                      </List>
+                        <img src={SWEMembershipCost} width="100%" />
                     </CardContent>
                   </Card>
                 </Grid>
