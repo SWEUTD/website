@@ -81,7 +81,7 @@ class Slider extends React.Component {
               xs={12}
             >
               <ul align="center">
-            <li><a href="https://sweutd.medium.com/" target="_blank"><img src={Blog} width="60%"/></a> </li>
+            <li><a href="https://sweutd.medium.com/" target="_blank"><img src={Blog} width="40%"/></a> </li>
             </ul>
             </Grid>
           </MediaQuery>
