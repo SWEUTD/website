@@ -156,18 +156,20 @@ class about extends Component {
                 <img src={Award} width="22%" align="center" />
                 <br />
                 <Grid container direction="row" style={{ padding: "50px" }}>
-                  <Grid item xs={6} style={{padding: "0 40px 0 0"}}/*, {display: "flex"}, {"flex-direction":"row"}}*/>
+                  <Grid item xs={6} /*style={{padding: "0 40px 0 0"}}/*, {display: "flex"}, {"flex-direction":"row"}}*/>
                     <ul align="center">
                       <h4><b>SWE Core Values:</b></h4>
-                      <Grid container direction="row" /*style={{ padding: "50px" }}*/>
-                        <Grid item xs={6}>
-                          <img src={Integrity} width="90%" />
+                      <Grid container direction="row" spacing={2} /*style={{ padding: "50px" }}*/>
+                        <Grid item xs={6} style={{ margin: "0 -40px 0 0" }}>
+                          <img src={Integrity} width="90%" style={{ padding: "0 0 8px 0" }}/>
                           <img src={InclusiveEnvironment} width="90%" />
-                          <img src={MutualSupport} width="90%" />
                         </Grid>
                         <Grid item xs={6}>
-                          <img src={ProfessionalExcellence} width="90%" />
+                          <img src={ProfessionalExcellence} width="90%" style={{ padding: "0 0 8px 0" }}/>
                           <img src={Trust} width="90%" />
+                        </Grid>
+                        <Grid item xs={12} style={{ margin: "-8px 0 0 0" }}>
+                          <img src={MutualSupport} width="45%" />
                         </Grid>
                       </Grid>
                     </ul>
