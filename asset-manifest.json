@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.91039174.chunk.css",
-    "main.js": "/static/js/main.d4711ff1.chunk.js",
-    "main.js.map": "/static/js/main.d4711ff1.chunk.js.map",
+    "main.js": "/static/js/main.f9c14dc6.chunk.js",
+    "main.js.map": "/static/js/main.f9c14dc6.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.94a6af97.js",
     "runtime-main.js.map": "/static/js/runtime-main.94a6af97.js.map",
-    "static/js/2.4bd95552.chunk.js": "/static/js/2.4bd95552.chunk.js",
-    "static/js/2.4bd95552.chunk.js.map": "/static/js/2.4bd95552.chunk.js.map",
+    "static/js/2.a3e94f6c.chunk.js": "/static/js/2.a3e94f6c.chunk.js",
+    "static/js/2.a3e94f6c.chunk.js.map": "/static/js/2.a3e94f6c.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.616b927400850c18cbd0c04cbd659862.js": "/precache-manifest.616b927400850c18cbd0c04cbd659862.js",
+    "precache-manifest.ce28ce2a07cd9c48e57d2b2197a9a745.js": "/precache-manifest.ce28ce2a07cd9c48e57d2b2197a9a745.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.91039174.chunk.css.map": "/static/css/main.91039174.chunk.css.map",
-    "static/js/2.4bd95552.chunk.js.LICENSE.txt": "/static/js/2.4bd95552.chunk.js.LICENSE.txt",
+    "static/js/2.a3e94f6c.chunk.js.LICENSE.txt": "/static/js/2.a3e94f6c.chunk.js.LICENSE.txt",
     "static/media/1.HEIC": "/static/media/1.ff820100.HEIC",
     "static/media/2.jpg": "/static/media/2.a6cb3cc9.jpg",
     "static/media/3.jpg": "/static/media/3.46504d3d.jpg",
@@ -50,7 +50,6 @@
     "static/media/MrunmayiSathaye.jpg": "/static/media/MrunmayiSathaye.0f07ec80.jpg",
     "static/media/MutualSupport.png": "/static/media/MutualSupport.da49b005.png",
     "static/media/NehaSapre.jpg": "/static/media/NehaSapre.7f664fbf.jpg",
-    "static/media/NithilaIllangovan.jpg": "/static/media/NithilaIllangovan.04c914af.jpg",
     "static/media/NivethaNarayanan.jpg": "/static/media/NivethaNarayanan.0c572acd.jpg",
     "static/media/NuhaSiddiqui.jpg": "/static/media/NuhaSiddiqui.1e58d7e2.jpg",
     "static/media/Officers.jpg": "/static/media/Officers.87156e40.jpg",
@@ -78,8 +77,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.94a6af97.js",
-    "static/js/2.4bd95552.chunk.js",
+    "static/js/2.a3e94f6c.chunk.js",
     "static/css/main.91039174.chunk.css",
-    "static/js/main.d4711ff1.chunk.js"
+    "static/js/main.f9c14dc6.chunk.js"
   ]
 }
