@@ -3,3 +3,4 @@ node_modules/
 util/config.js
 .env
 key.json
+backup.json
