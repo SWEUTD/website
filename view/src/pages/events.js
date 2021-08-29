@@ -17,13 +17,65 @@ import {
   Paper,
 } from "@material-ui/core";
 import NavBar from "../components/navbar";
+import LadiesInTech from "../assets/LadiesInTech.png"
+import SWE21ConferenceScholarship from "../assets/SWE21ConferenceScholarship.png"
+import CapitalOne from "../assets/CapitalOne.jpg"
+import kickoff_flyer2 from "../assets/kickoff_flyer2.png"
 
 // import SWE_Match_Presentation from "../assets/EventFlyers/SWE_Match_Presentation.png"
 
 const upcomingEvents = [
+  {
+    name: "Kickoff Meeting",
+    date: 'August 30, 5:30-6:30 PM.',
+    location: 'Location: TI Auditorium, ECSS 2.102.', 
+    description: "Come join us for our first meeting of the year! It will be a great opportunity to meet your fellow members, both new and old, and get your first SWE point for the Fall 2021 semester!",
+    link: '',
+    meetingbutton: 'https://tinyurl.com/SWEKickoffF21'
+  },
+
+  {
+    name: "Capital One Fall 2021 (Virtual) Events",
+    date: '',
+    description: "This one-on-one chat is a great opportunity to ask questions about our intern and rotation programs with a current (or recent grad) of the Technology Development Program. You can also learn more about #LifeatCapitalOne, our culture, project areas, and more." ,
+    link: 'https://www.signupgenius.com/go/8050e48a4a72ca2fe3-virtual23'
+  },
+  
+  {
+    name: "Ladies in Tech Mentoring Program ",
+    date: 'Application closed on September 6, 2021',
+    description: "The Ladies in Tech Mentoring Program, run by officers of SWE and WWC, has opened up mentee applications! The program aims to help freshmen majoring in STEM-related fields feel connected to the university, their major, and other women in tech. The Ladies in Tech Mentoring Program has officially opened its Mentee Applications for the 2021-2022 school year! If you're interested in becoming a mentee, please fill out the 2021-2022 Mentee Application by 11:59 PM on September 6, 2021. We only have around 25 spots for mentees this year, so be sure to check out the application if you are interested! Mentees will have access to professional, personal, and academic development events and create lasting relationships with other women in tech. Mentees will also have the opportunity to create an end-to-end technical project with the support of their mentors and the LIT officer team.",
+    link: '',
+    apply1: 'https://docs.google.com/forms/d/e/1FAIpQLSe70r5ViHZeL9RSnPN6uwNcpu5onJjWHgnekMEeku2MnGSh5Q/viewform'
+  },
+  {
+    name: "SWE 21 Conference: Scholarship Application",
+    date: 'Application closed on September 10, 2021.',
+    description: "Join us at the Crossroads of America this October for WE21—the top destination for women engineers and technologists! WE21 is the largest and most prestigious conference for women in engineering and technology. This year’s theme is Aspire to Inspire. We promise that the strong, diverse women you meet and learn from will leave you feeling personally inspired and reinvigorated to take on the world. The SWE Conference is a great place for recruiting and networking. If you are interested in attending this conference, please fill out the SWE Conference '21 Scholarship Application for a chance to be picked to get a full ride (excluding food) to the conference this fall.",
+    link: '',
+    apply2: 'https://docs.google.com/forms/d/e/1FAIpQLSf23hjgnpacApewlzyJZYpOKWDz63g0gtX5IDVfAejB0hbmSg/viewform'
+  }
+
 ];
 
 const flyers = [
+  {
+    image: kickoff_flyer2,
+    link: ''
+  },
+  {
+    image: CapitalOne,
+    link: ''
+  },
+  
+  {
+    image: LadiesInTech,
+    link: ''
+  },
+  {
+    image: SWE21ConferenceScholarship,
+    link: ''
+  }
 ];
 
 
@@ -54,7 +106,12 @@ function createData(event, flyer) {
 }
 
 
-const rows = [];
+const rows = [
+  createData(upcomingEvents[0], flyers[0].image),
+  createData(upcomingEvents[1], flyers[1].image),
+  createData(upcomingEvents[2], flyers[2].image),
+  createData(upcomingEvents[3], flyers[3].image),
+];
 
 class events extends Component {
   constructor(props) {
@@ -112,7 +169,7 @@ class events extends Component {
               */}
 					<div align="center">
               <h1>Upcoming Events</h1>
-              <h4>Currently, there are no upcoming events. Have a great summer!</h4>
+              
             </div>
           </Grid>
 					
@@ -130,18 +187,44 @@ class events extends Component {
             <TableRow key={row.event.name}>
       <TableCell component="th" scope="row" align="center">
 			  <br/>
-				<h4>{row.event.name}</h4>
-				<ListSubheader>{row.event.date}</ListSubheader>
+				<h4><strong>{row.event.name}</strong></h4>
+				<ListSubheader><strong>{row.event.date}</strong></ListSubheader>
+        <ListSubheader><strong>{row.event.location}</strong></ListSubheader>
 				{row.event.description != '' ?
-				(<div><h5 align="left">{row.event.description}</h5><br /> </div>) : null }
+				(<div><h5 align="left" >{row.event.description}</h5><br /> </div>) : null }
 				{row.event.link != '' && row.event.link != null
 				? (<div>
-				<Button href={row.event.link} align="center" variant="contained" color="primary" position="relative" zIndex="-3000">Join Meeting</Button>
+				<a href={row.event.link}><strong>Tech Coffee Chat - Register Here!</strong></a>
 				<br/>
 				<br/>
 				</div>)
 				: null
 				}
+        {row.event.meetingbutton != '' && row.event.meetingbutton != null 
+        ? (<div>
+          <Button href={row.event.meetingbutton} align="center" variant="contained" color="primary" position="relative" zIndex="-3000">Join Meeting</Button>
+          <br/>
+          <br/>
+        </div>)
+        : null
+        }
+        {row.event.apply1 != '' && row.event.apply1 != null
+				? (<div>
+				<a href={row.event.apply1}><strong>2021-2022 Mentee Application</strong></a>
+				<br/>
+				<br/>
+				</div>)
+				: null
+				}
+        {row.event.apply2 != '' && row.event.apply2 != null
+				? (<div>
+				<a href={row.event.apply2}><strong>SWE Conference 21' Scholarship Application</strong></a>
+				<br/>
+				<br/>
+				</div>)
+				: null
+				}
+
 			</TableCell>
 			  <TableCell component="th" scope="row" align="center">
 			  {row.flyer != '' ?
