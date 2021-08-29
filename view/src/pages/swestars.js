@@ -315,7 +315,7 @@ class swestars extends Component {
                   </List>
                   <br />
                   <br />
-                  <h1 align="center">Tier Prizes for Fall 2020</h1>
+                  <h1 align="center">Tier Prizes for Fall 2021</h1>
                   <Divider />
                   <Grid
                     container
@@ -377,7 +377,7 @@ class swestars extends Component {
                           <h3>Bronze Tier:</h3>
                         </ListSubheader>
                         <ListItem>
-                          <h4>Invitation to a virtual networking session</h4>
+                          <h4>Invitation to a networking session</h4>
                         </ListItem>
                       </List>
                     </Grid>
