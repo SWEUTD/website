@@ -28,12 +28,18 @@ db.collection("members").get().then(function(querySnapshot) {
             if(doc._fieldsProto.previousPoints.mapValue.fields.fall2020 != undefined) {
                 prevMap.fall2020 = parseInt(doc._fieldsProto.previousPoints.mapValue.fields.fall2020.integerValue);
             }
+            // Spring 2021
+            if(doc._fieldsProto.previousPoints.mapValue.fields.spring2021 != undefined) {
+                prevMap.spring2021 = parseInt(doc._fieldsProto.previousPoints.mapValue.fields.spring2021.integerValue);
+            }
         }
 
         // Move the current points value to Fall 2020 (update to current semester)
         if(doc._fieldsProto.points != undefined && doc._fieldsProto.points.integerValue != 0) {
-            var fall2020 = parseInt(doc._fieldsProto.points.integerValue);
-            prevMap.fall2020 = fall2020;
+            //var fall2020 = parseInt(doc._fieldsProto.points.integerValue);
+            //prevMap.fall2020 = fall2020;
+            var spring2021 = parseInt(doc._fieldsProto.points.integerValue);
+            prevMap.spring2021 = spring2021;
         }
 
         // Set current points to zero and store previous points
@@ -41,5 +47,8 @@ db.collection("members").get().then(function(querySnapshot) {
             points: 0,
             previousPoints: prevMap
         })
+        
+        // Print out the current points for debugging
+        // console.log(doc._fieldsProto.points);
     });
 });
