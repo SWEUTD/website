@@ -47,7 +47,7 @@ class swestars extends Component {
   getStars_Spring = () => {
     database
       .collection("members")
-      .where("points", ">", 0)
+      .where("previousPoints.spring2021", ">", 0)
       .get()
       .then((querySnapshot) => {
         let goldMem_Spring = [],
@@ -55,11 +55,11 @@ class swestars extends Component {
           bronzeMem_Spring = [];
         querySnapshot.forEach((doc) => {
           const name = `${doc.data().firstName} ${doc.data().lastName}`;
-          if (doc.data().points > 5) {
+          if (doc.data().previousPoints.spring2021 > 5) {
             goldMem_Spring.push(name);
-          } else if (doc.data().points > 4) {
+          } else if (doc.data().previousPoints.spring2021 > 4) {
             silverMem_Spring.push(name);
-          } else if (doc.data().points > 3) {
+          } else if (doc.data().previousPoints.spring2021 > 3) {
             bronzeMem_Spring.push(name);
           }
         });
