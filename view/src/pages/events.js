@@ -36,12 +36,28 @@ const upcomingEvents = [
   },
 
   {
-    name: "Capital One Fall 2021 (Virtual) Events",
-    date: '',
+    name: "Capital One Tech Coffee Chats",
+    date: '9/03, 9/16, 9/24. 9:00 AM - 11:00 AM CST',
     description: "This one-on-one chat is a great opportunity to ask questions about our intern and rotation programs with a current (or recent grad) of the Technology Development Program. You can also learn more about #LifeatCapitalOne, our culture, project areas, and more." ,
     link: 'https://www.signupgenius.com/go/8050e48a4a72ca2fe3-virtual23'
   },
-  
+  {
+    name: "Capital One Technical Case Interview Workshops",
+    date: '9/02, 9/10, 9/17, 9/24. 1:00 PM CST',
+    description: "During these workshops, you will have the opportunity to be able to be walked through practice interview questions and a case with Capital One professionals trained in our interview process. A recruiter will also be on the call to answer any questions you may have.",
+    link: '',
+    link02: 'https://capitalone.eightfold.ai/events/candidate/landing?plannedEventId=GWpKbeP9',
+    link10: 'https://capitalone.eightfold.ai/events/candidate/landing?plannedEventId=2PBpov7Q',
+    link17: 'https://capitalone.eightfold.ai/events/candidate/landing?plannedEventId=QP1pgvzj', 
+    link24: 'https://capitalone.eightfold.ai/events/candidate/landing?plannedEventId=o7jAeyWb'
+  },
+  {
+    name: "Diversity in Tech at Capital One",
+    date: 'Thursday, September 16, 2021. 5:00 PM - 6:00 PM CST',
+    description: "Join us for a live event to hear about how Capital One fosters a culture of diversity, inclusion, and belonging! We will also feature a panel of tech associates from our Business Resource Groups who will discuss #LifeAtCapitalOne and highlight what they are currently working on. Come prepared with any questions you may have! The first five people to register and attend this event will receive a Grubhub gift card. We look forward to seeing you there! ",
+    link: '',
+    link16: 'https://capitalone.eightfold.ai/events/candidate/landing?plannedEventId=2zQQoRzK'
+  },
   {
     name: "Ladies in Tech Mentoring Program ",
     date: 'Application closed on September 6, 2021',
@@ -66,6 +82,14 @@ const flyers = [
   },
   {
     image: CapitalOne,
+    link: ''
+  },
+  {
+    image: '',
+    link: ''
+  },
+  {
+    image: '',
     link: ''
   },
   
@@ -112,6 +136,8 @@ const rows = [
   createData(upcomingEvents[1], flyers[1].image),
   createData(upcomingEvents[2], flyers[2].image),
   createData(upcomingEvents[3], flyers[3].image),
+  createData(upcomingEvents[4], flyers[4].image),
+  createData(upcomingEvents[5], flyers[5].image),
 ];
 
 class events extends Component {
@@ -196,6 +222,46 @@ class events extends Component {
 				{row.event.link != '' && row.event.link != null
 				? (<div>
 				<a href={row.event.link}><strong>Tech Coffee Chat - Register Here!</strong></a>
+				<br/>
+				<br/>
+				</div>)
+				: null
+				}
+        {row.event.link02 != '' && row.event.link02 != null
+				? (<div>
+				<a href={row.event.link02}><strong>9/02 Workshop - Register Here!</strong></a>
+				<br/>
+				<br/>
+				</div>)
+				: null
+				}
+        {row.event.link10 != '' && row.event.link10 != null
+				? (<div>
+				<a href={row.event.link10}><strong>9/10 Workshop - Register Here!</strong></a>
+				<br/>
+				<br/>
+				</div>)
+				: null
+				}
+        {row.event.link17 != '' && row.event.link17 != null
+				? (<div>
+				<a href={row.event.link17}><strong>9/17 Workshop - Register Here!</strong></a>
+				<br/>
+				<br/>
+				</div>)
+				: null
+				}
+        {row.event.link16 != '' && row.event.link16 != null
+				? (<div>
+				<a href={row.event.link16}><strong>Register Here!</strong></a>
+				<br/>
+				<br/>
+				</div>)
+				: null
+				}
+        {row.event.link24 != '' && row.event.link24 != null
+				? (<div>
+				<a href={row.event.link24}><strong>9/24 Workshop - Register Here!</strong></a>
 				<br/>
 				<br/>
 				</div>)
