@@ -66,7 +66,7 @@ function App() {
           <Route exact path="/join" component={join} />
           <Route exact path="/contact" component={contact} />
           <Route exact path="/calendar" component={calendar} /> 
-          <PropsRoute exact path="/kickoff" eventHeading="Sign in to the SWE Kickoff event" eventPoints={1} eventName = "SWE Kickoff" eventDate = "8/30/2021" secretWord = "kickoff" component={meetingform}/>
+          <PropsRoute exact path="/paycomcfprep" eventHeading="Sign in to Paycom's Career Fair Prep event" eventPoints={1} eventName = "Paycom's Career Fair Prep" eventDate = "9/2/2021" secretWord = "gethired" component={meetingform}/>
 
         </Switch>
       </BrowserRouter>

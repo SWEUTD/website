@@ -26,12 +26,13 @@ import kickoff_flyer2 from "../assets/kickoff_flyer2.png"
 
 const upcomingEvents = [
   {
-    name: "Kickoff Meeting",
-    date: 'August 30, 5:30-6:30 PM.',
-    location: 'Location: TI Auditorium, ECSS 2.102.', 
-    description: "Come join us for our first meeting of the year! It will be a great opportunity to meet your fellow members, both new and old, and get your first SWE point for the Fall 2021 semester!",
+    name: "Paycom's Career Fair Prep",
+    date: 'Thursday, September 2, 2021. 12:00 PM  CST',
+    location: '', 
+    description: "Wanting to put your best foot forward at your Career Fair this fall? Come and hear Career Fair best practices from a Technical College Recruiter at Paycom!",
     link: '',
-    meetingbutton: 'https://tinyurl.com/SWEKickoffF21'
+    meetingbutton: 'https://paycom.zoom.us/j/99375664633?pwd=UGxpcFA2bmNvWExOQkREWU42NGtwZz09#success',
+    meetinginfo: 'Meeting ID: 993 7566 4633 | Password: 743422'
   },
 
   {
@@ -60,7 +61,7 @@ const upcomingEvents = [
 
 const flyers = [
   {
-    image: kickoff_flyer2,
+    image: '',
     link: ''
   },
   {
@@ -200,9 +201,17 @@ class events extends Component {
 				</div>)
 				: null
 				}
+         {row.event.meetinginfo != '' && row.event.meetinginfo != null 
+        ? (<div>
+          <ListSubheader><strong>{row.event.meetinginfo}</strong></ListSubheader>
+          <br/>
+          <br/>
+        </div>)
+        : null
+        }
         {row.event.meetingbutton != '' && row.event.meetingbutton != null 
         ? (<div>
-          <Button href={row.event.meetingbutton} align="center" variant="contained" color="primary" position="relative" zIndex="-3000">Join Meeting</Button>
+          <Button href={row.event.meetingbutton} align="center" variant="contained" color="primary" position="relative" zIndex="-3000">Attend Here!</Button>
           <br/>
           <br/>
         </div>)
