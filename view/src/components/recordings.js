@@ -11,6 +11,19 @@ import { authMiddleWare } from "../util/auth";
 
 const videos = [
   {
+    link: "https://www.youtube.com/embed/HYLdNKEYJUM",
+    title: "SWE Kickoff - 8/30/2021",
+  },
+  /*{
+    link:
+      "https://docs.google.com/presentation/d/e/1PeZpqSca9mQeJDVFUoictCNAP-nPN5eykTMTCYUUFwQ/embed?start=true&loop=true&delayms=9000",
+    title: "SWE Kickoff Slides - 8/30/2021",
+  },*/
+  {
+    link: "https://youtube.com/embed/6abhiIg1-bA",
+    title: "Recruiting Process Overview + AT&T Informational - 8/11/2021",
+  },
+  {
     link: "https://www.youtube.com/embed/v0I80ns293Q",
     title: "SWE Kickoff - 1/25/2021",
   },
@@ -67,6 +80,7 @@ const videos = [
       "https://docs.google.com/presentation/d/e/2PACX-1vSYy2zWDUDc4FiB89J-gLFDbnyJwPD-b-2i3peHB2bQPPHsA97xK9ZfOs0sSbNhizqYW4RCNGtUbJPC/embed?start=true&loop=true&delayms=9000",
     title: "SWE Kickoff Slides - 8/31/2020",
   },
+  
 ];
 
 const styles = (theme) => ({
