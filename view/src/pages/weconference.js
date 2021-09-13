@@ -99,29 +99,9 @@ class weconference extends Component {
                 </h6>
                 <p>
                   The world's largest conference for Women in engineering and
-                  technology. WE20 is an opportunity to hear about diligent
+                  technology. WE21 is an opportunity to hear about diligent
                   women making an impact in a field and encouraging other women
                   to become involved in engineering.
-                </p>
-                <h6>
-                  <b>Keynote speakers:</b>
-                </h6>
-                <p>
-                  {" "}
-                  Laura Maxwell, Senior Vice President, Supply Chain for
-                  Frito-Lay North America, Pepsico
-                </p>
-                <p>
-                  Sundari Mitra, Vice President, General Manager of SEG, Intel
-                  Corporation
-                </p>
-                <p>
-                  Linda DuCharme, President of Upstream Integrated Solutions,
-                  ExxonMobil
-                </p>
-                <p>
-                  Jennifer Rumsey, Vice President, Cummins Inc.
-                  President-Components Business
                 </p>
                 <h6>
                   <b>Career fair:</b>
@@ -134,14 +114,14 @@ class weconference extends Component {
                   <b>When and where?</b>
                 </h6>
                 <p>
-                  WE20 is a two week virtual conference and career fair from
+                  WE21 is a two week virtual conference and career fair from
                   November 2-13
                 </p>
                 <h6>
                   <b>When we are recruiting?</b>
                 </h6>
                 <p>
-                  Fill out the application from August 31st until September 18th{" "}
+                  Fill out the application from August 31st until September 11th{" "}
                 </p>
                 <p>
                   SWE is looking for 14 people who are involved with SWE and
