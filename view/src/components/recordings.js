@@ -11,14 +11,22 @@ import { authMiddleWare } from "../util/auth";
 
 const videos = [
   {
+    link: "https://www.youtube.com/embed/fMfKuAioxIg",
+    title: "PepsiCo Event pt.1 - 9/9/2021",
+  },
+  {
+    link: "https://youtube.com/embed/DWzDE_VHe4M",
+    title: "PepsiCo Event pt.2 - 9/9/2021",
+  },
+  {
     link: "https://www.youtube.com/embed/HYLdNKEYJUM",
     title: "SWE Kickoff - 8/30/2021",
   },
-  /*{
+  {
     link:
-      "https://docs.google.com/presentation/d/e/1PeZpqSca9mQeJDVFUoictCNAP-nPN5eykTMTCYUUFwQ/embed?start=true&loop=true&delayms=9000",
+      "https://docs.google.com/presentation/d/e/2PACX-1vSJrRDML4OtamGxYtZWB2ERH47-ktPKqh2jA5bVrr1XkCid7yyMGN64Ag2OYLc_WUG7c0uuX6XJ3pMD/embed?start=true&loop=true&delayms=9000",
     title: "SWE Kickoff Slides - 8/30/2021",
-  },*/
+  },
   {
     link: "https://youtube.com/embed/6abhiIg1-bA",
     title: "Recruiting Process Overview + AT&T Informational - 8/11/2021",

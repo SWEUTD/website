@@ -41,9 +41,41 @@ class swestars extends Component {
     setTimeout(() => {
       this.setState({ headerReady: true });
     }, 0);
-    this.getStars_Spring();
     this.getStars_Fall();
+    this.getStars_Spring();
   }
+  getStars_Fall = () => {
+    database
+      .collection("members")
+      .where("points", ">", 0)
+      .get()
+      .then((querySnapshot) => {
+        let goldMem_Fall = [],
+          silverMem_Fall = [],
+          bronzeMem_Fall = [];
+        querySnapshot.forEach((doc) => {
+          const name = `${doc.data().firstName} ${doc.data().lastName}`;
+          if (doc.data().points > 9) {
+            goldMem_Fall.push(name);
+          } else if (doc.data().points > 7) {
+            silverMem_Fall.push(name);
+          } else if (doc.data().points > 5) {
+            bronzeMem_Fall.push(name);
+          }
+        });
+        this.setState({
+          tierMembers_Fall: {
+            goldF: goldMem_Fall,
+            silverF: silverMem_Fall,
+            bronzeF: bronzeMem_Fall,
+          },
+        });
+      })
+      .catch(function (error) {
+        console.log("Error getting documents: ", error);
+      });
+  };
+
   getStars_Spring = () => {
     database
       .collection("members")
@@ -76,7 +108,7 @@ class swestars extends Component {
       });
   };
 
-  getStars_Fall = () => {
+  /*getStars_Fall = () => {
     database
       .collection("members")
       .where("previousPoints.fall2020", ">", 0)
@@ -107,7 +139,7 @@ class swestars extends Component {
       .catch(function (error) {
         console.log("Error getting documents: ", error);
       });
-  };
+  };*/
 
   render() {
     const { headerReady, tierMembers_Spring, tierMembers_Fall } = this.state;
@@ -152,6 +184,17 @@ class swestars extends Component {
                   <Divider />
                   <br />
                   <List alignItems="center">
+                  <ListSubheader align="center">
+                      <h4>Fall 2021:</h4>
+                    </ListSubheader>{" "}
+                    <br></br>
+                    {tierMembers_Fall &&
+                      tierMembers_Fall.goldF.map((val) => (
+                        <ListItemText align="center">
+                          <h4>{val}</h4>
+                        </ListItemText>
+                      ))}
+                      <br/><br/>
                     <ListSubheader align="center">
                       <h4>Spring 2021:</h4>
                     </ListSubheader>{" "}
@@ -162,24 +205,7 @@ class swestars extends Component {
                           <h4>{val}</h4>
                         </ListItemText>
                       ))}
-                    <br></br>
-                    <ListSubheader align="center">
-                      <h4>Fall 2020:</h4>
-                    </ListSubheader>
-                    <br></br>
-                    {tierMembers_Fall &&
-                      tierMembers_Fall.goldF.map((val) => (
-                        <ListItemText align="center">
-                          <h4>{val}</h4>
-                        </ListItemText>
-                      ))}
-                    <br></br>
-                    <ListSubheader align="center">
-                      <h4>Summer 2020:</h4>
-                    </ListSubheader>
-                    <ListItemText align="center">
-                      <h4>Lisa Chen</h4>
-                    </ListItemText>
+                    
                   </List>
                 </div>
               </Grid>
@@ -197,6 +223,17 @@ class swestars extends Component {
                   <Divider />
                   <br />
                   <List alignItems="center">
+                  <ListSubheader align="center">
+                      <h4>Fall 2021:</h4>
+                    </ListSubheader>{" "}
+                    <br></br>
+                    {tierMembers_Fall &&
+                      tierMembers_Fall.silverF.map((val) => (
+                        <ListItemText align="center">
+                          <h4>{val}</h4>
+                        </ListItemText>
+                      ))}
+                      <br/><br/>
                     <ListSubheader align="center">
                       <h4>Spring 2021:</h4>
                     </ListSubheader>
@@ -207,29 +244,7 @@ class swestars extends Component {
                           <h4>{val}</h4>
                         </ListItemText>
                       ))}
-                    <br></br>
-                    <ListSubheader align="center">
-                      <h4>Fall 2020:</h4>
-                    </ListSubheader>
-                    <br></br>
-                    {tierMembers_Fall &&
-                      tierMembers_Fall.silverF.map((val) => (
-                        <ListItemText align="center">
-                          <h4>{val}</h4>
-                        </ListItemText>
-                      ))}
-
-                    <br></br>
-                    <ListSubheader align="center">
-                      <h4>Summer 2020:</h4>
-                    </ListSubheader>
-                    <br></br>
-                    <ListItemText align="center">
-                      <h4>Lan Bui</h4>
-                    </ListItemText>
-                    <ListItemText align="center">
-                      <h4>Aishani De Sirkar</h4>
-                    </ListItemText>
+      
                   </List>
                 </div>
               </Grid>
@@ -246,6 +261,17 @@ class swestars extends Component {
                   <Divider />
                   <br />
                   <List alignItems="center">
+                  <ListSubheader align="center">
+                      <h4>Fall 2021:</h4>
+                    </ListSubheader>{" "}
+                    <br></br>
+                    {tierMembers_Fall &&
+                      tierMembers_Fall.bronzeF.map((val) => (
+                        <ListItemText align="center">
+                          <h4>{val}</h4>
+                        </ListItemText>
+                      ))}
+                      <br/><br/>
                     <ListSubheader align="center">
                       <h4>Spring 2021:</h4>
                     </ListSubheader>
@@ -256,29 +282,7 @@ class swestars extends Component {
                           <h4>{val}</h4>
                         </ListItemText>
                       ))}
-                    <br></br>
-                    <ListSubheader align="center">
-                      <h4>Fall 2020:</h4>
-                    </ListSubheader>
-                    <br></br>
-                    {tierMembers_Fall &&
-                      tierMembers_Fall.bronzeF.map((val) => (
-                        <ListItemText align="center">
-                          <h4>{val}</h4>
-                        </ListItemText>
-                      ))}
-
-                    <br></br>
-                    <ListSubheader align="center">
-                      <h4>Summer 2020:</h4>
-                    </ListSubheader>
-                    <br></br>
-                    <ListItemText align="center">
-                      <h4>Jyostna Thanjavur</h4>
-                    </ListItemText>
-                    <ListItemText align="center">
-                      <h4>Kendra Huang</h4>
-                    </ListItemText>
+                    
                   </List>
                 </div>
               </Grid>
