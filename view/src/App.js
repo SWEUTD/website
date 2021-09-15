@@ -66,8 +66,6 @@ function App() {
           <Route exact path="/join" component={join} />
           <Route exact path="/contact" component={contact} />
           <Route exact path="/calendar" component={calendar} /> 
-          <PropsRoute exact path="/paycomcfprep" eventHeading="Sign in to Paycom's Career Fair Prep event" eventPoints={1} eventName = "Paycom's Career Fair Prep" eventDate = "9/2/2021" secretWord = "gethired" component={meetingform}/>
-          <PropsRoute exact path="/pepsico" eventHeading="Sign in to Learn More about PepsiCo! event" eventPoints={1} eventName = "Learn More About PepsiCo!" eventDate = "9/8/2021" secretWord = "soda" component={meetingform}/>
           <PropsRoute exact path="/hiringwc1" eventHeading="Sign in to Hiring Season Tips and Tricks with Capital One event" eventPoints={1} eventName = "Hiring Season Tips and Tricks with Capital One" eventDate = "9/15/2021" secretWord = "apply" component={meetingform}/>
           <PropsRoute exact path="/networkd1" eventHeading="Sign in to Networking Session Series: Day 1 -- Shake up the Career Center’s information with JPMC! event" eventPoints={1} eventName = "Networking Session Series: Day 1 -- Shake up the Career Center’s information with JPMC!" eventDate = "9/21/2021" secretWord = "chasing" component={meetingform}/>
           <PropsRoute exact path="/networkd2" eventHeading="Sign in to Networking Session Series: Day 2 -- Learn key communication skills with Credera! event" eventPoints={1} eventName = "Networking Session Series: Day 2 -- Learn key communication skills with Credera!" eventDate = "9/22/2021" secretWord = "social" component={meetingform}/>
