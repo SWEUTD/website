@@ -50,7 +50,7 @@ import NuhaSiddiqui from "../assets/OfficerPhotos2021/NuhaSiddiqui.jpg";
 import ReshmiRanjith from "../assets/OfficerPhotos2021/ReshmiRanjith.JPG";
 import ShreyaChauk from "../assets/OfficerPhotos2021/ShreyaChauk.jpg";
 import SabaShaikh from "../assets/OfficerPhotos2021/SabaShaikh.jpg";
-import SamridhiGanguly from "../assets/OfficerPhotos2021/SamriddhiGanguly";
+import SamridhiGanguly from "../assets/OfficerPhotos2021/SamriddhiGanguly.jpg";
 import SreyaNagumalla from "../assets/OfficerPhotos2021/SreyaNagumalla.JPG";
 import VamikaChatlani from "../assets/OfficerPhotos2021/VamikaChatlani.jpg";
 import ZainebAhmad from "../assets/OfficerPhotos2021/ZainebAhmad.png";
