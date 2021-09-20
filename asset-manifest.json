@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.363b93ce.chunk.css",
-    "main.js": "/static/js/main.b6fd1cef.chunk.js",
-    "main.js.map": "/static/js/main.b6fd1cef.chunk.js.map",
+    "main.js": "/static/js/main.48d5d27e.chunk.js",
+    "main.js.map": "/static/js/main.48d5d27e.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.94a6af97.js",
     "runtime-main.js.map": "/static/js/runtime-main.94a6af97.js.map",
     "static/js/2.c28b8e30.chunk.js": "/static/js/2.c28b8e30.chunk.js",
     "static/js/2.c28b8e30.chunk.js.map": "/static/js/2.c28b8e30.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.2f1303a6e46def47f9ca2268fa2b3ab8.js": "/precache-manifest.2f1303a6e46def47f9ca2268fa2b3ab8.js",
+    "precache-manifest.721a3c2edfffceaed369a09a24ccdbb4.js": "/precache-manifest.721a3c2edfffceaed369a09a24ccdbb4.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.363b93ce.chunk.css.map": "/static/css/main.363b93ce.chunk.css.map",
     "static/js/2.c28b8e30.chunk.js.LICENSE.txt": "/static/js/2.c28b8e30.chunk.js.LICENSE.txt",
@@ -33,6 +33,7 @@
     "static/media/Events.jpg": "/static/media/Events.a3fb2c22.jpg",
     "static/media/Events2.jpg": "/static/media/Events2.d6ea8178.jpg",
     "static/media/GillSansMTBook.ttf": "/static/media/GillSansMTBook.9a2b9a60.ttf",
+    "static/media/GoldAward.png": "/static/media/GoldAward.ac25f19d.png",
     "static/media/IfritMaruf.jpg": "/static/media/IfritMaruf.7186e821.jpg",
     "static/media/InclusiveEnvironment.png": "/static/media/InclusiveEnvironment.80b2b104.png",
     "static/media/Integrity.png": "/static/media/Integrity.33ebe12c.png",
@@ -63,7 +64,6 @@
     "static/media/SabaShaikh.jpg": "/static/media/SabaShaikh.e1599498.jpg",
     "static/media/SamriddhiGanguly.jpg": "/static/media/SamriddhiGanguly.b29333ee.jpg",
     "static/media/ShreyaChauk.jpg": "/static/media/ShreyaChauk.4d544797.jpg",
-    "static/media/SilverAward.png": "/static/media/SilverAward.c7f71d61.png",
     "static/media/SreyaNagumalla.JPG": "/static/media/SreyaNagumalla.f3f4cddb.JPG",
     "static/media/Trust.png": "/static/media/Trust.e30963ff.png",
     "static/media/VamikaChatlani.jpg": "/static/media/VamikaChatlani.51c6883d.jpg",
@@ -79,6 +79,6 @@
     "static/js/runtime-main.94a6af97.js",
     "static/js/2.c28b8e30.chunk.js",
     "static/css/main.363b93ce.chunk.css",
-    "static/js/main.b6fd1cef.chunk.js"
+    "static/js/main.48d5d27e.chunk.js"
   ]
 }

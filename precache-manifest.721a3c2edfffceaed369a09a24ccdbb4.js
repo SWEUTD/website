@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2277ac9c4851af8e44c0f87672e92288",
+    "revision": "34d6df7bca42ea7aab75b96f4ad23037",
     "url": "/index.html"
   },
   {
-    "revision": "c447a8fc42f761befa2a",
+    "revision": "90f21fb51500278c5147",
     "url": "/static/css/main.363b93ce.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.c28b8e30.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c447a8fc42f761befa2a",
-    "url": "/static/js/main.b6fd1cef.chunk.js"
+    "revision": "90f21fb51500278c5147",
+    "url": "/static/js/main.48d5d27e.chunk.js"
   },
   {
     "revision": "c815442ab336b747f527",
@@ -106,6 +106,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "9a2b9a6013395e2a68653dc40738dc74",
     "url": "/static/media/GillSansMTBook.9a2b9a60.ttf"
+  },
+  {
+    "revision": "ac25f19dfc92c9b012cb83671a8d0bf4",
+    "url": "/static/media/GoldAward.ac25f19d.png"
   },
   {
     "revision": "7186e821a3475f7ebe4fb1dcb8c783ee",
@@ -226,10 +230,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "4d5447974f44573383cd6332cd8aa447",
     "url": "/static/media/ShreyaChauk.4d544797.jpg"
-  },
-  {
-    "revision": "c7f71d61077b90c9564bbdf531d5aa60",
-    "url": "/static/media/SilverAward.c7f71d61.png"
   },
   {
     "revision": "f3f4cddbafdd1c58aa1e984cf2d80a80",
