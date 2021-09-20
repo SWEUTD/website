@@ -15,7 +15,7 @@ import Statistics from "../assets/statistics.png";
 import SponsorA from "../assets/AT&T.png";
 import SponsorB from "../assets/CBRE.png";
 import SponsorC from "../assets/XILINX.png";
-import Award from "../assets/SilverAward.png";
+import Award from "../assets/GoldAward.png";
 import Integrity from "../assets/Integrity.png";
 import InclusiveEnvironment from "../assets/InclusiveEnvironment.png";
 import MutualSupport from "../assets/MutualSupport.png";
@@ -144,12 +144,12 @@ class about extends Component {
               <h3><b>Outstanding Jonsson School Student Organization Award</b></h3>
               <br />
 
-              <h3><b>SWE Mission Award 2020 - Silver</b></h3>
+              <h3><b>SWE Mission Award 2021 - Gold</b></h3>
               <h4>
                 The SWE Mission Awards recognize SWE groups that embody SWE core
                 values and demonstrate continuous improvement and growth as they
                 work to achieve the Society’s strategic goals. UT-Dallas SWE is
-                proud to have been awarded a 2020 Collegiate Silver award.
+                proud to have been awarded a 2021 Collegiate Gold award.
               </h4>
               <br />
               <MediaQuery minDeviceWidth={1224}>

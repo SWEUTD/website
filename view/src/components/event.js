@@ -125,6 +125,7 @@ class event extends Component {
           points: response.data.memberInfo.points,
           previousPoints: response.data.memberInfo.previousPoints || {},
         });
+        // console.log(response);
       })
       .catch((error) => {
         if (error.response !== undefined) {
@@ -204,6 +205,11 @@ class event extends Component {
     var fall2020Points;
     if(this.state.previousPoints.fall2020 != undefined) {
       fall2020Points = <td align="center">Fall 2020: {this.state.previousPoints.fall2020} points</td>
+    }
+
+    var spring2021Points;
+    if(this.state.previousPoints.spring2021 != undefined) {
+      spring2021Points = <td align="center">Spring 2021: {this.state.previousPoints.spring2021} points</td>
     }
 
     let rewardStatus;
@@ -331,6 +337,7 @@ class event extends Component {
                         <tr>
                           {fall2020Points}
                           {summer2020Points}
+                          {spring2021Points}
                         </tr>
                       </table>
                       <br />

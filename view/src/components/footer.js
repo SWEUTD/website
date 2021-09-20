@@ -5,7 +5,7 @@ import Grid from "@material-ui/core/Grid";
 import MediaQuery from "react-responsive";
 
 //images
-import Award from "../assets/SilverAward.png";
+import Award from "../assets/GoldAward.png";
 
 const styles = (theme) => ({
   root: {
