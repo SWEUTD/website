@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.363b93ce.chunk.css",
-    "main.js": "/static/js/main.7568b042.chunk.js",
-    "main.js.map": "/static/js/main.7568b042.chunk.js.map",
+    "main.js": "/static/js/main.44c89bce.chunk.js",
+    "main.js.map": "/static/js/main.44c89bce.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.94a6af97.js",
     "runtime-main.js.map": "/static/js/runtime-main.94a6af97.js.map",
-    "static/js/2.cfab6058.chunk.js": "/static/js/2.cfab6058.chunk.js",
-    "static/js/2.cfab6058.chunk.js.map": "/static/js/2.cfab6058.chunk.js.map",
+    "static/js/2.59dea069.chunk.js": "/static/js/2.59dea069.chunk.js",
+    "static/js/2.59dea069.chunk.js.map": "/static/js/2.59dea069.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.be892572da793c70b057dba8f66e7bbf.js": "/precache-manifest.be892572da793c70b057dba8f66e7bbf.js",
+    "precache-manifest.5ed4f7f93f800237f2bb1878c8419dd5.js": "/precache-manifest.5ed4f7f93f800237f2bb1878c8419dd5.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.363b93ce.chunk.css.map": "/static/css/main.363b93ce.chunk.css.map",
-    "static/js/2.cfab6058.chunk.js.LICENSE.txt": "/static/js/2.cfab6058.chunk.js.LICENSE.txt",
+    "static/js/2.59dea069.chunk.js.LICENSE.txt": "/static/js/2.59dea069.chunk.js.LICENSE.txt",
     "static/media/1.HEIC": "/static/media/1.ff820100.HEIC",
     "static/media/2.jpg": "/static/media/2.a6cb3cc9.jpg",
     "static/media/3.jpg": "/static/media/3.46504d3d.jpg",
@@ -26,8 +26,11 @@
     "static/media/AreebaQazi.jpg": "/static/media/AreebaQazi.3cfbdf86.jpg",
     "static/media/ArushiAgrawal.jpg": "/static/media/ArushiAgrawal.75e91334.jpg",
     "static/media/Blog.png": "/static/media/Blog.e9f4ff1e.png",
+    "static/media/BoeingCompanyMulticulturalAward.png": "/static/media/BoeingCompanyMulticulturalAward.00af3522.png",
     "static/media/CBRE.png": "/static/media/CBRE.6ff29e49.png",
     "static/media/CapitalOne.jpg": "/static/media/CapitalOne.3ce61107.jpg",
+    "static/media/Collegiate_Mentoring.png": "/static/media/Collegiate_Mentoring.24b8a351.png",
+    "static/media/Collegiate_SWE_Leadership.png": "/static/media/Collegiate_SWE_Leadership.dceafbe3.png",
     "static/media/DeeshaKumbham.JPG": "/static/media/DeeshaKumbham.d7a3a5ce.JPG",
     "static/media/EshaBansal.jpg": "/static/media/EshaBansal.01b55c6c.jpg",
     "static/media/Events.jpg": "/static/media/Events.a3fb2c22.jpg",
@@ -80,8 +83,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.94a6af97.js",
-    "static/js/2.cfab6058.chunk.js",
+    "static/js/2.59dea069.chunk.js",
     "static/css/main.363b93ce.chunk.css",
-    "static/js/main.7568b042.chunk.js"
+    "static/js/main.44c89bce.chunk.js"
   ]
 }
