@@ -84,7 +84,7 @@ class Slideshow extends React.Component {
     return (
       <div className={classNames("slider", { "s--ready": sliderReady })}>
         <p className="slider__top-heading">
-          UT-Dallas Society of Women Engineers
+          Society of Women Engineers UT-Dallas
         </p>
         <div className="slider__slides">
           {slides.map((slide, index) => (

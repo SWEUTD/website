@@ -89,7 +89,7 @@ class join extends Component {
                       <br />
                       <h5>
                         Click <a href="/portal">here</a> to visit the member
-                        portal and create an account with UTD SWE
+                        portal and create an account with SWE UTD
                       </h5>
                     </CardContent>
                   </Card>

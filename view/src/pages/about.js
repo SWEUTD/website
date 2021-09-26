@@ -16,6 +16,9 @@ import SponsorA from "../assets/AT&T.png";
 import SponsorB from "../assets/CBRE.png";
 import SponsorC from "../assets/XILINX.png";
 import Award from "../assets/GoldAward.png";
+import BoeingCompanyMulticulturalAward from "../assets/BoeingCompanyMulticulturalAward.png";
+import Collegiate_SWE_Leadership from "../assets/Collegiate_SWE_Leadership.png";
+import Collegiate_Mentoring from "../assets/Collegiate_Mentoring.png";
 import Integrity from "../assets/Integrity.png";
 import InclusiveEnvironment from "../assets/InclusiveEnvironment.png";
 import MutualSupport from "../assets/MutualSupport.png";
@@ -66,7 +69,7 @@ class about extends Component {
         <NavBar />
         <div className={classNames("header", { ready: headerReady })}>
           <p className="heading">
-            About the UT-Dallas Society of Women Engineers
+            About the Society of Women Engineers UT-Dallas
           </p>
         </div>
         <Grid
@@ -144,16 +147,25 @@ class about extends Component {
               <h3><b>Outstanding Jonsson School Student Organization Award</b></h3>
               <br />
 
+              <h3><b>Boeing Company Multicultural Award</b></h3>
+              <MediaQuery minDeviceWidth={1224}>
+                <img src={BoeingCompanyMulticulturalAward} width="25%" align="center" />
+                <br />
+              </MediaQuery>
+              <br /><br />
+
               <h3><b>SWE Mission Award 2021 - Gold</b></h3>
               <h4>
                 The SWE Mission Awards recognize SWE groups that embody SWE core
                 values and demonstrate continuous improvement and growth as they
-                work to achieve the Society’s strategic goals. UT-Dallas SWE is
+                work to achieve the Society’s strategic goals. SWE UT-Dallas is
                 proud to have been awarded a 2021 Collegiate Gold award.
               </h4>
               <br />
               <MediaQuery minDeviceWidth={1224}>
                 <img src={Award} width="22%" align="center" />
+                <img src={Collegiate_SWE_Leadership} width="22%" align="center" />
+                <img src={Collegiate_Mentoring} width="22%" align="center" />
                 <br />
                 <Grid container direction="row" style={{ padding: "50px" }}>
                   <Grid item xs={6} /*style={{padding: "0 40px 0 0"}}/*, {display: "flex"}, {"flex-direction":"row"}}*/>

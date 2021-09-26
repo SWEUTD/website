@@ -36,7 +36,7 @@ class navbar extends Component {
                 height="31"
                 className="d-inline-block align-center"
               />{" "}
-              UTD SWE
+              SWE UTD
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
