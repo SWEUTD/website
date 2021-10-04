@@ -13,6 +13,7 @@ import {
   faFacebook,
   faInstagram,
   faLinkedin,
+  faDiscord,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -67,7 +68,16 @@ class navbar extends Component {
                 </NavDropdown>
                 <Nav.Link href="/calendar">Calendar</Nav.Link>
                 <Nav.Link href="/portal">Member Portal</Nav.Link>
+                <Nav.Link href="/contact" id="basic-nav-dropdown">Subsribe to our mailing list!</Nav.Link>
               </Nav>
+              <Navbar.Brand href="https://discord.gg/Tg4476YPSk" pullRight>
+                <FontAwesomeIcon
+                  icon={faDiscord}
+                  size="lg"
+                  className="imageLink"
+                  style={{ color: "#DBC554" }}
+                />{" "}
+              </Navbar.Brand>
               <Navbar.Brand href="https://www.facebook.com/sweutd" pullRight>
                 <FontAwesomeIcon
                   icon={faFacebook}
