@@ -43,7 +43,7 @@ import MadisonKing from "../assets/OfficerPhotos2021/MadisonKing.jpg";
 import ManshaFatima from "../assets/OfficerPhotos2021/ManshaFatima.jpg";
 import NivethaNarayanan from "../assets/OfficerPhotos2021/NivethaNarayanan.jpg";
 import NehaSapre from "../assets/OfficerPhotos2021/NehaSapre.jpg";
-import NithyaJaisankar from "../assets/logo.png";
+import NithyaJaisankar from "../assets/OfficerPhotos2021/IMG_7969.jpg";
 import NithyaSree from "../assets/OfficerPhotos2021/NithyaSree.jpg";
 import NithilaIllangovan from "../assets/OfficerPhotos2021/Nithila.jpg";
 import NuhaSiddiqui from "../assets/OfficerPhotos2021/NuhaSiddiqui.jpg";
