@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.363b93ce.chunk.css",
-    "main.js": "/static/js/main.67641a7e.chunk.js",
-    "main.js.map": "/static/js/main.67641a7e.chunk.js.map",
+    "main.js": "/static/js/main.d2bc25b8.chunk.js",
+    "main.js.map": "/static/js/main.d2bc25b8.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.94a6af97.js",
     "runtime-main.js.map": "/static/js/runtime-main.94a6af97.js.map",
-    "static/js/2.02865121.chunk.js": "/static/js/2.02865121.chunk.js",
-    "static/js/2.02865121.chunk.js.map": "/static/js/2.02865121.chunk.js.map",
+    "static/js/2.81cbb5b9.chunk.js": "/static/js/2.81cbb5b9.chunk.js",
+    "static/js/2.81cbb5b9.chunk.js.map": "/static/js/2.81cbb5b9.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.64de275c95bc2ca02d3d13dffb971327.js": "/precache-manifest.64de275c95bc2ca02d3d13dffb971327.js",
+    "precache-manifest.b2eeed570ffd8562d0a0598904d4097c.js": "/precache-manifest.b2eeed570ffd8562d0a0598904d4097c.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.363b93ce.chunk.css.map": "/static/css/main.363b93ce.chunk.css.map",
-    "static/js/2.02865121.chunk.js.LICENSE.txt": "/static/js/2.02865121.chunk.js.LICENSE.txt",
+    "static/js/2.81cbb5b9.chunk.js.LICENSE.txt": "/static/js/2.81cbb5b9.chunk.js.LICENSE.txt",
     "static/media/1.HEIC": "/static/media/1.ff820100.HEIC",
     "static/media/2.jpg": "/static/media/2.a6cb3cc9.jpg",
     "static/media/3.jpg": "/static/media/3.46504d3d.jpg",
@@ -37,6 +37,7 @@
     "static/media/Events2.jpg": "/static/media/Events2.d6ea8178.jpg",
     "static/media/GillSansMTBook.ttf": "/static/media/GillSansMTBook.9a2b9a60.ttf",
     "static/media/GoldAward.png": "/static/media/GoldAward.ac25f19d.png",
+    "static/media/IMG_7969.jpg": "/static/media/IMG_7969.67a93efb.jpg",
     "static/media/IfritMaruf.jpg": "/static/media/IfritMaruf.7186e821.jpg",
     "static/media/InclusiveEnvironment.png": "/static/media/InclusiveEnvironment.80b2b104.png",
     "static/media/Integrity.png": "/static/media/Integrity.33ebe12c.png",
@@ -80,8 +81,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.94a6af97.js",
-    "static/js/2.02865121.chunk.js",
+    "static/js/2.81cbb5b9.chunk.js",
     "static/css/main.363b93ce.chunk.css",
-    "static/js/main.67641a7e.chunk.js"
+    "static/js/main.d2bc25b8.chunk.js"
   ]
 }
