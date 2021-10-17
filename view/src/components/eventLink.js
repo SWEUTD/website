@@ -35,6 +35,7 @@ import CloudUploadIcon from "@material-ui/icons/CloudUpload";
 
 import axios from "axios";
 import { authMiddleWare } from "../util/auth";
+import { auth } from '../components/firebase';
 
 import { BrowserRouter, Route } from "react-router-dom";
 import meetingform from "../pages/meetingform";
@@ -83,6 +84,25 @@ class EventLinkCreater extends Component {
 
     console.log("hello");
     console.log(this.state.eventArray);
+
+    axios
+      .post(
+        'http://localhost:8080/api/updateEventsList',
+        newEvent
+      )
+      .then((response) => {
+        localStorage.setItem('AuthToken', `Bearer ${response.data.token}`);
+        /*this.setState({
+          loginLoading: false,
+        });*/
+        this.props.history.push('/portal');
+      })
+      .catch((error) => {
+        this.setState({
+          errors: error.response.data,
+          // loginLoading: false,
+        });
+      });
     
     this.setState({
       eventName: "",
@@ -97,7 +117,7 @@ class EventLinkCreater extends Component {
     render() {
         return (
         <>
-            <h1>Event link creater</h1>
+            <h1>Event link Creator</h1>
             <form autoComplete="off" noValidate>
               <Divider />
               <CardContent>
