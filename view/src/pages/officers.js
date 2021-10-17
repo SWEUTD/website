@@ -23,96 +23,95 @@ import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 // Officer photos
 //import SWElogo from "../assets/OfficerPhotos/SWElogo.png";
-import AarushiPandey from "../assets/OfficerPhotos/AarushiPandey.jpg";
-import AayushiChoudhary from "../assets/OfficerPhotos/AayushiChoudhary.png";
-import AfridaTasnim from "../assets/OfficerPhotos/AfridaTasnim.jpg";
-import AngelleNazareno from "../assets/OfficerPhotos/AngelleNazareno.jpg";
-import AreebaQazi from "../assets/OfficerPhotos/AreebaQazi.jpg";
-import ArushiAgrawal from "../assets/OfficerPhotos/ArushiAgrawal.jpg";
-import CadyBaltz from "../assets/OfficerPhotos/CadyBaltz.jpg";
-import CaitlinTibbetts from "../assets/OfficerPhotos/CaitlinTibbetts.jpg";
-import DeeshaKumbham from "../assets/OfficerPhotos/DeeshaKumbham.jpg";
-import GabrielleDuncan from "../assets/OfficerPhotos/GabrielleDuncan.jpg";
-import HansikaSundaresan from "../assets/OfficerPhotos/HansikaSundaresan.jpg";
-import IfritMaruf from "../assets/OfficerPhotos/IfritMaruf.jpg";
-import IshaniChowdhury from "../assets/OfficerPhotos/IshaniChowdhury.JPG";
-import JeshnaGupta from "../assets/OfficerPhotos/JeshnaGupta.jpg";
-import LaineyRogers from "../assets/OfficerPhotos/LaineyRogers.jpeg";
-import MaahaSakia from "../assets/OfficerPhotos/MaahaSakia.jpg";
-import MadisonKing from "../assets/OfficerPhotos/MadisonKing.jpg";
-import ManshaFatima from "../assets/OfficerPhotos/ManshaFatima.jpg";
-import MedhaAiyah from "../assets/OfficerPhotos/MedhaAiyah.jpg";
-import MrunmayiSathaye from "../assets/OfficerPhotos/MrunmayiSathaye.jpg";
-import NivethaNarayanan from "../assets/OfficerPhotos/NivethaNarayanan.jpg";
-import NehaSapre from "../assets/OfficerPhotos/NehaSapre.jpg";
-import NithilaIllangovan from "../assets/OfficerPhotos/NithilaIllangovan.jpg";
-import NuhaSiddiqui from "../assets/OfficerPhotos/NuhaSiddiqui.jpg";
-import PallaviVayalali from "../assets/OfficerPhotos/PallaviVayalali.png";
-import PriyankaGanesan from "../assets/OfficerPhotos/PriyankaGanesan.jpeg";
-import ReshmiRanjith from "../assets/OfficerPhotos/ReshmiRanjith.jpg";
-import ShivaniGandhi from "../assets/OfficerPhotos/ShivaniGandhi.jpg";
-import ShreyaChauk from "../assets/OfficerPhotos/ShreyaChauk.jpg";
-import SreyaNagumalla from "../assets/OfficerPhotos/SreyaNagumalla.jpg";
-import VamikaChatlani from "../assets/OfficerPhotos/VamikaChatlani.jpg";
-import ZainebAhmad from "../assets/OfficerPhotos/ZainebAhmad.png";
-import PushpaKumar from "../assets/OfficerPhotos/PushpaKumar.png";
-import JerryAlexander from "../assets/OfficerPhotos/JerryAlexander.jpg";
+import AarushiPandey from "../assets/OfficerPhotos2021/AarushiPandey.jpg";
+import AayushiChoudhary from "../assets/OfficerPhotos2021/AayushiChoudhary.png";
+import AfridaTasnim from "../assets/OfficerPhotos2021/AfridaTasnim.jpg";
+import AnhNguyen from "../assets/OfficerPhotos2021/AnhNguyen.jpg";
+import AreebaQazi from "../assets/OfficerPhotos2021/AreebaQazi.jpg";
+import ArushiAgrawal from "../assets/OfficerPhotos2021/ArushiAgrawal.jpg";
+import DeeshaKumbham from "../assets/OfficerPhotos2021/DeeshaKumbham.JPG";
+import EshaBansal from "../assets/OfficerPhotos2021/EshaBansal.jpg";
+import IfritMaruf from "../assets/OfficerPhotos2021/IfritMaruf.jpg";
+import IshaniChowdhury from "../assets/OfficerPhotos2021/IshaniChowdhury.jpg";
+import JeshnaGupta from "../assets/OfficerPhotos2021/JeshnaGupta.JPG";
+import JennaKrueger from "../assets/OfficerPhotos2021/JennaKrueger.jpg";
+import JessicaTruong from "../assets/OfficerPhotos2021/JessicaTruong.JPG";
+import LaineyRogers from "../assets/OfficerPhotos2021/LaineyRogers.JPG";
+import LenaMubarak from "../assets/OfficerPhotos2021/LenaMubarak.jpg";
+import MaahaSakia from "../assets/OfficerPhotos2021/MaahaSakhia.jpg";
+import MadisonKing from "../assets/OfficerPhotos2021/MadisonKing.jpg";
+import ManshaFatima from "../assets/OfficerPhotos2021/ManshaFatima.jpg";
+import NivethaNarayanan from "../assets/OfficerPhotos2021/NivethaNarayanan.jpg";
+import NehaSapre from "../assets/OfficerPhotos2021/NehaSapre.jpg";
+import NithyaJaisankar from "../assets/OfficerPhotos2021/IMG_7969.jpg";
+import NithyaSree from "../assets/OfficerPhotos2021/NithyaSree.jpg";
+import NithilaIllangovan from "../assets/OfficerPhotos2021/Nithila.jpg";
+import NuhaSiddiqui from "../assets/OfficerPhotos2021/NuhaSiddiqui.jpg";
+import ReshmiRanjith from "../assets/OfficerPhotos2021/ReshmiRanjith.JPG";
+import ShreyaChauk from "../assets/OfficerPhotos2021/ShreyaChauk.jpg";
+import SabaShaikh from "../assets/OfficerPhotos2021/SabaShaikh.jpg";
+import SamridhiGanguly from "../assets/OfficerPhotos2021/SamriddhiGanguly.jpg";
+import SreyaNagumalla from "../assets/OfficerPhotos2021/SreyaNagumalla.JPG";
+import VamikaChatlani from "../assets/OfficerPhotos2021/VamikaChatlani.jpg";
+import ZainebAhmad from "../assets/OfficerPhotos2021/ZainebAhmad.png";
+import PushpaKumar from "../assets/OfficerPhotos2021/PushpaKumar.png";
+import JerryAlexander from "../assets/OfficerPhotos2021/JerryAlexander.jpg";
 
 const officerList = [
   {
-    name: "Medha Aiyah",
-    image: MedhaAiyah,
-    position: "President",
-    committee: "Board",
-    linkedin: "https://www.linkedin.com/in/medha-aiyah/",
-  },
-  {
-    name: "Maaha Sakia",
+    name: "Maaha Sakhia",
     image: MaahaSakia,
-    position: "Vice President of External Affairs",
+    position: "President",
     committee: "Board",
     linkedin: "https://www.linkedin.com/in/maaha-sakhia-183298196/",
   },
   {
-    name: "Cady Baltz",
-    image: CadyBaltz,
+    name: "Areeba Qazi",
+    image: AreebaQazi,
     position: "Vice President of Internal Affairs",
     committee: "Board",
-    linkedin: "https://www.linkedin.com/in/cadybaltz/",
+    linkedin: "https://www.linkedin.com/in/areebaqazi/",
   },
   {
-    name: "Arushi Agrawal",
+    name: "Shreya Chauk",
+    image: ShreyaChauk,
+    position: "Vice President of External Affairs",
+    committee: "Board",
+    linkedin: "https://www.linkedin.com/in/shreyachauk/",
+  },
+  {
+    name: "Nuha Siddiqui",
+    image: NuhaSiddiqui,
+    position: "Secretary",
+    committee: "Board",
+    linkedin: "https://www.linkedin.com/in/nuha-siddiqui/",
+  },
+  {
+    name: "Arushi Agarwal",
     image: ArushiAgrawal,
-    position: "Secretary, Public Relations Committee Member",
-    committee: "Board, Public Relations",
-    linkedin: "https://www.linkedin.com/in/agrawal-arushi/",
-  },
-  {
-    name: "Nivetha Narayanan",
-    image: NivethaNarayanan,
     position: "Treasurer",
     committee: "Board",
-    linkedin: "https://www.linkedin.com/in/nivetha-narayanan-751ab8167/",
+    linkedin: "https://www.linkedin.com/in/agrawal-arushi/",
   },
   {
     name: "Afrida Tasnim",
     image: AfridaTasnim,
-    position: "WEHack Co-Director",
+    position: "WEHack Director",
     committee: "Board",
     linkedin: "https://www.linkedin.com/in/afrida-tasnim/",
   },
   {
-    name: "Angelle Nazareno",
-    image: AngelleNazareno,
+    name: "Ishani Chowdhury",
+    image: IshaniChowdhury,
     committee: "Board, Design",
     position: "Design Chair",
   },
   {
-    name: "Shivani Gandhi",
-    image: ShivaniGandhi,
+    name: "Vamika Chatlani",
+    image: VamikaChatlani,
     position: "Marketing Chair",
     committee: "Board, Marketing",
-    linkedin: "https://www.linkedin.com/in/shivanirgandhi/",
+    linkedin: "https://www.linkedin.com/in/vamika-chatlani-b844aa16b/",
   },
   {
     name: "Deesha Kumbham",
@@ -129,59 +128,80 @@ const officerList = [
     linkedin: "https://www.linkedin.com/in/jeshna-gupta/",
   },
   {
-    name: "Gabrielle Duncan",
-    image: GabrielleDuncan,
-    position: "Community Outreach Chair",
+    name: "Neha Sapre",
+    image: NehaSapre,
+    position: "Outreach- SWErve Chair",
     committee: "Board, SWErves",
-    linkedin: "https://www.linkedin.com/in/gabrielle-duncan-085822185/",
+    linkedin: "https://www.linkedin.com/in/nehasapre/",
   },
   {
-  name: "Shreya Chauk",
-    image: ShreyaChauk,
+    name: "Ifrit Maruf",
+    image: IfritMaruf,
     position: "Public Relations Chair",
     committee: "Board, Public Relations",
-    linkedin: "https://www.linkedin.com/in/shreyachauk/",
+    linkedin: "https://www.linkedin.com/in/ifrit-maruf/",
   },
   {
-    name: "Caitlin Tibbetts",
-    image: CaitlinTibbetts,
+    name: "Jenna Krueger",
+    image: JennaKrueger,
     position: "Competition Chair",
     committee: "Board",
-    linkedin: "https://www.linkedin.com/in/caitlin-tibbetts/",
+    linkedin: "",
   },
   {
-    name: "Madison King",
-    image: MadisonKing,
-    position: "Membership Chair",
-    committee: "Board",
-    linkedin: "https://www.linkedin.com/in/mbaileyking/",
-  },
-  {
-    name: "Areeba Qazi",
-    image: AreebaQazi,
+    name: "Aarushi Pandey",
+    image: AarushiPandey,
     position: "Webmaster Chair",
     committee: "Board, Website Development",
-    linkedin: "https://www.linkedin.com/in/areebaqazi/",
+    linkedin: "https://www.linkedin.com/in/aarushi-s-pandey/",
   },
   {
-    name: "Pallavi Vayalali",
-    image: PallaviVayalali,
+    name: "Saba Shaikh",
+    image: SabaShaikh,
     position: "Conference Committee Member",
     committee: "Conference",
-    linkedin: "https://www.linkedin.com/in/pallavi-vayalali/",
+    linkedin: "https://www.linkedin.com/in/saba-shaikh-3a1a27172/",
   },
   {
-    name: "Hansika Sundaresan",
-    image: HansikaSundaresan,
+    name: "Nithya Jaisankar",
+    image: NithyaJaisankar,
     position: "Conference Committee Member",
     committee: "Conference",
-    linkedin: "https://www.linkedin.com/in/hansika-sundaresan/",
+    linkedin: "https://www.linkedin.com/in/nithya-jaisankar/",
   },
   {
     name: "Lainey Rogers",
     image: LaineyRogers,
     position: "Industry Committee Member",
     committee: "Industry",
+  },
+  {
+    name: "Samridhi Ganguly",
+    image: SamridhiGanguly,
+    position: "Public Relations Committee Member",
+    committee: "Public Relations",
+    linkedin: "https://www.linkedin.com/in/samridhi-ganguly-1304b2203/",
+  },
+  {
+    name: "Jessica Truong",
+    image: JessicaTruong,
+    position: "Public Relations Committee Member",
+    committee: "Public Relations",
+    linkedin: "https://www.linkedin.com/in/truongjessica-tx/",
+  },
+  {
+    name: "Lena Mubarak",
+    image: LenaMubarak,
+    position: "Marketing Committee Member",
+    committee: "Marketing",
+    linkedin: "https://www.linkedin.com/in/lenamubarak/",
+  },
+  {
+    name: "Esha Bansal",
+    image: EshaBansal,
+    position: "Marketing Committee Member",
+    committee: "Marketing",
+    linkedin: "https://www.linkedin.com/in/esha-bansal-a587811aa/",
   },
   {
     name: "Aayushi Choudhary",
@@ -191,46 +211,11 @@ const officerList = [
     linkedin: "https://www.linkedin.com/in/aayushitech/",
   },
   {
-    name: "Mrunmayi Sathaye",
-    image: MrunmayiSathaye,
-    position: "Marketing Committee Member",
-    committee: "Marketing",
-    linkedin: "https://www.linkedin.com/in/mrunmayi-sathaye/",
-  },
-  {
-    name: "Vamika Chatlani",
-    image: VamikaChatlani,
-    position: "Marketing Committee Member",
-    committee: "Marketing",
-    linkedin: "https://www.linkedin.com/in/vamika-chatlani-b844aa16b/",
-  },
-  {
-    name: "Ifrit Maruf",
-    image: IfritMaruf,
-    position: "Public Relations Committee Member",
-    committee: "Public Relations",
-    linkedin: "https://www.linkedin.com/in/ifrit-maruf/",
-  },
-  {
-    name: "Priyanka Ganesan",
-    image: PriyankaGanesan,
-    position: "Public Relations Committee Member",
-    committee: "Public Relations",
-    linkedin: "https://www.linkedin.com/in/priyanka-ganesan/",
-  },
-  {
     name: "Reshmi Ranjith",
     image: ReshmiRanjith,
     position: "Website Development Committee Member",
     committee: "Website Development",
     linkedin: "https://www.linkedin.com/in/reshmi-ranjith/",
-  },
-  {
-    name: "Aarushi Pandey",
-    image: AarushiPandey,
-    position: "Website Development Committee Member",
-    committee: "Website Development",
-    linkedin: "https://www.linkedin.com/in/aarushi-s-pandey/",
   },
   {
     name: "Mansha Fatima",
@@ -240,37 +225,36 @@ const officerList = [
     linkedin: "https://www.linkedin.com/in/mansha-fatima-2a485412b/",
   },
   {
-    name: "Neha Sapre",
-    image: NehaSapre,
-    position: "SWErves Committee Member",
-    committee: "SWErves",
-    linkedin: "https://www.linkedin.com/in/nehasapre/",
+    name: "Anh Nguyen",
+    image: AnhNguyen,
+    position: "Website Development Committee Member",
+    committee: "Website Development"
   },
   {
-    name: "Nuha Siddiqui",
-    image: NuhaSiddiqui,
-    position: "SWErves Committee Member",
-    committee: "SWErves",
-    linkedin: "https://www.linkedin.com/in/nuha-siddiqui/",
+    name: "Nithya Sree",
+    image: NithyaSree,
+    position: "Videographer, Design Committee Member",
+    committee: "Design",
+    linkedin: "https://www.linkedin.com/in/mansha-fatima-2a485412b/",
   },
   {
-    name: "Ishani Chowdhury",
-    image: IshaniChowdhury,
-    position: "Design Committee Member",
+    name: "Nivetha Narayanan",
+    image: NivethaNarayanan,
+    position: "Graphic Design Committee Member",
     committee: "Design",
     linkedin: "https://www.linkedin.com/in/ishani-chowdhury/",
   },
   {
     name: "Nithila Illangovan",
     image: NithilaIllangovan,
-    position: "Design Committee Member",
+    position: "Graphic Design Committee Member",
     committee: "Design",
     linkedin: "https://www.linkedin.com/in/nithila-ilangovan-5678471a7/",
   },
   {
     name: "Sreya Nagumalla",
     image: SreyaNagumalla,
-    position: "Design Committee Member",
+    position: "Graphic Design Committee Member",
     committee: "Design",
     linkedin: "https://www.linkedin.com/in/sreya-nagumalla-135404168/",
   },
@@ -292,7 +276,7 @@ const officerList = [
     position: "ECS Assistant Dean for Student Development",
     committee: "Faculty Advisors",
     linkedin: "https://www.linkedin.com/in/internguy/",
-  },
+  }  
 ];
 
 const styles = (theme) => ({

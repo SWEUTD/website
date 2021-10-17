@@ -2,6 +2,16 @@ import React from "react";
 import { Grid } from "@material-ui/core";
 import PostCard from "./PostCard";
 import axios from "axios";
+import MediaQuery from "react-responsive";
+
+import Blog from "../assets/Blog.png";
+
+const styles = (theme) => ({
+  gridItem: {
+    display: "flex",
+    justifyContent: "center",
+  }
+});
 
 // wrapper for items
 class Slider extends React.Component {
@@ -46,7 +56,7 @@ class Slider extends React.Component {
       justifyContent: 'center'
     };
     const headerStyle = {
-      backgroundColor: "#5A5377",
+      backgroundColor: "#ffffff",
       color: "#f5f5f5",
       display: 'flex',
       alignItems: 'center',
@@ -56,10 +66,29 @@ class Slider extends React.Component {
 
     return (
       <div>
-        <div style={headerStyle}>
-          <h1>SWE UTD Articles</h1> <br/>
-        </div>
+        <MediaQuery minDeviceWidth={900}>
+          <Grid
+              className={styles.gridItem}
+              style={{
+                backgroundColor: "white",
+                color: "white",
+                padding: "30px 50px",
+                margin: "0",
+                maxWidth: "100%",
+              }}
+              item
+              md={10}
+              xs={12}
+            >
+              <ul align="center">
+            <li><a href="https://sweutd.medium.com/" target="_blank"><img src={Blog} width="40%"/></a> </li>
+            </ul>
+            </Grid>
+          </MediaQuery>
+        
+        
       <Grid container spacing={1} style={containerStyle} >
+      <br/><br/>
         {itemRows.map((row, id) =>
           row.map((item, key) => <PostCard {...item} key={key} />)
         )}
@@ -69,3 +98,6 @@ class Slider extends React.Component {
   }
 }
 export default Slider;
+
+// <div style={headerStyle}>
+// </div>
