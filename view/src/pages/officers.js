@@ -24,7 +24,6 @@ import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 // Officer photos
 //import SWElogo from "../assets/OfficerPhotos/SWElogo.png";
 import AarushiPandey from "../assets/OfficerPhotos2021/AarushiPandey.jpg";
-import AayushiChoudhary from "../assets/OfficerPhotos2021/AayushiChoudhary.png";
 import AfridaTasnim from "../assets/OfficerPhotos2021/AfridaTasnim.jpg";
 import AnhNguyen from "../assets/OfficerPhotos2021/AnhNguyen.jpg";
 import AreebaQazi from "../assets/OfficerPhotos2021/AreebaQazi.jpg";
@@ -202,13 +201,6 @@ const officerList = [
     position: "Marketing Committee Member",
     committee: "Marketing",
     linkedin: "https://www.linkedin.com/in/esha-bansal-a587811aa/",
-  },
-  {
-    name: "Aayushi Choudhary",
-    image: AayushiChoudhary,
-    position: "Marketing Committee Member",
-    committee: "Marketing",
-    linkedin: "https://www.linkedin.com/in/aayushitech/",
   },
   {
     name: "Reshmi Ranjith",
