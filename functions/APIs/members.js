@@ -298,3 +298,96 @@ exports.addEventMember = (request, response) => {
         .json({ general: "Something went wrong, please try again" });
     });
 };
+
+// Add new event to eventList in database from admin portal
+exports.addEventList = (request, response) => {
+  // each event has a points value, name, and date
+  const eventToAdd = {
+    eventPoints: request.body.eventPoints,
+    eventName: request.body.eventName,
+    eventDate: request.body.eventDate,
+    eventPath: request.body.eventPath,
+    eventSecretWord: request.body.eventSecretWord,
+    eventHeading: request.body.eventHeading,
+  };
+  // also need to connect this event to a new or existing member
+  const memberRequest = {
+    firstName: request.body.firstName,
+    lastName: request.body.lastName,
+    email: request.body.email,
+    phoneNumber: request.body.phoneNumber,
+    classification: request.body.classification,
+    major: request.body.major,
+    otherMajor: request.body.otherMajor,
+    netid: request.body.netid,
+  };
+
+  if (memberRequest.firstName != undefined) {
+    // trying to make a new user so validate
+    const { valid, errors } = validateAddEventData(memberRequest);
+    if (!valid) return response.status(400).json(errors);
+  }
+  /*if (memberRequest.netid == "") {
+    memberRequest.netid =
+      memberRequest.firstName.toLowerCase() +
+      memberRequest.lastName.toLowerCase();
+  }*/
+
+  let memberId;
+  db.doc(`/members/${memberRequest.netid}`)
+    .get()
+    .then((doc) => {
+      // adds to an existing member if that netid already exists in the database
+      if (doc.exists) {
+        let eventsList = doc.data().eventList;
+        if (
+          eventsList.some((event) => event.eventName === eventToAdd.eventName)
+        ) {
+          // already exists, so don't add it again
+          return response.status(409).json({
+            general: "You have already added this event to your account.",
+          });
+        }
+        eventsList.push(eventToAdd);
+        /*let newPointTotal =
+          parseInt(doc.data().points) + parseInt(eventToAdd.eventPoints);*/
+        const updatedMember = {
+          eventsList: eventsList,
+          //points: newPointTotal,
+        };
+        db.doc(`/members/${memberRequest.netid}`).update(updatedMember);
+        return response.status(200).json({ general: "Member updated" });
+      } else {
+        if (memberRequest.firstName == undefined) {
+          return response.status(500).json({
+            general: "NetID not associated with an account.",
+          });
+        }
+        // creates a new member in the database if the netid doesn't exist
+        memberId = memberRequest.netid;
+        const memberInfo = {
+          firstName: memberRequest.firstName,
+          lastName: memberRequest.lastName,
+          netid: memberRequest.netid,
+          phoneNumber: memberRequest.phoneNumber,
+          classification: memberRequest.classification,
+          major: memberRequest.major,
+          otherMajor: memberRequest.otherMajor,
+          email: memberRequest.email,
+          isMember: false,
+          events: [eventToAdd],
+          points: eventToAdd.eventPoints,
+          createdAt: new Date().toISOString(),
+          memberId,
+        };
+        db.doc(`/members/${memberRequest.netid}`).set(memberInfo);
+        return response.status(201).json({ general: "Member added" });
+      }
+    })
+    .catch((err) => {
+      console.error(err);
+      return response
+        .status(500)
+        .json({ general: "Something went wrong, please try again" });
+    });
+};

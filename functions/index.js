@@ -27,7 +27,7 @@ app.post("/newEvent", addEventMember);
 app.get("/member", auth, getMemberDetail);
 app.get("/alumniList", getAlumniList);
 app.get("/memberList", getMemberList); 
-app.get("/updateEventList", updateEventList);
+app.post("/updateEventList", updateEventList);
 
 exports.api = functions.https.onRequest(app);
 

@@ -87,7 +87,7 @@ class EventLinkCreater extends Component {
 
     axios
       .post(
-        'http://localhost:8080/api/updateEventsList',
+        'https://localhost:8080/api/updateEventList',
         newEvent
       )
       .then((response) => {
