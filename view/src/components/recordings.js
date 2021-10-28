@@ -88,6 +88,10 @@ const videos = [
       "https://docs.google.com/presentation/d/e/2PACX-1vSYy2zWDUDc4FiB89J-gLFDbnyJwPD-b-2i3peHB2bQPPHsA97xK9ZfOs0sSbNhizqYW4RCNGtUbJPC/embed?start=true&loop=true&delayms=9000",
     title: "SWE Kickoff Slides - 8/31/2020",
   },
+  {
+    link: "https://www.youtube.com/watch?v=DZVwUg3nMtY", 
+    title: "10/26 Capgemini Interview Prep"
+  }
   
 ];
 
