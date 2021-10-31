@@ -186,6 +186,26 @@ exports.getAlumniList = async (request, response) => {
     });
 };
 
+// gets information about an event from it's ID
+exports.eventLookup = async (request, response) => {
+  db.collection("events").doc(request.eventId).get()
+    .then((doc) => {
+      if (doc.exists) {
+        return response.status(200).json({ eventInfo: doc.data() });
+      } else {
+        return response.status(404).json({
+          message: "The event does not exist.",
+        });
+      }
+    })
+    .catch((error) => {
+      console.error(error);
+      return response.status(500).json({
+        message: "There was an issue getting the event information.",
+      });
+    });
+};
+
 // get a list of users for the member list in admin portal
 exports.getMemberList = async (request, response) => {
   db.collection("members")

@@ -16,6 +16,7 @@ const {
   addEventMember,
   getAlumniList,
   getMemberList,
+  eventLookup,
 } = require("./APIs/members");
 
 // Connects API routes to functions in the member.js file
@@ -26,6 +27,7 @@ app.post("/newEvent", addEventMember);
 app.get("/member", auth, getMemberDetail);
 app.get("/alumniList", getAlumniList);
 app.get("/memberList", getMemberList); 
+app.post("/eventLookup", eventLookup);
 
 exports.api = functions.https.onRequest(app);
 

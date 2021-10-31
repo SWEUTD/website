@@ -59,8 +59,9 @@ class EventForm extends Component {
     const authToken = localStorage.getItem("AuthToken");
     axios.defaults.headers.common = { Authorization: `${authToken}` };
     try {
-        const findEventResp = axios.get("https://us-central1-swe-utd-portal.cloudfunctions.net/api/member");
-        const addEventResp = axios.post("https://us-central1-swe-utd-portal.cloudfunctions.net/api/newEvent", memberData);
+        const findEventResp = axios.get("https://us-central1-swe-utd-portal.cloudfunctions.net/api/eventLookup", {eventId: this.props.match.params.eventId});
+        console.log(findEventResp);
+        const addEventResp = axios.post("https://us-central1-swe-utd-portal.cloudfunctions.net/api/newEvent");
     } catch(err) {
         if (error.response != undefined) {
             if (error.response.status === 403) {
