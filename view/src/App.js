@@ -66,13 +66,8 @@ function App() {
           <Route exact path="/join" component={join} />
           <Route exact path="/contact" component={contact} />
           <Route exact path="/calendar" component={calendar} /> 
-          <PropsRoute exact path="/internpanel" eventHeading="Sign in How to gain an internship Panel event" eventPoints={1} eventName = "How to gain an internship Panel" eventDate = "10/12/2021" secretWord = "orange" component={meetingform}/>
-          <PropsRoute exact path="/childrenhealth" eventHeading="Sign in Coloring Books and Cards for Children's Health event" eventPoints={1} eventName = "Coloring Books and Cards for Children's Health" eventDate = "10/14/2021" secretWord = "rainbow" component={meetingform}/>
-          <PropsRoute exact path="/gaming" eventHeading="Sign in Women in Tech and Gaming event" eventPoints={1} eventName = "Women in Tech and Gaming Event" eventDate = "10/15/2021" secretWord = "console" component={meetingform}/>
-          <PropsRoute exact path="/atttour" eventHeading="Sign in to AT\&T Plaze Tour event" eventPoints={1} eventName = "ATT Plaza Tour" eventDate = "10/13/2021" secretWord = "visitor" component={meetingform}/>
-          <PropsRoute exact path="/l3harris" eventHeading="Sign in to Master Technical Interviews with L3Harris event" eventPoints={1} eventName = "" eventDate = "10/18/2021" secretWord = "offer" component={meetingform}/>
-          <PropsRoute exact path="/gemini" eventHeading="Sign in to Interview Prep with CapGemini event" eventPoints={1} eventName = "" eventDate = "10/26/2021" secretWord = "twin" component={meetingform}/>
           <PropsRoute exact path="/tetrapak" eventHeading="Sign in to Tetra Pak event" eventPoints={1} eventName = "Tetra Pak" eventDate = "11/04/2021" secretWord = "raining" component={meetingform}/>
+          <PropsRoute exact path="/hotchoco" eventHeading="Sign in to Hot Chocolate & Hot Topics event" eventPoints={1} eventName = "Hot Chocolate & Hot Topics" eventDate = "11/09/2021" secretWord = "holidays" component={meetingform}/>
         </Switch>
       </BrowserRouter>
     </MuiThemeProvider>
