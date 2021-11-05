@@ -72,6 +72,7 @@ function App() {
           <PropsRoute exact path="/atttour" eventHeading="Sign in to AT\&T Plaze Tour event" eventPoints={1} eventName = "ATT Plaza Tour" eventDate = "10/13/2021" secretWord = "visitor" component={meetingform}/>
           <PropsRoute exact path="/l3harris" eventHeading="Sign in to Master Technical Interviews with L3Harris event" eventPoints={1} eventName = "" eventDate = "10/18/2021" secretWord = "offer" component={meetingform}/>
           <PropsRoute exact path="/gemini" eventHeading="Sign in to Interview Prep with CapGemini event" eventPoints={1} eventName = "" eventDate = "10/26/2021" secretWord = "twin" component={meetingform}/>
+          <PropsRoute exact path="/tetrapak" eventHeading="Sign in to Tetra Pak event" eventPoints={1} eventName = "Tetra Pak" eventDate = "11/04/2021" secretWord = "raining" component={meetingform}/>
         </Switch>
       </BrowserRouter>
     </MuiThemeProvider>
