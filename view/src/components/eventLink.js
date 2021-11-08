@@ -46,10 +46,10 @@ class EventLinkCreater extends Component {
         this.state = {
             eventName: "",
             eventPath: "/",
-            eventHeading: "",
+            //eventHeading: "",
             eventPoints: 0,
             eventDate: "",
-            eventSecretWord: "",
+            //eventSecretWord: "",
             eventArray: []
         }
     }
@@ -79,7 +79,7 @@ class EventLinkCreater extends Component {
     //let newEvent = {};
     //newEvent.push(this.state.eventName, this.state.eventPath, this.state.eventPoints, this.state.eventDate, this.state.eventSecretWord);
 
-    let newEvent = { eventName: this.state.eventName, eventPath: this.state.eventPath, eventHeading: this.state.eventHeading, eventPoints: this.state.eventPoints, eventDate: this.state.eventDate, eventSecretWord: this.state.eventSecretWord}
+    let newEvent = { eventName: this.state.eventName, eventPath: this.state.eventPath, /*eventHeading: this.state.eventHeading,*/ eventPoints: this.state.eventPoints, eventDate: this.state.eventDate/*, eventSecretWord: this.state.eventSecretWord*/}
     this.state.eventArray.push(newEvent);
 
     console.log("hello");
@@ -99,7 +99,7 @@ class EventLinkCreater extends Component {
       })
       .catch((error) => {
         this.setState({
-          errors: error.response.data,
+          errors: error.response,
           // loginLoading: false,
         });
       });
@@ -107,10 +107,10 @@ class EventLinkCreater extends Component {
     this.setState({
       eventName: "",
             eventPath: "/",
-            eventHeading: "",
+            //eventHeading: "",
             eventPoints: 0,
             eventDate: "",
-            eventSecretWord: ""
+            //eventSecretWord: ""
     });
   };
 
@@ -144,7 +144,7 @@ class EventLinkCreater extends Component {
                       onChange={this.handleChange}
                      />
                   </Grid>
-                  <Grid item md={6} xs={12}>
+                  {/*<Grid item md={6} xs={12}>
                     <TextField
                       fullWidth
                       label="Event Heading"
@@ -153,8 +153,8 @@ class EventLinkCreater extends Component {
                       variant="outlined"
                       value={this.state.eventHeading}
                       onChange={this.handleChange}
-                    />
-                  </Grid>
+                  /> 
+        </Grid> */}
                   <Grid item md={6} xs={12}>
                     <TextField
                       fullWidth
@@ -178,7 +178,7 @@ class EventLinkCreater extends Component {
                       onChange={this.handleChange}
                     />
                   </Grid>
-                  <Grid item md={6} xs={12}>
+                  {/*<Grid item md={6} xs={12}>
                     <TextField
                       fullWidth
                       label="Event Secret Word"
@@ -188,7 +188,7 @@ class EventLinkCreater extends Component {
                       value={this.state.eventSecretWord}
                       onChange={this.handleChange}
                     />
-                  </Grid>
+      </Grid> */}
                   <Button
                     fullWidth
                     variant="contained"
@@ -230,10 +230,10 @@ class EventLinkCreater extends Component {
                       Event name : {event.eventName}
                     </h3>
                     <p>Url: https://sweutd.com{event.eventPath}</p>
-                    <p>Heading: {event.eventHeading}</p>
+                    {/*<p>Heading: {event.eventHeading}</p>*/}
                     <p>Points: {event.eventPoints}</p>
                     <p>Date: {event.eventDate}</p>
-                    <p>Secret word: {event.eventSecretWord}</p>
+                    {/*<p>Secret word: {event.eventSecretWord}</p>*/}
                   </CardContent>
                 </Card>
               </ListItem>

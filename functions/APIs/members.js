@@ -307,8 +307,8 @@ exports.addEventList = (request, response) => {
     eventName: request.body.eventName,
     eventDate: request.body.eventDate,
     eventPath: request.body.eventPath,
-    eventSecretWord: request.body.eventSecretWord,
-    eventHeading: request.body.eventHeading,
+    //eventSecretWord: request.body.eventSecretWord,
+    //eventHeading: request.body.eventHeading,
   };
   // also need to connect this event to a new or existing member
   const memberRequest = {
@@ -334,7 +334,8 @@ exports.addEventList = (request, response) => {
   }*/
 
   let memberId;
-  db.doc(`/members/${memberRequest.netid}`)
+  /*
+  db.doc(`/events/${eventToAdd.eventName}`)
     .get()
     .then((doc) => {
       // adds to an existing member if that netid already exists in the database
@@ -349,8 +350,8 @@ exports.addEventList = (request, response) => {
           });
         }
         eventsList.push(eventToAdd);
-        /*let newPointTotal =
-          parseInt(doc.data().points) + parseInt(eventToAdd.eventPoints);*/
+        //let newPointTotal =
+        //parseInt(doc.data().points) + parseInt(eventToAdd.eventPoints);
         const updatedMember = {
           eventsList: eventsList,
           //points: newPointTotal,
@@ -383,11 +384,14 @@ exports.addEventList = (request, response) => {
         db.doc(`/members/${memberRequest.netid}`).set(memberInfo);
         return response.status(201).json({ general: "Member added" });
       }
-    })
+    })*/
+    db.doc(`/events/${newMember.netid}`).set(memberInfo);
+    return response.status(201).json({ general: "Event added" });
+  /*}
     .catch((err) => {
       console.error(err);
       return response
         .status(500)
         .json({ general: "Something went wrong, please try again" });
-    });
+    });*/
 };
