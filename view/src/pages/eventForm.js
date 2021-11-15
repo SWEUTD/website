@@ -1,17 +1,5 @@
-// meetingform.js
-
-// Meeting form for SWE events
-
 import React, { Component } from "react";
-import {
-  Button,
-  Select,
-  MenuItem,
-  Grid,
-  Container,
-  CircularProgress,
-  Typography,
-} from "@material-ui/core";
+import { Button, Container, CircularProgress } from "@material-ui/core";
 import withStyles from "@material-ui/core/styles/withStyles";
 import classNames from "classnames";
 import { authMiddleWare } from "../util/auth";
@@ -41,7 +29,12 @@ const styles = (theme) => ({
 class EventForm extends Component {
   constructor(props) {
     super(props);
-    this.state = { headerReady: false, eventProcessing: true };
+    this.state = {
+      headerReady: false,
+      eventProcessing: true,
+      eventData: null,
+      errors: [],
+    };
   }
 
   componentWillReceiveProps(nextProps) {
@@ -54,21 +47,27 @@ class EventForm extends Component {
     }
   }
 
-  componentWillMount = () => {
+  componentWillMount = async () => {
     authMiddleWare(this.props.history);
     const authToken = localStorage.getItem("AuthToken");
     axios.defaults.headers.common = { Authorization: `${authToken}` };
     try {
-        const findEventResp = axios.get("https://us-central1-swe-utd-portal.cloudfunctions.net/api/eventLookup", {eventId: this.props.match.params.eventId});
-        console.log(findEventResp);
-        const addEventResp = axios.post("https://us-central1-swe-utd-portal.cloudfunctions.net/api/newEvent");
-    } catch(err) {
-        if (error.response != undefined) {
-            if (error.response.status === 403) {
-              this.props.history.push("/login");
-            }
+      const findEventResp = await axios.get(
+        //"https://us-central1-swe-utd-portal.cloudfunctions.net/api/eventLookup",
+        "http://localhost:5000/swe-utd-portal/us-central1/api/eventLookup",
+        { params: { eventId: this.props.match.params.eventId } }
+      );
+      await axios.post(
+        "https://us-central1-swe-utd-portal.cloudfunctions.net/api/newEvent",
+        findEventResp
+      );
+      this.setState({ eventProcessing: false, eventData: findEventResp });
+    } catch (error) {
+      if (error.response != undefined) {
+        if (error.response.status === 403) {
+          this.props.history.push("/login");
         }
-        this.setState({ errorMsg: "Error in retrieving the data" });
+      }
     }
   };
 
@@ -80,8 +79,8 @@ class EventForm extends Component {
   }
 
   render() {
-    const { headerReady } = this.state;
-    const { classes } = this.props;
+    const { headerReady, eventData, eventProcessing } = this.state;
+    const { history } = this.props;
     return (
       <div>
         <NavBar />
@@ -89,18 +88,19 @@ class EventForm extends Component {
           <p className="heading">{this.props.eventHeading}</p>
         </div>
         <Container width="75%">
-            <Grid item sm={6} xs={12}>
-              <div className={classes.paper}>
-                <Typography component="h1" variant="h5">
-                  Already a member? Log in!
-                </Typography>
-                <CircularProgress
-                          size={30}
-                          className={classes.progess}
-                        />
-                <br />
-              </div>
-            </Grid>
+          {eventProcessing && <CircularProgress />}
+          {!eventProcessing && eventData && (
+            <>
+              <h2>Successfully checked into {eventData.eventName}</h2>
+              <Button
+                color="primary"
+                variant="contained"
+                onClick={() => history.push("/portal")}
+              >
+                View Profile
+              </Button>
+            </>
+          )}
         </Container>
       </div>
     );

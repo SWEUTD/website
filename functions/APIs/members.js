@@ -188,7 +188,9 @@ exports.getAlumniList = async (request, response) => {
 
 // gets information about an event from it's ID
 exports.eventLookup = async (request, response) => {
-  db.collection("events").doc(request.eventId).get()
+  db.collection("events")
+    .doc(request.query.eventId)
+    .get()
     .then((doc) => {
       if (doc.exists) {
         return response.status(200).json({ eventInfo: doc.data() });
