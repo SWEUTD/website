@@ -300,10 +300,10 @@ exports.addEventMember = (request, response) => {
 };
 
 // Add new event to eventList in database from admin portal
-exports.addEventList = (request, response) => {
+exports.updateEventList = (request, response) => {
   // each event has a points value, name, and date
   const eventToAdd = {
-    eventPoints: request.body.eventPoints,
+    //eventPoints: request.body.eventPoints,
     eventName: request.body.eventName,
     eventDate: request.body.eventDate,
     eventPath: request.body.eventPath,
@@ -312,15 +312,19 @@ exports.addEventList = (request, response) => {
   };
   // also need to connect this event to a new or existing member
   const memberRequest = {
-    firstName: request.body.firstName,
+    /*firstName: request.body.firstName,
     lastName: request.body.lastName,
     email: request.body.email,
     phoneNumber: request.body.phoneNumber,
     classification: request.body.classification,
     major: request.body.major,
     otherMajor: request.body.otherMajor,
-    netid: request.body.netid,
+    netid: request.body.netid,*/
+    eventName: request.body.eventName,
+    eventDate: request.body.eventDate,
+    eventPath: request.body.eventPath,
   };
+  //console.log(firstName);
 
   if (memberRequest.firstName != undefined) {
     // trying to make a new user so validate
@@ -334,7 +338,7 @@ exports.addEventList = (request, response) => {
   }*/
 
   let memberId;
-  /*
+  
   db.doc(`/events/${eventToAdd.eventName}`)
     .get()
     .then((doc) => {
@@ -346,7 +350,7 @@ exports.addEventList = (request, response) => {
         ) {
           // already exists, so don't add it again
           return response.status(409).json({
-            general: "You have already added this event to your account.",
+            general: "You have already added this event to the events list.",
           });
         }
         eventsList.push(eventToAdd);
@@ -356,18 +360,18 @@ exports.addEventList = (request, response) => {
           eventsList: eventsList,
           //points: newPointTotal,
         };
-        db.doc(`/members/${memberRequest.netid}`).update(updatedMember);
-        return response.status(200).json({ general: "Member updated" });
+        db.doc(`/events/${eventToAdd.eventName}`).update(updatedMember);
+        return response.status(200).json({ general: "Event list updated" });
       } else {
-        if (memberRequest.firstName == undefined) {
+        if (memberRequest.eventName == undefined) {
           return response.status(500).json({
-            general: "NetID not associated with an account.",
+            general: "Event name is missing.",
           });
         }
         // creates a new member in the database if the netid doesn't exist
-        memberId = memberRequest.netid;
-        const memberInfo = {
-          firstName: memberRequest.firstName,
+        /*memberId = memberRequest.netid;*/
+        const eventInfo = {
+          /*firstName: memberRequest.firstName,
           lastName: memberRequest.lastName,
           netid: memberRequest.netid,
           phoneNumber: memberRequest.phoneNumber,
@@ -379,19 +383,22 @@ exports.addEventList = (request, response) => {
           events: [eventToAdd],
           points: eventToAdd.eventPoints,
           createdAt: new Date().toISOString(),
-          memberId,
+          memberId,*/
+          eventName: memberRequest.eventName,
+          eventDate: memberRequest.eventDate,
+          eventPath: memberRequest.eventPath,
         };
-        db.doc(`/members/${memberRequest.netid}`).set(memberInfo);
-        return response.status(201).json({ general: "Member added" });
+        db.doc(`/events/${eventToAdd.eventName}`).set(eventInfo);
+        return response.status(201).json({ general: "Event added" });
       }
-    })*/
-    db.doc(`/events/${newMember.netid}`).set(memberInfo);
-    return response.status(201).json({ general: "Event added" });
-  /*}
+    })
+    /*db.doc(`/events/${newMember.netid}`).set(memberInfo);
+    return response.status(201).json({ general: "Event added" });*/
+  //}
     .catch((err) => {
       console.error(err);
       return response
         .status(500)
         .json({ general: "Something went wrong, please try again" });
-    });*/
+    });
 };

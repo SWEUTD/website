@@ -47,7 +47,7 @@ class EventLinkCreater extends Component {
             eventName: "",
             eventPath: "/",
             //eventHeading: "",
-            eventPoints: 0,
+            //eventPoints: 0,
             eventDate: "",
             //eventSecretWord: "",
             eventArray: []
@@ -79,7 +79,7 @@ class EventLinkCreater extends Component {
     //let newEvent = {};
     //newEvent.push(this.state.eventName, this.state.eventPath, this.state.eventPoints, this.state.eventDate, this.state.eventSecretWord);
 
-    let newEvent = { eventName: this.state.eventName, eventPath: this.state.eventPath, /*eventHeading: this.state.eventHeading,*/ eventPoints: this.state.eventPoints, eventDate: this.state.eventDate/*, eventSecretWord: this.state.eventSecretWord*/}
+    let newEvent = { eventName: this.state.eventName, eventPath: this.state.eventPath, /*eventHeading: this.state.eventHeading, eventPoints: this.state.eventPoints,*/ eventDate: this.state.eventDate/*, eventSecretWord: this.state.eventSecretWord*/}
     this.state.eventArray.push(newEvent);
 
     console.log("hello");
@@ -87,7 +87,7 @@ class EventLinkCreater extends Component {
 
     axios
       .post(
-        'https://localhost:8080/api/updateEventList',
+        'http://localhost:5000/swe-utd-portal/us-central1/api/updateEventList',
         newEvent
       )
       .then((response) => {
@@ -108,7 +108,7 @@ class EventLinkCreater extends Component {
       eventName: "",
             eventPath: "/",
             //eventHeading: "",
-            eventPoints: 0,
+            //eventPoints: 0,
             eventDate: "",
             //eventSecretWord: ""
     });
@@ -117,7 +117,7 @@ class EventLinkCreater extends Component {
     render() {
         return (
         <>
-            <h1>Event link Creator</h1>
+            <h1>Event Link Creator</h1>
             <form autoComplete="off" noValidate>
               <Divider />
               <CardContent>
@@ -155,7 +155,7 @@ class EventLinkCreater extends Component {
                       onChange={this.handleChange}
                   /> 
         </Grid> */}
-                  <Grid item md={6} xs={12}>
+                  {/*<Grid item md={6} xs={12}>
                     <TextField
                       fullWidth
                       label="Event Points"
@@ -166,7 +166,7 @@ class EventLinkCreater extends Component {
                       value={this.state.eventPoints}
                       onChange={this.handleChange}
                     />
-                  </Grid>
+      </Grid>*/}
                   <Grid item md={6} xs={12}>
                     <TextField
                       fullWidth
@@ -231,7 +231,7 @@ class EventLinkCreater extends Component {
                     </h3>
                     <p>Url: https://sweutd.com{event.eventPath}</p>
                     {/*<p>Heading: {event.eventHeading}</p>*/}
-                    <p>Points: {event.eventPoints}</p>
+                    {/*<p>Points: {event.eventPoints}</p>*/}
                     <p>Date: {event.eventDate}</p>
                     {/*<p>Secret word: {event.eventSecretWord}</p>*/}
                   </CardContent>
