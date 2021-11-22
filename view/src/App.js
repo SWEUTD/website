@@ -66,11 +66,9 @@ function App() {
           <Route exact path="/join" component={join} />
           <Route exact path="/contact" component={contact} />
           <Route exact path="/calendar" component={calendar} /> 
-          <PropsRoute exact path="/internpanel" eventHeading="Sign in How to gain an internship Panel event" eventPoints={1} eventName = "How to gain an internship Panel" eventDate = "10/12/2021" secretWord = "orange" component={meetingform}/>
-          <PropsRoute exact path="/childrenhealth" eventHeading="Sign in Coloring Books and Cards for Children's Health event" eventPoints={1} eventName = "Coloring Books and Cards for Children's Health" eventDate = "10/14/2021" secretWord = "rainbow" component={meetingform}/>
-          <PropsRoute exact path="/gaming" eventHeading="Sign in Women in Tech and Gaming event" eventPoints={1} eventName = "Women in Tech and Gaming Event" eventDate = "10/15/2021" secretWord = "console" component={meetingform}/>
-          <PropsRoute exact path="/atttour" eventHeading="Sign in to AT\&T Plaze Tour event" eventPoints={1} eventName = "ATT Plaza Tour" eventDate = "10/13/2021" secretWord = "visitor" component={meetingform}/>
-          <PropsRoute exact path="/l3harris" eventHeading="Sign in to Master Technical Interviews with L3Harris event" eventPoints={1} eventName = "" eventDate = "10/18/2021" secretWord = "offer" component={meetingform}/>
+          <PropsRoute exact path="/paycom" eventHeading="Sign in to Technical Interview Prep with Paycom event" eventPoints={1} eventName = "Technical Interview Prep with Paycom" eventDate = "11/17/2021" secretWord = "grind" component={meetingform}/>
+          <PropsRoute exact path="/behavioral" eventHeading="Sign in to SWE x WITB: Behavioral Interview Workshop event" eventPoints={1} eventName = "SWE x WITB: Behavioral Interview Workshop" eventDate = "11/16/2021" secretWord = "butterfly" component={meetingform}/>
+          <PropsRoute exact path="/potluck" eventHeading="Sign in to Thanksgiving Potluck Social event" eventPoints={1} eventName = "Thanksgiving Potluck Social" eventDate = "11/15/2021" secretWord = "turkey" component={meetingform}/>        
         </Switch>
       </BrowserRouter>
     </MuiThemeProvider>
