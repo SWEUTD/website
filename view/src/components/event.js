@@ -408,7 +408,14 @@ class event extends Component {
       >
           <CardContent height="100%" align="center">
                   
-                  <h1 align="center">Member List</h1><Divider />
+                  <h1 align="center">Member List</h1>
+                  <h6 align="center">Information about members who have signed into at least one event in any SWE event can be viewed here. <br/>
+                  Members are listed in descending order of their SWE points in the current semester in a collapsible manner. To view a list of <br/>
+                  all the events that a member has attended, click on the arrow beside the member name. On the other side of the name is how many <br/>
+                  SWE points they have this semester, and beside it is their total SWE points since they made a SWE account. <br/> If you wish to look up
+                  a particular member, you can enter their first name in the search bar.<br/> You can also look up an event and get a list of members who
+                  signed into the event. </h6>
+                  <Divider/>
                   <SearchPage/>
                   <br />
                   {/*this.state.users == null ? (
