@@ -118,6 +118,10 @@ class EventLinkCreater extends Component {
         return (
         <>
             <h1>Event Link Creator</h1>
+            <h6>Enter the name of the event, event url (after https://swe.utd.com/) and the date of the event and then click the button to create 
+            an event link. All input should be valid as no error handling is done (yet). For each event generated, SWE point=1, the heading of the 
+            sign in page will be generated from the event name, and there will not be any secret word needed to sign into events. Instead, the url 
+            of the event will act as a secret word, and more complex urls will be used for the sign in forms.</h6>
             <form autoComplete="off" noValidate>
               <Divider />
               <CardContent>
@@ -144,33 +148,10 @@ class EventLinkCreater extends Component {
                       onChange={this.handleChange}
                      />
                   </Grid>
-                  {/*<Grid item md={6} xs={12}>
-                    <TextField
-                      fullWidth
-                      label="Event Heading"
-                      margin="dense"
-                      name="eventHeading"
-                      variant="outlined"
-                      value={this.state.eventHeading}
-                      onChange={this.handleChange}
-                  /> 
-        </Grid> */}
-                  {/*<Grid item md={6} xs={12}>
-                    <TextField
-                      fullWidth
-                      label="Event Points"
-                      margin="dense"
-                      name="eventPoints"
-                      type="number"
-                      variant="outlined"
-                      value={this.state.eventPoints}
-                      onChange={this.handleChange}
-                    />
-      </Grid>*/}
                   <Grid item md={6} xs={12}>
                     <TextField
                       fullWidth
-                      label="Event Date"
+                      type="date"
                       margin="dense"
                       name="eventDate"
                       variant="outlined"
@@ -178,41 +159,13 @@ class EventLinkCreater extends Component {
                       onChange={this.handleChange}
                     />
                   </Grid>
-                  {/*<Grid item md={6} xs={12}>
-                    <TextField
-                      fullWidth
-                      label="Event Secret Word"
-                      margin="dense"
-                      name="eventSecretWord"
-                      variant="outlined"
-                      value={this.state.eventSecretWord}
-                      onChange={this.handleChange}
-                    />
-      </Grid> */}
                   <Button
                     fullWidth
                     variant="contained"
                     color="primary"
                     onClick={this.onClick}
-                    //className={classes.signup}
-                    //onClick={this.handleSignup}
-                    /*disabled={
-                      signupLoading ||
-                      !this.state.email ||
-                      !this.state.password ||
-                      !this.state.confirmPassword || //?
-                      !this.state.firstName ||
-                      !this.state.lastName ||
-                      !this.state.classification ||
-                      !this.state.major ||
-                      !this.state.netid ||
-                      !this.state.phoneNumber
-                    }*/
                   >
                     Create event link
-                    {/*signupLoading && (
-                      <CircularProgress size={30} className={classes.progess} />
-                    )*/}
                   </Button>
                 </Grid>
               </CardContent>
@@ -230,10 +183,7 @@ class EventLinkCreater extends Component {
                       Event name : {event.eventName}
                     </h3>
                     <p>Url: https://sweutd.com{event.eventPath}</p>
-                    {/*<p>Heading: {event.eventHeading}</p>*/}
-                    {/*<p>Points: {event.eventPoints}</p>*/}
                     <p>Date: {event.eventDate}</p>
-                    {/*<p>Secret word: {event.eventSecretWord}</p>*/}
                   </CardContent>
                 </Card>
               </ListItem>
