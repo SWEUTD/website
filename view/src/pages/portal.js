@@ -212,22 +212,22 @@ class portal extends Component {
                 button
                 key="Points"
                 onClick={this.loadEventPage}
-                width="drawerWidth"
+                style={{flex: 1, flexWrap: 'wrap'}}
               >
                 <ListItemIcon>
                   <NotesIcon />
                 </ListItemIcon>
-                <ListItemText primary="Points" />
+                  <ListItemText primary="Points" />
               </ListItem>
 
-              <ListItem button key="Profile" onClick={this.loadAccountPage}>
+              <ListItem button key="Profile" onClick={this.loadAccountPage} style={{flex: 1, flexWrap: 'wrap'}}>
                 <ListItemIcon>
                   <PersonIcon />
                 </ListItemIcon>
                 <ListItemText primary="Profile" />
               </ListItem>
 
-              <ListItem button key="Q/A" onClick={this.loadQandA}>
+              <ListItem button key="Q/A" onClick={this.loadQandA} style={{flex: 1, flexWrap: 'wrap'}}>
                 <ListItemIcon>
                   {" "}
                   <AccountBoxIcon />{" "}
@@ -235,14 +235,14 @@ class portal extends Component {
                 <ListItemText primary="Q/A" />
               </ListItem>
 
-              <ListItem button key="Alumni" onClick={this.loadAlumniPage}>
+              <ListItem button key="Alumni" onClick={this.loadAlumniPage} style={{flex: 1, flexWrap: 'wrap'}}>
                 <ListItemIcon>
                   <PeopleIcon />
                 </ListItemIcon>
                 <ListItemText primary="Member Network" />
               </ListItem>
 
-              <ListItem button key="SWEcrets" onClick={this.loadSwecrets}>
+              <ListItem button key="SWEcrets" onClick={this.loadSwecrets} style={{flex: 1, flexWrap: 'wrap'}}>
                 <ListItemIcon>
                   {" "}
                   <BusinessCenterIcon />{" "}
@@ -250,14 +250,14 @@ class portal extends Component {
                 <ListItemText primary="SWEcrets" />
               </ListItem>
 
-              <ListItem button key="Recordings" onClick={this.loadRecordings}>
+              <ListItem button key="Recordings" onClick={this.loadRecordings} style={{flex: 1, flexWrap: 'wrap'}}>
                 <ListItemIcon>
                   <VideoLibrary />
                 </ListItemIcon>
-                <ListItemText primary="Recordings/Slides" />
+                <ListItemText primary="Recordings/ Slides" />
               </ListItem>
 
-              <ListItem button key="Logout" onClick={this.logoutHandler}>
+              <ListItem button key="Logout" onClick={this.logoutHandler} style={{flex: 1, flexWrap: 'wrap'}}>
                 <ListItemIcon>
                   <ExitToAppIcon />
                 </ListItemIcon>
