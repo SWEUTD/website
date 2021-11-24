@@ -301,25 +301,14 @@ exports.addEventMember = (request, response) => {
 
 // Add new event to eventList in database from admin portal
 exports.updateEventList = (request, response) => {
-  // each event has a points value, name, and date
+  // each event has a name, date, and path
   const eventToAdd = {
-    //eventPoints: request.body.eventPoints,
     eventName: request.body.eventName,
     eventDate: request.body.eventDate,
     eventPath: request.body.eventPath,
-    //eventSecretWord: request.body.eventSecretWord,
-    //eventHeading: request.body.eventHeading,
   };
   // also need to connect this event to a new or existing member
   const memberRequest = {
-    /*firstName: request.body.firstName,
-    lastName: request.body.lastName,
-    email: request.body.email,
-    phoneNumber: request.body.phoneNumber,
-    classification: request.body.classification,
-    major: request.body.major,
-    otherMajor: request.body.otherMajor,
-    netid: request.body.netid,*/
     eventName: request.body.eventName,
     eventDate: request.body.eventDate,
     eventPath: request.body.eventPath,
@@ -331,11 +320,6 @@ exports.updateEventList = (request, response) => {
     const { valid, errors } = validateAddEventData(memberRequest);
     if (!valid) return response.status(400).json(errors);
   }
-  /*if (memberRequest.netid == "") {
-    memberRequest.netid =
-      memberRequest.firstName.toLowerCase() +
-      memberRequest.lastName.toLowerCase();
-  }*/
 
   let memberId;
   
@@ -354,11 +338,8 @@ exports.updateEventList = (request, response) => {
           });
         }
         eventsList.push(eventToAdd);
-        //let newPointTotal =
-        //parseInt(doc.data().points) + parseInt(eventToAdd.eventPoints);
         const updatedMember = {
           eventsList: eventsList,
-          //points: newPointTotal,
         };
         db.doc(`/events/${eventToAdd.eventName}`).update(updatedMember);
         return response.status(200).json({ general: "Event list updated" });
@@ -369,21 +350,7 @@ exports.updateEventList = (request, response) => {
           });
         }
         // creates a new member in the database if the netid doesn't exist
-        /*memberId = memberRequest.netid;*/
         const eventInfo = {
-          /*firstName: memberRequest.firstName,
-          lastName: memberRequest.lastName,
-          netid: memberRequest.netid,
-          phoneNumber: memberRequest.phoneNumber,
-          classification: memberRequest.classification,
-          major: memberRequest.major,
-          otherMajor: memberRequest.otherMajor,
-          email: memberRequest.email,
-          isMember: false,
-          events: [eventToAdd],
-          points: eventToAdd.eventPoints,
-          createdAt: new Date().toISOString(),
-          memberId,*/
           eventName: memberRequest.eventName,
           eventDate: memberRequest.eventDate,
           eventPath: memberRequest.eventPath,
@@ -392,9 +359,6 @@ exports.updateEventList = (request, response) => {
         return response.status(201).json({ general: "Event added" });
       }
     })
-    /*db.doc(`/events/${newMember.netid}`).set(memberInfo);
-    return response.status(201).json({ general: "Event added" });*/
-  //}
     .catch((err) => {
       console.error(err);
       return response
