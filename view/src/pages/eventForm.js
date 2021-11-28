@@ -58,15 +58,22 @@ class EventForm extends Component {
         { params: { eventId: this.props.match.params.eventId } }
       );
       await axios.post(
-        "https://us-central1-swe-utd-portal.cloudfunctions.net/api/newEvent",
-        findEventResp
+        "http://localhost:5000/swe-utd-portal/us-central1/api/newEvent",
+        //"https://us-central1-swe-utd-portal.cloudfunctions.net/api/newEvent",
+        findEventResp.data.eventInfo
       );
-      this.setState({ eventProcessing: false, eventData: findEventResp });
+      this.setState({ eventProcessing: false, eventData: findEventResp.data });
     } catch (error) {
       if (error.response != undefined) {
         if (error.response.status === 403) {
           this.props.history.push("/login");
         }
+      }
+      if (error.response.status === 409) {
+        this.setState({
+          eventProcessing: false,
+          errors: error.response.data.general,
+        });
       }
     }
   };
@@ -79,7 +86,7 @@ class EventForm extends Component {
   }
 
   render() {
-    const { headerReady, eventData, eventProcessing } = this.state;
+    const { headerReady, eventData, eventProcessing, errors } = this.state;
     const { history } = this.props;
     return (
       <div>
@@ -92,6 +99,18 @@ class EventForm extends Component {
           {!eventProcessing && eventData && (
             <>
               <h2>Successfully checked into {eventData.eventName}</h2>
+              <Button
+                color="primary"
+                variant="contained"
+                onClick={() => history.push("/portal")}
+              >
+                View Profile
+              </Button>
+            </>
+          )}
+          {errors && (
+            <>
+              <h3 style={{ marginBottom: 20 }}>{errors}</h3>
               <Button
                 color="primary"
                 variant="contained"

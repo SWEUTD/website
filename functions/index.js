@@ -23,7 +23,7 @@ const {
 app.post("/login", loginMember);
 app.post("/signup", signUpMember);
 app.post("/member", auth, updateMemberDetails);
-app.post("/newEvent", addEventMember);
+app.post("/newEvent", auth, addEventMember);
 app.get("/member", auth, getMemberDetail);
 app.get("/alumniList", getAlumniList);
 app.get("/memberList", getMemberList);
