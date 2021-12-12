@@ -236,8 +236,6 @@ class about extends Component {
                 We give special thanks to our sponsors: Capital One, AT&amp;T, Texas Instruments, JPMorgan Chase &amp; Co, 
                 and L3Harris Technologies
               </h3>
-              {/*<img src={SponsorA} width="25%" />
-              <img src={SponsorB} width="25%" />*/}
               <img src={Sponsors} width="70%" />
               <h4>
                 Interested in sponsoring the UT-Dallas section of SWE?{" "}
