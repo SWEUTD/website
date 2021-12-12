@@ -306,12 +306,14 @@ exports.updateEventList = (request, response) => {
     eventName: request.body.eventName,
     eventDate: request.body.eventDate,
     eventPath: request.body.eventPath,
+    eventPoints: request.body.eventPoints,
   };
   // also need to connect this event to a new or existing member
   const memberRequest = {
     eventName: request.body.eventName,
     eventDate: request.body.eventDate,
     eventPath: request.body.eventPath,
+    eventPoints: request.body.eventPoints,
   };
   //console.log(firstName);
 
@@ -354,6 +356,7 @@ exports.updateEventList = (request, response) => {
           eventName: memberRequest.eventName,
           eventDate: memberRequest.eventDate,
           eventPath: memberRequest.eventPath,
+          eventPoints: memberRequest.eventPoints,
         };
         db.doc(`/events/${eventToAdd.eventName}`).set(eventInfo);
         return response.status(201).json({ general: "Event added" });

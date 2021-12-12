@@ -47,7 +47,7 @@ class EventLinkCreater extends Component {
             eventName: "",
             eventPath: "/",
             //eventHeading: "",
-            //eventPoints: 0,
+            eventPoints: 0,
             eventDate: "",
             //eventSecretWord: "",
             eventArray: []
@@ -79,7 +79,7 @@ class EventLinkCreater extends Component {
     //let newEvent = {};
     //newEvent.push(this.state.eventName, this.state.eventPath, this.state.eventPoints, this.state.eventDate, this.state.eventSecretWord);
 
-    let newEvent = { eventName: this.state.eventName, eventPath: this.state.eventPath, /*eventHeading: this.state.eventHeading, eventPoints: this.state.eventPoints,*/ eventDate: this.state.eventDate/*, eventSecretWord: this.state.eventSecretWord*/}
+    let newEvent = { eventName: this.state.eventName, eventPath: this.state.eventPath, /*eventHeading: this.state.eventHeading,*/ eventPoints: this.state.eventPoints, eventDate: this.state.eventDate/*, eventSecretWord: this.state.eventSecretWord*/}
     this.state.eventArray.push(newEvent);
 
     console.log("hello");
@@ -108,7 +108,7 @@ class EventLinkCreater extends Component {
       eventName: "",
             eventPath: "/",
             //eventHeading: "",
-            //eventPoints: 0,
+            eventPoints: 0,
             eventDate: "",
             //eventSecretWord: ""
     });
@@ -118,8 +118,8 @@ class EventLinkCreater extends Component {
         return (
         <>
             <h1>Event Link Creator</h1>
-            <h6>Enter the name of the event, event url (after https://swe.utd.com/) and the date of the event and then click the button to create 
-            an event link. All input should be valid as no error handling is done (yet). For each event generated, SWE point=1, the heading of the 
+            <h6>Enter the name of the event, event url (after https://swe.utd.com/), the date of the event, and event points and then click the button  
+            to create an event link. All input should be valid as no error handling is done (yet). For each event generated, SWE point=1, the heading of the 
             sign in page will be generated from the event name, and there will not be any secret word needed to sign into events. Instead, the url 
             of the event will act as a secret word, and more complex urls will be used for the sign in forms.</h6>
             <form autoComplete="off" noValidate>
@@ -147,6 +147,18 @@ class EventLinkCreater extends Component {
                       value={this.state.eventPath}
                       onChange={this.handleChange}
                      />
+                  </Grid>
+                  <Grid item md={6} xs={12}>
+                    <TextField
+                      fullWidth
+                      label="Event Points"
+                      margin="dense"
+                      name="eventPoints"
+                      type="number"
+                      variant="outlined"
+                      value={this.state.eventPoints}
+                      onChange={this.handleChange}
+                    />
                   </Grid>
                   <Grid item md={6} xs={12}>
                     <TextField
@@ -184,6 +196,7 @@ class EventLinkCreater extends Component {
                     </h3>
                     <p>Url: https://sweutd.com{event.eventPath}</p>
                     <p>Date: {event.eventDate}</p>
+                    <p>Points: {event.eventPoints}</p>
                   </CardContent>
                 </Card>
               </ListItem>
