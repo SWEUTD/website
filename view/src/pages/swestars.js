@@ -57,7 +57,7 @@ class swestars extends Component {
           const name = `${doc.data().firstName} ${doc.data().lastName}`;
           if (doc.data().points > 8) {
             goldMem_Fall.push(name);
-          } else if (doc.data().points > 6) {
+          } else if (doc.data().points > 6) { 
             silverMem_Fall.push(name);
           } else if (doc.data().points > 4) {
             bronzeMem_Fall.push(name);
