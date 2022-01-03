@@ -12,8 +12,8 @@ import MediaQuery from "react-responsive";
 
 // images
 import Statistics from "../assets/statistics.png";
-//import SponsorA from "../assets/AT&T.png";
-//import SponsorB from "../assets/CBRE.png";
+import SponsorA from "../assets/AT&T.png";
+import SponsorB from "../assets/CBRE.png";
 import Sponsors from "../assets/Sponsors.png";
 import Award from "../assets/GoldAward.png";
 import BoeingCompanyMulticulturalAward from "../assets/BoeingCompanyMulticulturalAward.png";
