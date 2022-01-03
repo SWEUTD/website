@@ -24,7 +24,7 @@ import CapitalOne from "../assets/CapitalOne.jpg"
 
 const upcomingEvents = [
 
-  {
+  /*{
     name: "SWE x WITB: Behavioral Interview Workshop",
     date: 'Date(s): 11/16. Time: 3:00 PM - 4:00 PM CST',
     location: 'SSA 14.245',
@@ -37,20 +37,20 @@ const upcomingEvents = [
     location: '',
     description: "Panelists: Robert Smith (software developer manager) and Amber McGee (recruiter)",
     link: 'https://tinyurl.com/paycomxswe'
-  }
+  }*/
  
 ];
 
 const flyers = [
   
-  {
+  /*{
     image: '',
     link: ''
   },
   {
     image: '',
     link: ''
-  },
+  },*/
   
   
 ];
@@ -84,8 +84,8 @@ function createData(event, flyer) {
 
 
 const rows = [
-  createData(upcomingEvents[0], flyers[0].image),
-  createData(upcomingEvents[1], flyers[1].image),
+  /*createData(upcomingEvents[0], flyers[0].image),
+  createData(upcomingEvents[1], flyers[1].image),*/
  
 ];
 
@@ -145,6 +145,8 @@ class events extends Component {
               */}
 					<div align="center">
               <h1>Upcoming Events</h1>
+              <br/>
+              <h3>Happy holidays! Look out for upcoming events here!</h3>
               
             </div>
           </Grid>
