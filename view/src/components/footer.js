@@ -38,7 +38,7 @@ class footer extends Component {
               <h5>Society of Women Engineers @ UT Dallas</h5>
               <br />
               <p>
-                The UTD SWE stimulates women to achieve full potential in
+                The SWE UTD stimulates women to achieve full potential in
                 careers as engineers and leaders, expand the image of the
                 engineering profession as a positive force in improving the
                 quality of life, and demonstrate the value of diversity.
@@ -46,8 +46,8 @@ class footer extends Component {
               <p>
                 The SWE Mission Awards recognize SWE groups that embody SWE core
                 values and demonstrate continuous improvement and growth as they
-                work to achieve the Society’s strategic goals. UT-Dallas SWE is
-                proud to have been awarded a 2020 Collegiate Silver award.
+                work to achieve the Society’s strategic goals. SWE UTD is
+                proud to have been awarded a 2021 Collegiate Gold award.
               </p>
             </Grid>
             <Grid item xs={2} className={classes.col}>
@@ -99,7 +99,7 @@ class footer extends Component {
             </Grid>
           </Grid>
           <Grid container className={classes.row2}>
-            &copy; {new Date().getFullYear()} UTD Society of Women Engineers
+            &copy; {new Date().getFullYear()} Society of Women Engineers UTD
           </Grid>
         </MediaQuery>
         <MediaQuery maxDeviceWidth={1224}>
@@ -107,14 +107,14 @@ class footer extends Component {
             <h5>Society of Women Engineers @ UTD</h5>
             <br />
             <p>
-              The UTD SWE stimulates women to achieve full potential in careers
+              The SWE UTD stimulates women to achieve full potential in careers
               as engineers and leaders, expand the image of the engineering
               profession as a positive force in improving the quality of life,
               and demonstrate the value of diversity.
             </p>
           </Grid>
           <Grid container className={classes.row2}>
-            &copy; {new Date().getFullYear()} UTD Society of Women Engineers
+            &copy; {new Date().getFullYear()} Society of Women Engineers UTD
           </Grid>
         </MediaQuery>
       </Grid>
