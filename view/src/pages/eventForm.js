@@ -33,7 +33,7 @@ class EventForm extends Component {
       headerReady: false,
       eventProcessing: true,
       eventData: null,
-      errors: [],
+      errors: null,
     };
   }
 
@@ -53,16 +53,14 @@ class EventForm extends Component {
     axios.defaults.headers.common = { Authorization: `${authToken}` };
     try {
       const findEventResp = await axios.get(
-        //"https://us-central1-swe-utd-portal.cloudfunctions.net/api/eventLookup",
-        "http://localhost:5000/swe-utd-portal/us-central1/api/eventLookup",
+        "https://us-central1-swe-utd-portal.cloudfunctions.net/api/eventLookup",
         { params: { eventId: this.props.match.params.eventId } }
       );
       await axios.post(
-        "http://localhost:5000/swe-utd-portal/us-central1/api/newEvent",
-        //"https://us-central1-swe-utd-portal.cloudfunctions.net/api/newEvent",
+        "https://us-central1-swe-utd-portal.cloudfunctions.net/api/newEvent",
         findEventResp.data.eventInfo
       );
-      this.setState({ eventProcessing: false, eventData: findEventResp.data });
+      this.setState({ eventProcessing: false, eventData: findEventResp.data.eventInfo });
     } catch (error) {
       if (error.response != undefined) {
         if (error.response.status === 403) {
@@ -88,6 +86,7 @@ class EventForm extends Component {
   render() {
     const { headerReady, eventData, eventProcessing, errors } = this.state;
     const { history } = this.props;
+    console.log(eventData);
     return (
       <div>
         <NavBar />
@@ -96,7 +95,7 @@ class EventForm extends Component {
         </div>
         <Container width="75%">
           {eventProcessing && <CircularProgress />}
-          {!eventProcessing && eventData && (
+          {!eventProcessing && eventData && !errors && (
             <>
               <h2>Successfully checked into {eventData.eventName}</h2>
               <Button
@@ -109,7 +108,16 @@ class EventForm extends Component {
             </>
           )}
           {errors && (
+            <>
             <h3 style={{ marginBottom: 20 }}>{errors}</h3>
+            <Button
+                color="primary"
+                variant="contained"
+                onClick={() => history.push("/portal")}
+              >
+                View Profile
+              </Button>
+              </>
           )}
         </Container>
       </div>
