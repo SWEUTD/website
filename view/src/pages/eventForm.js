@@ -109,16 +109,7 @@ class EventForm extends Component {
             </>
           )}
           {errors && (
-            <>
-              <h3 style={{ marginBottom: 20 }}>{errors}</h3>
-              <Button
-                color="primary"
-                variant="contained"
-                onClick={() => history.push("/portal")}
-              >
-                View Profile
-              </Button>
-            </>
+            <h3 style={{ marginBottom: 20 }}>{errors}</h3>
           )}
         </Container>
       </div>

@@ -4,7 +4,7 @@ import Slider from "./components/slider";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import { ThemeProvider as MuiThemeProvider } from "@material-ui/core/styles";
-import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
+import {createTheme} from "@material-ui/core/styles";
 import login from "./pages/login";
 import home from "./pages/home";
 import portal from "./pages/portal";
@@ -20,7 +20,7 @@ import calendar from "./pages/calendar";
 import meetingform from "./pages/meetingform";
 import EventForm from "./pages/eventForm";
 
-const theme = createMuiTheme({
+const theme = createTheme({
   palette: {
     primary: {
       light: "#DBC554", // swe gold
