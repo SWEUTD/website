@@ -162,54 +162,7 @@ class events extends Component {
 				</div>)
 				: null
 				}
-        {row.event.step1 != '' && row.event.step1 != null 
-        ? (<div>
-          <ListSubheader><strong>{row.event.step1}</strong></ListSubheader>
-          <br/>
-          <br/>
-        </div>)
-        : null
-        }
-        {row.event.link1 != '' && row.event.link1 != null
-				? (<div>
-				<a href={row.event.link1}><strong>WWtechapp!</strong></a>
-				<br/>
-				<br/>
-				</div>)
-				: null
-				}
-        {row.event.step2 != '' && row.event.step2 != null 
-        ? (<div>
-          <ListSubheader><strong>{row.event.step2}</strong></ListSubheader>
-          <br/>
-          <br/>
-        </div>)
-        : null
-        }
-        {row.event.link2 != '' && row.event.link2 != null
-				? (<div>
-				<a href={row.event.link2}><strong>JPMC2022Intern</strong></a>
-				<br/>
-				<br/>
-				</div>)
-				: null
-				}
-        {row.event.link3 != '' && row.event.link3 != null
-				? (<div>
-				<a href={row.event.link3}><strong>JPMC2022Fulltime</strong></a>
-				<br/>
-				<br/>
-				</div>)
-				: null
-				}
-        {row.event.step3 != '' && row.event.step3 != null 
-        ? (<div>
-          <ListSubheader><strong>{row.event.step3}</strong></ListSubheader>
-          <br/>
-          <br/>
-        </div>)
-        : null
-        }
+      
 
 
 			</TableCell>

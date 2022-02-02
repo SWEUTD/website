@@ -24,7 +24,6 @@ import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 // Officer photos
 //import SWElogo from "../assets/OfficerPhotos/SWElogo.png";
 import AarushiPandey from "../assets/OfficerPhotos2021/AarushiPandey.jpg";
-import AayushiChoudhary from "../assets/OfficerPhotos2021/AayushiChoudhary.png";
 import AfridaTasnim from "../assets/OfficerPhotos2021/AfridaTasnim.jpg";
 import AnhNguyen from "../assets/OfficerPhotos2021/AnhNguyen.jpg";
 import AreebaQazi from "../assets/OfficerPhotos2021/AreebaQazi.jpg";
@@ -43,7 +42,7 @@ import MadisonKing from "../assets/OfficerPhotos2021/MadisonKing.jpg";
 import ManshaFatima from "../assets/OfficerPhotos2021/ManshaFatima.jpg";
 import NivethaNarayanan from "../assets/OfficerPhotos2021/NivethaNarayanan.jpg";
 import NehaSapre from "../assets/OfficerPhotos2021/NehaSapre.jpg";
-import NithyaJaisankar from "../assets/logo.png";
+import NithyaJaisankar from "../assets/OfficerPhotos2021/IMG_7969.jpg";
 import NithyaSree from "../assets/OfficerPhotos2021/NithyaSree.jpg";
 import NithilaIllangovan from "../assets/OfficerPhotos2021/Nithila.jpg";
 import NuhaSiddiqui from "../assets/OfficerPhotos2021/NuhaSiddiqui.jpg";
@@ -202,13 +201,6 @@ const officerList = [
     position: "Marketing Committee Member",
     committee: "Marketing",
     linkedin: "https://www.linkedin.com/in/esha-bansal-a587811aa/",
-  },
-  {
-    name: "Aayushi Choudhary",
-    image: AayushiChoudhary,
-    position: "Marketing Committee Member",
-    committee: "Marketing",
-    linkedin: "https://www.linkedin.com/in/aayushitech/",
   },
   {
     name: "Reshmi Ranjith",

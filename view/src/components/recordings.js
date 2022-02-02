@@ -11,6 +11,10 @@ import { authMiddleWare } from "../util/auth";
 
 const videos = [
   {
+    link: "https://www.youtube.com/embed/DZVwUg3nMtY", 
+    title: "10/26 Capgemini Interview Prep"
+  },
+  {
     link: "https://www.youtube.com/embed/fMfKuAioxIg",
     title: "PepsiCo Event pt.1 - 9/9/2021",
   },
@@ -88,6 +92,7 @@ const videos = [
       "https://docs.google.com/presentation/d/e/2PACX-1vSYy2zWDUDc4FiB89J-gLFDbnyJwPD-b-2i3peHB2bQPPHsA97xK9ZfOs0sSbNhizqYW4RCNGtUbJPC/embed?start=true&loop=true&delayms=9000",
     title: "SWE Kickoff Slides - 8/31/2020",
   },
+ 
   
 ];
 

@@ -47,7 +47,7 @@ class footer extends Component {
                 The SWE Mission Awards recognize SWE groups that embody SWE core
                 values and demonstrate continuous improvement and growth as they
                 work to achieve the Society’s strategic goals. SWE UTD is
-                proud to have been awarded a 2020 Collegiate Silver award.
+                proud to have been awarded a 2021 Collegiate Gold award.
               </p>
             </Grid>
             <Grid item xs={2} className={classes.col}>
@@ -99,7 +99,7 @@ class footer extends Component {
             </Grid>
           </Grid>
           <Grid container className={classes.row2}>
-            &copy; {new Date().getFullYear()} UTD Society of Women Engineers
+            &copy; {new Date().getFullYear()} Society of Women Engineers UTD
           </Grid>
         </MediaQuery>
         <MediaQuery maxDeviceWidth={1224}>
