@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.363b93ce.chunk.css",
-    "main.js": "/static/js/main.ac639dc9.chunk.js",
-    "main.js.map": "/static/js/main.ac639dc9.chunk.js.map",
+    "main.css": "/static/css/main.2fed6350.chunk.css",
+    "main.js": "/static/js/main.4d8549d0.chunk.js",
+    "main.js.map": "/static/js/main.4d8549d0.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.94a6af97.js",
     "runtime-main.js.map": "/static/js/runtime-main.94a6af97.js.map",
-    "static/js/2.aaae5691.chunk.js": "/static/js/2.aaae5691.chunk.js",
-    "static/js/2.aaae5691.chunk.js.map": "/static/js/2.aaae5691.chunk.js.map",
+    "static/js/2.c1ad4648.chunk.js": "/static/js/2.c1ad4648.chunk.js",
+    "static/js/2.c1ad4648.chunk.js.map": "/static/js/2.c1ad4648.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.0ce8fbcd70aa4da326d67c9f8e29356a.js": "/precache-manifest.0ce8fbcd70aa4da326d67c9f8e29356a.js",
+    "precache-manifest.203e0f3f5c45490580c645a6556452eb.js": "/precache-manifest.203e0f3f5c45490580c645a6556452eb.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.363b93ce.chunk.css.map": "/static/css/main.363b93ce.chunk.css.map",
-    "static/js/2.aaae5691.chunk.js.LICENSE.txt": "/static/js/2.aaae5691.chunk.js.LICENSE.txt",
+    "static/css/main.2fed6350.chunk.css.map": "/static/css/main.2fed6350.chunk.css.map",
+    "static/js/2.c1ad4648.chunk.js.LICENSE.txt": "/static/js/2.c1ad4648.chunk.js.LICENSE.txt",
     "static/media/1.HEIC": "/static/media/1.ff820100.HEIC",
     "static/media/2.jpg": "/static/media/2.a6cb3cc9.jpg",
     "static/media/3.jpg": "/static/media/3.46504d3d.jpg",
@@ -19,6 +19,7 @@
     "static/media/5.png": "/static/media/5.96b6b1d1.png",
     "static/media/AT&T.png": "/static/media/AT&T.2b225577.png",
     "static/media/AarushiPandey.jpg": "/static/media/AarushiPandey.047e0f77.jpg",
+    "static/media/AayushiChoudhary.png": "/static/media/AayushiChoudhary.f1ea4c4f.png",
     "static/media/AboutSWE.mp4": "/static/media/AboutSWE.e7ea095f.mp4",
     "static/media/AfridaTasnim.jpg": "/static/media/AfridaTasnim.eebfabfe.jpg",
     "static/media/AnhNguyen.jpg": "/static/media/AnhNguyen.83d3a73a.jpg",
@@ -36,7 +37,6 @@
     "static/media/Events2.jpg": "/static/media/Events2.d6ea8178.jpg",
     "static/media/GillSansMTBook.ttf": "/static/media/GillSansMTBook.9a2b9a60.ttf",
     "static/media/GoldAward.png": "/static/media/GoldAward.ac25f19d.png",
-    "static/media/IMG_7969.jpg": "/static/media/IMG_7969.67a93efb.jpg",
     "static/media/IfritMaruf.jpg": "/static/media/IfritMaruf.7186e821.jpg",
     "static/media/InclusiveEnvironment.png": "/static/media/InclusiveEnvironment.80b2b104.png",
     "static/media/Integrity.png": "/static/media/Integrity.33ebe12c.png",
@@ -80,8 +80,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.94a6af97.js",
-    "static/js/2.aaae5691.chunk.js",
-    "static/css/main.363b93ce.chunk.css",
-    "static/js/main.ac639dc9.chunk.js"
+    "static/js/2.c1ad4648.chunk.js",
+    "static/css/main.2fed6350.chunk.css",
+    "static/js/main.4d8549d0.chunk.js"
   ]
 }
