@@ -4,7 +4,7 @@ import Slider from "./components/slider";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import { ThemeProvider as MuiThemeProvider } from "@material-ui/core/styles";
-import {createTheme} from "@material-ui/core/styles";
+import {createTheme} from "@material-ui/core";
 import login from "./pages/login";
 import home from "./pages/home";
 import portal from "./pages/portal";
