@@ -69,6 +69,7 @@ const styles = (theme) => ({
     width: "31px",
     left: "50%",
     top: "35%",
+    padding: "100px 0 0 0",
   },
   toolbar: theme.mixins.toolbar,
 });

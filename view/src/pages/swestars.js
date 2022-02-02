@@ -55,11 +55,11 @@ class swestars extends Component {
           bronzeMem_Fall = [];
         querySnapshot.forEach((doc) => {
           const name = `${doc.data().firstName} ${doc.data().lastName}`;
-          if (doc.data().points > 9) {
+          if (doc.data().points > 7) {
             goldMem_Fall.push(name);
-          } else if (doc.data().points > 7) {
-            silverMem_Fall.push(name);
           } else if (doc.data().points > 5) {
+            silverMem_Fall.push(name);
+          } else if (doc.data().points > 3) {
             bronzeMem_Fall.push(name);
           }
         });

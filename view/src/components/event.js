@@ -214,8 +214,8 @@ class event extends Component {
 
     let rewardStatus;
     let nextLevel;
-    if (this.state.points < 5) {
-      nextLevel = 5 - this.state.points;
+    if (this.state.points < 3) {
+      nextLevel = 3 - this.state.points;
       rewardStatus = (
         <div>
           <h4 align="center">
@@ -227,8 +227,8 @@ class event extends Component {
           <p>★ Invitation to a virtual networking session</p>
         </div>
       );
-    } else if (this.state.points < 7) {
-      nextLevel = 7 - this.state.points;
+    } else if (this.state.points < 5) {
+      nextLevel = 5 - this.state.points;
       rewardStatus = (
         <div>
           <h1 align="center">You are a Bronze SWE Star!</h1>
@@ -245,11 +245,11 @@ class event extends Component {
           <Divider />
           <br />
           <h5>You have unlocked:</h5>
-          <p>★ Virtual Networking Session</p>
+          <p>★ Networking Session</p>
         </div>
       );
-    } else if (this.state.points < 9) {
-      nextLevel = 9 - this.state.points;
+    } else if (this.state.points < 7) {
+      nextLevel = 7 - this.state.points;
       rewardStatus = (
         <div>
           <h1 align="center">You are a Silver SWE Star!</h1>
@@ -266,7 +266,7 @@ class event extends Component {
           <Divider />
           <br />
           <h5>You have unlocked:</h5>
-          <p>★ Virtual Networking Session</p>
+          <p>★ Networking Session</p>
           <p>★ Social Media Shoutout</p>
         </div>
       );

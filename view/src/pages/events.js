@@ -26,63 +26,21 @@ const upcomingEvents = [
   
  
   {
-    name: "\"How to Gain an Internship\" Panel",
-    date: 'Date: 10/12. Time: 5:00PM - 6:00PM CST',
-    location: 'SSA 14.510',
+    name: "Insight to Capgemini’s RISE Program",
+    date: 'Date: 2/16/22. Time: 6:00PM - 7:00PM CST',
+    /*location: 'TBD',*/
     description: "Want some quick tips and tricks on how to stand out to recruiters? Come to this event with SWE and WWC! We have panelists ready to answer your questions!",
-    link: 'https://tinyurl.com/internf21',
+    link: 'https://tinyurl.com/swexcapgemini',
   },
 
-  {
-    name: "Coloring Books and Cards for Children's Health",
-    date: 'Date: 10/14. Time: 5:30 PM - 6:30 PM CST',
-    location: 'SSA 14.244',
-    description: "We’re making coloring books and cards for children for empowerment! If you bring coloring books you will get an extra hour!",
-    link: '',
-  },
-  {
-    name: "Women in Tech & Gaming Event",
-    date: 'Date: 10/15. Time: 6:00 PM - 8:30 PM CST',
-    location: 'TBD',
-    description: "An event to encourage women across campus, who have similar interests, to network and find people with similar ideals. This event, even though it is targeted to women in tech and gaming, will be open to everyone across campus. If a person is not a part of those communities, it is an opportunity for them to learn about another perspective and demographic. ",
-    link: '',
-  },
-  {
-    name: "The JPMorgan Chase & Co. Software Engineer Program's Winning Women in Technology",
-    date: 'Date: 11/2. Time: 5:30 PM - 7:00 PM CST',
-    location: '',
-    description: "Apply by October 15th! Follow these steps to attend the event:",
-    link: '',
-    step1: "1. Fill out the Winning Women in Technology application:", 
-    link1: 'https://tinyurl.com/WWtechapp',
-    step2: "2. Fill out the Software Engineer Program Application that is applicable to your graduation year: ",
-    link2: 'https://tinyurl.com/JPMC2022intern', 
-    link3: 'https://tinyurl.com/JPMC2022fulltime',
-    step3: "3. Look out for an email with the event link!",
-  }
 
 ];
 
 const flyers = [
-  
   {
     image: '',
     link: ''
   },
-  {
-    image: '',
-    link: ''
-  },
-  {
-    image: '',
-    link: ''
-  },
-  {
-    image: '',
-    link: ''
-  },
-  
-  
 ];
 
 
@@ -115,10 +73,6 @@ function createData(event, flyer) {
 
 const rows = [
   createData(upcomingEvents[0], flyers[0].image),
-  createData(upcomingEvents[1], flyers[1].image),
-  createData(upcomingEvents[2], flyers[2].image),
-  createData(upcomingEvents[3], flyers[3].image),
-  
 ];
 
 class events extends Component {
