@@ -16,6 +16,16 @@ import WePhoto from "../assets/SlideshowImages/WE.jpg";
 import OfficersPhoto from "../assets/SlideshowImages/Officers.jpg";
 import EventPhoto from "../assets/SlideshowImages/Events.jpg";
 import EventPhoto2 from "../assets/SlideshowImages/Events2.jpg";
+import event1 from "../assets/SlideshowImages/event1.jpg";
+import iospic from "../assets/SlideshowImages/iospic.jpg";
+import social1 from "../assets/SlideshowImages/social1.jpg";
+import social2 from "../assets/SlideshowImages/social2.JPG";
+import wee from "../assets/SlideshowImages/wee.jpg";
+import we1 from "../assets/SlideshowImages/we1.jpg";
+import we2 from "../assets/SlideshowImages/we2.jpg";
+import we3 from "../assets/SlideshowImages/we3.jpg";
+import we4 from "../assets/SlideshowImages/we4.jpg";
+import we5 from "../assets/SlideshowImages/we5.jpg";
 
 // photos and their titles/links
 // can add more photos by adding to this array
@@ -31,10 +41,62 @@ const slides = [
     link: "/join",
   },
   {
+    title: "Get Involved",
+    img: iospic,
+    link: "/join",
+  },
+  {
+    title: "Get Involved",
+    img: social1,
+    link: "/join",
+  },
+  {
+    title: "Get Involved",
+    img: social2,
+    link: "/join",
+  },
+  
+  {
     title: "Our Events",
     img: EventPhoto2,
     link: "/events",
   },
+  {
+    title: "Our Events",
+    img: event1,
+    link: "/events",
+  },
+  {
+    title: "Our Events",
+    img: wee,
+    link: "/events",
+  },
+  {
+    title: "Our Events",
+    img: we1,
+    link: "/events",
+  },
+  {
+    title: "Our Events",
+    img: we2,
+    link: "/events",
+  },
+  {
+    title: "Our Events",
+    img: we3,
+    link: "/events",
+  },
+  {
+    title: "Our Events",
+    img: we4,
+    link: "/events",
+  },
+  {
+    title: "Our Events",
+    img: we5,
+    link: "/events",
+  },
+
   {
     title: "Meet Our Officers",
     img: OfficersPhoto,
