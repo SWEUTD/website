@@ -67,7 +67,8 @@
   },
   "proxy": "https://us-central1-swe-utd-portal.cloudfunctions.net/api",
   "devDependencies": {
-    "gh-pages": "^3.0.0"
+    "gh-pages": "^3.0.0",
+    "mini-css-extract-plugin": "2.4.5"
   },
   "resolutions": {
     "mini-css-extract-plugin": "2.4.5"
