@@ -66,6 +66,7 @@ function App() {
           <Route exact path="/weconference" component={weconference} />
           <Route exact path="/join" component={join} />
           <Route exact path="/contact" component={contact} />
+          <Route exact path="/checkin/:eventId" component={EventForm} /> 
           <Route exact path="/calendar" component={calendar} /> 
           <PropsRoute exact path="/capgemini" eventHeading="Sign in to Insight to Capgemini’s RISE Program event" eventPoints={1} eventName = "Insight to Capgemini’s RISE Program" eventDate = "2/6/2021" secretWord = "fall" component={meetingform}/>
           <PropsRoute exact path="/galentines" eventHeading="Sign in to Galentines Bingo social" eventPoints={1} eventName="Galentines Bingo Social" eventDate="2/15/2021" secretWord="numbers" component={meetingform}/>
