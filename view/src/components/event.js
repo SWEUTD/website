@@ -30,6 +30,8 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import SearchPage from "../components/searchPage";
 
+import Button from "@material-ui/core/Button"
+
 const styles = (theme) => ({
   content: {
     flexGrow: 1,
@@ -212,6 +214,11 @@ class event extends Component {
       spring2021Points = <td align="center">Spring 2021: {this.state.previousPoints.spring2021} points</td>
     }
 
+    var fall2021Points;
+    if(this.state.previousPoints.fall2021 != undefined) {
+      fall2021Points = <td align="center">Fall 2021: {this.state.previousPoints.fall2021} points</td>
+    }
+
     let rewardStatus;
     let nextLevel;
     if (this.state.points < 3) {
@@ -338,6 +345,7 @@ class event extends Component {
                           {fall2020Points}
                           {summer2020Points}
                           {spring2021Points}
+                          {fall2021Points}
                         </tr>
                       </table>
                       <br />

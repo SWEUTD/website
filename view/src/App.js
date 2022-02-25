@@ -68,11 +68,7 @@ function App() {
           <Route exact path="/contact" component={contact} />
           <Route exact path="/checkin/:eventId" component={EventForm} /> 
           <Route exact path="/calendar" component={calendar} /> 
-          <PropsRoute exact path="/capgemini" eventHeading="Sign in to Insight to Capgemini’s RISE Program event" eventPoints={1} eventName = "Insight to Capgemini’s RISE Program" eventDate = "2/6/2021" secretWord = "fall" component={meetingform}/>
-          <PropsRoute exact path="/galentines" eventHeading="Sign in to Galentines Bingo social" eventPoints={1} eventName="Galentines Bingo Social" eventDate="2/15/2021" secretWord="numbers" component={meetingform}/>
-          <PropsRoute exact path="/crafts" eventHeading="Sign in to Hope's Door Crafts Kits volunteering" eventPoints={1} eventName="Hope's Door Crafts Kits Volunteering" eventDate="2/21/2021" secretWord="art" component={meetingform}/>
-          <PropsRoute exact path="/TI" eventHeading="Sign in to TI's industry event" eventPoints={1} eventName="Ti's Industry event" eventDate="2/23/2021" secretWord="industry" component={meetingform}/>
-          <PropsRoute exact path="/collab" eventHeading="Sign in to SWE x WWC Speed Networking collab" eventPoints={1} eventName="SWE x WWC Speed Networking" eventDate="2/24/2021" secretWord="meeting" component={meetingform}/>
+          <PropsRoute exact path="/cards" eventHeading="Sign in to Volunteering: Cards for Children's Health" eventPoints={1} eventName="Volunteering: Cards for Children's Health" eventDate="3/3/2022" secretWord="spirit" component={meetingform}/>
         </Switch>
       </BrowserRouter>
     </MuiThemeProvider>
