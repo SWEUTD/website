@@ -23,36 +23,24 @@ import CapitalOne from "../assets/CapitalOne.jpg"
 // import SWE_Match_Presentation from "../assets/EventFlyers/SWE_Match_Presentation.png"
 
 const upcomingEvents = [
-
-  {
-    name: "SWE x WITB: Behavioral Interview Workshop",
-    date: 'Date(s): 11/16. Time: 3:00 PM - 4:00 PM CST',
-    location: 'SSA 14.245',
-    description: "Need to brush up on your soft skills? We will go over tips and tricks so you can ace your behavioral interview!",
-    link: 'https://teams.microsoft.com/dl/launcher/launcher.html?url=%2F_%23%2Fl%2Fmeetup-join%2F19%3Ameeting_NzU3NWVmMDctMDE1NC00NTllLTlhYmEtNjM0MDVjNGQ4Mzcw%40thread.v2%2F0%3Fcontext%3D%257b%2522Tid%2522%253a%25228d281d1d-9c4d-4bf7-b16e-032d15de9f6c%2522%252c%2522Oid%2522%253a%2522b60eb0e6-02c9-4a59-b0d1-644cbed52573%2522%257d%26anon%3Dtrue&type=meetup-join&deeplinkId=3a9a5e1b-ddb0-456d-9e24-ee551106f9ca&directDl=true&msLaunch=true&enableMobilePage=true&suppressPrompt=true',
-  },
-  {
-    name: "Technical Interview Prep with Paycom",
-    date: 'Date/Time: November 17th, 5:30 - 6:30 PM',
-    location: '',
-    description: "Panelists: Robert Smith (software developer manager) and Amber McGee (recruiter)",
-    link: 'https://tinyurl.com/paycomxswe'
-  }
+  
  
+  {
+    name: "Insight to Capgemini’s RISE Program",
+    date: 'Date: 2/16/22. Time: 6:00PM - 7:00PM CST',
+    /*location: 'TBD',*/
+    description: "Want some quick tips and tricks on how to stand out to recruiters? Come to this event with SWE and WWC! We have panelists ready to answer your questions!",
+    link: 'https://tinyurl.com/swexcapgemini',
+  },
+
+
 ];
 
 const flyers = [
-  
   {
     image: '',
     link: ''
   },
-  {
-    image: '',
-    link: ''
-  },
-  
-  
 ];
 
 
@@ -85,8 +73,6 @@ function createData(event, flyer) {
 
 const rows = [
   createData(upcomingEvents[0], flyers[0].image),
-  createData(upcomingEvents[1], flyers[1].image),
- 
 ];
 
 class events extends Component {

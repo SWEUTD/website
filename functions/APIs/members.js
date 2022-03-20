@@ -186,6 +186,28 @@ exports.getAlumniList = async (request, response) => {
     });
 };
 
+// gets information about an event from it's ID
+exports.eventLookup = async (request, response) => {
+  db.collection("events")
+    .doc(request.query.eventId)
+    .get()
+    .then((doc) => {
+      if (doc.exists) {
+        return response.status(200).json({ eventInfo: doc.data() });
+      } else {
+        return response.status(404).json({
+          message: "The event does not exist.",
+        });
+      }
+    })
+    .catch((error) => {
+      console.error(error);
+      return response.status(500).json({
+        message: "There was an issue getting the event information.",
+      });
+    });
+};
+
 // get a list of users for the member list in admin portal
 exports.getMemberList = async (request, response) => {
   db.collection("members")
@@ -211,37 +233,15 @@ exports.getMemberList = async (request, response) => {
 
 // Add new event to a member
 exports.addEventMember = (request, response) => {
+  const netid = request.member.netid;
   // each event has a points value, name, and date
   const eventToAdd = {
     eventPoints: request.body.eventPoints,
     eventName: request.body.eventName,
     eventDate: request.body.eventDate,
   };
-  // also need to connect this event to a new or existing member
-  const memberRequest = {
-    firstName: request.body.firstName,
-    lastName: request.body.lastName,
-    email: request.body.email,
-    phoneNumber: request.body.phoneNumber,
-    classification: request.body.classification,
-    major: request.body.major,
-    otherMajor: request.body.otherMajor,
-    netid: request.body.netid,
-  };
 
-  if (memberRequest.firstName != undefined) {
-    // trying to make a new user so validate
-    const { valid, errors } = validateAddEventData(memberRequest);
-    if (!valid) return response.status(400).json(errors);
-  }
-  if (memberRequest.netid == "") {
-    memberRequest.netid =
-      memberRequest.firstName.toLowerCase() +
-      memberRequest.lastName.toLowerCase();
-  }
-
-  let memberId;
-  db.doc(`/members/${memberRequest.netid}`)
+  db.doc(`/members/${netid}`)
     .get()
     .then((doc) => {
       // adds to an existing member if that netid already exists in the database
@@ -262,33 +262,12 @@ exports.addEventMember = (request, response) => {
           events: eventsList,
           points: newPointTotal,
         };
-        db.doc(`/members/${memberRequest.netid}`).update(updatedMember);
+        db.doc(`/members/${netid}`).update(updatedMember);
         return response.status(200).json({ general: "Member updated" });
       } else {
-        if (memberRequest.firstName == undefined) {
-          return response.status(500).json({
-            general: "NetID not associated with an account.",
-          });
-        }
-        // creates a new member in the database if the netid doesn't exist
-        memberId = memberRequest.netid;
-        const memberInfo = {
-          firstName: memberRequest.firstName,
-          lastName: memberRequest.lastName,
-          netid: memberRequest.netid,
-          phoneNumber: memberRequest.phoneNumber,
-          classification: memberRequest.classification,
-          major: memberRequest.major,
-          otherMajor: memberRequest.otherMajor,
-          email: memberRequest.email,
-          isMember: false,
-          events: [eventToAdd],
-          points: eventToAdd.eventPoints,
-          createdAt: new Date().toISOString(),
-          memberId,
-        };
-        db.doc(`/members/${memberRequest.netid}`).set(memberInfo);
-        return response.status(201).json({ general: "Member added" });
+        return response.status(500).json({
+          general: "Was not able to find account.",
+        });
       }
     })
     .catch((err) => {
@@ -305,14 +284,14 @@ exports.updateEventList = (request, response) => {
   const eventToAdd = {
     eventName: request.body.eventName,
     eventDate: request.body.eventDate,
-    eventPath: request.body.eventPath,
+    //eventPath: request.body.eventPath,
     eventPoints: request.body.eventPoints,
   };
   // also need to connect this event to a new or existing member
   const memberRequest = {
     eventName: request.body.eventName,
     eventDate: request.body.eventDate,
-    eventPath: request.body.eventPath,
+    //eventPath: request.body.eventPath,
     eventPoints: request.body.eventPoints,
   };
   //console.log(firstName);
@@ -355,7 +334,7 @@ exports.updateEventList = (request, response) => {
         const eventInfo = {
           eventName: memberRequest.eventName,
           eventDate: memberRequest.eventDate,
-          eventPath: memberRequest.eventPath,
+          //eventPath: memberRequest.eventPath,
           eventPoints: memberRequest.eventPoints,
         };
         db.doc(`/events/${eventToAdd.eventName}`).set(eventInfo);

@@ -4,7 +4,7 @@ import Slider from "./components/slider";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import { ThemeProvider as MuiThemeProvider } from "@material-ui/core/styles";
-import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
+import {createTheme} from "@material-ui/core";
 import login from "./pages/login";
 import home from "./pages/home";
 import portal from "./pages/portal";
@@ -18,8 +18,9 @@ import contact from "./pages/contact";
 import join from "./pages/join";
 import calendar from "./pages/calendar";
 import meetingform from "./pages/meetingform";
+import EventForm from "./pages/eventForm";
 
-const theme = createMuiTheme({
+const theme = createTheme({
   palette: {
     primary: {
       light: "#DBC554", // swe gold
@@ -65,10 +66,9 @@ function App() {
           <Route exact path="/weconference" component={weconference} />
           <Route exact path="/join" component={join} />
           <Route exact path="/contact" component={contact} />
+          <Route exact path="/checkin/:eventId" component={EventForm} /> 
           <Route exact path="/calendar" component={calendar} /> 
-          <PropsRoute exact path="/paycom" eventHeading="Sign in to Technical Interview Prep with Paycom event" eventPoints={1} eventName = "Technical Interview Prep with Paycom" eventDate = "11/17/2021" secretWord = "grind" component={meetingform}/>
-          <PropsRoute exact path="/behavioral" eventHeading="Sign in to SWE x WITB: Behavioral Interview Workshop event" eventPoints={1} eventName = "SWE x WITB: Behavioral Interview Workshop" eventDate = "11/16/2021" secretWord = "butterfly" component={meetingform}/>
-          <PropsRoute exact path="/potluck" eventHeading="Sign in to Thanksgiving Potluck Social event" eventPoints={1} eventName = "Thanksgiving Potluck Social" eventDate = "11/15/2021" secretWord = "turkey" component={meetingform}/>        
+          <PropsRoute exact path="/cards" eventHeading="Sign in to Volunteering: Cards for Children's Health" eventPoints={1} eventName="Volunteering: Cards for Children's Health" eventDate="3/3/2022" secretWord="spirit" component={meetingform}/>
         </Switch>
       </BrowserRouter>
     </MuiThemeProvider>

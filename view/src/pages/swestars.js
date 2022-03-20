@@ -41,10 +41,11 @@ class swestars extends Component {
     setTimeout(() => {
       this.setState({ headerReady: true });
     }, 0);
-    this.getStars_Fall();
     this.getStars_Spring();
+    this.getStars_Fall();
+    //this.getStars_Spring();
   }
-  getStars_Fall = () => {
+  /*getStars_Fall = () => {
     database
       .collection("members")
       .where("points", ">", 0)
@@ -55,11 +56,11 @@ class swestars extends Component {
           bronzeMem_Fall = [];
         querySnapshot.forEach((doc) => {
           const name = `${doc.data().firstName} ${doc.data().lastName}`;
-          if (doc.data().points > 9) {
+          if (doc.data().points > 7) {
             goldMem_Fall.push(name);
-          } else if (doc.data().points > 7) {
-            silverMem_Fall.push(name);
           } else if (doc.data().points > 5) {
+            silverMem_Fall.push(name);
+          } else if (doc.data().points > 3) {
             bronzeMem_Fall.push(name);
           }
         });
@@ -74,12 +75,12 @@ class swestars extends Component {
       .catch(function (error) {
         console.log("Error getting documents: ", error);
       });
-  };
+  };*/
 
   getStars_Spring = () => {
     database
       .collection("members")
-      .where("previousPoints.spring2021", ">", 0)
+      .where("points", ">", 0)
       .get()
       .then((querySnapshot) => {
         let goldMem_Spring = [],
@@ -87,11 +88,11 @@ class swestars extends Component {
           bronzeMem_Spring = [];
         querySnapshot.forEach((doc) => {
           const name = `${doc.data().firstName} ${doc.data().lastName}`;
-          if (doc.data().previousPoints.spring2021 > 5) {
+          if (doc.data().points > 5) {
             goldMem_Spring.push(name);
-          } else if (doc.data().previousPoints.spring2021 > 4) {
+          } else if (doc.data().points > 4) {
             silverMem_Spring.push(name);
-          } else if (doc.data().previousPoints.spring2021 > 3) {
+          } else if (doc.data().points > 3) {
             bronzeMem_Spring.push(name);
           }
         });
@@ -108,10 +109,10 @@ class swestars extends Component {
       });
   };
 
-  /*getStars_Fall = () => {
+  getStars_Fall = () => {
     database
       .collection("members")
-      .where("previousPoints.fall2020", ">", 0)
+      .where("previousPoints.fall2021", ">", 0)
       .get()
       .then((querySnapshot) => {
         let goldMem_Fall = [],
@@ -120,11 +121,11 @@ class swestars extends Component {
         querySnapshot.forEach((doc) => {
           const name = `${doc.data().firstName} ${doc.data().lastName}`;
 
-          if (doc.data().previousPoints.fall2020 > 9) {
+          if (doc.data().previousPoints.fall2021 > 7) {
             goldMem_Fall.push(name);
-          } else if (doc.data().previousPoints.fall2020 > 7) {
+          } else if (doc.data().previousPoints.fall2021 > 5) {
             silverMem_Fall.push(name);
-          } else if (doc.data().previousPoints.fall2020 > 5) {
+          } else if (doc.data().previousPoints.fall2021 > 3) {
             bronzeMem_Fall.push(name);
           }
         });
@@ -139,7 +140,7 @@ class swestars extends Component {
       .catch(function (error) {
         console.log("Error getting documents: ", error);
       });
-  };*/
+  };
 
   render() {
     const { headerReady, tierMembers_Spring, tierMembers_Fall } = this.state;
@@ -185,22 +186,22 @@ class swestars extends Component {
                   <br />
                   <List alignItems="center">
                   <ListSubheader align="center">
-                      <h4>Fall 2021:</h4>
+                      <h4>Spring 2022:</h4>
                     </ListSubheader>{" "}
                     <br></br>
-                    {tierMembers_Fall &&
-                      tierMembers_Fall.goldF.map((val) => (
+                    {tierMembers_Spring &&
+                      tierMembers_Spring.goldS.map((val) => (
                         <ListItemText align="center">
                           <h4>{val}</h4>
                         </ListItemText>
                       ))}
                       <br/><br/>
-                    <ListSubheader align="center">
-                      <h4>Spring 2021:</h4>
+                  <ListSubheader align="center">
+                      <h4>Fall 2021:</h4>
                     </ListSubheader>{" "}
                     <br></br>
-                    {tierMembers_Spring &&
-                      tierMembers_Spring.goldS.map((val) => (
+                    {tierMembers_Fall &&
+                      tierMembers_Fall.goldF.map((val) => (
                         <ListItemText align="center">
                           <h4>{val}</h4>
                         </ListItemText>
@@ -224,6 +225,18 @@ class swestars extends Component {
                   <br />
                   <List alignItems="center">
                   <ListSubheader align="center">
+                  
+                      <h4>Spring 2022:</h4>
+                    </ListSubheader> {" "}
+                    <br></br>
+                    {tierMembers_Spring &&
+                      tierMembers_Spring.silverS.map((val) => (
+                        <ListItemText align="center">
+                          <h4>{val}</h4>
+                        </ListItemText>
+                      ))}
+                      <br/><br/>
+                      <ListSubheader align="center">
                       <h4>Fall 2021:</h4>
                     </ListSubheader>{" "}
                     <br></br>
@@ -233,17 +246,7 @@ class swestars extends Component {
                           <h4>{val}</h4>
                         </ListItemText>
                       ))}
-                      <br/><br/>
-                    <ListSubheader align="center">
-                      <h4>Spring 2021:</h4>
-                    </ListSubheader>
-                    <br></br>
-                    {tierMembers_Spring &&
-                      tierMembers_Spring.silverS.map((val) => (
-                        <ListItemText align="center">
-                          <h4>{val}</h4>
-                        </ListItemText>
-                      ))}
+                    
       
                   </List>
                 </div>
@@ -262,6 +265,18 @@ class swestars extends Component {
                   <br />
                   <List alignItems="center">
                   <ListSubheader align="center">
+                  
+                      <h4>Spring 2022:</h4>
+                    </ListSubheader> {" "}
+                    <br></br>
+                    {tierMembers_Spring &&
+                      tierMembers_Spring.bronzeS.map((val) => (
+                        <ListItemText align="center">
+                          <h4>{val}</h4>
+                        </ListItemText>
+                      ))}
+                      <br/><br/>
+                      <ListSubheader align="center">
                       <h4>Fall 2021:</h4>
                     </ListSubheader>{" "}
                     <br></br>
@@ -271,17 +286,7 @@ class swestars extends Component {
                           <h4>{val}</h4>
                         </ListItemText>
                       ))}
-                      <br/><br/>
-                    <ListSubheader align="center">
-                      <h4>Spring 2021:</h4>
-                    </ListSubheader>
-                    <br></br>
-                    {tierMembers_Spring &&
-                      tierMembers_Spring.bronzeS.map((val) => (
-                        <ListItemText align="center">
-                          <h4>{val}</h4>
-                        </ListItemText>
-                      ))}
+                    
                     
                   </List>
                 </div>
@@ -319,7 +324,7 @@ class swestars extends Component {
                   </List>
                   <br />
                   <br />
-                  <h1 align="center">Tier Prizes for Fall 2021</h1>
+                  <h1 align="center">Tier Prizes for Spring 2022</h1>
                   <Divider />
                   <Grid
                     container
