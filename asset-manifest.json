@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.36fcd27b.css",
-    "main.js": "/static/js/main.996051d0.js",
+    "main.js": "/static/js/main.87ae7926.js",
     "static/media/AboutSWE.mp4": "/static/media/AboutSWE.91edac4e22f1e5e80cc9.mp4",
     "static/media/4.png": "/static/media/4.67514a4380c11251448a.png",
     "static/media/1.HEIC": "/static/media/1.0b6ff84115ff7ee16c3b.HEIC",
@@ -18,13 +18,13 @@
     "static/media/NithyaSree.jpg": "/static/media/NithyaSree.c53252788c82c154630a.jpg",
     "static/media/JennaKrueger.jpg": "/static/media/JennaKrueger.d056353e21a1a6d97dc7.jpg",
     "static/media/IfritMaruf.jpg": "/static/media/IfritMaruf.92b22cc27863a468bba0.jpg",
-    "static/media/AfridaTasnim.jpg": "/static/media/AfridaTasnim.80e0f009fba7f03692df.jpg",
     "static/media/NehaSapre.jpg": "/static/media/NehaSapre.fd1cac8b5757a4bd2684.jpg",
     "static/media/IMG_7969.jpg": "/static/media/IMG_7969.0d208379dbf39fb87f31.jpg",
     "static/media/3.jpg": "/static/media/3.95aff4fc08164ede999b.jpg",
     "static/media/IshaniChowdhury.jpg": "/static/media/IshaniChowdhury.8c81bf76542bf3eedc89.jpg",
     "static/media/EshaBansal.jpg": "/static/media/EshaBansal.c960aedac02d73f637cf.jpg",
     "static/media/AreebaQazi.jpg": "/static/media/AreebaQazi.846a82500b8ca0cb3d9f.jpg",
+    "static/media/MrunmayiSathaye.jpg": "/static/media/MrunmayiSathaye.29d6c0305cc00cdcd609.jpg",
     "static/media/NivethaNarayanan.jpg": "/static/media/NivethaNarayanan.4fa818123ad699415ba3.jpg",
     "static/media/MadisonKing.jpg": "/static/media/MadisonKing.89a7659038f2f932c1a3.jpg",
     "static/media/5.png": "/static/media/5.146b5e15e2a3dc2d17ce.png",
@@ -58,6 +58,7 @@
     "static/media/JessicaTruong.JPG": "/static/media/JessicaTruong.f883d72718932759f1a6.JPG",
     "static/media/statistics.png": "/static/media/statistics.c465029259d2a726280e.png",
     "static/media/SWEUTDMembershipBenefit.png": "/static/media/SWEUTDMembershipBenefit.6d00d4bc881e5844a259.png",
+    "static/media/SarahTao.JPG": "/static/media/SarahTao.fe8453490a66a2a7824a.JPG",
     "static/media/SWEMembershipCost.png": "/static/media/SWEMembershipCost.6a3734d8d2e9200280b0.png",
     "static/media/JerryAlexander.jpg": "/static/media/JerryAlexander.b32d592d056c90fc3be5.jpg",
     "static/media/Collegiate_SWE_Leadership.png": "/static/media/Collegiate_SWE_Leadership.b9f59e27f8bc670ef7cc.png",
@@ -73,16 +74,17 @@
     "static/media/SWEUTDMembershipCost.png": "/static/media/SWEUTDMembershipCost.326501bc220d5035df47.png",
     "static/media/contact.png": "/static/media/contact.a8625bbdc9b7e686f5c6.png",
     "static/media/GillSansMTBook.ttf": "/static/media/GillSansMTBook.d16c34d46dea8543d159.ttf",
+    "static/media/SWElogo.png": "/static/media/SWElogo.17b3aad893f443ae3839.png",
     "static/media/logo.png": "/static/media/logo.17b3aad893f443ae3839.png",
     "static/media/AT&T.png": "/static/media/AT&T.0df0543184ae8cc48a42.png",
     "static/media/MatchLogo.png": "/static/media/MatchLogo.75e2b009b5ad06c6b7a1.png",
     "static/media/CapitalOne.jpg": "/static/media/CapitalOne.efefe65dc331fbebfe75.jpg",
     "index.html": "/index.html",
     "main.36fcd27b.css.map": "/static/css/main.36fcd27b.css.map",
-    "main.996051d0.js.map": "/static/js/main.996051d0.js.map"
+    "main.87ae7926.js.map": "/static/js/main.87ae7926.js.map"
   },
   "entrypoints": [
     "static/css/main.36fcd27b.css",
-    "static/js/main.996051d0.js"
+    "static/js/main.87ae7926.js"
   ]
 }
