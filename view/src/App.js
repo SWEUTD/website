@@ -68,7 +68,7 @@ function App() {
           <Route exact path="/contact" component={contact} />
           <Route exact path="/checkin/:eventId" component={EventForm} /> 
           <Route exact path="/calendar" component={calendar} /> 
-          <PropsRoute exact path="/cards" eventHeading="Sign in to Volunteering: Cards for Children's Health" eventPoints={1} eventName="Volunteering: Cards for Children's Health" eventDate="4/7/2022" secretWord="art" component={meetingform}/>
+          <PropsRoute exact path="/cards" eventHeading="Sign in to Volunteering: Coloring Books for Children's Health" eventPoints={1} eventName="Volunteering: Coloring Books for Children's Health" eventDate="4/7/2022" secretWord="art" component={meetingform}/>
           <PropsRoute exact path="/easter" eventHeading="Sign in to Easter Campus Scavenger Hunt Social" eventPoints={1} eventName="Easter Campus Scavenger Hunt Social" eventDate="4/5/2022" secretWord="egg" component={meetingform}/>
           <PropsRoute exact path="/collab" eventHeading="Sign in to SWE x WWC Speed Networking" eventPoints={1} eventName="SWE x WWC Speed Networking" eventDate="4/5/2022" secretWord="meeting" component={meetingform}/>
           <PropsRoute exact path="/at&t" eventHeading="Sign in to AT&T: How to Stay Connected!" eventPoints={1} eventName="AT&T: How to Stay Connected!" eventDate="4/6/2022" secretWord="network" component={meetingform}/>
