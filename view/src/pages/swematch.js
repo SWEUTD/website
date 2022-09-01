@@ -35,31 +35,12 @@ class swematch extends Component {
           <p className="heading">SWEMatch</p>
         </div>
         <Container className={classes.container}>
+          
           <p align="center" class="movingItem">
-            Due to complications around COVID-19, SWE Match cannot proceed as
-            planned this season. We are deeply saddened because this was going
-            to be the inaugural season, but we have some ideas to make it just
-            as valuable! We will be having a virtual engineering competition
-            instead!
-            <strong>
-              All the applications on this page are updated and valid, APPLY
-              NOW.
-            </strong>
-            And SWE Match will proceed to the Team Tech competition at WE22 next
-            season. More details to come.
-          </p>
-          <p align="center" class="movingItem">
-            Introducing a new SWE UTD program, <strong>SWE Match</strong>! The
-            purpose of SWE Match is to get more all-female teams in engineering
-            competitions. Starting next semester, SWE will be taking
-            applications to join SWE Match and be matched with women in other
-            engineering disciplines in order to build a comprehensive
-            engineering project to the specifications of the{" "}
-            <strong>WE21 Team Tech Competition</strong>. The cohort will be set
-            up with all of the equipment and space needed to build the product
-            so they can focus on the engineering. If this sounds like a great
-            opportunity for you, make sure to{" "}
-            <strong>follow SWE UTD on social media to keep up to date!</strong>
+          Apply for SWEMatch '22! Work on an engineering project with a group throughout the year! 
+          You’ll also build your engineering and professional skills by attending our weekly workshops!
+
+            <strong> Follow SWE UTD on social media to keep up to date!</strong>
           </p>
           <p align="center" class="movingItem">
             <strong>
@@ -69,58 +50,40 @@ class swematch extends Component {
           <h3 class="movingItem">Get Involved!</h3>
           <Row>
             <Col>
+        
               <h4 class="movingItem">
-                <a href="https://form.jotform.com/202226926996062">
-                  Beginner Track
+                <a href="https://forms.gle/8U8m8AYgPTByP45x8">
+                Non-competitive:
                 </a>
               </h4>
               <p class="movingItem">
-                Our beginner collegiate engineers looking to hone their craft
-                and get some experience. Beginner track participants should be
-                excited about engineering and willing to learn!
+                Work in small groups on a project of your choice
+                Team Lead Applications available for Upperclassmen and previous SWEMatch members (Freshmen cannot apply for Team Lead)
+                For freshmen, we strongly recommend the member application on this track!
+
               </p>
             </Col>
             <Col>
               <h4 class="movingItem">
-                <a href="https://form.jotform.com/202226333501137">
-                  Advanced Track
+                <a href="https://forms.gle/FAs4K37QfuzPBoab8">
+                Competitive: 
                 </a>
               </h4>
               <p class="movingItem">
-                Advanced track participants are more experienced collegiate
-                engineers looking to teach, lead, and guide the design and
-                construction of the project. Advanced track participants will be
-                required to show their qualification by bringing in some
-                portfolio work.
+              Work in a group with our sponsor company to engineer a competitive project
+              Goal is to compete at the WE23 Team Tech Competition
+              The competitive track applications are available for upperclassmen ONLY (Freshmen cannot apply for this track)
+
               </p>
+              
             </Col>
           </Row>
-          <p align="center" class="movingItem">
-            Each of these two tracks constitute being a full member of the team.
-            Beginner track participants will be partnered up with an advanced
-            track participant as a point of contact for technical questions.
-          </p>
-          <h3 class="movingItem">
-            About{" "}
-            <a href="https://swe.org/awards/collegiate-competitions/">
-              Team Tech:
-            </a>
-          </h3>
-          <p class="movingItem">
-            For the Team Tech competition, we will be partnering up with an
-            industry partner to help us come up with a great engineering
-            project. To start off with, we will be writing comprehensive
-            proposal and design documents to be sent to the Team Tech judges for
-            approval in early January 2021. Then we will spend the whole Spring
-            semester building a prototype and writing a final report and draft
-            presentation to be sent to the Team Tech judges by June 2021.
-            Finally, we will find out if we are selected in August 2021, and if
-            we are, Team Tech will sponsor one of us to go to WE21 to present
-            our project and possibly win awards. We will, of course, be
-            fundraising in an attempt to get most, if not all of us to WE21 to
-            see our teammate present!
-          </p>
-          <h3 class="movingItem">Dates to Save:</h3>
+
+      
+          
+          
+      
+          {/* <h3 class="movingItem">Dates to Save:</h3>
           <ul class="movingItem">
             <li>
               <strong>7 September 2020:</strong> SWE Match Advanced and Beginner
@@ -145,7 +108,7 @@ class swematch extends Component {
             <li>
               <strong>20 October 2020 at 8:30PM:</strong> First General Meeting!
             </li>
-          </ul>
+          </ul> */}
           <div align="center">
             <img
               class="movingItem"

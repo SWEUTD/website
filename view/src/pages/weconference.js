@@ -99,7 +99,7 @@ class weconference extends Component {
                 </h6>
                 <p>
                   The world's largest conference for Women in engineering and
-                  technology. WE21 is an opportunity to hear about diligent
+                  technology. WE22 is an opportunity to hear about diligent
                   women making an impact in a field and encouraging other women
                   to become involved in engineering.
                 </p>
@@ -114,21 +114,20 @@ class weconference extends Component {
                   <b>When and where?</b>
                 </h6>
                 <p>
-                  WE21 is a two week virtual conference and career fair from
-                  November 2-13
+                WE22 is a two-day conference and career fair hosted in Houston, TX from October 20-22, 2022
+
                 </p>
                 <h6>
                   <b>When we are recruiting?</b>
                 </h6>
                 <p>
-                  Fill out the application from August 31st until September 11th{" "}
+                Fill out the application before September 9th at 11:59 pm{" "}
                 </p>
                 <p>
-                  SWE is looking for 14 people who are involved with SWE and
-                  have a passion for engineering
+                SWE is looking for people who are involved with SWE and have a passion for engineering to receive our SWE UTD WE Conference scholarship, which will cover housing and registration costs during the conference.
                 </p>
                 <Button
-                  href="https://forms.gle/VPLjYEPrBwJ9LdiPA"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSe1YV_bRTUHdhJSF18HA9ZfZQq44k6i6g7p94t95_DZItj4wQ/viewform"
                   variant="contained"
                   color="primary"
                 >

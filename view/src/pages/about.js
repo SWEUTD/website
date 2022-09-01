@@ -13,8 +13,9 @@ import MediaQuery from "react-responsive";
 // images
 import Statistics from "../assets/statistics.png";
 import SponsorA from "../assets/AT&T.png";
-import SponsorB from "../assets/CBRE.png";
-import SponsorC from "../assets/XILINX.png";
+import SponsorB from "../assets/Credera.png";
+import SponsorC from "../assets/CapitalOne.jpg";
+import SponsorD from "../assets/L3Harris.png";
 import Award from "../assets/GoldAward.png";
 import BoeingCompanyMulticulturalAward from "../assets/BoeingCompanyMulticulturalAward.png";
 import Collegiate_SWE_Leadership from "../assets/Collegiate_SWE_Leadership.png";
@@ -233,12 +234,13 @@ class about extends Component {
               <br />
               <h1>Our Sponsors</h1>
               <h2>
-                We give special thanks to our sponsors: AT&amp;T, CBRE, and
-                Xilinx
+                We give special thanks to our sponsors: AT&amp;T, Credera, Capital One, and
+                L3Harris
               </h2>
-              <img src={SponsorA} width="25%" />
-              <img src={SponsorB} width="25%" />
-              <img src={SponsorC} width="25%" />
+              <img src={SponsorA} width="20%" />
+              <img src={SponsorB} width="20%" />
+              <img src={SponsorC} width="20%" />
+              <img src={SponsorD} width="20%"/>
               <h4>
                 Interested in sponsoring the UT-Dallas section of SWE?{" "}
                 <a class="yellowBG" href="/contact">
