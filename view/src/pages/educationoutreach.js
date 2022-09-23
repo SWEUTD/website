@@ -97,6 +97,14 @@ class educationoutreach extends Component {
            Over 150 students attended each week!
 
           </p>
+
+          <p align="left" class="movingItem">
+          <b>5. <u>AWS Workshop Series</u> -</b> Our SWE section partnered with AWS YouthTech 
+            and ACM UTD to present a 2-day, beginner-friendly AWS and Machine Learning 
+            camp for high school and college students from March 5th - March 6th."
+
+
+          </p>
           
           
         </Container>

@@ -53,7 +53,7 @@ class navbar extends Component {
                     WE Conference
                   </NavDropdown.Item>
                   <NavDropdown.Item href="/swematch">SWEMatch</NavDropdown.Item>
-                  <NavDropdown.Item href="">
+                  <NavDropdown.Item href="https://bit.ly/utdlitmp">
                     Ladies in Tech
                   </NavDropdown.Item>
                   <NavDropdown.Item href="/educationoutreach">Education Outreach</NavDropdown.Item>

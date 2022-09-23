@@ -42,7 +42,7 @@ class calendar extends Component {
               scrolling: "no",
             }}
           ></iframe>
-          <a href="/events" class="myButton" style={{"width" : "20%"},{"align" : "center"}}>Upcoming Events</a>
+          <a href="https://calendar.google.com/calendar/u/2?cid=c3dldXRkQGdtYWlsLmNvbQ" class="myButton" style={{"width" : "20%"},{"align" : "center"}}>Add to your calendar</a>
         </Container>
         <br />
       </div>
