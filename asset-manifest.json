@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.36fcd27b.css",
-    "main.js": "/static/js/main.8549fa63.js",
+    "main.js": "/static/js/main.653138b3.js",
     "static/media/AboutSWE.mp4": "/static/media/AboutSWE.91edac4e22f1e5e80cc9.mp4",
     "static/media/4.png": "/static/media/4.67514a4380c11251448a.png",
     "static/media/1.HEIC": "/static/media/1.0b6ff84115ff7ee16c3b.HEIC",
@@ -57,15 +57,16 @@
     "static/media/GillSansMTBook.ttf": "/static/media/GillSansMTBook.d16c34d46dea8543d159.ttf",
     "static/media/SWElogo.png": "/static/media/SWElogo.17b3aad893f443ae3839.png",
     "static/media/logo.png": "/static/media/logo.17b3aad893f443ae3839.png",
+    "static/media/STMicroelectronics.png": "/static/media/STMicroelectronics.d53e630c0b58b641327b.png",
     "static/media/AT&T.png": "/static/media/AT&T.0df0543184ae8cc48a42.png",
     "static/media/MatchLogo.png": "/static/media/MatchLogo.75e2b009b5ad06c6b7a1.png",
     "static/media/CapitalOne.jpg": "/static/media/CapitalOne.efefe65dc331fbebfe75.jpg",
     "index.html": "/index.html",
     "main.36fcd27b.css.map": "/static/css/main.36fcd27b.css.map",
-    "main.8549fa63.js.map": "/static/js/main.8549fa63.js.map"
+    "main.653138b3.js.map": "/static/js/main.653138b3.js.map"
   },
   "entrypoints": [
     "static/css/main.36fcd27b.css",
-    "static/js/main.8549fa63.js"
+    "static/js/main.653138b3.js"
   ]
 }
