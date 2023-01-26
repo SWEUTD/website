@@ -21,7 +21,7 @@ import Footer from "../components/footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
-// Officer photos
+// Officer photoss
 import SWElogo from "../assets/OfficerPhotos/SWElogo.png";
 import AreebaQazi from "../assets/OfficerPhotos2022/AreebaQazi.JPG";
 import AvaniGarde from "../assets/OfficerPhotos2022/AvaniGarde.JPG";
@@ -47,7 +47,7 @@ const officerList = [
     name: "Areeba Qazi",
     image: AreebaQazi,
     position: "Vice President of Community",
-    committee: "Board",
+    committee: "Exec",
     linkedin: "https://www.linkedin.com/in/areebaqazi/",
   },
   
@@ -55,7 +55,7 @@ const officerList = [
     name: "Neha Sapre",
     image: NehaSapre,
     position: "Vice President of Programs",
-    committee: "Board",
+    committee: "Exec",
     linkedin: "https://www.linkedin.com/in/nehasapre/",
   },
 
@@ -71,7 +71,7 @@ const officerList = [
     name: "Ifrit Maruf",
     image: IfritMaruf,
     position: "President",
-    committee: "Board",
+    committee: "Exec",
     linkedin: "https://www.linkedin.com/in/ifrit-maruf/",
   },
   
@@ -79,7 +79,15 @@ const officerList = [
     name: "Jenna Krueger",
     image: JennaKrueger, 
     position: "SWEMatch Co-Chair",
-    committee: "Board",
+    committee: "SWE Match",
+    linkedin: "",
+  },
+
+  {
+    name: "Varsha George",
+    image: VarshaG, 
+    position: "SWEMatch Co-Chair",
+    committee: "SWE Match",
     linkedin: "",
   },
   
@@ -137,14 +145,14 @@ const officerList = [
     name: "Esha Bansal",
     image: EshaBansal,
     position: "Secretary",
-    committee: "Board",
+    committee: "Exec",
     linkedin: "https://www.linkedin.com/in/esha-bansal-a587811aa/",
   },
   {
     name: "Nithya Sree",
     image: NithyaK,
     position: "Treasurer",
-    committee: "Board",
+    committee: "Exec",
     linkedin: "https://www.linkedin.com/in/mansha-fatima-2a485412b/",
   },
   {
@@ -180,7 +188,7 @@ const styles = (theme) => ({
   },
   image: {
     width: "80%",
-    borderRadius: "50%",
+    borderRadius: "8px", // 50% intially w/ circles
   },
   officerHeading: {},
 });
