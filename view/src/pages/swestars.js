@@ -149,7 +149,7 @@ class swestars extends Component {
       <div className={classes.root}>
         <NavBar />
         <div className={classNames("header", { ready: headerReady })}>
-          <p className="heading">Our SWE Stars</p>
+          <p className="heading">SWE Stars</p>
         </div>
         <div className="fullscreen">
           <Grid
@@ -161,6 +161,101 @@ class swestars extends Component {
             className="movingItem"
             direction="column"
           >
+          <div className="howTo">
+            <Grid
+              style={{ padding: "50px" }}
+              className={classes.gridItem}
+              //md={3}
+              xs={12}
+            >
+              <div>
+                <h1 align="center">Become a SWE Star</h1>
+                <Divider />
+                <h3 align="center" color="black">
+                  Earn SWE Points by:
+                </h3>
+
+                <br></br>
+
+                <h4 align="center">- Attending industry events</h4>
+                <h4 align="center">- Meeting other SWE members at socials</h4>
+                <h4 align="center">- Volunteering</h4>
+                
+                <br />
+                <br />
+                <h1 align="center">Tier Prizes for Spring 2023</h1>
+                <Divider />
+                <Grid
+                  container
+                  height="100%"
+                  width="100%"
+                  alignItems="stretch"
+                  justify="space-evenly"
+                  className="movingItem"
+                  //md={9}
+                  xs={12}
+                  style={{ color: "black" }}
+                >
+                  <Grid
+                    className={classes.gridItem}
+                    style={{ backgroundColor: "#cacacba6", padding: "50px" }}
+                    item
+                    md={4}
+                    xs={12}
+                  >
+                    <List dense="true">
+                      <ListSubheader>
+                        <h3 color="gold">Gold Tier (>9 points):</h3>
+                      </ListSubheader>
+                      <ListItem>
+                        <h4>(Top 15 SWE Gold Stars) SWE Gift Bags</h4>
+                      </ListItem>
+                      <ListItem>
+                        <h4>1x1 Resume Critiquing Session + Mock Interview</h4>
+                      </ListItem>
+                    </List>
+                  </Grid>
+
+                  <Grid
+                    className={classes.gridItem}
+                    style={{ backgroundColor: "#cacacba6", padding: "50px" }}
+                    item
+                    md={4}
+                    xs={12}
+                  >
+                    <List dense="true">
+                      <ListSubheader>
+                        <h3>Silver Tier (>7 points):</h3>
+                      </ListSubheader>
+                      <ListItem>
+                        <h4>Mock Interview with a Recruiter</h4>
+                      </ListItem>
+                    </List>
+                  </Grid>
+
+                  <Grid
+                    className={classes.gridItem}
+                    style={{ backgroundColor: "#cacacba6", padding: "50px" }}
+                    item
+                    md={4}
+                    xs={12}
+                  >
+                    <List dense="true">
+                      <ListSubheader>
+                        <h3>Bronze Tier (>5 points)</h3>
+                      </ListSubheader>
+                      <ListItem>
+                        <h4>Social Media Shoutout</h4>
+                      </ListItem>
+                    </List>
+                  </Grid>
+                </Grid>
+              </div>
+            </Grid>
+            <h1 align="center">Our SWE Stars</h1>
+            <Divider />
+          </div>
+            
             <Grid
               container
               height="100%"
@@ -292,108 +387,6 @@ class swestars extends Component {
                 </div>
               </Grid>
             </Grid>
-
-            <div className="howTo">
-              <Grid
-                style={{ padding: "50px" }}
-                className={classes.gridItem}
-                //md={3}
-                xs={12}
-              >
-                <div>
-                  <h1 align="center">Become a SWE Star</h1>
-                  <Divider />
-                  <h3 align="center" color="black">
-                    Earn SWE Points by:
-                  </h3>
-
-                  <br></br>
-
-                  <List dense="true" align="center">
-                    <ListSubheader>
-                      <h4 align="center">Attending industry events</h4>
-                    </ListSubheader>
-                    <ListSubheader>
-                      <h4 align="center">
-                        Meeting other SWE members at socials
-                      </h4>
-                    </ListSubheader>
-                    <ListSubheader>
-                      <h4 align="center">Volunteering</h4>
-                    </ListSubheader>
-                  </List>
-                  <br />
-                  <br />
-                  <h1 align="center">Tier Prizes for Spring 2022</h1>
-                  <Divider />
-                  <Grid
-                    container
-                    height="100%"
-                    width="100%"
-                    alignItems="stretch"
-                    justify="space-evenly"
-                    className="movingItem"
-                    //md={9}
-                    xs={12}
-                    style={{ color: "black" }}
-                  >
-                    <Grid
-                      className={classes.gridItem}
-                      style={{ backgroundColor: "#cacacba6", padding: "50px" }}
-                      item
-                      md={4}
-                      xs={12}
-                    >
-                      <List dense="true">
-                        <ListSubheader>
-                          <h3 color="gold">Gold Tier:</h3>
-                        </ListSubheader>
-                        <ListItem>
-                          <h4>(Top 15 SWE Gold Stars) SWE Gift Bags</h4>
-                        </ListItem>
-                        <ListItem>
-                          <h4>1x1 Resume Critiquing Session</h4>
-                        </ListItem>
-                      </List>
-                    </Grid>
-
-                    <Grid
-                      className={classes.gridItem}
-                      style={{ backgroundColor: "#cacacba6", padding: "50px" }}
-                      item
-                      md={4}
-                      xs={12}
-                    >
-                      <List dense="true">
-                        <ListSubheader>
-                          <h3>Silver Tier:</h3>
-                        </ListSubheader>
-                        <ListItem>
-                          <h4>Social media shoutout</h4>
-                        </ListItem>
-                      </List>
-                    </Grid>
-
-                    <Grid
-                      className={classes.gridItem}
-                      style={{ backgroundColor: "#cacacba6", padding: "50px" }}
-                      item
-                      md={4}
-                      xs={12}
-                    >
-                      <List dense="true">
-                        <ListSubheader>
-                          <h3>Bronze Tier:</h3>
-                        </ListSubheader>
-                        <ListItem>
-                          <h4>Invitation to a networking session</h4>
-                        </ListItem>
-                      </List>
-                    </Grid>
-                  </Grid>
-                </div>
-              </Grid>
-            </div>
           </Grid>
           <Footer />
         </div>

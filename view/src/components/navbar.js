@@ -69,7 +69,7 @@ class navbar extends Component {
                 </NavDropdown>
                 <Nav.Link href="/calendar">Calendar</Nav.Link>
                 <Nav.Link href="/portal">Member Portal</Nav.Link>
-                <Nav.Link href="/contact" id="basic-nav-dropdown">Subsribe to our mailing list!</Nav.Link>
+                <Nav.Link href="/contact" id="basic-nav-dropdown">Subscribe to our mailing list!</Nav.Link>
               </Nav>
               <Navbar.Brand href="https://discord.gg/Tg4476YPSk" pullRight>
                 <FontAwesomeIcon
