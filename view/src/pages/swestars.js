@@ -205,7 +205,7 @@ class swestars extends Component {
                   >
                     <List dense="true">
                       <ListSubheader>
-                        <h3 color="gold">Gold Tier (> 9 points):</h3>
+                        <h3 color="gold">Gold Tier (more than 9 points):</h3>
                       </ListSubheader>
                       <ListItem>
                         <h4>(Top 15 SWE Gold Stars) SWE Gift Bags</h4>
@@ -225,7 +225,7 @@ class swestars extends Component {
                   >
                     <List dense="true">
                       <ListSubheader>
-                        <h3>Silver Tier (> 7 points):</h3>
+                        <h3>Silver Tier (more than 7 points):</h3>
                       </ListSubheader>
                       <ListItem>
                         <h4>Mock Interview with a Recruiter</h4>
@@ -242,7 +242,7 @@ class swestars extends Component {
                   >
                     <List dense="true">
                       <ListSubheader>
-                        <h3>Bronze Tier (> 5 points)</h3>
+                        <h3>Bronze Tier (more than 5 points)</h3>
                       </ListSubheader>
                       <ListItem>
                         <h4>Social Media Shoutout</h4>
