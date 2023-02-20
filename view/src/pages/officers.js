@@ -36,21 +36,26 @@ import ShagunDalal from "../assets/OfficerPhotos2022/ShagunDalal.JPG";
 import ShamithaThumma from "../assets/OfficerPhotos2022/ShamithaThumma.JPG";
 import VarshaG from "../assets/OfficerPhotos2022/VarshaG.JPG";
 import JennaKrueger from "../assets/OfficerPhotos2021/JennaKrueger.jpg";
-
+import SwaritaKelwada from "../assets/OfficerPhotos2022/SwaritaKelwada.JPG";
+import PurvaPawar from "../assets/OfficerPhotos2022/PurvaPawar.JPG";
+import SatvikaRavi from "../assets/OfficerPhotos2022/SatvikaRavi.JPG";
+import AditiMungale from "../assets/OfficerPhotos2022/AditiMungale.JPG";
 
 import ZainebAhmad from "../assets/OfficerPhotos2021/ZainebAhmad.png";
 import PushpaKumar from "../assets/OfficerPhotos2021/PushpaKumar.png";
 import JerryAlexander from "../assets/OfficerPhotos2021/JerryAlexander.jpg";
 
 const officerList = [
+  /*
   {
-    name: "Areeba Qazi",
+    
+    name: "Areeba Qazi", //REMOVE ??
     image: AreebaQazi,
     position: "Vice President of Community",
     committee: "Exec",
     linkedin: "https://www.linkedin.com/in/areebaqazi/",
   },
-  
+  */
   {
     name: "Neha Sapre",
     image: NehaSapre,
@@ -58,7 +63,7 @@ const officerList = [
     committee: "Exec",
     linkedin: "https://www.linkedin.com/in/nehasapre/",
   },
-
+/*
   {
     name: "Jessics Truong",
     image: SWElogo,
@@ -66,7 +71,7 @@ const officerList = [
     committee: "Community Events",
     linkedin: "",
   },
-  
+  */
   {
     name: "Ifrit Maruf",
     image: IfritMaruf,
@@ -92,11 +97,11 @@ const officerList = [
   },
   
   {
-    name: "Swarita Kelwada",
-    image: SWElogo,
+    name: "Swarita Kelwada", //crop her picture and fix linkedin??
+    image: SwaritaKelwada,
     position: "WEHack Director",
     committee: "WEHack",
-    linkedin: "https://www.linkedin.com/in/deesha-kumbham-86b4b6196/",
+    /*linkedin: "https://www.linkedin.com/in/deesha-kumbham-86b4b6196/",*/
   },
   {
     name: "Faiza Rahman",
@@ -120,10 +125,11 @@ const officerList = [
     linkedin: "https://www.linkedin.com/in/avanigarde/",
   },
   {
-    name: "Palak Bhargava",
-    image: PalakBhargava,
-    position: "Education Outreach Chair",
-    committee: "Education Outreach",
+    
+    name: "Purva Pawar", 
+    image: PurvaPawar    ,
+    position: "Community Events Chair",
+    committee: "Community Events",
     linkedin: "https://www.linkedin.com/in/palak-bhargava01/",
   },
   {
@@ -142,6 +148,13 @@ const officerList = [
     linkedin: "https://www.linkedin.com/in/priyanka-amalkar-9417811b7/",
   },
   {
+    name: "Aditi Mungale",
+    image: AditiMungale,
+    position: "Education Outreach Chair",
+    committee: "Education Outreach",
+    linkedin: "https://www.linkedin.com/in/priyanka-amalkar-9417811b7/",
+  },
+  {
     name: "Esha Bansal",
     image: EshaBansal,
     position: "Secretary",
@@ -149,8 +162,8 @@ const officerList = [
     linkedin: "https://www.linkedin.com/in/esha-bansal-a587811aa/",
   },
   {
-    name: "Nithya Sree",
-    image: NithyaK,
+    name: "Satvika Ravi",
+    image: SatvikaRavi,
     position: "Treasurer",
     committee: "Exec",
     linkedin: "https://www.linkedin.com/in/mansha-fatima-2a485412b/",
@@ -168,7 +181,7 @@ const officerList = [
     committee: "Faculty Advisors",
   },
   {
-    name: "Jerry Alexander",
+    name: "Jerry Alexander", //Remove?? wasn't in slides
     image: JerryAlexander,
     position: "ECS Assistant Dean for Student Development",
     committee: "Faculty Advisors",

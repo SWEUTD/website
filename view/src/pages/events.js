@@ -26,11 +26,9 @@ const upcomingEvents = [
   
  
   {
-    name: "Insight to Capgemini’s RISE Program",
-    date: 'Date: 2/16/22. Time: 6:00PM - 7:00PM CST',
+    name: "Please refer to our calendar to see upcoming events! ",
     /*location: 'TBD',*/
-    description: "Want some quick tips and tricks on how to stand out to recruiters? Come to this event with SWE and WWC! We have panelists ready to answer your questions!",
-    link: 'https://tinyurl.com/swexcapgemini',
+    link: 'https://sweutd.com/calendar',
   },
 
 
@@ -156,7 +154,7 @@ class events extends Component {
 				(<div><h5 align="left" >{row.event.description}</h5><br /> </div>) : null }
 				{row.event.link != '' && row.event.link != null
 				? (<div>
-				<a href={row.event.link}><strong>Attend Here!</strong></a>
+				<a href={row.event.link}><strong>Link to Calendar</strong></a>
 				<br/>
 				<br/>
 				</div>)
