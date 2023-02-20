@@ -56,12 +56,9 @@ class educationoutreach extends Component {
           
           <h4 align="center"> Upcoming events </h4>
           <p align="left" class="movingItem">
-          We have an upcoming volunteering opportunity with iCode Plano. 
-          This event will involve helping the Girl Scouts earn their Junior 
-          Robotics badge! iCode will be providing any curriculum you would 
-          need to know in advance. The volunteering event will be on 09/25/2022
-           (Sunday), 10am - 12pm.
-
+          We are currently collaborating with Dallas SWE to help them with their annual “Design Your World” volunteer event. 
+          The event has multiple booths, workshops, and activities that need volunteers. 
+          The event will happen in mid-March, and if you are interested in volunteering, please fill out the volunteer interest form linked above.
           </p>
           <br></br>
           
@@ -106,6 +103,10 @@ class educationoutreach extends Component {
 
           </p>
           
+          <p align="left" class="movingItem">
+            <b>6. <u>North Hills Preparatory Panel</u> -</b> Our team visited the North Hills 
+            Preparatory school to answer questions young women in the community had about pursuing a degree in STEM.
+          </p>
           
         </Container>
         <Footer />
