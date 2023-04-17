@@ -138,8 +138,8 @@ class events extends Component {
       <Table className={classes.table} aria-label="simple table">
         <TableHead>
         <TableRow>
-            <TableCell align="center" width="45%"><h2></h2></TableCell>
-            <TableCell align="center" width="55%"><h2></h2></TableCell>
+            <TableCell align="center" width="100%"><h2></h2></TableCell>
+            <TableCell align="center" width="0%"><h2></h2></TableCell>
           </TableRow>
 		    </TableHead>
         <TableBody>
