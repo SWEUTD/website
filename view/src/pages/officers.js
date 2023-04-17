@@ -46,32 +46,7 @@ import PushpaKumar from "../assets/OfficerPhotos2021/PushpaKumar.png";
 import JerryAlexander from "../assets/OfficerPhotos2021/JerryAlexander.jpg";
 
 const officerList = [
-  /*
-  {
-    
-    name: "Areeba Qazi", //REMOVE ??
-    image: AreebaQazi,
-    position: "Vice President of Community",
-    committee: "Exec",
-    linkedin: "https://www.linkedin.com/in/areebaqazi/",
-  },
-  */
-  {
-    name: "Neha Sapre",
-    image: NehaSapre,
-    position: "Vice President of Programs",
-    committee: "Exec",
-    linkedin: "https://www.linkedin.com/in/nehasapre/",
-  },
-/*
-  {
-    name: "Jessics Truong",
-    image: SWElogo,
-    position: "Community Events Chair",
-    committee: "Community Events",
-    linkedin: "",
-  },
-  */
+
   {
     name: "Ifrit Maruf",
     image: IfritMaruf,
@@ -79,13 +54,35 @@ const officerList = [
     committee: "Exec",
     linkedin: "https://www.linkedin.com/in/ifrit-maruf/",
   },
+
+  {
+    name: "Neha Sapre",
+    image: NehaSapre,
+    position: "Vice President",
+    committee: "Exec",
+    linkedin: "https://www.linkedin.com/in/nehasapre/",
+  },
+  {
+    name: "Esha Bansal",
+    image: EshaBansal,
+    position: "Secretary",
+    committee: "Exec",
+    linkedin: "https://www.linkedin.com/in/esha-bansal-a587811aa/",
+  },
+  {
+    name: "Satvika Ravi",
+    image: SatvikaRavi,
+    position: "Treasurer",
+    committee: "Exec",
+    linkedin: "https://www.linkedin.com/in/satvika-ravi-0926911ab/",
+  },
   
   {
     name: "Jenna Krueger",
     image: JennaKrueger, 
     position: "SWEMatch Co-Chair",
     committee: "SWE Match",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/jenna-krueger-2024-bmen/",
   },
 
   {
@@ -93,7 +90,7 @@ const officerList = [
     image: VarshaG, 
     position: "SWEMatch Co-Chair",
     committee: "SWE Match",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/varsha-george/",
   },
   
   {
@@ -101,7 +98,7 @@ const officerList = [
     image: SwaritaKelwada,
     position: "WEHack Director",
     committee: "WEHack",
-    /*linkedin: "https://www.linkedin.com/in/deesha-kumbham-86b4b6196/",*/
+    linkedin: "https://www.linkedin.com/in/swarita-kelwada-2278a4172/",
   },
   {
     name: "Faiza Rahman",
@@ -130,7 +127,7 @@ const officerList = [
     image: PurvaPawar    ,
     position: "Community Events Chair",
     committee: "Community Events",
-    linkedin: "https://www.linkedin.com/in/palak-bhargava01/",
+    linkedin: "https://www.linkedin.com/in/purvapawar/",
   },
   {
     name: "Shagun Dalal",
@@ -152,22 +149,9 @@ const officerList = [
     image: AditiMungale,
     position: "Education Outreach Chair",
     committee: "Education Outreach",
-    linkedin: "https://www.linkedin.com/in/priyanka-amalkar-9417811b7/",
+    linkedin: "https://www.linkedin.com/in/aditi-mungale/",
   },
-  {
-    name: "Esha Bansal",
-    image: EshaBansal,
-    position: "Secretary",
-    committee: "Exec",
-    linkedin: "https://www.linkedin.com/in/esha-bansal-a587811aa/",
-  },
-  {
-    name: "Satvika Ravi",
-    image: SatvikaRavi,
-    position: "Treasurer",
-    committee: "Exec",
-    linkedin: "https://www.linkedin.com/in/mansha-fatima-2a485412b/",
-  },
+  
   {
     name: "Dr. Pushpa Kumar",
     image: PushpaKumar,
@@ -180,13 +164,7 @@ const officerList = [
     position: "SWE UTD Section Counselor",
     committee: "Faculty Advisors",
   },
-  {
-    name: "Jerry Alexander", //Remove?? wasn't in slides
-    image: JerryAlexander,
-    position: "ECS Assistant Dean for Student Development",
-    committee: "Faculty Advisors",
-    linkedin: "https://www.linkedin.com/in/internguy/",
-  }  
+   
 ];
 
 const styles = (theme) => ({
